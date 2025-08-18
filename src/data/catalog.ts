@@ -1526,5 +1526,262 @@ export const categories: Category[] = [
         ]
       }
     ]
+  },
+  {
+    id: "6",
+    name: "MANAGED SERVICES",
+    description: "Serviços gerenciados completos para operação e manutenção de infraestrutura",
+    subcategories: [
+      {
+        id: "6.1",
+        name: "Gerenciamento Padrão",
+        description: "Gerenciamento básico com suporte técnico e monitoramento essencial",
+        items: [
+          {
+            id: "6.1.1",
+            name: "Gerenciamento Padrão 8x5",
+            description: "Bundle 5 horas com suporte das 9h às 18h",
+            price: 199.00,
+            functionality: "Pacote de gerenciamento básico com 5 horas incluídas e suporte em horário comercial",
+            applicability: "Pequenas empresas, ambientes de desenvolvimento, aplicações não críticas",
+            example: "Pequena empresa com website corporativo ou ambiente de desenvolvimento",
+            characteristics: [
+              "Bundle: 5 horas incluídas",
+              "Suporte: 8x5 (9h às 18h)",
+              "Atualizações de sistema",
+              "Suporte técnico básico",
+              "Monitoramento básico",
+              "Todos os data centers"
+            ],
+            tags: ["managed", "standard", "8x5", "basic", "monitoring"],
+            observations: "Inclui atualizações, suporte técnico e monitoramento básico para ambientes não críticos"
+          },
+          {
+            id: "6.1.2",
+            name: "Gerenciamento Padrão 24x7",
+            description: "Bundle 5 horas com suporte 24 horas por dia",
+            price: 299.00,
+            functionality: "Gerenciamento básico com disponibilidade total e resposta 24/7 para questões urgentes",
+            applicability: "Empresas com operação contínua, websites de alto tráfego, aplicações 24/7",
+            example: "E-commerce que opera 24h ou aplicação que precisa de disponibilidade contínua",
+            characteristics: [
+              "Bundle: 5 horas incluídas",
+              "Suporte: 24x7",
+              "Resposta prioritária",
+              "Monitoramento contínuo",
+              "Atualizações programadas",
+              "Escalation automático"
+            ],
+            tags: ["managed", "standard", "24x7", "continuous", "priority"],
+            observations: "Ideal para aplicações que requerem disponibilidade contínua com suporte básico"
+          }
+        ]
+      },
+      {
+        id: "6.2",
+        name: "Gerenciamento Avançado",
+        description: "Gerenciamento completo com recursos avançados de rede e segurança",
+        items: [
+          {
+            id: "6.2.1",
+            name: "Gerenciamento Avançado 8x5",
+            description: "Bundle 7 horas com suporte das 9h às 18h",
+            price: 399.00,
+            functionality: "Gerenciamento avançado com mais horas incluídas e recursos de rede e backup",
+            applicability: "Médias empresas, aplicações corporativas, ambientes com necessidades específicas",
+            example: "Empresa média com múltiplas aplicações ou ambiente corporativo estruturado",
+            characteristics: [
+              "Bundle: 7 horas incluídas",
+              "Suporte: 8x5 (9h às 18h)",
+              "Suporte de rede avançado",
+              "Gerenciamento de backup",
+              "Configuração de firewall",
+              "Otimização de performance"
+            ],
+            tags: ["managed", "advanced", "8x5", "network", "backup"],
+            observations: "Inclui recursos avançados de rede, backup e otimização para ambientes corporativos"
+          },
+          {
+            id: "6.2.2",
+            name: "Gerenciamento Avançado 24x7",
+            description: "Bundle 7 horas com suporte 24 horas por dia",
+            price: 499.00,
+            functionality: "Gerenciamento avançado com disponibilidade total e expertise especializada",
+            applicability: "Empresas críticas, aplicações de produção, ambientes complexos",
+            example: "Sistema ERP crítico ou aplicação de produção com alta complexidade",
+            characteristics: [
+              "Bundle: 7 horas incluídas",
+              "Suporte: 24x7",
+              "Expertise especializada",
+              "Gerenciamento proativo",
+              "Monitoramento avançado",
+              "Response automatizado"
+            ],
+            tags: ["managed", "advanced", "24x7", "proactive", "expert"],
+            observations: "Gerenciamento proativo com expertise avançada para ambientes críticos"
+          },
+          {
+            id: "6.2.3",
+            name: "Gerenciamento Avançado Cloud",
+            description: "Gerenciamento especializado para ambientes cloud",
+            functionality: "Gerenciamento específico para infraestrutura cloud com ferramentas especializadas",
+            applicability: "Ambientes cloud, infraestrutura híbrida, aplicações cloud-native",
+            example: "Infraestrutura cloud com múltiplas VMs ou aplicação cloud-native complexa",
+            characteristics: [
+              "Especializado para cloud",
+              "Ferramentas WHM/cPanel",
+              "Suporte de rede cloud",
+              "Backup automatizado",
+              "Firewall cloud",
+              "Escalabilidade automática"
+            ],
+            tags: ["managed", "advanced", "cloud", "whm", "cpanel"],
+            observations: "Inclui suporte de rede, backup, firewall, e ferramentas como WHM/cPanel. Bundle conforme contratação."
+          }
+        ]
+      },
+      {
+        id: "6.3",
+        name: "Gerenciamento Full",
+        description: "Gerenciamento completo premium com máxima disponibilidade",
+        items: [
+          {
+            id: "6.3.1",
+            name: "Gerenciamento Full 8x5",
+            description: "Bundle 10 horas com suporte das 9h às 18h",
+            price: 599.00,
+            functionality: "Gerenciamento completo com máximo de horas incluídas e suporte premium",
+            applicability: "Grandes empresas, infraestrutura complexa, ambientes mission-critical",
+            example: "Grande corporação com infraestrutura complexa ou sistema mission-critical",
+            characteristics: [
+              "Bundle: 10 horas incluídas",
+              "Suporte: 8x5 (9h às 18h)",
+              "Gerenciamento completo",
+              "Consultoria incluída",
+              "Otimização contínua",
+              "Relatórios executivos"
+            ],
+            tags: ["managed", "full", "8x5", "premium", "consulting"],
+            observations: "Máximo pacote de horas com gerenciamento completo e consultoria incluída"
+          },
+          {
+            id: "6.3.2",
+            name: "Gerenciamento Full 24x7",
+            description: "Bundle 10 horas com suporte 24 horas por dia",
+            price: 699.00,
+            functionality: "Gerenciamento premium total com disponibilidade máxima e expertise dedicada",
+            applicability: "Empresas enterprise, sistemas críticos, infraestrutura de alta disponibilidade",
+            example: "Sistema bancário ou infraestrutura enterprise com requisitos máximos de disponibilidade",
+            characteristics: [
+              "Bundle: 10 horas incluídas",
+              "Suporte: 24x7",
+              "Expertise dedicada",
+              "Gerenciamento proativo total",
+              "SLA premium",
+              "Resposta imediata"
+            ],
+            tags: ["managed", "full", "24x7", "enterprise", "dedicated"],
+            observations: "Máximo nível de gerenciamento com expertise dedicada e SLA premium"
+          }
+        ]
+      },
+      {
+        id: "6.4",
+        name: "Sustentação",
+        description: "Serviços especializados de sustentação e administração de infraestrutura",
+        items: [
+          {
+            id: "6.4.1",
+            name: "Suporte e Monitoramento Reativo e Proativo",
+            description: "Monitoramento completo com suporte reativo e proativo",
+            functionality: "Monitoramento 24/7 com detecção proativa de problemas e resposta reativa a incidentes",
+            applicability: "Infraestruturas críticas, ambientes de produção, sistemas de alta disponibilidade",
+            example: "Monitoramento de data center ou infraestrutura crítica de produção",
+            characteristics: [
+              "Monitoramento 24/7",
+              "Detecção proativa de problemas",
+              "Resposta reativa a incidentes",
+              "Alertas automáticos",
+              "Escalation inteligente",
+              "Métricas de performance"
+            ],
+            tags: ["sustentacao", "monitoring", "proactive", "reactive", "24x7"],
+            observations: "Combinação de monitoramento proativo e suporte reativo para máxima eficiência"
+          },
+          {
+            id: "6.4.2",
+            name: "Administração Física e Lógica de Nós Computacionais",
+            description: "Gestão completa de servidores físicos e virtuais",
+            functionality: "Administração técnica completa de toda infraestrutura computacional física e virtual",
+            applicability: "Data centers, infraestrutura híbrida, ambientes de virtualização complexos",
+            example: "Administração de cluster de servidores ou infraestrutura de virtualização enterprise",
+            characteristics: [
+              "Gestão física de servidores",
+              "Administração de VMs",
+              "Configuração de hardware",
+              "Otimização de recursos",
+              "Manutenção preventiva",
+              "Documentação técnica"
+            ],
+            tags: ["sustentacao", "administration", "physical", "virtual", "infrastructure"],
+            observations: "Gestão técnica completa de toda infraestrutura computacional"
+          },
+          {
+            id: "6.4.3",
+            name: "Administração de Incidentes e Problemas ISO 20000-1",
+            description: "Gestão de incidentes seguindo padrões internacionais",
+            functionality: "Processo estruturado de gestão de incidentes, problemas e solicitações conforme ISO 20000-1",
+            applicability: "Empresas com certificação ISO, ambientes regulados, organizações enterprise",
+            example: "Gestão de incidentes em banco ou empresa com certificação ISO",
+            characteristics: [
+              "Conformidade ISO 20000-1",
+              "Gestão estruturada de incidentes",
+              "Processo de escalation definido",
+              "SLA por prioridade",
+              "Documentação de processos",
+              "Métricas de qualidade"
+            ],
+            tags: ["sustentacao", "iso20000", "incident-management", "compliance", "process"],
+            observations: "Processo certificado ISO 20000-1 para gestão profissional de incidentes"
+          },
+          {
+            id: "6.4.4",
+            name: "Hotline para Demandas Críticas",
+            description: "Canal direto para situações críticas e emergenciais",
+            functionality: "Linha direta dedicada para demandas críticas com resposta imediata e escalation automático",
+            applicability: "Sistemas mission-critical, aplicações financeiras, infraestrutura de alta criticidade",
+            example: "Hotline para sistema bancário ou aplicação de trading financeiro",
+            characteristics: [
+              "Canal direto dedicado",
+              "Resposta imediata",
+              "Escalation automático",
+              "Prioridade máxima",
+              "Expertise especializada",
+              "Disponibilidade 24/7"
+            ],
+            tags: ["sustentacao", "hotline", "critical", "emergency", "immediate"],
+            observations: "Canal prioritário para situações críticas com resposta imediata garantida"
+          },
+          {
+            id: "6.4.5",
+            name: "Auxílio em Projeção e Planejamento de Infraestrutura",
+            description: "Consultoria para crescimento e evolução da infraestrutura",
+            functionality: "Análise técnica e planejamento estratégico para evolução e crescimento da infraestrutura computacional",
+            applicability: "Empresas em crescimento, planejamento de expansão, modernização de infraestrutura",
+            example: "Planejamento de expansão de e-commerce ou migração para cloud híbrida",
+            characteristics: [
+              "Análise de capacidade",
+              "Planejamento de crescimento",
+              "Otimização de recursos",
+              "Roadmap tecnológico",
+              "Análise de custos",
+              "Recomendações técnicas"
+            ],
+            tags: ["sustentacao", "planning", "consulting", "infrastructure", "growth"],
+            observations: "Consultoria especializada para planejamento estratégico de infraestrutura"
+          }
+        ]
+      }
+    ]
   }
 ];
