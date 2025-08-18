@@ -1,4 +1,4 @@
-import { Search, Menu, Filter } from "lucide-react";
+import { Search, Menu, Filter, Home } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
@@ -6,9 +6,10 @@ interface HeaderProps {
   onSearchChange: (search: string) => void;
   searchValue: string;
   onMenuToggle: () => void;
+  onHomeClick?: () => void;
 }
 
-export const Header = ({ onSearchChange, searchValue, onMenuToggle }: HeaderProps) => {
+export const Header = ({ onSearchChange, searchValue, onMenuToggle, onHomeClick }: HeaderProps) => {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-card/95 backdrop-blur supports-[backdrop-filter]:bg-card/60">
       <div className="container mx-auto flex h-16 items-center px-4">
@@ -22,7 +23,7 @@ export const Header = ({ onSearchChange, searchValue, onMenuToggle }: HeaderProp
         </Button>
         
         <div className="flex items-center space-x-4">
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-2 cursor-pointer" onClick={onHomeClick}>
             <div className="h-8 w-8 rounded-lg bg-gradient-primary flex items-center justify-center">
               <span className="text-primary-foreground font-bold text-sm">HD</span>
             </div>
@@ -44,10 +45,18 @@ export const Header = ({ onSearchChange, searchValue, onMenuToggle }: HeaderProp
           </div>
         </div>
         
-        <Button variant="outline" size="sm" className="hidden sm:flex">
-          <Filter className="h-4 w-4 mr-2" />
-          Filtros
-        </Button>
+        <div className="flex items-center gap-2">
+          {onHomeClick && (
+            <Button variant="ghost" size="sm" onClick={onHomeClick} className="flex items-center gap-2">
+              <Home className="h-4 w-4" />
+              <span className="hidden md:inline">Home</span>
+            </Button>
+          )}
+          <Button variant="outline" size="sm" className="hidden sm:flex">
+            <Filter className="h-4 w-4 mr-2" />
+            Filtros
+          </Button>
+        </div>
       </div>
     </header>
   );

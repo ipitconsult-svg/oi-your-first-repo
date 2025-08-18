@@ -9,9 +9,15 @@ import { ArrowLeft, Building2, Eye, EyeOff } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 interface CatalogViewProps {
   searchValue: string;
+  showHome?: boolean;
+  onCategoryEnter?: () => void;
+  onBackToHome?: () => void;
 }
 export const CatalogView = ({
-  searchValue
+  searchValue,
+  showHome = true,
+  onCategoryEnter,
+  onBackToHome
 }: CatalogViewProps) => {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [breadcrumb, setBreadcrumb] = useState<{
@@ -27,11 +33,13 @@ export const CatalogView = ({
         id: categoryId,
         name: category.name
       }]);
+      onCategoryEnter?.();
     }
   };
   const handleBackClick = () => {
     setSelectedCategory(null);
     setBreadcrumb([]);
+    onBackToHome?.();
   };
   const filterItems = (items: any[]) => {
     if (!searchValue) return items;
@@ -128,6 +136,41 @@ export const CatalogView = ({
   }
   const filteredCategories = filterItems(categories);
   const filteredDataCenters = filterItems(dataCenters);
+
+  // Don't show home section if showHome is false (i.e., user is in a category)
+  if (!showHome) {
+    return <div className="space-y-12">
+        {/* Categories Section - Simplified Grid */}
+        <section>
+          <div className="mb-8 text-center">
+            <h2 className="text-2xl font-bold mb-3">Categorias Principais</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Selecione uma categoria para explorar nossos produtos e serviços especializados
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {filteredCategories.map(category => <CategoryCard key={category.id} category={category} onCategoryClick={handleCategoryClick} />)}
+          </div>
+        </section>
+
+        {/* Show all when searching */}
+        {searchValue && <>
+            {filteredDataCenters.length > 0 && <section>
+                <div className="mb-6">
+                  <h2 className="text-xl font-semibold mb-2">Data Centers</h2>
+                  <p className="text-muted-foreground text-sm">
+                    {filteredDataCenters.length} resultado(s) encontrado(s)
+                  </p>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+                  {filteredDataCenters.map(dc => <DataCenterCard key={dc.id} dataCenter={dc} />)}
+                </div>
+              </section>}
+          </>}
+      </div>;
+  }
+
   return <div className="space-y-12">
       {/* Quick Stats */}
       {!searchValue && <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
@@ -167,7 +210,17 @@ export const CatalogView = ({
       {!searchValue && <section>
           <Accordion type="single" collapsible className="w-full max-w-4xl mx-auto">
             <AccordionItem value="data-centers" className="border rounded-lg">
-              
+              <AccordionTrigger className="text-left hover:no-underline px-6 py-4">
+                <div className="flex items-center gap-3">
+                  <Building2 className="h-5 w-5 text-primary" />
+                  <div className="text-left">
+                    <h2 className="text-xl font-semibold">Nossos Data Centers</h2>
+                    <p className="text-sm text-muted-foreground">
+                      Infraestrutura de ponta em localidades estratégicas
+                    </p>
+                  </div>
+                </div>
+              </AccordionTrigger>
               <AccordionContent className="px-6 pb-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4">
                   {filteredDataCenters.map(dc => <DataCenterCard key={dc.id} dataCenter={dc} />)}
