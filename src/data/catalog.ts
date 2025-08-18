@@ -711,6 +711,28 @@ export const categories: Category[] = [
                           },
                           {
                             id: "1.1.1.4.1.1.2",
+                            name: "1TB NVMe Enterprise Plus (Kingston KC3000)",
+                            description: "SSD NVMe premium para workloads de alta performance",
+                            price: 699,
+                            functionality: "Performance premium com cache SLC e controlador avançado",
+                            applicability: "Databases enterprise, aplicações críticas, workloads intensivos",
+                            example: "Database PostgreSQL com alta concorrência ou aplicação real-time",
+                            characteristics: ["1TB capacidade", "PCIe 4.0 x4", "Kingston KC3000", "3D TLC NAND", "Cache SLC"],
+                            tags: ["storage", "nvme", "premium", "enterprise-plus", "high-performance"]
+                          },
+                          {
+                            id: "1.1.1.4.1.1.3",
+                            name: "2TB NVMe Enterprise (Kingston NV2)",
+                            description: "SSD NVMe enterprise de alta capacidade",
+                            price: 900,
+                            functionality: "Capacidade expandida com performance enterprise",
+                            applicability: "Databases médios, aplicações com grande volume de dados",
+                            example: "Sistema ERP com dados históricos ou data warehouse médio",
+                            characteristics: ["2TB capacidade", "PCIe 3.0 x4", "Kingston NV2", "Enterprise grade", "3D NAND"],
+                            tags: ["storage", "nvme", "enterprise", "medium-capacity", "data-intensive"]
+                          },
+                          {
+                            id: "1.1.1.4.1.1.4",
                             name: "2TB NVMe Enterprise Plus (Kingston KC3000)",
                             description: "SSD NVMe premium com máxima performance sustentada",
                             price: 1600,
@@ -721,7 +743,29 @@ export const categories: Category[] = [
                             tags: ["storage", "nvme", "premium", "enterprise-plus", "maximum-performance"]
                           },
                           {
-                            id: "1.1.1.4.1.1.3",
+                            id: "1.1.1.4.1.1.5",
+                            name: "4TB NVMe Enterprise (Kingston NV2)",
+                            description: "SSD NVMe enterprise de alta capacidade para grandes workloads",
+                            price: 1849,
+                            functionality: "Grande capacidade com performance enterprise consistente",
+                            applicability: "Big data médio, consolidação de storage, aplicações data-intensive",
+                            example: "Data lake para analytics ou consolidação de múltiplos sistemas",
+                            characteristics: ["4TB capacidade", "PCIe 3.0 x4", "Kingston NV2", "Enterprise grade", "High endurance"],
+                            tags: ["storage", "nvme", "enterprise", "high-capacity", "consolidation"]
+                          },
+                          {
+                            id: "1.1.1.4.1.1.6",
+                            name: "4TB NVMe Enterprise Plus (Kingston KC3000)",
+                            description: "SSD NVMe premium de alta capacidade para workloads críticos",
+                            price: 3200,
+                            functionality: "Capacidade premium com performance sustentada máxima",
+                            applicability: "Databases críticos grandes, analytics em tempo real, aplicações tier-0",
+                            example: "Database Oracle RAC ou sistema de analytics em tempo real",
+                            characteristics: ["4TB capacidade", "PCIe 4.0 x4", "Kingston KC3000", "Premium controller", "Advanced ECC"],
+                            tags: ["storage", "nvme", "premium", "enterprise-plus", "tier-0", "critical"]
+                          },
+                          {
+                            id: "1.1.1.4.1.1.7",
                             name: "8TB NVMe Enterprise Plus (WD BLACK)",
                             description: "SSD NVMe de máxima capacidade para workloads extremos",
                             price: 7600,
@@ -730,6 +774,17 @@ export const categories: Category[] = [
                             example: "Data lake para analytics ou database distribuído NoSQL",
                             characteristics: ["8TB capacidade", "PCIe 4.0", "WD BLACK", "Game Mode 2.0", "Advanced thermal"],
                             tags: ["storage", "nvme", "maximum-capacity", "big-data", "extreme"]
+                          },
+                          {
+                            id: "1.1.1.4.1.1.8",
+                            name: "8TB NVMe PCIe M.2 SSD",
+                            description: "SSD NVMe M.2 de máxima capacidade para aplicações especializadas",
+                            price: 7000,
+                            functionality: "Forma M.2 com capacidade máxima para slots específicos",
+                            applicability: "Aplicações especializadas, form factor específico, workstations",
+                            example: "Workstation para edição de vídeo 8K ou desenvolvimento de jogos",
+                            characteristics: ["8TB capacidade", "M.2 form factor", "PCIe interface", "Maximum density", "Specialized"],
+                            tags: ["storage", "nvme", "m2", "specialized", "workstation", "maximum-capacity"]
                           }
                         ]
                       },
@@ -751,6 +806,17 @@ export const categories: Category[] = [
                           },
                           {
                             id: "1.1.1.4.1.2.2",
+                            name: "480GB SSD - 2.5\"",
+                            description: "SSD intermediário para aplicações médias",
+                            price: 480,
+                            functionality: "Capacidade balanceada para aplicações de médio porte",
+                            applicability: "Aplicações web, pequenos databases, cache de aplicação",
+                            example: "Storage para CMS ou sistema de e-commerce pequeno",
+                            characteristics: ["480GB capacidade", "2.5\" SATA", "MLC NAND", "DRAM cache"],
+                            tags: ["storage", "ssd", "medium", "applications", "web"]
+                          },
+                          {
+                            id: "1.1.1.4.1.2.3",
                             name: "1TB SSD - 2.5\" Enterprise (Crucial)",
                             description: "SSD enterprise com confiabilidade para aplicações críticas",
                             price: 439,
@@ -761,9 +827,75 @@ export const categories: Category[] = [
                             tags: ["storage", "ssd", "enterprise", "reliable", "business"]
                           },
                           {
-                            id: "1.1.1.4.1.2.3",
+                            id: "1.1.1.4.1.2.4",
+                            name: "960GB SSD - 2.5\" Enterprise Plus (Kingston)",
+                            description: "SSD enterprise plus com performance otimizada",
+                            price: 1100,
+                            functionality: "Performance enterprise com recursos avançados de proteção",
+                            applicability: "Aplicações críticas, databases médios, workloads intensivos",
+                            example: "Database MySQL para e-commerce ou aplicação CRM enterprise",
+                            characteristics: ["960GB capacidade", "Enterprise Plus", "Kingston KC series", "Advanced wear leveling"],
+                            tags: ["storage", "ssd", "enterprise-plus", "performance", "critical"]
+                          },
+                          {
+                            id: "1.1.1.4.1.2.5",
+                            name: "2TB SSD - 2.5\" Enterprise (Crucial)",
+                            description: "SSD enterprise de alta capacidade para grandes aplicações",
+                            price: 800,
+                            functionality: "Grande capacidade com confiabilidade enterprise",
+                            applicability: "Grandes aplicações, consolidação de dados, backup rápido",
+                            example: "Consolidação de múltiplos sistemas ou backup de alta velocidade",
+                            characteristics: ["2TB capacidade", "Enterprise grade", "Crucial series", "High endurance"],
+                            tags: ["storage", "ssd", "enterprise", "high-capacity", "consolidation"]
+                          },
+                          {
+                            id: "1.1.1.4.1.2.6",
+                            name: "1.92TB SSD - 2.5\" Enterprise Plus (Kingston)",
+                            description: "SSD enterprise plus de capacidade otimizada",
+                            price: 2000,
+                            functionality: "Capacidade otimizada com performance enterprise plus",
+                            applicability: "Workloads críticos, databases importantes, aplicações tier-1",
+                            example: "Database Oracle ou sistema SAP crítico",
+                            characteristics: ["1.92TB capacidade", "Enterprise Plus", "Kingston DC series", "Advanced ECC"],
+                            tags: ["storage", "ssd", "enterprise-plus", "optimized", "tier-1"]
+                          },
+                          {
+                            id: "1.1.1.4.1.2.7",
+                            name: "4TB SSD - 2.5\" Enterprise (Crucial)",
+                            description: "SSD enterprise de alta capacidade para consolidação",
+                            price: 2200,
+                            functionality: "Alta capacidade com performance enterprise sustentada",
+                            applicability: "Consolidação massiva, data warehousing, backup enterprise",
+                            example: "Data warehouse para BI ou consolidação de múltiplos servidores",
+                            characteristics: ["4TB capacidade", "Enterprise grade", "Crucial series", "High density"],
+                            tags: ["storage", "ssd", "enterprise", "consolidation", "data-warehouse"]
+                          },
+                          {
+                            id: "1.1.1.4.1.2.8",
+                            name: "4TB SSD - 2.5\" Enterprise Plus (Intel)",
+                            description: "SSD Intel enterprise plus para máxima confiabilidade",
+                            price: 3700,
+                            functionality: "Tecnologia Intel com máxima confiabilidade enterprise",
+                            applicability: "Aplicações mission-critical, dados vitais, compliance rigoroso",
+                            example: "Sistema financeiro ou aplicação regulada crítica",
+                            characteristics: ["4TB capacidade", "Intel enterprise", "Maximum reliability", "Advanced features"],
+                            tags: ["storage", "ssd", "intel", "enterprise-plus", "mission-critical"]
+                          },
+                          {
+                            id: "1.1.1.4.1.2.9",
+                            name: "8TB SSD - 2.5\" Enterprise",
+                            description: "SSD enterprise de máxima capacidade para grandes volumes",
+                            price: 5300,
+                            functionality: "Máxima capacidade SSD para consolidação massiva",
+                            applicability: "Grandes volumes de dados, consolidação extrema, archives rápidos",
+                            example: "Archive de dados corporativos ou consolidação de datacenter",
+                            characteristics: ["8TB capacidade", "Enterprise grade", "Maximum density", "Long term reliability"],
+                            tags: ["storage", "ssd", "enterprise", "maximum-capacity", "archive"]
+                          },
+                          {
+                            id: "1.1.1.4.1.2.10",
                             name: "7.68TB SSD - 2.5\" Enterprise Plus (Kingston)",
-                            description: "SSD enterprise de alta capacidade para dados críticos",
+                            description: "SSD enterprise plus de alta capacidade para dados críticos",
                             price: 5390,
                             functionality: "Máxima capacidade SSD com recursos enterprise avançados",
                             applicability: "Consolidação de dados, databases grandes, analytics",
@@ -780,6 +912,17 @@ export const categories: Category[] = [
                         items: [
                           {
                             id: "1.1.1.4.1.3.1",
+                            name: "2TB HDD 2.5\"",
+                            description: "Disco rígido compacto para servidores com limitação de espaço",
+                            price: 540,
+                            functionality: "Formato compacto com boa capacidade para servidores 1U/2U",
+                            applicability: "Servidores compactos, laptops de alta capacidade, storage portátil",
+                            example: "Servidor 1U para aplicação web ou storage compacto para mobilidade",
+                            characteristics: ["2TB capacidade", "2.5\" SATA", "5400 RPM", "Compact form factor"],
+                            tags: ["storage", "hdd", "compact", "servers", "portable"]
+                          },
+                          {
+                            id: "1.1.1.4.1.3.2",
                             name: "1TB HDD - 3.5\"",
                             description: "Disco rígido básico para armazenamento geral",
                             price: 400,
@@ -790,7 +933,40 @@ export const categories: Category[] = [
                             tags: ["storage", "hdd", "mass-storage", "backup", "economical"]
                           },
                           {
-                            id: "1.1.1.4.1.3.2",
+                            id: "1.1.1.4.1.3.3",
+                            name: "2TB HDD - 3.5\"",
+                            description: "Disco rígido intermediário com boa capacidade",
+                            price: 439,
+                            functionality: "Capacidade balanceada para aplicações diversas",
+                            applicability: "Aplicações médias, backup, storage para pequenos sistemas",
+                            example: "Storage para sistema de arquivos ou backup de servidores pequenos",
+                            characteristics: ["2TB capacidade", "3.5\" SATA", "7200 RPM", "Good performance"],
+                            tags: ["storage", "hdd", "balanced", "medium", "versatile"]
+                          },
+                          {
+                            id: "1.1.1.4.1.3.4",
+                            name: "4TB HDD - 3.5\"",
+                            description: "Disco de boa capacidade para aplicações médias",
+                            price: 596,
+                            functionality: "Capacidade expandida para aplicações empresariais médias",
+                            applicability: "Sistemas médios, backup expandido, aplicações departamentais",
+                            example: "Storage para sistema ERP pequeno ou backup departamental",
+                            characteristics: ["4TB capacidade", "3.5\" SATA", "7200 RPM", "Enterprise features"],
+                            tags: ["storage", "hdd", "medium-capacity", "business", "departmental"]
+                          },
+                          {
+                            id: "1.1.1.4.1.3.5",
+                            name: "8TB HDD - 3.5\"",
+                            description: "Disco de alta capacidade para aplicações grandes",
+                            price: 974,
+                            functionality: "Alta capacidade para aplicações enterprise",
+                            applicability: "Grandes aplicações, backup enterprise, sistemas consolidados",
+                            example: "Storage para sistema corporativo ou backup enterprise",
+                            characteristics: ["8TB capacidade", "3.5\" SATA", "7200 RPM", "Enterprise grade"],
+                            tags: ["storage", "hdd", "high-capacity", "enterprise", "consolidation"]
+                          },
+                          {
+                            id: "1.1.1.4.1.3.6",
                             name: "12TB HDD - 3.5\"",
                             description: "Disco de alta capacidade para arquivamento",
                             price: 1500,
@@ -798,18 +974,51 @@ export const categories: Category[] = [
                             applicability: "Arquivamento, backup de longo prazo, dados históricos",
                             example: "Repositório de backups ou arquivo histórico de dados",
                             characteristics: ["12TB capacidade", "Enterprise class", "7200 RPM", "HelioSeal technology"],
-                            tags: ["storage", "hdd", "high-capacity", "archival", "backup"]
+                            tags: ["storage", "hdd", "archival", "backup", "long-term"]
                           },
                           {
-                            id: "1.1.1.4.1.3.3",
+                            id: "1.1.1.4.1.3.7",
+                            name: "16TB HDD - 3.5\"",
+                            description: "Disco de capacidade estendida para grandes volumes",
+                            price: 1500,
+                            functionality: "Capacidade estendida para volumes de dados significativos",
+                            applicability: "Grandes volumes, backup extensivo, consolidação de dados",
+                            example: "Consolidação de múltiplos sistemas ou backup massivo",
+                            characteristics: ["16TB capacidade", "Enterprise grade", "Optimized for capacity", "Advanced reliability"],
+                            tags: ["storage", "hdd", "extended-capacity", "consolidation", "massive"]
+                          },
+                          {
+                            id: "1.1.1.4.1.3.8",
+                            name: "18TB HDD - 3.5\"",
+                            description: "Disco de capacidade superior para aplicações intensivas",
+                            price: 3000,
+                            functionality: "Capacidade superior para aplicações data-intensive",
+                            applicability: "Big data, arquivamento massivo, data warehousing",
+                            example: "Data warehouse ou repositório para big data analytics",
+                            characteristics: ["18TB capacidade", "Enterprise grade", "CMR technology", "High capacity optimization"],
+                            tags: ["storage", "hdd", "superior-capacity", "big-data", "data-warehouse"]
+                          },
+                          {
+                            id: "1.1.1.4.1.3.9",
+                            name: "20TB HDD - 3.5\"",
+                            description: "Disco de máxima capacidade para volumes extremos",
+                            price: 3800,
+                            functionality: "Capacidade máxima para volumes extremos de dados",
+                            applicability: "Volumes extremos, backup massivo, data lakes",
+                            example: "Data lake para analytics massivos ou backup de datacenter",
+                            characteristics: ["20TB capacidade", "Maximum capacity", "Enterprise grade", "Advanced error correction"],
+                            tags: ["storage", "hdd", "maximum", "extreme-volumes", "data-lakes"]
+                          },
+                          {
+                            id: "1.1.1.4.1.3.10",
                             name: "22TB HDD - 3.5\"",
-                            description: "Disco de máxima capacidade para grandes volumes",
+                            description: "Disco de capacidade absoluta para aplicações massivas",
                             price: 4000,
-                            functionality: "Capacidade máxima para grandes volumes de dados",
-                            applicability: "Big data, arquivamento massivo, data lakes",
-                            example: "Storage para data lake ou arquivo massivo de mídia",
-                            characteristics: ["22TB capacidade", "Enterprise grade", "CMR technology", "Advanced error correction"],
-                            tags: ["storage", "hdd", "maximum-capacity", "big-data", "massive"]
+                            functionality: "Capacidade absoluta para aplicações massivas",
+                            applicability: "Aplicações massivas, arquivamento absoluto, big data extremo",
+                            example: "Storage para data lake massivo ou arquivo histórico completo",
+                            characteristics: ["22TB capacidade", "Absolute maximum", "Enterprise grade", "Maximum density"],
+                            tags: ["storage", "hdd", "absolute-maximum", "massive", "extreme"]
                           }
                         ]
                       },
@@ -857,6 +1066,31 @@ export const categories: Category[] = [
                             example: "RAID 1 básico para redundância de dados não críticos",
                             characteristics: ["Sem custo adicional", "Gerenciado pelo SO", "RAID básico", "Flexibilidade de configuração"],
                             tags: ["raid", "software", "basic", "free", "flexible"]
+                          }
+                        ]
+                      },
+                      {
+                        id: "1.1.1.4.1.6",
+                        name: "Tipos de RAID",
+                        description: "Configurações RAID para redundância e performance otimizadas",
+                        items: [
+                          {
+                            id: "1.1.1.4.1.6.info",
+                            name: "Calculadora RAID",
+                            description: "Ferramenta para cálculo e comparação de configurações RAID",
+                            functionality: "Calculadora interativa para planejamento de arrays RAID com diferentes configurações",
+                            applicability: "Planejamento de storage, análise de redundância, otimização de performance",
+                            example: "Calcular capacidade útil e redundância para RAID 5 com 8 discos de 2TB",
+                            characteristics: [
+                              "Suporte a todos os níveis RAID",
+                              "Cálculo de capacidade útil",
+                              "Análise de redundância",
+                              "Comparação de performance",
+                              "Simulação de falhas"
+                            ],
+                            tags: ["raid", "calculator", "planning", "analysis", "redundancy"],
+                            observations: "Use a calculadora RAID para dimensionar adequadamente seu array de storage",
+                            externalLink: "https://calculadora-raid.org/"
                           }
                         ]
                       }
