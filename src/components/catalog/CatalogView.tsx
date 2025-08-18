@@ -168,34 +168,39 @@ export const CatalogView = ({ searchValue }: CatalogViewProps) => {
   const filteredDataCenters = filterItems(dataCenters);
 
   return (
-    <div className="space-y-8">
-      {/* Data Centers Section */}
-      <section>
-        <div className="flex items-center gap-3 mb-6">
-          <div className="h-8 w-8 rounded-lg bg-gradient-primary flex items-center justify-center">
-            <Building2 className="h-4 w-4 text-primary-foreground" />
+    <div className="space-y-12">
+      {/* Quick Stats */}
+      {!searchValue && (
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+          <div className="bg-card border rounded-lg p-4 text-center">
+            <div className="text-2xl font-bold text-primary">{filteredDataCenters.length}</div>
+            <div className="text-sm text-muted-foreground">Data Centers</div>
           </div>
-          <div>
-            <h2 className="text-2xl font-bold">Data Centers</h2>
-            <p className="text-muted-foreground">Localizações estratégicas para sua infraestrutura</p>
+          <div className="bg-card border rounded-lg p-4 text-center">
+            <div className="text-2xl font-bold text-primary">{filteredCategories.length}</div>
+            <div className="text-sm text-muted-foreground">Categorias</div>
+          </div>
+          <div className="bg-card border rounded-lg p-4 text-center">
+            <div className="text-2xl font-bold text-primary">50+</div>
+            <div className="text-sm text-muted-foreground">Serviços</div>
+          </div>
+          <div className="bg-card border rounded-lg p-4 text-center">
+            <div className="text-2xl font-bold text-primary">24/7</div>
+            <div className="text-sm text-muted-foreground">Suporte</div>
           </div>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-          {filteredDataCenters.map((dc) => (
-            <DataCenterCard key={dc.id} dataCenter={dc} />
-          ))}
-        </div>
-      </section>
+      )}
 
-      {/* Categories Section */}
+      {/* Categories Section - Simplified Grid */}
       <section>
-        <div className="mb-6">
-          <h2 className="text-2xl font-bold mb-2">Categorias de Serviços</h2>
-          <p className="text-muted-foreground">Explore nosso catálogo completo de soluções</p>
+        <div className="mb-8 text-center">
+          <h2 className="text-2xl font-bold mb-3">Categorias Principais</h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            Selecione uma categoria para explorar nossos produtos e serviços especializados
+          </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {filteredCategories.map((category) => (
             <CategoryCard
               key={category.id}
@@ -205,6 +210,57 @@ export const CatalogView = ({ searchValue }: CatalogViewProps) => {
           ))}
         </div>
       </section>
+
+      {/* Data Centers Section - Collapsible */}
+      {!searchValue && (
+        <section>
+          <Accordion type="single" collapsible className="w-full max-w-4xl mx-auto">
+            <AccordionItem value="data-centers" className="border rounded-lg">
+              <AccordionTrigger className="px-6 py-4 hover:no-underline">
+                <div className="flex items-center gap-3">
+                  <div className="h-8 w-8 rounded-lg bg-gradient-primary flex items-center justify-center">
+                    <Building2 className="h-4 w-4 text-primary-foreground" />
+                  </div>
+                  <div className="text-left">
+                    <h3 className="text-lg font-semibold">Nossos Data Centers</h3>
+                    <p className="text-sm text-muted-foreground">
+                      {filteredDataCenters.length} localizações estratégicas disponíveis
+                    </p>
+                  </div>
+                </div>
+              </AccordionTrigger>
+              <AccordionContent className="px-6 pb-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4">
+                  {filteredDataCenters.map((dc) => (
+                    <DataCenterCard key={dc.id} dataCenter={dc} />
+                  ))}
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </section>
+      )}
+
+      {/* Show all when searching */}
+      {searchValue && (
+        <>
+          {filteredDataCenters.length > 0 && (
+            <section>
+              <div className="mb-6">
+                <h2 className="text-xl font-semibold mb-2">Data Centers</h2>
+                <p className="text-muted-foreground text-sm">
+                  {filteredDataCenters.length} resultado(s) encontrado(s)
+                </p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+                {filteredDataCenters.map((dc) => (
+                  <DataCenterCard key={dc.id} dataCenter={dc} />
+                ))}
+              </div>
+            </section>
+          )}
+        </>
+      )}
     </div>
   );
 };
