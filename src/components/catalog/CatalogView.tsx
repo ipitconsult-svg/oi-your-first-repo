@@ -70,8 +70,51 @@ export const CatalogView = ({ searchValue }: CatalogViewProps) => {
 
         <Accordion type="single" collapsible className="space-y-4">
           {category.subcategories.map((subcategory) => {
+            const renderSubcategoryContent = (subcat: any) => {
+              const filteredItems = filterItems(subcat.items);
+              
+              return (
+                <div className="space-y-6">
+                  {/* Render items if they exist */}
+                  {filteredItems.length > 0 && (
+                    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+                      {filteredItems.map((item) => (
+                        <ItemCard key={item.id} item={item} showPrice={showPrices} />
+                      ))}
+                    </div>
+                  )}
+                  
+                  {/* Render nested subcategories if they exist */}
+                  {subcat.subcategories && subcat.subcategories.length > 0 && (
+                    <Accordion type="single" collapsible className="space-y-3">
+                      {subcat.subcategories.map((nestedSubcat: any) => {
+                        const nestedFilteredItems = filterItems(nestedSubcat.items);
+                        if (searchValue && nestedFilteredItems.length === 0 && (!nestedSubcat.subcategories || nestedSubcat.subcategories.length === 0)) return null;
+
+                        return (
+                          <AccordionItem key={nestedSubcat.id} value={nestedSubcat.id}>
+                            <AccordionTrigger className="text-left hover:no-underline pl-4">
+                              <div>
+                                <h4 className="text-base font-medium">{nestedSubcat.name}</h4>
+                                <p className="text-sm text-muted-foreground">{nestedSubcat.description}</p>
+                              </div>
+                            </AccordionTrigger>
+                            <AccordionContent className="pl-4">
+                              {renderSubcategoryContent(nestedSubcat)}
+                            </AccordionContent>
+                          </AccordionItem>
+                        );
+                      })}
+                    </Accordion>
+                  )}
+                </div>
+              );
+            };
+
             const filteredItems = filterItems(subcategory.items);
-            if (searchValue && filteredItems.length === 0) return null;
+            const hasNestedSubcategories = subcategory.subcategories && subcategory.subcategories.length > 0;
+            
+            if (searchValue && filteredItems.length === 0 && !hasNestedSubcategories) return null;
 
             return (
               <AccordionItem key={subcategory.id} value={subcategory.id}>
@@ -82,10 +125,8 @@ export const CatalogView = ({ searchValue }: CatalogViewProps) => {
                   </div>
                 </AccordionTrigger>
                 <AccordionContent>
-                  <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 pt-4">
-                    {filteredItems.map((item) => (
-                      <ItemCard key={item.id} item={item} showPrice={showPrices} />
-                    ))}
+                  <div className="pt-4">
+                    {renderSubcategoryContent(subcategory)}
                   </div>
                 </AccordionContent>
               </AccordionItem>
