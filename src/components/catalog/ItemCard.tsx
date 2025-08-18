@@ -10,9 +10,10 @@ import { useState } from "react";
 
 interface ItemCardProps {
   item: CatalogItem;
+  showPrice?: boolean;
 }
 
-export const ItemCard = ({ item }: ItemCardProps) => {
+export const ItemCard = ({ item, showPrice = false }: ItemCardProps) => {
   const [isExpanded, setIsExpanded] = useState(false);
   
   const formatPrice = (price: number) => {
@@ -47,7 +48,7 @@ export const ItemCard = ({ item }: ItemCardProps) => {
               ID: {item.id}
             </CardDescription>
           </div>
-          {item.price && (
+          {item.price && showPrice && (
             <HoverCard>
               <HoverCardTrigger asChild>
                 <div className="text-right cursor-pointer hover:scale-105 transition-transform">

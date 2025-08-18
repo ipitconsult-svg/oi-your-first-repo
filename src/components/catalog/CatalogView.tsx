@@ -5,7 +5,7 @@ import { CategoryCard } from "./CategoryCard";
 import { DataCenterCard } from "./DataCenterCard";
 import { ItemCard } from "./ItemCard";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Building2 } from "lucide-react";
+import { ArrowLeft, Building2, Eye, EyeOff } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 interface CatalogViewProps {
@@ -15,6 +15,7 @@ interface CatalogViewProps {
 export const CatalogView = ({ searchValue }: CatalogViewProps) => {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [breadcrumb, setBreadcrumb] = useState<{ id: string; name: string }[]>([]);
+  const [showPrices, setShowPrices] = useState(false);
 
   const handleCategoryClick = (categoryId: string) => {
     const category = categories.find(c => c.id === categoryId);
@@ -46,15 +47,25 @@ export const CatalogView = ({ searchValue }: CatalogViewProps) => {
 
     return (
       <div className="space-y-6">
-        <div className="flex items-center gap-4">
-          <Button variant="outline" onClick={handleBackClick}>
-            <ArrowLeft className="h-4 w-4 mr-2" />
-            Voltar
-          </Button>
-          <div>
-            <h2 className="text-2xl font-bold">{category.name}</h2>
-            <p className="text-muted-foreground">{category.description}</p>
+        <div className="flex items-center justify-between gap-4">
+          <div className="flex items-center gap-4">
+            <Button variant="outline" onClick={handleBackClick}>
+              <ArrowLeft className="h-4 w-4 mr-2" />
+              Voltar
+            </Button>
+            <div>
+              <h2 className="text-2xl font-bold">{category.name}</h2>
+              <p className="text-muted-foreground">{category.description}</p>
+            </div>
           </div>
+          <Button
+            variant="outline"
+            onClick={() => setShowPrices(!showPrices)}
+            className="flex items-center gap-2"
+          >
+            {showPrices ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+            {showPrices ? 'Ocultar Preços' : 'Mostrar Preços'}
+          </Button>
         </div>
 
         <Accordion type="single" collapsible className="space-y-4">
@@ -73,7 +84,7 @@ export const CatalogView = ({ searchValue }: CatalogViewProps) => {
                 <AccordionContent>
                   <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 pt-4">
                     {filteredItems.map((item) => (
-                      <ItemCard key={item.id} item={item} />
+                      <ItemCard key={item.id} item={item} showPrice={showPrices} />
                     ))}
                   </div>
                 </AccordionContent>
