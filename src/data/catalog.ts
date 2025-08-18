@@ -131,27 +131,817 @@ export const categories: Category[] = [
     description: "Soluções completas de processamento e computação para todas as necessidades",
     subcategories: [
       {
-        id: "1.1.0",
-        name: "Data Centers (Informativo)",
-        description: "Escolha estratégica de localização para otimizar performance, custo e compliance",
-        items: [
+        id: "1.1",
+        name: "Bare Metal (Servidor Dedicado)",
+        description: "Servidores físicos dedicados exclusivamente para seu projeto com máximo controle e performance",
+        items: [],
+        subcategories: [
           {
-            id: "1.1.0.info",
-            name: "Guia de Escolha de Data Centers",
-            description: "Como escolher o data center ideal para seu projeto",
-            functionality: "Cada data center oferece características únicas para diferentes necessidades de negócio, desde certificações até posicionamento geográfico estratégico",
-            applicability: "A escolha deve considerar: latência para usuários finais, compliance regulatório, custo-benefício, conectividade e requisitos específicos",
-            example: "JPA para máxima certificação e latência mínima LATAM, SPO para hub brasileiro, Orlando para custo-benefício",
-            characteristics: [
-              "JPA: Tier III certificado, menor latência América Latina",
-              "SPO: Hub financeiro, máxima conectividade nacional",
-              "Orlando: Melhor custo-benefício, gateway EUA",
-              "México: NAFTA, crescimento acelerado",
-              "Colômbia: Mercado emergente, incentivos fiscais"
-            ],
-            tags: ["datacenter", "infraestrutura", "localização", "compliance"],
-            observations: "A escolha do data center impacta diretamente performance, compliance e custos operacionais. Consulte nossa equipe para análise personalizada.",
-            externalLink: "https://www.hostdime.com.br/data-centers/"
+            id: "1.1.0",
+            name: "Data Centers (Informativo)",
+            description: "Escolha estratégica de localização para otimizar performance, custo e compliance",
+            items: [
+              {
+                id: "1.1.0.info",
+                name: "Guia de Escolha de Data Centers",
+                description: "Como escolher o data center ideal para seu projeto",
+                functionality: "Cada data center oferece características únicas para diferentes necessidades de negócio, desde certificações até posicionamento geográfico estratégico",
+                applicability: "A escolha deve considerar: latência para usuários finais, compliance regulatório, custo-benefício, conectividade e requisitos específicos",
+                example: "JPA para máxima certificação e latência mínima LATAM, SPO para hub brasileiro, Orlando para custo-benefício",
+                characteristics: [
+                  "JPA: Tier III certificado, menor latência América Latina",
+                  "SPO: Hub financeiro, máxima conectividade nacional",
+                  "Orlando: Melhor custo-benefício, gateway EUA",
+                  "México: NAFTA, crescimento acelerado",
+                  "Colômbia: Mercado emergente, incentivos fiscais"
+                ],
+                tags: ["datacenter", "infraestrutura", "localização", "compliance"],
+                observations: "A escolha do data center impacta diretamente performance, compliance e custos operacionais. Consulte nossa equipe para análise personalizada.",
+                externalLink: "https://www.hostdime.com.br/data-centers/"
+              }
+            ]
+          },
+          {
+            id: "1.1.1",
+            name: "Hardware",
+            description: "Componentes de hardware configuráveis para servidores dedicados",
+            items: [],
+            subcategories: [
+              {
+                id: "1.1.1.1",
+                name: "CPU",
+                description: "Processadores Intel Xeon e AMD EPYC para máxima performance e eficiência",
+                items: [
+                  {
+                    id: "1.1.1.1.1",
+                    name: "4-Core E3-1271 v3 3.6Ghz w/HT",
+                    description: "Processador entry-level para aplicações básicas e desenvolvimento",
+                    price: 100,
+                    functionality: "Quad-core com Hyper-Threading para paralelização básica de tarefas",
+                    applicability: "Servidores web básicos, desenvolvimento, aplicações de baixo volume, sites pequenos",
+                    example: "Site WordPress com tráfego moderado ou ambiente de desenvolvimento",
+                    characteristics: ["4 cores físicos", "8 threads", "3.6GHz base clock", "Hyper-Threading", "Tecnologia 22nm"],
+                    tags: ["cpu", "entry-level", "e3", "quad-core", "development"]
+                  },
+                  {
+                    id: "1.1.1.1.2",
+                    name: "4-Core Xeon E3-1270 3.4Ghz w/HT",
+                    description: "Processador para aplicações de pequeno a médio porte",
+                    price: 200,
+                    functionality: "Processamento eficiente para aplicações single-threaded e multi-threaded moderadas",
+                    applicability: "Aplicações web, pequenos databases, servidores de arquivos, e-commerce médio",
+                    example: "Servidor de aplicação para e-commerce de médio porte ou database MySQL",
+                    characteristics: ["4 cores físicos", "8 threads", "3.4GHz base clock", "Hyper-Threading", "Cache inteligente"],
+                    tags: ["cpu", "xeon", "quad-core", "web-server", "database"]
+                  },
+                  {
+                    id: "1.1.1.1.3",
+                    name: "10-Core Xeon E5-2660 v2 2.2 Ghz w/HT",
+                    description: "Processador de médio porte para aplicações empresariais",
+                    price: 700,
+                    functionality: "Múltiplos cores para paralelização de workloads empresariais",
+                    applicability: "Virtualização, databases médios, aplicações empresariais, analytics",
+                    example: "Servidor de virtualização com múltiplas VMs ou database PostgreSQL enterprise",
+                    characteristics: ["10 cores físicos", "20 threads", "2.2GHz base", "22nm Ivy Bridge-EP", "25MB cache"],
+                    tags: ["cpu", "xeon", "multi-core", "enterprise", "virtualization"]
+                  },
+                  {
+                    id: "1.1.1.1.4",
+                    name: "12-Core Xeon Gold 5118 2.3 GHz w/HT",
+                    description: "Processador Gold series para aplicações de alta performance",
+                    price: 2000,
+                    functionality: "Arquitetura avançada com tecnologias de aceleração para cargas críticas",
+                    applicability: "HPC, analytics avançado, databases enterprise, AI/ML workloads",
+                    example: "Cluster de processamento científico ou sistema de analytics em tempo real",
+                    characteristics: ["12 cores físicos", "24 threads", "2.3GHz base", "Skylake-SP", "Turbo Boost 3.2GHz"],
+                    tags: ["cpu", "xeon-gold", "high-performance", "hpc", "analytics"]
+                  },
+                  {
+                    id: "1.1.1.1.5",
+                    name: "48-Core AMD EPYC 7k62 3.3Ghz w/HT",
+                    description: "Processador flagship para máxima densidade de cores e performance",
+                    price: 5500,
+                    functionality: "Máxima densidade de cores para paralelização extrema e workloads enterprise críticos",
+                    applicability: "Virtualização massiva, HPC, databases distribuídos, big data analytics",
+                    example: "Cluster de virtualização enterprise ou processamento de big data com Spark",
+                    characteristics: ["48 cores físicos", "96 threads", "3.3GHz base", "7nm Zen 2", "256MB L3 cache"],
+                    tags: ["cpu", "amd", "epyc", "flagship", "maximum-cores", "enterprise"]
+                  }
+                ]
+              },
+              {
+                id: "1.1.1.2",
+                name: "GPU",
+                description: "Placas gráficas especializadas para aceleração de workloads específicos",
+                items: [
+                  {
+                    id: "1.1.1.2.1",
+                    name: "RTX 4060 Ti (16 GB vRAM)",
+                    description: "GPU para desenvolvimento IA, rendering e computação paralela",
+                    price: 4900,
+                    functionality: "Aceleração de cargas de trabalho paralelas, ray tracing e inferência IA",
+                    applicability: "Machine Learning, rendering 3D, simulações, desenvolvimento IA, computer vision",
+                    example: "Treinamento de modelos de ML médios ou rendering de animações 3D",
+                    characteristics: ["16GB GDDR6", "RTX 4060 Ti", "Ada Lovelace", "DLSS 3", "AV1 encoding"],
+                    tags: ["gpu", "rtx", "ai", "rendering", "development"]
+                  },
+                  {
+                    id: "1.1.1.2.2",
+                    name: "RTX 4090 (24GB VRAM)",
+                    description: "GPU flagship para máxima performance em IA e rendering profissional",
+                    price: 22000,
+                    functionality: "Performance extrema para workloads GPU-intensivos e IA avançada",
+                    applicability: "IA avançada, rendering profissional, simulações complexas, pesquisa científica",
+                    example: "Treinamento de modelos LLM ou rendering 8K para cinema",
+                    characteristics: ["24GB GDDR6X", "RTX 4090", "16384 CUDA cores", "Ada Lovelace", "3rd gen RT cores"],
+                    tags: ["gpu", "rtx", "flagship", "ai", "professional", "rendering"]
+                  },
+                  {
+                    id: "1.1.1.2.3",
+                    name: "RTX 5090 (32GB VRAM)",
+                    description: "GPU de última geração para aplicações mais exigentes",
+                    price: 23000,
+                    functionality: "Tecnologia de ponta para aplicações de IA generativa e rendering avançado",
+                    applicability: "IA generativa, modelos LLM grandes, rendering 8K+, pesquisa avançada",
+                    example: "Inferência de modelos GPT ou rendering de filmes em resolução máxima",
+                    characteristics: ["32GB GDDR7", "RTX 5090", "Next-gen architecture", "Advanced AI acceleration"],
+                    tags: ["gpu", "rtx", "next-gen", "generative-ai", "maximum-performance"]
+                  },
+                  {
+                    id: "1.1.1.2.4",
+                    name: "AMD RADEON XTX 7900 (24GB RAM)",
+                    description: "GPU AMD de alta performance para workloads de computação",
+                    price: 7000,
+                    functionality: "Alternativa AMD para computação paralela e renderização",
+                    applicability: "Computação científica, rendering, desenvolvimento de jogos, OpenCL",
+                    example: "Simulações científicas ou desenvolvimento de aplicações gráficas",
+                    characteristics: ["24GB GDDR6", "RDNA 3", "96 Compute Units", "OpenCL support"],
+                    tags: ["gpu", "amd", "radeon", "compute", "scientific"]
+                  }
+                ]
+              },
+              {
+                id: "1.1.1.3",
+                name: "Memória",
+                description: "Módulos de RAM DDR3 e DDR4 para diferentes necessidades de performance",
+                items: [
+                  {
+                    id: "1.1.1.3.1",
+                    name: "16GB DDR3",
+                    description: "Memória básica para sistemas legacy e aplicações simples",
+                    price: 50,
+                    functionality: "RAM para sistemas que ainda requerem tecnologia DDR3",
+                    applicability: "Sistemas legacy, aplicações básicas, servidores antigos em migração",
+                    example: "Servidor web básico ou aplicação legacy em migração",
+                    characteristics: ["16GB capacidade", "DDR3 SDRAM", "ECC opcional", "Velocidades padrão DDR3"],
+                    tags: ["memory", "ddr3", "basic", "legacy"]
+                  },
+                  {
+                    id: "1.1.1.3.2",
+                    name: "32GB DDR3",
+                    description: "Memória DDR3 de maior capacidade para sistemas específicos",
+                    price: 150,
+                    functionality: "Maior capacidade em tecnologia DDR3 para sistemas específicos",
+                    applicability: "Sistemas legacy com maior demanda de RAM, ambientes específicos",
+                    example: "Servidor de arquivos ou sistema específico que requer DDR3",
+                    characteristics: ["32GB capacidade", "DDR3 SDRAM", "ECC support", "Múltiplos módulos"],
+                    tags: ["memory", "ddr3", "medium", "legacy-plus"]
+                  },
+                  {
+                    id: "1.1.1.3.3",
+                    name: "16GB DDR4",
+                    description: "Memória moderna para aplicações atuais",
+                    price: 150,
+                    functionality: "RAM moderna com melhor eficiência energética e performance",
+                    applicability: "Aplicações modernas, virtualização básica, databases médios",
+                    example: "Servidor de aplicação web moderna ou database MySQL",
+                    characteristics: ["16GB capacidade", "DDR4 SDRAM", "ECC support", "2400MHz ou superior"],
+                    tags: ["memory", "ddr4", "modern", "standard"]
+                  },
+                  {
+                    id: "1.1.1.3.4",
+                    name: "32GB DDR4",
+                    description: "Memória de alta capacidade para aplicações exigentes",
+                    price: 250,
+                    functionality: "Grande volume de RAM para aplicações memory-intensive",
+                    applicability: "Virtualização, databases grandes, cache em memória, analytics",
+                    example: "Servidor de virtualização com múltiplas VMs ou cache Redis grande",
+                    characteristics: ["32GB capacidade", "DDR4 SDRAM", "ECC registered", "Alta velocidade"],
+                    tags: ["memory", "ddr4", "high-capacity", "virtualization"]
+                  },
+                  {
+                    id: "1.1.1.3.5",
+                    name: "64GB DDR4",
+                    description: "Memória enterprise para máxima performance",
+                    price: 450,
+                    functionality: "Volume máximo de RAM para aplicações enterprise críticas",
+                    applicability: "Databases enterprise, virtualização pesada, analytics em memória, HPC",
+                    example: "Database Oracle RAC ou cluster de analytics com dados em memória",
+                    characteristics: ["64GB capacidade", "DDR4 SDRAM", "ECC registered", "Enterprise grade", "Load reduced"],
+                    tags: ["memory", "ddr4", "enterprise", "maximum", "critical"]
+                  }
+                ]
+              },
+              {
+                id: "1.1.1.4",
+                name: "Armazenamento",
+                description: "Soluções completas de storage interno para diferentes necessidades de performance",
+                items: [],
+                subcategories: [
+                  {
+                    id: "1.1.1.4.1",
+                    name: "Discos Internos",
+                    description: "Storage interno direto conectado ao servidor",
+                    items: [],
+                    subcategories: [
+                      {
+                        id: "1.1.1.4.1.1",
+                        name: "NVMe",
+                        description: "Storage de máxima performance com protocolo NVMe sobre PCIe",
+                        items: [
+                          {
+                            id: "1.1.1.4.1.1.1",
+                            name: "1TB NVMe Enterprise (Kingston NV2)",
+                            description: "SSD NVMe enterprise para aplicações críticas com latência mínima",
+                            price: 400,
+                            functionality: "Storage de ultra-alta velocidade com protocolo NVMe 1.3",
+                            applicability: "Databases críticos, cache de alta velocidade, aplicações latency-sensitive",
+                            example: "Database transacional com milhares de IOPS ou cache Redis crítico",
+                            characteristics: ["1TB capacidade", "PCIe 3.0 x4", "Kingston NV2", "Enterprise grade", "3D NAND"],
+                            tags: ["storage", "nvme", "enterprise", "high-speed", "critical"]
+                          },
+                          {
+                            id: "1.1.1.4.1.1.2",
+                            name: "2TB NVMe Enterprise Plus (Kingston KC3000)",
+                            description: "SSD NVMe premium com máxima performance sustentada",
+                            price: 1600,
+                            functionality: "Performance premium com cache SLC e controlador avançado",
+                            applicability: "Workloads intensivos, databases enterprise, applications tier-1",
+                            example: "Database Oracle com workload OLTP intensivo",
+                            characteristics: ["2TB capacidade", "PCIe 4.0 x4", "Kingston KC3000", "3D TLC NAND", "Cache SLC"],
+                            tags: ["storage", "nvme", "premium", "enterprise-plus", "maximum-performance"]
+                          },
+                          {
+                            id: "1.1.1.4.1.1.3",
+                            name: "8TB NVMe Enterprise Plus (WD BLACK)",
+                            description: "SSD NVMe de máxima capacidade para workloads extremos",
+                            price: 7600,
+                            functionality: "Capacidade máxima com performance enterprise sustentada",
+                            applicability: "Big data, analytics massivos, databases distribuídos",
+                            example: "Data lake para analytics ou database distribuído NoSQL",
+                            characteristics: ["8TB capacidade", "PCIe 4.0", "WD BLACK", "Game Mode 2.0", "Advanced thermal"],
+                            tags: ["storage", "nvme", "maximum-capacity", "big-data", "extreme"]
+                          }
+                        ]
+                      },
+                      {
+                        id: "1.1.1.4.1.2",
+                        name: "SSD",
+                        description: "Solid State Drives SATA para performance balanceada e confiabilidade",
+                        items: [
+                          {
+                            id: "1.1.1.4.1.2.1",
+                            name: "240GB SSD - 2.5\"",
+                            description: "SSD básico ideal para sistema operacional e aplicações leves",
+                            price: 180,
+                            functionality: "Storage sólido para boot rápido e aplicações básicas",
+                            applicability: "Sistema operacional, aplicações pequenas, cache secundário",
+                            example: "Disco de boot do servidor ou cache para aplicações web",
+                            characteristics: ["240GB capacidade", "2.5\" SATA", "TLC NAND", "DRAM cache"],
+                            tags: ["storage", "ssd", "basic", "boot", "os"]
+                          },
+                          {
+                            id: "1.1.1.4.1.2.2",
+                            name: "1TB SSD - 2.5\" Enterprise (Crucial)",
+                            description: "SSD enterprise com confiabilidade para aplicações críticas",
+                            price: 439,
+                            functionality: "Confiabilidade enterprise com proteção de dados avançada",
+                            applicability: "Aplicações empresariais, dados importantes, workloads 24x7",
+                            example: "Storage para aplicação ERP ou sistema de inventário",
+                            characteristics: ["1TB capacidade", "Enterprise grade", "Crucial MX series", "Power loss protection"],
+                            tags: ["storage", "ssd", "enterprise", "reliable", "business"]
+                          },
+                          {
+                            id: "1.1.1.4.1.2.3",
+                            name: "7.68TB SSD - 2.5\" Enterprise Plus (Kingston)",
+                            description: "SSD enterprise de alta capacidade para dados críticos",
+                            price: 5390,
+                            functionality: "Máxima capacidade SSD com recursos enterprise avançados",
+                            applicability: "Consolidação de dados, databases grandes, analytics",
+                            example: "Consolidação de múltiplos databases ou data warehouse",
+                            characteristics: ["7.68TB capacidade", "Enterprise Plus", "Kingston DC series", "Advanced ECC"],
+                            tags: ["storage", "ssd", "enterprise-plus", "high-capacity", "consolidation"]
+                          }
+                        ]
+                      },
+                      {
+                        id: "1.1.1.4.1.3",
+                        name: "HDD",
+                        description: "Hard Disk Drives para armazenamento de massa econômico",
+                        items: [
+                          {
+                            id: "1.1.1.4.1.3.1",
+                            name: "1TB HDD - 3.5\"",
+                            description: "Disco rígido básico para armazenamento geral",
+                            price: 400,
+                            functionality: "Armazenamento de massa com boa relação custo/capacidade",
+                            applicability: "Arquivos, backups, dados não críticos, storage secundário",
+                            example: "Storage para arquivos de backup ou repositório de documentos",
+                            characteristics: ["1TB capacidade", "3.5\" SATA", "7200 RPM", "64MB cache"],
+                            tags: ["storage", "hdd", "mass-storage", "backup", "economical"]
+                          },
+                          {
+                            id: "1.1.1.4.1.3.2",
+                            name: "12TB HDD - 3.5\"",
+                            description: "Disco de alta capacidade para arquivamento",
+                            price: 1500,
+                            functionality: "Grande capacidade para arquivamento e backup",
+                            applicability: "Arquivamento, backup de longo prazo, dados históricos",
+                            example: "Repositório de backups ou arquivo histórico de dados",
+                            characteristics: ["12TB capacidade", "Enterprise class", "7200 RPM", "HelioSeal technology"],
+                            tags: ["storage", "hdd", "high-capacity", "archival", "backup"]
+                          },
+                          {
+                            id: "1.1.1.4.1.3.3",
+                            name: "22TB HDD - 3.5\"",
+                            description: "Disco de máxima capacidade para grandes volumes",
+                            price: 4000,
+                            functionality: "Capacidade máxima para grandes volumes de dados",
+                            applicability: "Big data, arquivamento massivo, data lakes",
+                            example: "Storage para data lake ou arquivo massivo de mídia",
+                            characteristics: ["22TB capacidade", "Enterprise grade", "CMR technology", "Advanced error correction"],
+                            tags: ["storage", "hdd", "maximum-capacity", "big-data", "massive"]
+                          }
+                        ]
+                      },
+                      {
+                        id: "1.1.1.4.1.4",
+                        name: "SAS",
+                        description: "Discos SAS para ambientes enterprise com alta confiabilidade",
+                        items: [
+                          {
+                            id: "1.1.1.4.1.4.1",
+                            name: "600GB SAS",
+                            description: "Disco SAS enterprise para aplicações críticas",
+                            price: 91,
+                            functionality: "Interface SAS com dual-port para alta disponibilidade",
+                            applicability: "Ambientes enterprise críticos, storage arrays, alta disponibilidade",
+                            example: "Storage para sistema crítico com redundância total",
+                            characteristics: ["600GB capacidade", "SAS 12Gb/s", "Dual-port", "Enterprise grade"],
+                            tags: ["storage", "sas", "enterprise", "critical", "high-availability"]
+                          }
+                        ]
+                      },
+                      {
+                        id: "1.1.1.4.1.5",
+                        name: "Controladora RAID",
+                        description: "Controladoras para redundância e performance de storage",
+                        items: [
+                          {
+                            id: "1.1.1.4.1.5.1",
+                            name: "Hardware RAID",
+                            description: "Controladora RAID dedicada com processador próprio",
+                            price: 210,
+                            functionality: "RAID por hardware com cache dedicado e processamento independente",
+                            applicability: "Aplicações críticas, alta performance, redundância enterprise",
+                            example: "Array RAID para database crítico com cache de gravação",
+                            characteristics: ["Cache dedicado", "Processador independente", "BBU support", "Multiple RAID levels"],
+                            tags: ["raid", "hardware", "enterprise", "performance", "redundancy"]
+                          },
+                          {
+                            id: "1.1.1.4.1.5.2",
+                            name: "Software RAID",
+                            description: "RAID implementado via software do sistema operacional",
+                            price: 0,
+                            functionality: "RAID gerenciado pelo SO sem hardware adicional",
+                            applicability: "Ambientes básicos, desenvolvimento, redundância simples",
+                            example: "RAID 1 básico para redundância de dados não críticos",
+                            characteristics: ["Sem custo adicional", "Gerenciado pelo SO", "RAID básico", "Flexibilidade de configuração"],
+                            tags: ["raid", "software", "basic", "free", "flexible"]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    id: "1.1.1.4.2",
+                    name: "Storage Externo",
+                    description: "Soluções de storage externo - Veja categoria STaaS para detalhes completos",
+                    items: [
+                      {
+                        id: "1.1.1.4.2.link",
+                        name: "Ver categoria STaaS (Storage as a Service)",
+                        description: "Acesse a categoria STaaS para todas as opções de storage externo",
+                        functionality: "Link para categoria completa de storage",
+                        applicability: "Todas as necessidades de storage externo escalável",
+                        example: "Storage em bloco, object storage, snapshots, etc.",
+                        characteristics: ["Link para categoria STaaS"],
+                        tags: ["storage", "external", "staas", "link"],
+                        observations: "Consulte a categoria STaaS para opções completas de storage externo"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            id: "1.1.2",
+            name: "Conectividade",
+            description: "Soluções de rede e conectividade - Veja categoria NETWORKING para detalhes completos",
+            items: [
+              {
+                id: "1.1.2.link",
+                name: "Ver categoria NETWORKING",
+                description: "Acesse a categoria NETWORKING para todas as opções de conectividade",
+                functionality: "Link para categoria completa de networking e conectividade",
+                applicability: "Todas as necessidades de conectividade, rede e comunicação",
+                example: "Cross connections, bandwidth, blocos IP, BGP, etc.",
+                characteristics: ["Link para categoria NETWORKING"],
+                tags: ["networking", "connectivity", "link"],
+                observations: "Consulte a categoria NETWORKING para opções completas de conectividade"
+              }
+            ]
+          },
+          {
+            id: "1.1.3",
+            name: "Licenças e Softwares",
+            description: "Licenças de software e sistemas operacionais - Veja categoria LICENÇAS DE SOFTWARE",
+            items: [
+              {
+                id: "1.1.3.link",
+                name: "Ver categoria LICENÇAS DE SOFTWARE",
+                description: "Acesse a categoria LICENÇAS DE SOFTWARE para todas as opções de software",
+                functionality: "Link para categoria completa de licenças e software",
+                applicability: "Todas as necessidades de software, licenças e sistemas operacionais",
+                example: "cPanel, Windows Server, SQL Server, Plesk, etc.",
+                characteristics: ["Link para categoria LICENÇAS DE SOFTWARE"],
+                tags: ["software", "licenses", "operating-system", "link"],
+                observations: "Consulte a categoria LICENÇAS DE SOFTWARE para opções completas de software"
+              }
+            ]
+          },
+          {
+            id: "1.1.4",
+            name: "Segurança",
+            description: "Soluções de segurança - Veja categoria SECURITY para detalhes completos",
+            items: [
+              {
+                id: "1.1.4.link",
+                name: "Ver categoria SECURITY",
+                description: "Acesse a categoria SECURITY para todas as opções de segurança",
+                functionality: "Link para categoria completa de segurança e proteção",
+                applicability: "Todas as necessidades de segurança, proteção e compliance",
+                example: "Firewall, proteção DDoS, SOC, EDR, etc.",
+                characteristics: ["Link para categoria SECURITY"],
+                tags: ["security", "protection", "firewall", "link"],
+                observations: "Consulte a categoria SECURITY para opções completas de segurança"
+              }
+            ]
+          },
+          {
+            id: "1.1.5",
+            name: "Gerenciamento",
+            description: "Serviços gerenciados - Veja categoria MANAGED SERVICES para detalhes completos",
+            items: [
+              {
+                id: "1.1.5.link",
+                name: "Ver categoria MANAGED SERVICES",
+                description: "Acesse a categoria MANAGED SERVICES para todas as opções de gerenciamento",
+                functionality: "Link para categoria completa de serviços gerenciados",
+                applicability: "Todas as necessidades de gerenciamento, suporte e monitoramento",
+                example: "Gerenciamento 24x7, suporte técnico, monitoramento proativo, etc.",
+                characteristics: ["Link para categoria MANAGED SERVICES"],
+                tags: ["managed", "support", "monitoring", "link"],
+                observations: "Consulte a categoria MANAGED SERVICES para opções completas de gerenciamento"
+              }
+            ]
+          },
+          {
+            id: "1.1.6",
+            name: "Data Protection",
+            description: "Proteção de dados - Veja categoria DATA PROTECTION para detalhes completos",
+            items: [
+              {
+                id: "1.1.6.link",
+                name: "Ver categoria DATA PROTECTION",
+                description: "Acesse a categoria DATA PROTECTION para todas as opções de proteção de dados",
+                functionality: "Link para categoria completa de proteção e backup de dados",
+                applicability: "Todas as necessidades de backup, recuperação e proteção de dados",
+                example: "Backup automatizado, DRaaS, replicação, arquivamento, etc.",
+                characteristics: ["Link para categoria DATA PROTECTION"],
+                tags: ["backup", "disaster-recovery", "protection", "link"],
+                observations: "Consulte a categoria DATA PROTECTION para opções completas de proteção de dados"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: "1.2",
+        name: "IaaS (Infrastructure as a Service)",
+        description: "Infraestrutura como serviço com flexibilidade e escalabilidade de nuvem",
+        items: [],
+        subcategories: [
+          {
+            id: "1.2.1",
+            name: "Nuvem Privada",
+            description: "Ambiente de nuvem dedicado exclusivamente para sua organização",
+            items: [
+              {
+                id: "1.2.1.1",
+                name: "Proxmox com HA",
+                description: "Plataforma de virtualização open-source com alta disponibilidade nativa",
+                functionality: "Virtualização completa com clustering, migração live e interface web unificada",
+                applicability: "Empresas que necessitam flexibilidade total e controle absoluto sobre infraestrutura",
+                example: "Datacenter virtualizado para empresa com múltiplas aplicações e departamentos isolados",
+                characteristics: [
+                  "Open source sem vendor lock-in",
+                  "Alta disponibilidade nativa",
+                  "Live migration automática",
+                  "Interface web intuitiva",
+                  "Clustering integrado",
+                  "Backup automático",
+                  "Storage distribuído"
+                ],
+                tags: ["private-cloud", "proxmox", "ha", "virtualization", "open-source"],
+                observations: "Solução ideal para organizações que valorizam controle total e flexibilidade sem dependência de fornecedor",
+                externalLink: "https://www.eveo.com.br/nuvem-privada/"
+              },
+              {
+                id: "1.2.1.2",
+                name: "VMware vSphere",
+                description: "Plataforma enterprise de virtualização líder mundial em recursos corporativos",
+                functionality: "Suite completa de virtualização com recursos enterprise e integração total",
+                applicability: "Ambientes enterprise que exigem máxima confiabilidade e recursos avançados",
+                example: "Datacenter corporativo com workloads mission-critical e compliance rigoroso",
+                characteristics: [
+                  "vMotion para migração sem downtime",
+                  "DRS para balanceamento automático",
+                  "Alta disponibilidade avançada",
+                  "vSAN para storage definido por software",
+                  "vCenter para gerenciamento centralizado",
+                  "Integração com ecossistema VMware",
+                  "Suporte enterprise 24x7"
+                ],
+                tags: ["private-cloud", "vmware", "enterprise", "vsphere", "mission-critical"]
+              },
+              {
+                id: "1.2.1.3",
+                name: "Microsoft Hyper-V",
+                description: "Plataforma de virtualização Microsoft integrada ao ecossistema Windows",
+                functionality: "Virtualização otimizada para ambientes Microsoft com integração nativa",
+                applicability: "Organizações com forte dependência do ecossistema Microsoft",
+                example: "Infraestrutura virtualizada para empresa com Active Directory e aplicações .NET",
+                characteristics: [
+                  "Integração nativa com Windows",
+                  "System Center integration",
+                  "PowerShell automation",
+                  "Azure integration ready",
+                  "Live migration",
+                  "Replica para DR",
+                  "Licensing simplificado"
+                ],
+                tags: ["private-cloud", "microsoft", "hyper-v", "windows", "integration"]
+              }
+            ]
+          },
+          {
+            id: "1.2.2",
+            name: "Nuvem Pública",
+            description: "Serviços de nuvem pública escaláveis com billing flexível",
+            items: [
+              {
+                id: "1.2.2.1",
+                name: "Cloud Server (OnApp)",
+                description: "Servidores virtuais escaláveis automaticamente com billing por uso real",
+                functionality: "VMs sob demanda com escalabilidade automática horizontal e vertical",
+                applicability: "Aplicações web modernas, desenvolvimento ágil, ambientes com demanda variável",
+                example: "API REST que escala automaticamente conforme tráfego ou ambiente de desenvolvimento dinâmico",
+                characteristics: [
+                  "Escalabilidade automática",
+                  "Billing por hora de uso",
+                  "API REST completa",
+                  "Templates pré-configurados",
+                  "Monitoramento integrado",
+                  "Load balancing automático",
+                  "Storage persistente"
+                ],
+                tags: ["cloud-server", "scalable", "onapp", "public-cloud", "api"],
+                externalLink: "https://www.hostdime.com.br/produtos/cloud-server/"
+              },
+              {
+                id: "1.2.2.2",
+                name: "Data Center Virtual (DCV)",
+                description: "Datacenter completo virtualizado com recursos dedicados e isolamento total",
+                functionality: "Ambiente isolado e dedicado na nuvem pública com recursos garantidos",
+                applicability: "Empresas que necessitam ambiente isolado na nuvem com performance dedicada",
+                example: "Filial virtualizada com conectividade segura para matriz ou ambiente isolado para cliente específico",
+                characteristics: [
+                  "Recursos dedicados garantidos",
+                  "Ambiente completamente isolado",
+                  "Conectividade dedicada opcional",
+                  "Storage dedicado",
+                  "Rede privada isolada",
+                  "Firewall dedicado",
+                  "Backup dedicado"
+                ],
+                tags: ["dcv", "virtual-datacenter", "isolated", "dedicated", "private-network"]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: "1.3",
+        name: "DBaaS (Database as a Service)",
+        description: "Banco de dados como serviço com gerenciamento automatizado e otimização contínua",
+        items: [],
+        subcategories: [
+          {
+            id: "1.3.1",
+            name: "Essencial",
+            description: "Plano básico ideal para desenvolvimento, testes e aplicações pequenas",
+            items: [
+              {
+                id: "1.3.1.1",
+                name: "DBaaS Essencial (1 CORE / 8GB RAM / 100GB STG)",
+                description: "Database básico gerenciado para desenvolvimento e aplicações pequenas",
+                functionality: "Database totalmente gerenciado com backup automático e monitoramento básico",
+                applicability: "Desenvolvimento, testes, aplicações pequenas, protótipos, sites pessoais",
+                example: "Database para blog WordPress, aplicação de portfólio ou ambiente de desenvolvimento",
+                characteristics: [
+                  "1 vCORE dedicado",
+                  "8GB RAM garantida",
+                  "100GB Storage SSD",
+                  "Backup automático diário",
+                  "Monitoramento básico",
+                  "SSL incluído",
+                  "Restore point-in-time"
+                ],
+                tags: ["dbaas", "essencial", "development", "small", "basic"],
+                observations: "Ideal para começar projetos com possibilidade de upgrade conforme crescimento",
+                externalLink: "https://www.hostdime.com.br/dbaas-40-de-economia-e-como-usar/"
+              }
+            ]
+          },
+          {
+            id: "1.3.2",
+            name: "Standard",
+            description: "Plano intermediário para aplicações de médio porte com boa performance",
+            items: [
+              {
+                id: "1.3.2.1",
+                name: "DBaaS Standard (2 CORE / 8GB RAM / 200GB STG)",
+                description: "Database gerenciado para aplicações de médio porte com performance balanceada",
+                functionality: "Database otimizado com recursos balanceados para aplicações empresariais médias",
+                applicability: "Aplicações web médias, e-commerce pequeno a médio, sistemas internos",
+                example: "Database para loja virtual com catálogo médio ou sistema de CRM empresarial",
+                characteristics: [
+                  "2 vCORE dedicados",
+                  "8GB RAM garantida",
+                  "200GB Storage SSD",
+                  "Backup automático 2x/dia",
+                  "Monitoramento avançado",
+                  "SSL certificado",
+                  "Replication read-only"
+                ],
+                tags: ["dbaas", "standard", "medium", "ecommerce", "business"]
+              }
+            ]
+          },
+          {
+            id: "1.3.3",
+            name: "Performance",
+            description: "Plano de alta performance para aplicações críticas e analytics",
+            items: [
+              {
+                id: "1.3.3.1",
+                name: "DBaaS Performance 1 (4 CORE / 8GB RAM / 300GB STG)",
+                description: "Database de alta performance para aplicações críticas e workloads intensivos",
+                functionality: "Database otimizado para alta performance com SSD NVMe e cache inteligente",
+                applicability: "Aplicações críticas, analytics em tempo real, relatórios complexos, ERPs",
+                example: "Database para sistema ERP empresarial ou plataforma de analytics em tempo real",
+                characteristics: [
+                  "4 vCORE de alta performance",
+                  "8GB RAM otimizada",
+                  "300GB Storage NVMe",
+                  "Backup contínuo",
+                  "Monitoramento em tempo real",
+                  "Query optimization",
+                  "Connection pooling"
+                ],
+                tags: ["dbaas", "performance", "critical", "analytics", "nvme"]
+              },
+              {
+                id: "1.3.3.2",
+                name: "DBaaS Performance 2 (6 CORE / 8GB RAM / 300GB STG)",
+                description: "Database de performance superior para cargas de trabalho mais intensivas",
+                functionality: "Recursos expandidos para workloads com maior paralelização",
+                applicability: "Aplicações com alta concorrência, sistemas multi-tenant, analytics avançado",
+                example: "Plataforma SaaS com múltiplos clientes ou sistema de business intelligence",
+                characteristics: [
+                  "6 vCORE de alta performance",
+                  "8GB RAM otimizada",
+                  "300GB Storage NVMe",
+                  "Backup incremental contínuo",
+                  "Performance insights",
+                  "Advanced monitoring",
+                  "Automatic failover"
+                ],
+                tags: ["dbaas", "performance-plus", "concurrent", "saas", "bi"]
+              }
+            ]
+          },
+          {
+            id: "1.3.4",
+            name: "Enterprise",
+            description: "Plano enterprise para máxima performance, recursos e disponibilidade",
+            items: [
+              {
+                id: "1.3.4.1",
+                name: "DBaaS Enterprise 1 (8 CORE / 8GB RAM / 300GB STG)",
+                description: "Database enterprise com recursos dedicados para aplicações críticas",
+                functionality: "Database de nível enterprise com todos os recursos de alta disponibilidade",
+                applicability: "Aplicações enterprise críticas, sistemas financeiros, compliance rigoroso",
+                example: "Sistema bancário, ERP enterprise ou aplicação com compliance PCI-DSS",
+                characteristics: [
+                  "8 vCORE enterprise",
+                  "8GB RAM ECC",
+                  "300GB Storage enterprise",
+                  "High Availability (HA)",
+                  "Disaster Recovery automático",
+                  "Encryption at rest",
+                  "24x7 Enterprise Support"
+                ],
+                tags: ["dbaas", "enterprise", "ha", "critical", "compliance"]
+              },
+              {
+                id: "1.3.4.2",
+                name: "DBaaS Enterprise + (16 CORE / 16GB RAM / 600GB STG)",
+                description: "Database enterprise de máxima capacidade para cargas extremas",
+                functionality: "Configuração máxima com todos os recursos enterprise e performance extrema",
+                applicability: "Sistemas mission-critical, big data, analytics massivos, aplicações tier-1",
+                example: "Core banking system, data warehouse enterprise ou sistema de trading",
+                characteristics: [
+                  "16 vCORE enterprise",
+                  "16GB RAM ECC registered",
+                  "600GB Storage enterprise NVMe",
+                  "Multi-AZ High Availability",
+                  "Automated disaster recovery",
+                  "Advanced encryption",
+                  "Dedicated support engineer"
+                ],
+                tags: ["dbaas", "enterprise-plus", "maximum", "mission-critical", "tier-1"]
+              }
+            ]
+          },
+          {
+            id: "1.3.5",
+            name: "DBaaS Addons",
+            description: "Recursos adicionais para expandir capacidades do DBaaS",
+            items: [
+              {
+                id: "1.3.5.1",
+                name: "Armazenamento Extra (50 GB)",
+                description: "Storage adicional para expandir capacidade do database",
+                functionality: "Expansão de storage sem downtime com performance mantida",
+                applicability: "Quando o database precisa de mais espaço para dados",
+                example: "Expansão para acomodar crescimento de dados históricos",
+                characteristics: ["50GB storage adicional", "SSD performance", "Expansão online"],
+                tags: ["dbaas", "addon", "storage", "expansion"]
+              },
+              {
+                id: "1.3.5.2", 
+                name: "Memória RAM Adicional (1 GB)",
+                description: "RAM extra para melhorar performance de cache",
+                functionality: "Mais memória para cache e queries complexas",
+                applicability: "Otimização de performance para queries pesadas",
+                example: "Melhoria de performance para relatórios complexos",
+                characteristics: ["1GB RAM adicional", "Cache expansion", "Performance boost"],
+                tags: ["dbaas", "addon", "memory", "performance"]
+              },
+              {
+                id: "1.3.5.3",
+                name: "vCORE Adicional (1 vCORE)",
+                description: "Processamento extra para workloads mais intensivos",
+                functionality: "CPU adicional para paralelização de queries",
+                applicability: "Workloads com maior demanda de processamento",
+                example: "Otimização para analytics ou indexação pesada",
+                characteristics: ["1 vCORE adicional", "Parallel processing", "Workload optimization"],
+                tags: ["dbaas", "addon", "cpu", "processing"]
+              },
+              {
+                id: "1.3.5.4",
+                name: "Retenção de Backup Estendida (30D)",
+                description: "Extensão do período de retenção de backups",
+                functionality: "Backup com retenção estendida para compliance",
+                applicability: "Requisitos de compliance e auditoria",
+                example: "Conformidade com políticas de retenção corporativas",
+                characteristics: ["30 dias retenção", "Compliance ready", "Point-in-time recovery"],
+                tags: ["dbaas", "addon", "backup", "compliance"]
+              }
+            ]
           }
         ]
       }

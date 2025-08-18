@@ -17,6 +17,7 @@ export interface SubCategory {
   name: string;
   description: string;
   items: CatalogItem[];
+  subcategories?: SubCategory[];
 }
 
 export interface Category {
