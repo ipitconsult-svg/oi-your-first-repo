@@ -70,37 +70,52 @@ export const CatalogView = ({ searchValue }: CatalogViewProps) => {
 
         <Accordion type="single" collapsible className="space-y-4">
           {category.subcategories.map((subcategory) => {
-            const renderSubcategoryContent = (subcat: any) => {
+            const renderSubcategoryContent = (subcat: any, level: number = 0) => {
               const filteredItems = filterItems(subcat.items);
               
               return (
-                <div className="space-y-6">
-                  {/* Render items if they exist */}
+                <div className="space-y-4">
+                  {/* Render items if they exist - use compact cards for better space usage */}
                   {filteredItems.length > 0 && (
-                    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-                      {filteredItems.map((item) => (
-                        <ItemCard key={item.id} item={item} showPrice={showPrices} />
-                      ))}
+                    <div className="space-y-3">
+                      <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
+                        {filteredItems.map((item) => (
+                          <ItemCard key={item.id} item={item} showPrice={showPrices} />
+                        ))}
+                      </div>
                     </div>
                   )}
                   
-                  {/* Render nested subcategories if they exist */}
+                  {/* Render nested subcategories with accordion for space efficiency */}
                   {subcat.subcategories && subcat.subcategories.length > 0 && (
-                    <Accordion type="single" collapsible className="space-y-3">
+                    <Accordion type="single" collapsible className="space-y-2">
                       {subcat.subcategories.map((nestedSubcat: any) => {
                         const nestedFilteredItems = filterItems(nestedSubcat.items);
-                        if (searchValue && nestedFilteredItems.length === 0 && (!nestedSubcat.subcategories || nestedSubcat.subcategories.length === 0)) return null;
+                        const hasContent = nestedFilteredItems.length > 0 || (nestedSubcat.subcategories && nestedSubcat.subcategories.length > 0);
+                        
+                        if (searchValue && !hasContent) return null;
 
                         return (
-                          <AccordionItem key={nestedSubcat.id} value={nestedSubcat.id}>
-                            <AccordionTrigger className="text-left hover:no-underline pl-4">
-                              <div>
-                                <h4 className="text-base font-medium">{nestedSubcat.name}</h4>
-                                <p className="text-sm text-muted-foreground">{nestedSubcat.description}</p>
+                          <AccordionItem key={nestedSubcat.id} value={nestedSubcat.id} className="border rounded-lg">
+                            <AccordionTrigger className="text-left hover:no-underline px-4 py-3">
+                              <div className="text-left">
+                                <h4 className={`font-medium ${level > 0 ? 'text-sm' : 'text-base'}`}>
+                                  {nestedSubcat.name}
+                                  {nestedFilteredItems.length > 0 && (
+                                    <span className="ml-2 text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">
+                                      {nestedFilteredItems.length} itens
+                                    </span>
+                                  )}
+                                </h4>
+                                {nestedSubcat.description && (
+                                  <p className="text-xs text-muted-foreground mt-1 line-clamp-2">
+                                    {nestedSubcat.description}
+                                  </p>
+                                )}
                               </div>
                             </AccordionTrigger>
-                            <AccordionContent className="pl-4">
-                              {renderSubcategoryContent(nestedSubcat)}
+                            <AccordionContent className="px-4 pb-3">
+                              {renderSubcategoryContent(nestedSubcat, level + 1)}
                             </AccordionContent>
                           </AccordionItem>
                         );
@@ -113,19 +128,31 @@ export const CatalogView = ({ searchValue }: CatalogViewProps) => {
 
             const filteredItems = filterItems(subcategory.items);
             const hasNestedSubcategories = subcategory.subcategories && subcategory.subcategories.length > 0;
+            const hasContent = filteredItems.length > 0 || hasNestedSubcategories;
             
-            if (searchValue && filteredItems.length === 0 && !hasNestedSubcategories) return null;
+            if (searchValue && !hasContent) return null;
 
             return (
-              <AccordionItem key={subcategory.id} value={subcategory.id}>
-                <AccordionTrigger className="text-left hover:no-underline">
-                  <div>
-                    <h3 className="text-lg font-semibold">{subcategory.name}</h3>
-                    <p className="text-sm text-muted-foreground">{subcategory.description}</p>
+              <AccordionItem key={subcategory.id} value={subcategory.id} className="border rounded-lg">
+                <AccordionTrigger className="text-left hover:no-underline px-6 py-4">
+                  <div className="text-left">
+                    <h3 className="text-lg font-semibold">
+                      {subcategory.name}
+                      {filteredItems.length > 0 && (
+                        <span className="ml-3 text-sm bg-primary/10 text-primary px-3 py-1 rounded-full">
+                          {filteredItems.length} itens
+                        </span>
+                      )}
+                    </h3>
+                    {subcategory.description && (
+                      <p className="text-sm text-muted-foreground mt-1 line-clamp-2">
+                        {subcategory.description}
+                      </p>
+                    )}
                   </div>
                 </AccordionTrigger>
-                <AccordionContent>
-                  <div className="pt-4">
+                <AccordionContent className="px-6 pb-4">
+                  <div className="pt-2">
                     {renderSubcategoryContent(subcategory)}
                   </div>
                 </AccordionContent>
