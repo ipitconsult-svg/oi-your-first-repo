@@ -1996,5 +1996,393 @@ export const categories: Category[] = [
         ]
       }
     ]
+  },
+  {
+    id: "8",
+    name: "LICENÇAS DE SOFTWARE",
+    description: "Licenças de software para infraestrutura e produtividade 📋",
+    subcategories: [
+      {
+        id: "8.1",
+        name: "cPanel, Plesk, Imunify360",
+        description: "Painéis de controle e soluções de segurança para hosting",
+        items: [
+          {
+            id: "8.1.1",
+            name: "cPanel Solo",
+            description: "Licença cPanel para um único servidor com até 1 conta",
+            functionality: "Painel de controle web completo para gerenciamento de hosting e email",
+            applicability: "Servidores dedicados, VPS, desenvolvimento de sites",
+            example: "Gerenciamento de domínios, emails, bancos de dados MySQL, backups",
+            price: 45,
+            characteristics: [
+              "1 conta cPanel",
+              "WHM (WebHost Manager)",
+              "Softaculous incluído",
+              "SSL AutoSSL",
+              "Backup automático",
+              "Interface web intuitiva",
+              "Suporte a PHP/MySQL"
+            ],
+            tags: ["cpanel", "hosting", "painel", "solo", "web"],
+            observations: "Licença mensal - ideal para projetos pequenos"
+          },
+          {
+            id: "8.1.2",
+            name: "cPanel Admin",
+            description: "Licença cPanel para até 5 contas em servidor dedicado",
+            functionality: "Solução completa de hosting com múltiplas contas e recursos avançados",
+            applicability: "Pequenos provedores de hosting, agências web, revendas",
+            example: "Hospedagem de múltiplos sites, revenda de hosting, gestão centralizada",
+            price: 62,
+            characteristics: [
+              "Até 5 contas cPanel",
+              "WHM completo",
+              "Softaculous Premium",
+              "SSL ilimitado",
+              "Backup avançado",
+              "API completa",
+              "Branded interface"
+            ],
+            tags: ["cpanel", "admin", "multiplo", "revenda", "premium"],
+            observations: "Licença mensal para servidores dedicados"
+          },
+          {
+            id: "8.1.3",
+            name: "cPanel Pro",
+            description: "Licença cPanel para até 30 contas com recursos profissionais",
+            functionality: "Solução profissional para provedores de hosting com recursos enterprise",
+            applicability: "Provedores de hosting médios, empresas com múltiplos projetos",
+            example: "Hosting empresarial, múltiplos domínios corporativos, ambientes de produção",
+            price: 89,
+            characteristics: [
+              "Até 30 contas cPanel",
+              "WHM Enterprise",
+              "Softaculous Premium",
+              "CloudLinux compatível",
+              "Backup enterprise",
+              "API avançada",
+              "White label completo"
+            ],
+            tags: ["cpanel", "pro", "enterprise", "hosting", "profissional"],
+            observations: "Licença mensal ideal para uso corporativo"
+          },
+          {
+            id: "8.1.4",
+            name: "Plesk Web Admin",
+            description: "Licença Plesk para até 10 domínios em servidor único",
+            functionality: "Painel de controle moderno para gerenciamento de websites e aplicações",
+            applicability: "Desenvolvimento web, pequenos projetos, agências digitais",
+            example: "Sites WordPress, aplicações PHP, emails corporativos",
+            price: 38,
+            characteristics: [
+              "Até 10 domínios",
+              "WordPress Toolkit",
+              "SSL Let's Encrypt",
+              "Git integration",
+              "Docker support",
+              "Node.js ready",
+              "Interface moderna"
+            ],
+            tags: ["plesk", "web-admin", "wordpress", "moderno", "docker"],
+            observations: "Licença mensal com toolkit WordPress incluído"
+          },
+          {
+            id: "8.1.5",
+            name: "Plesk Web Pro",
+            description: "Licença Plesk para até 30 domínios com recursos profissionais",
+            functionality: "Solução completa para desenvolvimento e hosting profissional",
+            applicability: "Agências web, desenvolvedores profissionais, projetos corporativos",
+            example: "Múltiplos sites corporativos, aplicações web, e-commerce",
+            price: 58,
+            characteristics: [
+              "Até 30 domínios",
+              "WordPress Toolkit Pro",
+              "SSL Premium",
+              "Git deployment",
+              "Docker complete",
+              "Performance monitoring",
+              "Advanced security"
+            ],
+            tags: ["plesk", "web-pro", "profissional", "performance", "security"],
+            observations: "Licença mensal com recursos avançados de desenvolvimento"
+          },
+          {
+            id: "8.1.6",
+            name: "Imunify360",
+            description: "Solução completa de segurança para servidores web",
+            functionality: "Proteção avançada contra malware, ataques e vulnerabilidades",
+            applicability: "Servidores de hosting, sites WordPress, e-commerce, aplicações críticas",
+            example: "Proteção em tempo real, firewall inteligente, limpeza de malware",
+            price: 28,
+            characteristics: [
+              "Firewall WAF inteligente",
+              "Scanner de malware",
+              "Proteção em tempo real",
+              "Limpeza automática",
+              "Reputation management",
+              "Patch management",
+              "Dashboard centralizado"
+            ],
+            tags: ["imunify", "security", "malware", "firewall", "protecao"],
+            observations: "Licença mensal por servidor - essencial para segurança web"
+          }
+        ]
+      },
+      {
+        id: "8.2",
+        name: "Microsoft",
+        description: "Licenças Microsoft para servidores e produtividade",
+        items: [
+          {
+            id: "8.2.1",
+            name: "Windows Server 2022 Standard",
+            description: "Sistema operacional Windows Server 2022 Standard Edition",
+            functionality: "Sistema operacional robusto para servidores empresariais",
+            applicability: "Servidores corporativos, aplicações .NET, Active Directory",
+            example: "Controlador de domínio, servidor de arquivos, aplicações corporativas",
+            price: 185,
+            characteristics: [
+              "Até 2 VMs OSE",
+              "Hyper-V incluído",
+              "Active Directory",
+              "Windows Admin Center",
+              "Storage Spaces Direct",
+              "Shielded VMs",
+              "Container support"
+            ],
+            tags: ["windows", "server", "2022", "standard", "microsoft"],
+            observations: "Licença perpétua - 2 core pack mínimo"
+          },
+          {
+            id: "8.2.2",
+            name: "Windows Server 2022 Datacenter",
+            description: "Windows Server 2022 Datacenter Edition com virtualização ilimitada",
+            functionality: "Solução enterprise com virtualização ilimitada e recursos avançados",
+            applicability: "Grandes infraestruturas, virtualização intensa, cloud privado",
+            example: "Datacenter virtualizado, cloud híbrido, múltiplas VMs",
+            price: 895,
+            characteristics: [
+              "VMs OSE ilimitadas",
+              "Hyper-V avançado",
+              "Software Defined Networking",
+              "Storage Replica",
+              "Shielded VMs",
+              "Nano Server",
+              "Windows containers"
+            ],
+            tags: ["windows", "server", "datacenter", "virtualizacao", "enterprise"],
+            observations: "Licença perpétua por processador - ideal para virtualização"
+          },
+          {
+            id: "8.2.3",
+            name: "SQL Server 2022 Standard",
+            description: "Banco de dados Microsoft SQL Server 2022 Standard",
+            functionality: "Sistema de gerenciamento de banco de dados relacional completo",
+            applicability: "Aplicações corporativas, ERP, CRM, business intelligence",
+            example: "Sistema ERP, aplicações web, data warehouse pequeno/médio",
+            price: 468,
+            characteristics: [
+              "Até 128GB RAM",
+              "24 cores máximo",
+              "Always On Basic",
+              "Backup encryption",
+              "Transparent Data Encryption",
+              "Integration Services",
+              "Reporting Services"
+            ],
+            tags: ["sql", "server", "2022", "standard", "database"],
+            observations: "Licença perpétua por core - 4 core pack mínimo"
+          },
+          {
+            id: "8.2.4",
+            name: "SQL Server 2022 Enterprise",
+            description: "SQL Server 2022 Enterprise com recursos avançados",
+            functionality: "Solução completa para aplicações mission-critical e big data",
+            applicability: "Aplicações críticas, big data, data warehouse enterprise",
+            example: "Data warehouse enterprise, análise avançada, aplicações críticas",
+            price: 1840,
+            characteristics: [
+              "RAM ilimitada",
+              "Cores ilimitados",
+              "Always On Advanced",
+              "Advanced Analytics",
+              "In-Memory OLTP",
+              "Columnstore indexes",
+              "Stretch Database"
+            ],
+            tags: ["sql", "server", "enterprise", "unlimited", "critical"],
+            observations: "Licença perpétua por core - para aplicações críticas"
+          },
+          {
+            id: "8.2.5",
+            name: "Remote Desktop Services CAL",
+            description: "Client Access License para Remote Desktop Services",
+            functionality: "Licença de acesso para usuários conectarem via Remote Desktop",
+            applicability: "Trabalho remoto, terminal server, aplicações centralizadas",
+            example: "Acesso remoto a aplicações, desktop virtualizado, trabalho híbrido",
+            price: 32,
+            characteristics: [
+              "Acesso RDS por usuário",
+              "Session sharing",
+              "RemoteApp suporte",
+              "Gateway integration",
+              "Web access",
+              "Load balancing",
+              "High availability"
+            ],
+            tags: ["rds", "cal", "remote", "desktop", "acesso"],
+            observations: "Licença por usuário - necessária para cada usuário RDS"
+          },
+          {
+            id: "8.2.6",
+            name: "Windows Server CAL",
+            description: "Client Access License para Windows Server",
+            functionality: "Licença de acesso para usuários/dispositivos acessarem Windows Server",
+            applicability: "Redes corporativas, Active Directory, file sharing",
+            example: "Acesso a shares, autenticação AD, print services",
+            price: 28,
+            characteristics: [
+              "Acesso ao servidor",
+              "Active Directory",
+              "File services",
+              "Print services",
+              "DHCP/DNS",
+              "Certificate services",
+              "Web services básico"
+            ],
+            tags: ["windows", "cal", "server", "acesso", "corporativo"],
+            observations: "Licença por usuário ou dispositivo - essencial para acesso ao servidor"
+          }
+        ]
+      },
+      {
+        id: "8.3",
+        name: "CloudLinux, LiteSpeed e Outros",
+        description: "Soluções especializadas para otimização e performance",
+        items: [
+          {
+            id: "8.3.1",
+            name: "CloudLinux OS",
+            description: "Sistema operacional otimizado para provedores de hosting compartilhado",
+            functionality: "OS Linux com isolamento de recursos e estabilidade aprimorada",
+            applicability: "Hosting compartilhado, reseller hosting, múltiplos tenants",
+            example: "Servidor de hosting com múltiplos clientes, isolamento de recursos",
+            price: 24,
+            characteristics: [
+              "LVE (resource limits)",
+              "CageFS security",
+              "SecureLinks protection",
+              "PHP Selector",
+              "Python Selector",
+              "Node.js Selector",
+              "MySQL Governor"
+            ],
+            tags: ["cloudlinux", "hosting", "isolamento", "estabilidade", "compartilhado"],
+            observations: "Licença mensal por servidor - ideal para hosting compartilhado"
+          },
+          {
+            id: "8.3.2",
+            name: "LiteSpeed Web Server",
+            description: "Servidor web de alta performance compatível com Apache",
+            functionality: "Servidor web otimizado para alta performance e baixo consumo de recursos",
+            applicability: "Sites de alto tráfego, WordPress, e-commerce, aplicações web",
+            example: "Site WordPress com milhares de visitantes, loja virtual",
+            price: 38,
+            characteristics: [
+              "Drop-in Apache replacement",
+              "HTTP/3 support",
+              "Built-in cache",
+              "WordPress optimization",
+              "SSL/TLS optimization",
+              "QUIC protocol",
+              "Advanced security"
+            ],
+            tags: ["litespeed", "webserver", "performance", "wordpress", "cache"],
+            observations: "Licença mensal por servidor - até 50% mais rápido que Apache"
+          },
+          {
+            id: "8.3.3",
+            name: "LiteSpeed Enterprise",
+            description: "LiteSpeed Web Server Enterprise com recursos avançados",
+            functionality: "Versão enterprise com recursos avançados para alta demanda",
+            applicability: "Sites enterprise, alta disponibilidade, aplicações críticas",
+            example: "Portal corporativo, aplicação com milhões de usuários",
+            price: 89,
+            characteristics: [
+              "Unlimited domains",
+              "Load balancing",
+              "Advanced cache",
+              "Edge Side Includes",
+              "Web ADC features",
+              "Priority support",
+              "Advanced monitoring"
+            ],
+            tags: ["litespeed", "enterprise", "unlimited", "balancing", "advanced"],
+            observations: "Licença mensal - para aplicações de alta demanda"
+          },
+          {
+            id: "8.3.4",
+            name: "JetBackup",
+            description: "Solução profissional de backup para cPanel e DirectAdmin",
+            functionality: "Sistema de backup completo com interface gráfica e automação",
+            applicability: "Servidores de hosting, backup corporativo, disaster recovery",
+            example: "Backup automático de sites, restauração point-in-time",
+            price: 18,
+            characteristics: [
+              "Interface gráfica",
+              "Backup incremental",
+              "Multiple destinations",
+              "Point-in-time restore",
+              "Email notifications",
+              "API integration",
+              "Cloud storage support"
+            ],
+            tags: ["jetbackup", "backup", "cpanel", "restore", "automatico"],
+            observations: "Licença mensal por servidor - backup profissional essencial"
+          },
+          {
+            id: "8.3.5",
+            name: "Softaculous",
+            description: "Auto-installer com 400+ scripts de aplicações web",
+            functionality: "Instalador automático de aplicações web com um clique",
+            applicability: "Hosting providers, instalação fácil de CMS, desenvolvimento rápido",
+            example: "Instalação WordPress, Joomla, Drupal, PrestaShop em um clique",
+            price: 12,
+            characteristics: [
+              "400+ applications",
+              "One-click install",
+              "Auto-updates",
+              "Staging area",
+              "Backup before update",
+              "AMPPS integration",
+              "Custom themes"
+            ],
+            tags: ["softaculous", "installer", "wordpress", "cms", "aplicacoes"],
+            observations: "Licença mensal por servidor - essencial para hosting providers"
+          },
+          {
+            id: "8.3.6",
+            name: "ConfigServer Firewall (CSF)",
+            description: "Firewall e sistema de detecção de intrusão para servidores Linux",
+            functionality: "Proteção avançada contra ataques e monitoramento de segurança",
+            applicability: "Servidores Linux, VPS, dedicados, proteção contra ataques",
+            example: "Proteção contra brute force, DDoS, port scanning",
+            price: 8,
+            characteristics: [
+              "Stateful packet inspection",
+              "Login failure daemon",
+              "Process tracking",
+              "Directory watching",
+              "Distributed attacks protection",
+              "Email alerts",
+              "Web interface"
+            ],
+            tags: ["csf", "firewall", "security", "intrusion", "protection"],
+            observations: "Licença mensal por servidor - segurança essencial para Linux"
+          }
+        ]
+      }
+    ]
   }
 ];
