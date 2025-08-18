@@ -219,26 +219,58 @@ export const CatalogView = ({
     <div className="space-y-16">
       {/* Hero Section */}
       {!searchValue && (
-        <section className="relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-hero opacity-90"></div>
-          <div className="relative z-10 text-center py-16 px-4">
-            <div className="max-w-4xl mx-auto">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
-                Infraestrutura de <span className="text-primary-subtle">Classe Mundial</span>
-              </h1>
-              <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto animate-fade-in">
-                Soluções completas de hosting e data center com tecnologia de ponta, 
-                suporte 24/7 e infraestrutura robusta para o seu negócio crescer.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-scale-in">
-                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg px-6 py-3">
-                  <span className="text-white font-semibold">99.9% Uptime</span>
-                </div>
-                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg px-6 py-3">
-                  <span className="text-white font-semibold">Suporte 24/7</span>
-                </div>
-                <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg px-6 py-3">
-                  <span className="text-white font-semibold">Múltiplas Localizações</span>
+        <section className="relative overflow-hidden -mx-4 px-4">
+          <div className="absolute inset-0 bg-gradient-hero"></div>
+          
+          {/* Animated background elements */}
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute top-20 left-10 w-4 h-4 bg-white/20 rounded-full animate-float"></div>
+            <div className="absolute top-40 right-20 w-2 h-2 bg-white/30 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
+            <div className="absolute bottom-20 left-1/3 w-3 h-3 bg-white/15 rounded-full animate-float" style={{animationDelay: '2s'}}></div>
+            <div className="absolute top-1/2 right-10 w-1 h-1 bg-white/40 rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
+          </div>
+          
+          <div className="relative z-10 text-center py-20 px-4">
+            <div className="max-w-5xl mx-auto">
+              <div className="animate-slide-up">
+                <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 tracking-tight">
+                  Infraestrutura de{" "}
+                  <span className="relative">
+                    <span className="bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">
+                      Classe Mundial
+                    </span>
+                    <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-white/0 via-white/60 to-white/0 rounded-full"></div>
+                  </span>
+                </h1>
+              </div>
+              
+              <div className="animate-slide-up" style={{animationDelay: '0.2s'}}>
+                <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-4xl mx-auto leading-relaxed font-light">
+                  Soluções completas de hosting e data center com tecnologia de ponta,{" "}
+                  <span className="font-medium">suporte 24/7</span> e infraestrutura robusta para o seu negócio crescer.
+                </p>
+              </div>
+              
+              <div className="animate-scale-in" style={{animationDelay: '0.4s'}}>
+                <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                  <div className="group bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl px-8 py-4 hover:bg-white/20 transition-all duration-300 hover:scale-105">
+                    <div className="flex items-center gap-3">
+                      <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+                      <span className="text-white font-semibold text-lg">99.9% Uptime</span>
+                    </div>
+                  </div>
+                  <div className="group bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl px-8 py-4 hover:bg-white/20 transition-all duration-300 hover:scale-105">
+                    <div className="flex items-center gap-3">
+                      <div className="w-3 h-3 bg-blue-400 rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
+                      <span className="text-white font-semibold text-lg">Suporte 24/7</span>
+                    </div>
+                  </div>
+                  <div className="group bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl px-8 py-4 hover:bg-white/20 transition-all duration-300 hover:scale-105">
+                    <div className="flex items-center gap-3">
+                      <div className="w-3 h-3 bg-orange-400 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
+                      <span className="text-white font-semibold text-lg">Global</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -248,64 +280,75 @@ export const CatalogView = ({
 
       {/* Quick Stats - Enhanced */}
       {!searchValue && (
-        <section className="relative">
+        <section className="relative -mt-12 z-20">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            <div className="group bg-gradient-card border rounded-xl p-6 text-center hover:shadow-elegant transition-all duration-300 hover:-translate-y-1">
-              <div className="text-3xl font-bold text-primary mb-2 group-hover:scale-110 transition-transform">
-                {filteredDataCenters.length}
+            {[
+              { value: filteredDataCenters.length, label: "Data Centers", delay: "0ms" },
+              { value: filteredCategories.length, label: "Categorias", delay: "100ms" },
+              { value: "50+", label: "Serviços", delay: "200ms" },
+              { value: "24/7", label: "Suporte", delay: "300ms" }
+            ].map((stat, index) => (
+              <div 
+                key={stat.label}
+                className="group bg-white/95 backdrop-blur-lg border border-white/20 rounded-2xl p-6 text-center hover:shadow-float transition-all duration-500 hover:-translate-y-2 hover:scale-105 animate-slide-up"
+                style={{ animationDelay: stat.delay }}
+              >
+                <div className="relative">
+                  <div className="text-3xl md:text-4xl font-bold text-primary mb-3 group-hover:scale-110 transition-transform duration-300">
+                    {stat.value}
+                  </div>
+                  <div className="text-sm font-medium text-muted-foreground uppercase tracking-wide">
+                    {stat.label}
+                  </div>
+                  
+                  {/* Floating animation elements */}
+                  <div className="absolute -top-2 -right-2 w-2 h-2 bg-primary/30 rounded-full animate-float opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                  <div className="absolute -bottom-1 -left-1 w-1 h-1 bg-primary/40 rounded-full animate-pulse opacity-0 group-hover:opacity-100 transition-opacity" style={{animationDelay: '0.5s'}}></div>
+                </div>
               </div>
-              <div className="text-sm text-muted-foreground font-medium">Data Centers</div>
-            </div>
-            <div className="group bg-gradient-card border rounded-xl p-6 text-center hover:shadow-elegant transition-all duration-300 hover:-translate-y-1">
-              <div className="text-3xl font-bold text-primary mb-2 group-hover:scale-110 transition-transform">
-                {filteredCategories.length}
-              </div>
-              <div className="text-sm text-muted-foreground font-medium">Categorias</div>
-            </div>
-            <div className="group bg-gradient-card border rounded-xl p-6 text-center hover:shadow-elegant transition-all duration-300 hover:-translate-y-1">
-              <div className="text-3xl font-bold text-primary mb-2 group-hover:scale-110 transition-transform">
-                50+
-              </div>
-              <div className="text-sm text-muted-foreground font-medium">Serviços</div>
-            </div>
-            <div className="group bg-gradient-card border rounded-xl p-6 text-center hover:shadow-elegant transition-all duration-300 hover:-translate-y-1">
-              <div className="text-3xl font-bold text-primary mb-2 group-hover:scale-110 transition-transform">
-                24/7
-              </div>
-              <div className="text-sm text-muted-foreground font-medium">Suporte</div>
-            </div>
+            ))}
           </div>
         </section>
       )}
 
       {/* Data Centers Section - More Prominent */}
       {!searchValue && (
-        <section className="relative">
+        <section className="relative py-8">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-3 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
-                <Building2 className="h-4 w-4" />
-                Infraestrutura Global
+            <div className="text-center mb-16 animate-slide-up">
+              <div className="inline-flex items-center gap-3 bg-primary/10 text-primary px-6 py-3 rounded-full text-sm font-medium mb-6 hover:bg-primary/20 transition-colors">
+                <Building2 className="h-5 w-5 animate-float" />
+                <span className="font-semibold">Infraestrutura Global</span>
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Nossos Data Centers</h2>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                Infraestrutura de ponta em localidades estratégicas ao redor do mundo, 
-                garantindo baixa latência e alta disponibilidade para seus projetos.
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
+                Nossos Data Centers
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                Infraestrutura de ponta em localidades estratégicas ao redor do mundo,{" "}
+                <span className="font-medium text-foreground">garantindo baixa latência</span> e{" "}
+                <span className="font-medium text-foreground">alta disponibilidade</span> para seus projetos.
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-              {filteredDataCenters.map(dc => (
-                <div key={dc.id} className="group animate-fade-in">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+              {filteredDataCenters.map((dc, index) => (
+                <div 
+                  key={dc.id} 
+                  className="animate-slide-up"
+                  style={{ animationDelay: `${index * 200}ms` }}
+                >
                   <DataCenterCard dataCenter={dc} />
                 </div>
               ))}
             </div>
 
-            <div className="text-center">
-              <div className="inline-flex items-center gap-2 text-sm text-muted-foreground bg-muted/50 px-4 py-2 rounded-full">
-                <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                Todos os data centers operando normalmente
+            <div className="text-center animate-slide-up" style={{animationDelay: '0.6s'}}>
+              <div className="inline-flex items-center gap-3 text-sm text-muted-foreground bg-muted/30 px-6 py-3 rounded-full border border-green-200/50">
+                <div className="relative">
+                  <span className="w-3 h-3 bg-green-500 rounded-full block animate-ping absolute"></span>
+                  <span className="w-3 h-3 bg-green-500 rounded-full block relative"></span>
+                </div>
+                <span className="font-medium">Todos os data centers operando normalmente</span>
               </div>
             </div>
           </div>
@@ -313,19 +356,25 @@ export const CatalogView = ({
       )}
 
       {/* Categories Section - Enhanced */}
-      <section className="relative">
+      <section className="relative py-8">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Categorias Principais</h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Explore nossa gama completa de produtos e serviços especializados, 
-              desenvolvidos para atender às necessidades específicas do seu negócio.
+          <div className="text-center mb-16 animate-slide-up">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
+              Categorias Principais
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Explore nossa gama completa de produtos e serviços especializados,{" "}
+              <span className="font-medium text-foreground">desenvolvidos para atender</span> às necessidades específicas do seu negócio.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredCategories.map((category, index) => (
-              <div key={category.id} className="animate-fade-in" style={{ animationDelay: `${index * 100}ms` }}>
+              <div 
+                key={category.id} 
+                className="animate-slide-up" 
+                style={{ animationDelay: `${index * 150}ms` }}
+              >
                 <CategoryCard category={category} onCategoryClick={handleCategoryClick} />
               </div>
             ))}
