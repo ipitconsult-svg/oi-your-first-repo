@@ -8,8 +8,8 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Modern Design System - Light Mode */
-    --background: 248 250 252;
+    /* Modern Design System - Enhanced Contrast */
+    --background: 241 245 249;
     --foreground: 15 23 42;
 
     --card: 255 255 255;
@@ -23,11 +23,11 @@ All colors MUST be HSL.
     --primary-foreground: 255 255 255;
     --primary-subtle: 22 100% 95%;
 
-    /* Modern grays */
-    --secondary: 241 245 249;
+    /* Enhanced grays for better contrast */
+    --secondary: 248 250 252;
     --secondary-foreground: 51 65 85;
 
-    --muted: 248 250 252;
+    --muted: 226 232 240;
     --muted-foreground: 100 116 139;
 
     --accent: 241 245 249;
@@ -40,18 +40,18 @@ All colors MUST be HSL.
     --input: 226 232 240;
     --ring: 22 100% 55%;
 
-    /* Modern design tokens */
+    /* Enhanced design tokens for better contrast */
     --gradient-primary: linear-gradient(135deg, hsl(22 100% 55%) 0%, hsl(22 90% 45%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(248 250 252) 0%, hsl(241 245 249) 50%, hsl(226 232 240) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(241 245 249) 0%, hsl(226 232 240) 50%, hsl(203 213 225) 100%);
     --gradient-subtle: linear-gradient(180deg, hsl(255 255 255) 0%, hsl(248 250 252) 100%);
     --gradient-card: linear-gradient(145deg, hsl(255 255 255) 0%, hsl(248 250 252) 100%);
-    --gradient-datacenter: linear-gradient(135deg, hsl(22 100% 55% / 0.05) 0%, hsl(248 250 252) 100%);
-    --gradient-background: linear-gradient(135deg, hsl(248 250 252) 0%, hsl(241 245 249) 50%, hsl(255 255 255) 100%);
+    --gradient-datacenter: linear-gradient(135deg, hsl(22 100% 55% / 0.08) 0%, hsl(255 255 255) 100%);
+    --gradient-background: linear-gradient(135deg, hsl(226 232 240) 0%, hsl(241 245 249) 40%, hsl(248 250 252) 100%);
     
-    --shadow-elegant: 0 10px 40px -12px hsl(22 100% 55% / 0.25);
-    --shadow-card: 0 4px 20px -4px hsl(15 23 42 / 0.08);
+    --shadow-elegant: 0 12px 40px -8px hsl(15 23 42 / 0.15);
+    --shadow-card: 0 6px 25px -6px hsl(15 23 42 / 0.12);
     --shadow-glow: 0 0 40px hsl(22 100% 55% / 0.3);
-    --shadow-float: 0 20px 40px -12px hsl(15 23 42 / 0.15);
+    --shadow-float: 0 25px 50px -12px hsl(15 23 42 / 0.25);
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 

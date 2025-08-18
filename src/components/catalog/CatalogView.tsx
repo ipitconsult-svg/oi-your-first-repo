@@ -245,20 +245,20 @@ export const CatalogView = ({
         </section>
       )}
 
-      {/* Stats - Modern Cards with depth */}
+      {/* Stats - Enhanced Visual Hierarchy */}
       {!searchValue && (
         <section className="relative px-4 mb-20 -mt-8">
           <div className="max-w-5xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {[
-                { value: filteredDataCenters.length, label: "Data Centers", color: "from-blue-500/10 to-blue-600/5" },
-                { value: filteredCategories.length, label: "Categorias", color: "from-green-500/10 to-green-600/5" },
-                { value: "50+", label: "Serviços", color: "from-purple-500/10 to-purple-600/5" },
-                { value: "24/7", label: "Suporte", color: "from-orange-500/10 to-orange-600/5" }
+                { value: filteredDataCenters.length, label: "Data Centers", gradient: "from-blue-500/20 to-blue-600/10" },
+                { value: filteredCategories.length, label: "Categorias", gradient: "from-green-500/20 to-green-600/10" },
+                { value: "50+", label: "Serviços", gradient: "from-purple-500/20 to-purple-600/10" },
+                { value: "24/7", label: "Suporte", gradient: "from-orange-500/20 to-orange-600/10" }
               ].map((stat, index) => (
                 <div 
                   key={stat.label}
-                  className={`relative bg-white/90 backdrop-blur-xl border border-white/40 rounded-2xl p-6 text-center hover:bg-white/95 hover:shadow-elegant transition-all duration-500 hover:-translate-y-2 animate-slide-up bg-gradient-to-br ${stat.color}`}
+                  className={`relative bg-white/95 backdrop-blur-xl border border-white/60 rounded-2xl p-6 text-center hover:bg-white hover:shadow-float hover:border-white/80 transition-all duration-500 hover:-translate-y-3 animate-slide-up bg-gradient-to-br ${stat.gradient}`}
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   <div className="text-3xl md:text-4xl font-light text-primary mb-2">
@@ -277,8 +277,8 @@ export const CatalogView = ({
       {/* Data Centers - Enhanced Visual Design */}
       {!searchValue && (
         <section className="py-20 px-4 relative">
-          {/* Section background */}
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-50 to-white opacity-80"></div>
+          {/* Enhanced section background */}
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-100/80 to-white/60"></div>
           
           <div className="relative z-10 max-w-6xl mx-auto">
             <div className="text-center mb-16 animate-slide-up">
@@ -301,8 +301,8 @@ export const CatalogView = ({
                   className="animate-slide-up"
                   style={{ animationDelay: `${index * 150}ms` }}
                 >
-                  <div className="group relative bg-white/80 backdrop-blur-xl border border-white/40 rounded-3xl p-8 hover:bg-white/90 hover:shadow-elegant transition-all duration-500 hover:-translate-y-2">
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="group relative bg-white/95 backdrop-blur-xl border border-white/60 rounded-3xl p-8 hover:bg-white hover:shadow-float hover:border-white/80 transition-all duration-500 hover:-translate-y-3">
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/8 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     
                     <div className="relative z-10">
                       <div className="flex items-start justify-between mb-6">
@@ -321,11 +321,11 @@ export const CatalogView = ({
                       </p>
                       
                       <div className="grid grid-cols-2 gap-4">
-                        <div className="text-center p-4 bg-gradient-to-br from-blue-50 to-blue-100/50 rounded-2xl">
+                        <div className="text-center p-4 bg-gradient-to-br from-blue-100/80 to-blue-200/40 rounded-2xl border border-blue-200/30">
                           <div className="text-lg font-medium text-primary">99.9%</div>
                           <div className="text-xs text-muted-foreground font-medium">Uptime</div>
                         </div>
-                        <div className="text-center p-4 bg-gradient-to-br from-green-50 to-green-100/50 rounded-2xl">
+                        <div className="text-center p-4 bg-gradient-to-br from-green-100/80 to-green-200/40 rounded-2xl border border-green-200/30">
                           <div className="text-lg font-medium text-primary">&lt;2ms</div>
                           <div className="text-xs text-muted-foreground font-medium">Latência</div>
                         </div>
@@ -365,12 +365,12 @@ export const CatalogView = ({
                 style={{ animationDelay: `${index * 100}ms` }}
                 onClick={() => handleCategoryClick(category.id)}
               >
-                <div className="relative h-full bg-white/80 backdrop-blur-xl border border-white/40 rounded-3xl p-8 hover:bg-white/90 hover:shadow-elegant transition-all duration-500 hover:-translate-y-2">
-                  {/* Gradient overlay on hover */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-blue-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative h-full bg-white/95 backdrop-blur-xl border border-white/60 rounded-3xl p-8 hover:bg-white hover:shadow-float hover:border-white/80 transition-all duration-500 hover:-translate-y-3">
+                  {/* Enhanced gradient overlay on hover */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/12 via-transparent to-blue-500/8 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   
                   <div className="relative z-10 text-center">
-                    <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-16 h-16 bg-gradient-to-br from-primary/25 to-primary/15 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 border border-primary/20">
                       <Package className="h-8 w-8 text-primary" />
                     </div>
                     
@@ -383,7 +383,7 @@ export const CatalogView = ({
                     </p>
                     
                     <div className="flex justify-center gap-4">
-                      <div className="text-center px-4 py-2 bg-gradient-to-r from-primary/10 to-primary/5 rounded-xl">
+                      <div className="text-center px-4 py-2 bg-gradient-to-r from-primary/15 to-primary/10 rounded-xl border border-primary/20">
                         <div className="text-lg font-medium text-primary">
                           {category.subcategories.reduce((total, subcat) => {
                             const subcatItems = subcat.items.length;
