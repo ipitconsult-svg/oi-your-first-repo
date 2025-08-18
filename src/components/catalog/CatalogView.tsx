@@ -231,7 +231,7 @@ export const CatalogView = ({
           
           <div className="relative z-10 max-w-4xl mx-auto text-center">
             <div className="animate-slide-up">
-              <h1 className="text-5xl md:text-7xl font-light text-foreground mb-8 tracking-tight leading-tight">
+              <h1 className="text-5xl md:text-7xl font-light text-slate-800 mb-8 tracking-tight leading-tight">
                 Infraestrutura
                 <br />
                 <span className="font-medium text-primary">Simplificada</span>
@@ -239,7 +239,7 @@ export const CatalogView = ({
             </div>
             
             <div className="animate-slide-up" style={{animationDelay: '0.2s'}}>
-              <p className="text-lg md:text-xl text-muted-foreground mb-16 max-w-2xl mx-auto leading-relaxed font-light">
+              <p className="text-lg md:text-xl text-slate-700 mb-16 max-w-2xl mx-auto leading-relaxed font-light">
                 Soluções completas de data center e cloud com tecnologia de ponta
               </p>
             </div>
@@ -266,7 +266,7 @@ export const CatalogView = ({
                   <div className="text-3xl md:text-4xl font-light text-primary mb-2">
                     {stat.value}
                   </div>
-                  <div className="text-sm font-medium text-muted-foreground uppercase tracking-wide">
+                  <div className="text-sm font-medium text-slate-600 uppercase tracking-wide">
                     {stat.label}
                   </div>
                 </div>
@@ -288,10 +288,10 @@ export const CatalogView = ({
                 <Building2 className="h-4 w-4" />
                 <span>Infraestrutura Global</span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-light text-foreground mb-6 tracking-tight">
+              <h2 className="text-4xl md:text-5xl font-light text-slate-800 mb-6 tracking-tight">
                 Nossos Data Centers
               </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-light">
+              <p className="text-lg text-slate-600 max-w-2xl mx-auto font-light">
                 Infraestrutura global de alta performance
               </p>
             </div>
@@ -309,8 +309,8 @@ export const CatalogView = ({
                     <div className="relative z-10">
                       <div className="flex items-start justify-between mb-6">
                         <div>
-                          <h3 className="text-xl font-medium text-foreground mb-2">{dc.name}</h3>
-                          <div className="flex items-center gap-2 text-muted-foreground">
+                          <h3 className="text-xl font-medium text-slate-800 mb-2">{dc.name}</h3>
+                          <div className="flex items-center gap-2 text-slate-600">
                             <MapPin className="h-4 w-4 text-primary" />
                             <span className="text-sm">{dc.location}</span>
                           </div>
@@ -318,18 +318,18 @@ export const CatalogView = ({
                         <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
                       </div>
                       
-                      <p className="text-sm text-muted-foreground mb-8 leading-relaxed">
+                      <p className="text-sm text-slate-600 mb-8 leading-relaxed">
                         {dc.description}
                       </p>
                       
                       <div className="grid grid-cols-2 gap-4">
                         <div className="text-center p-4 bg-gradient-to-br from-blue-100/80 to-blue-200/40 rounded-2xl border border-blue-200/30">
                           <div className="text-lg font-medium text-primary">99.9%</div>
-                          <div className="text-xs text-muted-foreground font-medium">Uptime</div>
+                          <div className="text-xs text-slate-600 font-medium">Uptime</div>
                         </div>
                         <div className="text-center p-4 bg-gradient-to-br from-green-100/80 to-green-200/40 rounded-2xl border border-green-200/30">
                           <div className="text-lg font-medium text-primary">&lt;2ms</div>
-                          <div className="text-xs text-muted-foreground font-medium">Latência</div>
+                          <div className="text-xs text-slate-600 font-medium">Latência</div>
                         </div>
                       </div>
                     </div>
@@ -351,10 +351,10 @@ export const CatalogView = ({
         
         <div className="relative z-10 max-w-6xl mx-auto">
           <div className="text-center mb-16 animate-slide-up">
-            <h2 className="text-4xl md:text-5xl font-light text-foreground mb-6 tracking-tight">
+            <h2 className="text-4xl md:text-5xl font-light text-slate-800 mb-6 tracking-tight">
               Explore por Categoria
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-light">
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto font-light">
               Encontre a solução ideal para seu projeto
             </p>
           </div>
@@ -376,11 +376,11 @@ export const CatalogView = ({
                       <Package className="h-8 w-8 text-primary" />
                     </div>
                     
-                    <h3 className="text-xl font-medium text-foreground mb-4 group-hover:text-primary transition-colors duration-300">
+                    <h3 className="text-xl font-medium text-slate-800 mb-4 group-hover:text-primary transition-colors duration-300">
                       {category.name}
                     </h3>
                     
-                    <p className="text-sm text-muted-foreground mb-6 leading-relaxed line-clamp-3">
+                    <p className="text-sm text-slate-600 mb-6 leading-relaxed line-clamp-3">
                       {category.description}
                     </p>
                     
@@ -394,7 +394,7 @@ export const CatalogView = ({
                             return total + subcatItems + nestedItems;
                           }, 0)}
                         </div>
-                        <div className="text-xs text-muted-foreground font-medium">itens disponíveis</div>
+                        <div className="text-xs text-slate-600 font-medium">itens disponíveis</div>
                       </div>
                     </div>
                   </div>
