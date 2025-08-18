@@ -2384,5 +2384,1001 @@ export const categories: Category[] = [
         ]
       }
     ]
+  },
+  {
+    id: "9",
+    name: "PROFESSIONAL SERVICES",
+    description: "Serviços profissionais especializados em migração e implementação 🔧",
+    subcategories: [
+      {
+        id: "9.1",
+        name: "Migração de Dados",
+        description: "Serviços especializados para migração segura de dados e ambientes",
+        items: [
+          {
+            id: "9.1.1",
+            name: "Migração para cPanel/Plesk",
+            description: "Migração completa de ambientes para painéis de controle",
+            functionality: "Transferência segura de sites, emails, bancos de dados e configurações para cPanel ou Plesk",
+            applicability: "Migração de hosting, consolidação de servidores, mudança de provedor",
+            example: "Migração de 50 sites WordPress com emails e bancos MySQL para cPanel",
+            price: 850,
+            characteristics: [
+              "Migração de sites e domínios",
+              "Transferência de emails",
+              "Backup de segurança",
+              "Teste de funcionalidades",
+              "Configuração DNS",
+              "Suporte pós-migração",
+              "Zero downtime"
+            ],
+            tags: ["migracao", "cpanel", "plesk", "hosting", "websites"],
+            observations: "Preço por ambiente migrado - análise técnica prévia incluída"
+          },
+          {
+            id: "9.1.2",
+            name: "Migração com Acronis Backup",
+            description: "Migração de instâncias completas utilizando tecnologia Acronis",
+            functionality: "Clonagem e transferência de servidores virtuais e físicos com snapshot point-in-time",
+            applicability: "Migração de VMs, disaster recovery, mudança de datacenter",
+            example: "Migração de servidor Windows com SQL Server de 500GB",
+            price: 1200,
+            characteristics: [
+              "Backup completo antes da migração",
+              "Clonagem bit-a-bit",
+              "Verificação de integridade",
+              "Rollback disponível",
+              "Migração incremental",
+              "Suporte a qualquer OS",
+              "Mínimo downtime"
+            ],
+            tags: ["migracao", "acronis", "backup", "vm", "clonagem"],
+            observations: "Preço por servidor - complexidade avaliada caso a caso"
+          },
+          {
+            id: "9.1.3",
+            name: "Migração de Volumes de Disco",
+            description: "Transferência especializada de grandes volumes de dados",
+            functionality: "Migração otimizada de discos e sistemas de arquivos preservando permissões e metadados",
+            applicability: "Grandes volumes de dados, storage migration, consolidação",
+            example: "Migração de 10TB de dados científicos com estrutura complexa",
+            price: 1800,
+            characteristics: [
+              "Preservação de permissões",
+              "Verificação de integridade",
+              "Compressão inteligente",
+              "Transferência otimizada",
+              "Log detalhado",
+              "Validação pós-migração",
+              "Suporte a qualquer filesystem"
+            ],
+            tags: ["migracao", "disco", "volume", "dados", "filesystem"],
+            observations: "Preço por TB migrado - avaliação de complexidade incluída"
+          },
+          {
+            id: "9.1.4",
+            name: "Migração de Bancos de Dados",
+            description: "Migração especializada de sistemas de banco de dados",
+            functionality: "Transferência segura de bancos com conversão de esquemas e otimização",
+            applicability: "Mudança de SGBD, upgrade de versão, migração cloud",
+            example: "Migração Oracle para PostgreSQL com 2TB de dados",
+            price: 2500,
+            characteristics: [
+              "Conversão de esquemas",
+              "Migração de dados",
+              "Otimização de queries",
+              "Teste de integridade",
+              "Backup de segurança",
+              "Validação funcional",
+              "Suporte multi-SGBD"
+            ],
+            tags: ["migracao", "database", "sql", "oracle", "postgresql"],
+            observations: "Preço por banco - POC incluída para validação"
+          }
+        ]
+      },
+      {
+        id: "9.2",
+        name: "Implementação de Soluções",
+        description: "Desenho e implementação de arquiteturas técnicas personalizadas",
+        items: [
+          {
+            id: "9.2.1",
+            name: "Arquitetura de Solução Básica",
+            description: "Desenho e implementação de soluções técnicas para pequenos projetos",
+            functionality: "Análise, desenho e implementação de infraestrutura para projetos básicos",
+            applicability: "Startups, pequenas empresas, projetos piloto",
+            example: "Arquitetura web com load balancer, 2 servidores e banco de dados",
+            price: 3500,
+            characteristics: [
+              "Análise de requisitos",
+              "Desenho de arquitetura",
+              "Documentação técnica",
+              "Implementação guiada",
+              "Testes de validação",
+              "Entrega funcional",
+              "Suporte inicial"
+            ],
+            tags: ["arquitetura", "implementacao", "basica", "startup", "pequena"],
+            observations: "Projeto até 30 dias - inclui documentação técnica"
+          },
+          {
+            id: "9.2.2",
+            name: "Arquitetura de Solução Avançada",
+            description: "Desenho e implementação de soluções complexas e distribuídas",
+            functionality: "Arquitetura enterprise com alta disponibilidade, escalabilidade e segurança",
+            applicability: "Empresas médias, aplicações críticas, arquiteturas distribuídas",
+            example: "Microserviços em Kubernetes com CI/CD e monitoramento",
+            price: 8500,
+            characteristics: [
+              "Arquitetura distribuída",
+              "Alta disponibilidade",
+              "Escalabilidade automática",
+              "Segurança avançada",
+              "Monitoramento integrado",
+              "CI/CD pipeline",
+              "Documentação completa"
+            ],
+            tags: ["arquitetura", "avancada", "kubernetes", "microservicos", "enterprise"],
+            observations: "Projeto até 60 dias - inclui treinamento da equipe"
+          },
+          {
+            id: "9.2.3",
+            name: "Arquitetura Enterprise",
+            description: "Soluções corporativas de grande escala com compliance e governança",
+            functionality: "Arquitetura enterprise completa com governança, compliance e integração",
+            applicability: "Grandes corporações, aplicações mission-critical, compliance regulatório",
+            example: "Plataforma bancária com segregação de ambientes e auditoria",
+            price: 25000,
+            characteristics: [
+              "Governança corporativa",
+              "Compliance regulatório",
+              "Segregação de ambientes",
+              "Auditoria integrada",
+              "Disaster recovery",
+              "Integração legacy",
+              "Suporte 24x7"
+            ],
+            tags: ["enterprise", "corporativo", "compliance", "governance", "auditoria"],
+            observations: "Projeto 90+ dias - metodologia ágil com entregas incrementais"
+          }
+        ]
+      },
+      {
+        id: "9.3",
+        name: "Professional Services",
+        description: "Serviços técnicos especializados e hands-on para infraestrutura",
+        items: [
+          {
+            id: "9.3.1",
+            name: "Setup Servidor Dedicado Padrão",
+            description: "Configuração inicial profissional de servidor dedicado",
+            functionality: "Instalação, configuração e otimização de servidor dedicado com OS e serviços básicos",
+            applicability: "Novos servidores dedicados, ambiente de produção, setup inicial",
+            example: "Configuração CentOS com Apache, MySQL, PHP e hardening básico",
+            price: 425,
+            characteristics: [
+              "Instalação do OS",
+              "Configuração básica",
+              "Hardening de segurança",
+              "Otimização de performance",
+              "Configuração de rede",
+              "Documentação entregue",
+              "Teste de funcionamento"
+            ],
+            tags: ["setup", "dedicado", "configuracao", "os", "basico"],
+            observations: "Inclui Alta Disponibilidade (HA) quando aplicável"
+          },
+          {
+            id: "9.3.2",
+            name: "Setup Alta Disponibilidade Intermediária",
+            description: "Configuração de ambiente com alta disponibilidade intermediária",
+            functionality: "Implementação de cluster com failover automático e redundância",
+            applicability: "Aplicações críticas, e-commerce, ambientes corporativos",
+            example: "Cluster de 2 servidores web com load balancer e banco replicado",
+            price: 700,
+            characteristics: [
+              "Cluster configuration",
+              "Failover automático",
+              "Load balancing",
+              "Replicação de dados",
+              "Monitoramento HA",
+              "Teste de failover",
+              "Documentação técnica"
+            ],
+            tags: ["ha", "cluster", "failover", "intermediario", "redundancia"],
+            observations: "Setup para até 2 servidores com redundância N+1"
+          },
+          {
+            id: "9.3.3",
+            name: "Setup Alta Disponibilidade Premium",
+            description: "Configuração de ambiente enterprise com máxima disponibilidade",
+            functionality: "Arquitetura enterprise com múltiplas camadas de redundância e disaster recovery",
+            applicability: "Aplicações mission-critical, finance, healthcare, governo",
+            example: "Cluster multi-site com replicação síncrona e failover automático",
+            price: 1150,
+            characteristics: [
+              "Arquitetura multi-tier",
+              "Redundância N+N",
+              "Disaster recovery",
+              "Replicação síncrona",
+              "Failover < 30s",
+              "Monitoramento 24x7",
+              "SLA 99.99%"
+            ],
+            tags: ["ha", "premium", "enterprise", "disaster-recovery", "critical"],
+            observations: "Setup enterprise com SLA premium e suporte prioritário"
+          },
+          {
+            id: "9.3.4",
+            name: "Smart Hands",
+            description: "Serviço técnico presencial especializado no datacenter",
+            functionality: "Técnico especializado executa procedimentos complexos presencialmente",
+            applicability: "Manutenção especializada, troubleshooting avançado, procedimentos críticos",
+            example: "Substituição de placa-mãe, configuração de RAID, diagnóstico hardware",
+            price: 400,
+            characteristics: [
+              "Técnico especializado",
+              "Conhecimento avançado",
+              "Ferramentas profissionais",
+              "Diagnóstico preciso",
+              "Relatório detalhado",
+              "Fotos do procedimento",
+              "Comunicação em tempo real"
+            ],
+            tags: ["smart-hands", "especializado", "presencial", "avancado", "diagnostico"],
+            observations: "Cobrança por hora - mínimo 1 hora, inclui relatório técnico"
+          },
+          {
+            id: "9.3.5",
+            name: "Remote Hands",
+            description: "Execução de procedimentos técnicos com instruções remotas",
+            functionality: "Técnico executa procedimentos com base em instruções detalhadas do cliente",
+            applicability: "Procedimentos rotineiros, seguimento de scripts, manutenção programada",
+            example: "Reinicialização de serviços, troca de cabos, execução de scripts",
+            price: 300,
+            characteristics: [
+              "Execução de scripts",
+              "Seguimento de instruções",
+              "Comunicação constante",
+              "Fotos de verificação",
+              "Log de atividades",
+              "Confirmação de resultados",
+              "Disponibilidade rápida"
+            ],
+            tags: ["remote-hands", "scripts", "instrucoes", "rotineiro", "rapido"],
+            observations: "Cobrança por hora - procedimentos com base em instruções do cliente"
+          },
+          {
+            id: "9.3.6",
+            name: "Expertise Hands",
+            description: "Correções e configurações avançadas sob demanda",
+            functionality: "Especialista resolve problemas complexos e implementa soluções avançadas",
+            applicability: "Problemas críticos, otimizações complexas, arquiteturas avançadas",
+            example: "Otimização de performance, troubleshooting de rede, tuning de banco",
+            price: 600,
+            characteristics: [
+              "Especialista sênior",
+              "Resolução de problemas",
+              "Otimização avançada",
+              "Análise de root cause",
+              "Soluções customizadas",
+              "Documentação técnica",
+              "Knowledge transfer"
+            ],
+            tags: ["expertise", "avancado", "otimizacao", "senior", "problemas"],
+            observations: "Cobrança por hora - especialista sênior para problemas complexos"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: "10",
+    name: "IT TRANSFORMATION SERVICE",
+    description: "Serviços de transformação digital e modernização de TI 🚀",
+    subcategories: [
+      {
+        id: "10.1",
+        name: "Compliance",
+        description: "Consultoria para implementação de certificações e frameworks de governança",
+        items: [
+          {
+            id: "10.1.1",
+            name: "Consultoria ISO 27001",
+            description: "Implementação completa da certificação ISO 27001 para segurança da informação",
+            functionality: "Consultoria especializada para adequação e certificação ISO 27001",
+            applicability: "Empresas que precisam de certificação internacional, compliance regulatório",
+            example: "Implementação ISO 27001 em fintech com 200 funcionários",
+            characteristics: [
+              "Gap analysis inicial",
+              "Política de segurança",
+              "Procedimentos operacionais",
+              "Treinamento de equipes",
+              "Auditoria interna",
+              "Preparação para certificação",
+              "Acompanhamento contínuo"
+            ],
+            externalLink: "https://hostdime.com.br/contato",
+            tags: ["iso", "27001", "seguranca", "compliance", "certificacao"],
+            observations: "Projeto sob medida - duração média 6-12 meses"
+          },
+          {
+            id: "10.1.2",
+            name: "Consultoria PCI DSS",
+            description: "Adequação aos padrões PCI DSS para processamento de cartões",
+            functionality: "Implementação completa dos controles PCI DSS para ambiente de cartões",
+            applicability: "E-commerce, fintechs, processadoras de pagamento, adquirentes",
+            example: "Adequação PCI DSS Level 1 para gateway de pagamentos",
+            characteristics: [
+              "Assessment inicial",
+              "Segmentação de rede",
+              "Criptografia de dados",
+              "Controles de acesso",
+              "Monitoramento contínuo",
+              "Testes de penetração",
+              "Documentação completa"
+            ],
+            externalLink: "https://hostdime.com.br/contato",
+            tags: ["pci", "dss", "pagamentos", "cartao", "fintech"],
+            observations: "Consultoria especializada - inclui assessment e remediação"
+          },
+          {
+            id: "10.1.3",
+            name: "Framework ITIL",
+            description: "Implementação de práticas ITIL para gerenciamento de serviços de TI",
+            functionality: "Estruturação de processos de TI baseados em melhores práticas ITIL",
+            applicability: "Departamentos de TI, service desk, operações de infraestrutura",
+            example: "Implementação ITIL v4 com service desk e gestão de incidentes",
+            characteristics: [
+              "Mapeamento de processos",
+              "Service desk estruturado",
+              "Gestão de incidentes",
+              "Gestão de mudanças",
+              "SLA e métricas",
+              "Treinamento de equipes",
+              "Melhoria contínua"
+            ],
+            externalLink: "https://hostdime.com.br/contato",
+            tags: ["itil", "processos", "service-desk", "gestao", "qualidade"],
+            observations: "Implementação gradual com foco em quick wins iniciais"
+          }
+        ]
+      },
+      {
+        id: "10.2",
+        name: "Otimização de Infraestrutura",
+        description: "Revisão e modernização de ambientes tecnológicos",
+        items: [
+          {
+            id: "10.2.1",
+            name: "Assessment de Infraestrutura",
+            description: "Análise completa da infraestrutura atual com recomendações de melhoria",
+            functionality: "Avaliação técnica detalhada de performance, segurança e adequação às normas",
+            applicability: "Empresas com infraestrutura legada, problemas de performance, expansão",
+            example: "Assessment de datacenter com 100 servidores e recomendações de cloud hybrid",
+            price: 15000,
+            characteristics: [
+              "Análise de performance",
+              "Avaliação de segurança",
+              "Compliance assessment",
+              "Análise de custos",
+              "Roadmap de modernização",
+              "Priorização de ações",
+              "ROI projetado"
+            ],
+            tags: ["assessment", "infraestrutura", "performance", "modernizacao", "roadmap"],
+            observations: "Inclui relatório executivo e roadmap de 24 meses"
+          },
+          {
+            id: "10.2.2",
+            name: "Modernização Cloud",
+            description: "Migração e modernização para arquiteturas cloud-native",
+            functionality: "Transformação de aplicações legadas para arquiteturas modernas em cloud",
+            applicability: "Modernização de sistemas, redução de custos, escalabilidade",
+            example: "Migração de ERP monolítico para microserviços em containers",
+            characteristics: [
+              "Cloud readiness assessment",
+              "Containerização",
+              "Microserviços",
+              "CI/CD pipeline",
+              "Infrastructure as Code",
+              "Monitoring moderno",
+              "Cost optimization"
+            ],
+            externalLink: "https://hostdime.com.br/contato",
+            tags: ["cloud", "modernizacao", "containers", "microservicos", "devops"],
+            observations: "Projeto estruturado com entregas incrementais e POCs"
+          },
+          {
+            id: "10.2.3",
+            name: "Otimização de Performance",
+            description: "Melhoria de performance e eficiência de sistemas críticos",
+            functionality: "Análise e otimização de gargalos de performance em aplicações e infraestrutura",
+            applicability: "Aplicações lentas, problemas de escalabilidade, alto consumo de recursos",
+            example: "Otimização de aplicação web com redução de 70% no tempo de resposta",
+            price: 8500,
+            characteristics: [
+              "Performance profiling",
+              "Identificação de gargalos",
+              "Otimização de código",
+              "Tuning de banco de dados",
+              "Cache strategies",
+              "Load testing",
+              "Monitoramento contínuo"
+            ],
+            tags: ["performance", "otimizacao", "tuning", "gargalos", "velocidade"],
+            observations: "Garantia de melhoria mínima de 40% na performance"
+          }
+        ]
+      },
+      {
+        id: "10.3",
+        name: "Implementação de IA",
+        description: "Soluções de inteligência artificial para automação e insights",
+        items: [
+          {
+            id: "10.3.1",
+            name: "Private LLM",
+            description: "Implementação de Large Language Model privado e customizado",
+            functionality: "Solução completa de LLM privado com treinamento específico e interface de acesso",
+            applicability: "Empresas que precisam de IA privada, compliance de dados, conhecimento específico",
+            example: "LLM privado para análise de contratos jurídicos com LGPD compliance",
+            characteristics: [
+              "LLM privado dedicado",
+              "Treinamento customizado",
+              "Interface web intuitiva",
+              "API para integração",
+              "Compliance LGPD",
+              "Controle total dos dados",
+              "Múltiplos modelos disponíveis"
+            ],
+            externalLink: "https://hostdime.com.br/contato",
+            tags: ["llm", "ia", "privado", "treinamento", "lgpd"],
+            observations: "Solução sob medida - avaliação técnica e de dados necessária"
+          },
+          {
+            id: "10.3.2",
+            name: "Support Agent AI",
+            description: "Agente de IA para automação de atendimento e helpdesk",
+            functionality: "IA especializada para triagem e resolução automática de tickets de suporte",
+            applicability: "Service desk, atendimento ao cliente, suporte técnico interno",
+            example: "Bot que resolve 60% dos tickets de TI automaticamente",
+            characteristics: [
+              "Triagem inteligente",
+              "Resolução automática",
+              "Base de conhecimento",
+              "Integração com ITSM",
+              "Aprendizado contínuo",
+              "Escalação inteligente",
+              "Analytics de performance"
+            ],
+            externalLink: "https://hostdime.com.br/contato",
+            tags: ["support", "ai", "helpdesk", "automacao", "tickets"],
+            observations: "ROI típico de 6 meses com redução de 50-70% no volume manual"
+          },
+          {
+            id: "10.3.3",
+            name: "AI Analytics Platform",
+            description: "Plataforma de análise de dados com inteligência artificial",
+            functionality: "Solução completa de analytics com IA para insights preditivos e prescritivos",
+            applicability: "Business intelligence, análise preditiva, otimização de processos",
+            example: "Plataforma que prevê demanda e otimiza estoque automaticamente",
+            characteristics: [
+              "Machine learning integrado",
+              "Análise preditiva",
+              "Dashboards inteligentes",
+              "Alertas automáticos",
+              "Integração de dados",
+              "Modelos personalizados",
+              "Insights acionáveis"
+            ],
+            externalLink: "https://hostdime.com.br/contato",
+            tags: ["analytics", "ai", "preditivo", "insights", "business"],
+            observations: "Plataforma escalável com modelos de IA pré-treinados e customizáveis"
+          }
+        ]
+      },
+      {
+        id: "10.4",
+        name: "Automação",
+        description: "Desenvolvimento de soluções personalizadas para automação de processos",
+        items: [
+          {
+            id: "10.4.1",
+            name: "Unblock MPX",
+            description: "Interface web para desbloqueio automático de IPs em sistemas de segurança",
+            functionality: "Sistema automatizado para desbloqueio de IPs bloqueados com interface web intuitiva",
+            applicability: "Provedores de internet, empresas com firewall, gestão de acessos",
+            example: "Portal self-service para clientes desbloquearem IPs bloqueados",
+            price: 8500,
+            characteristics: [
+              "Interface web responsiva",
+              "Desbloqueio automático",
+              "Log de atividades",
+              "Integração com firewalls",
+              "Controle de permissões",
+              "API REST",
+              "Notificações automáticas"
+            ],
+            externalLink: "https://preview--ip-unblock-automator.lovable.app/",
+            tags: ["unblock", "ip", "firewall", "automacao", "web"],
+            observations: "Solução pronta para implementação - customizações disponíveis"
+          },
+          {
+            id: "10.4.2",
+            name: "Mail Security Suite",
+            description: "Conjunto completo de ferramentas para segurança e saúde de email",
+            functionality: "Monitoramento de blacklist, warm-up de IPs e verificação de hardbounces",
+            applicability: "Provedores de email, marketing digital, empresas com alto volume de email",
+            example: "Monitoramento de 100 IPs com warm-up automático e alertas",
+            price: 12000,
+            characteristics: [
+              "Monitoramento de blacklist",
+              "Warm-up automático",
+              "Verificação de hardbounces",
+              "Dashboard de saúde",
+              "Alertas em tempo real",
+              "Relatórios detalhados",
+              "Integração com MTAs"
+            ],
+            tags: ["email", "security", "blacklist", "warmup", "bounce"],
+            observations: "Melhora deliverability e reputação de email significativamente"
+          },
+          {
+            id: "10.4.3",
+            name: "Automação Customizada",
+            description: "Desenvolvimento de soluções de automação sob medida",
+            functionality: "Criação de aplicações personalizadas para automatizar processos específicos do cliente",
+            applicability: "Processos manuais repetitivos, integração de sistemas, workflows complexos",
+            example: "Sistema de aprovação de despesas com integração ERP e notificações",
+            characteristics: [
+              "Análise de processos",
+              "Desenvolvimento sob medida",
+              "Integração com sistemas",
+              "Interface moderna",
+              "API para integrações",
+              "Documentação completa",
+              "Suporte contínuo"
+            ],
+            externalLink: "https://hostdime.com.br/contato",
+            tags: ["automacao", "customizado", "desenvolvimento", "processos", "integracao"],
+            observations: "Orçamento sob medida após análise de requisitos detalhada"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: "11",
+    name: "MONITORAMENTO",
+    description: "Soluções de monitoramento proativo para infraestrutura e aplicações 📊",
+    subcategories: [
+      {
+        id: "11.1",
+        name: "360 Monitoring",
+        description: "Solução completa de monitoramento com dashboard e alertas",
+        items: [
+          {
+            id: "11.1.1",
+            name: "360 Monitoring Básico",
+            description: "Monitoramento básico para 1 servidor e 30 sites",
+            functionality: "Monitoramento de disponibilidade, performance e alertas básicos",
+            applicability: "Pequenas empresas, sites corporativos, startups",
+            example: "Monitoramento de servidor web com 10 sites WordPress",
+            price: 30,
+            characteristics: [
+              "1 servidor incluído",
+              "30 sites monitorados",
+              "Alertas por email",
+              "Dashboard web",
+              "Uptime monitoring",
+              "Response time",
+              "Relatórios mensais"
+            ],
+            tags: ["360", "monitoring", "basico", "sites", "uptime"],
+            observations: "Solução entry-level ideal para pequenos projetos"
+          },
+          {
+            id: "11.1.2",
+            name: "Servidor Adicional",
+            description: "Adição de servidor extra ao monitoramento 360",
+            functionality: "Expansão do monitoramento para servidores adicionais",
+            applicability: "Expansão de infraestrutura, múltiplos ambientes",
+            example: "Adição de servidor de banco de dados ao monitoramento",
+            price: 8,
+            characteristics: [
+              "Servidor adicional",
+              "Métricas completas",
+              "Alertas configuráveis",
+              "Integração dashboard",
+              "Histórico de dados",
+              "Performance baseline",
+              "SLA tracking"
+            ],
+            tags: ["360", "adicional", "servidor", "expansao", "metricas"],
+            observations: "Addon para expansão do monitoramento base"
+          },
+          {
+            id: "11.1.3",
+            name: "Site Adicional",
+            description: "Adição de site extra ao monitoramento 360",
+            functionality: "Monitoramento adicional de websites e aplicações web",
+            applicability: "Múltiplos domínios, expansão de sites, aplicações distribuídas",
+            example: "Adição de loja virtual ao monitoramento existente",
+            price: 2,
+            characteristics: [
+              "Site adicional",
+              "Availability check",
+              "Response time",
+              "Content verification",
+              "SSL monitoring",
+              "Alertas específicos",
+              "Performance tracking"
+            ],
+            tags: ["360", "site", "adicional", "web", "disponibilidade"],
+            observations: "Addon para monitoramento de sites adicionais"
+          }
+        ]
+      },
+      {
+        id: "11.2",
+        name: "Enterprise Monitoring",
+        description: "Monitoramento avançado para ambientes corporativos e críticos",
+        items: [
+          {
+            id: "11.2.1",
+            name: "Monitoramento Dedicado Básico",
+            description: "Monitoramento avançado para servidor dedicado sem virtualização",
+            functionality: "Monitoramento completo de servidor físico com métricas detalhadas",
+            applicability: "Servidores dedicados, aplicações críticas, ambientes de produção",
+            example: "Monitoramento de servidor de banco de dados Oracle",
+            price: 200,
+            characteristics: [
+              "Métricas de hardware",
+              "Performance do sistema",
+              "Alertas personalizados",
+              "Dashboard dedicado",
+              "Relatórios detalhados",
+              "Baseline automático",
+              "Notificações NOC"
+            ],
+            tags: ["enterprise", "dedicado", "hardware", "performance", "critico"],
+            observations: "Monitoramento completo para servidores físicos sem VMs"
+          },
+          {
+            id: "11.2.2",
+            name: "Monitoramento Dedicado com Virtualização",
+            description: "Monitoramento de host físico com visibilidade de VMs",
+            functionality: "Monitoramento do hypervisor e máquinas virtuais com correlação de dados",
+            applicability: "Ambientes virtualizados, cloud privado, consolidação de servidores",
+            example: "VMware vSphere com 8 VMs monitoradas individualmente",
+            price: 250,
+            characteristics: [
+              "Host e VMs",
+              "Recursos virtualizados",
+              "Correlation engine",
+              "VM individual tracking",
+              "Resource contention",
+              "Capacity planning",
+              "Alertas hierárquicos"
+            ],
+            tags: ["enterprise", "virtualizacao", "vmware", "hypervisor", "vms"],
+            observations: "Host base + R$5/VM para visibilidade individual"
+          },
+          {
+            id: "11.2.3",
+            name: "Monitoramento Cloud/VHM",
+            description: "Monitoramento especializado para ambientes cloud e VHM",
+            functionality: "Monitoramento otimizado para instâncias cloud com elasticidade",
+            applicability: "Cloud público, instâncias auto-scaling, ambientes dinâmicos",
+            example: "Monitoramento de 15 instâncias AWS com auto-scaling",
+            price: 40,
+            characteristics: [
+              "Cloud-native monitoring",
+              "Auto-discovery",
+              "Elastic scaling",
+              "Cost correlation",
+              "Multi-cloud support",
+              "API integration",
+              "Performance optimization"
+            ],
+            tags: ["cloud", "vhm", "elastic", "auto-scaling", "aws"],
+            observations: "Dashboard com login dedicado e métricas cloud-específicas"
+          },
+          {
+            id: "11.2.4",
+            name: "Monitoramento Customizado Pequeno",
+            description: "Solução customizada para até 5 dispositivos de rede",
+            functionality: "Monitoramento personalizado para dispositivos específicos com dashboard customizado",
+            applicability: "Equipamentos de rede, IoT, dispositivos especializados",
+            example: "Monitoramento de 5 switches core com métricas SNMP",
+            price: 300,
+            characteristics: [
+              "Até 5 dispositivos",
+              "Dashboard customizado",
+              "Credenciais dedicadas",
+              "SNMP monitoring",
+              "Alertas NOC",
+              "Telegram integration",
+              "SLA personalizado"
+            ],
+            tags: ["customizado", "rede", "snmp", "switches", "telegram"],
+            observations: "Entrega via dashboard personalizado com alertas ilimitados"
+          },
+          {
+            id: "11.2.5",
+            name: "Monitoramento Customizado Adicional",
+            description: "Dispositivos adicionais para monitoramento customizado",
+            functionality: "Expansão do monitoramento customizado para dispositivos extras",
+            applicability: "Crescimento de infraestrutura, novos equipamentos, expansão de rede",
+            example: "Adição de firewalls e roteadores ao monitoramento existente",
+            price: 20,
+            characteristics: [
+              "Dispositivo adicional",
+              "Integração dashboard",
+              "Alertas configuráveis",
+              "Métricas específicas",
+              "Telefone ou SMS",
+              "Correlação de dados",
+              "Response opcional"
+            ],
+            tags: ["adicional", "dispositivo", "expansao", "firewall", "roteador"],
+            observations: "Addon com resposta opcional por telefone ou SMS"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: "12",
+    name: "INTELIGÊNCIA ARTIFICIAL",
+    description: "Soluções de IA e GPU para machine learning e computação avançada 🤖",
+    subcategories: [
+      {
+        id: "12.1",
+        name: "GPU as a Service",
+        description: "Acesso sob demanda a GPUs de alta performance para IA e ML",
+        items: [
+          {
+            id: "12.1.1",
+            name: "GPU NVIDIA A100",
+            description: "GPU enterprise para treinamento de modelos de IA e ML de grande escala",
+            functionality: "Acesso a GPU NVIDIA A100 com 80GB HBM2e para workloads intensivos de IA",
+            applicability: "Treinamento de LLMs, deep learning, research científico, simulações",
+            example: "Treinamento de modelo de linguagem com 7B parâmetros",
+            price: 1800,
+            characteristics: [
+              "80GB HBM2e memory",
+              "6912 CUDA cores",
+              "Tensor cores 3rd gen",
+              "NVLink connectivity",
+              "Multi-instance GPU",
+              "ECC memory",
+              "PCIe Gen4"
+            ],
+            externalLink: "https://gpuaas.com/",
+            tags: ["gpu", "a100", "ai", "ml", "training"],
+            observations: "Cobrança por hora - ideal para treinamento de modelos grandes"
+          },
+          {
+            id: "12.1.2",
+            name: "GPU NVIDIA H100",
+            description: "GPU de última geração para IA generativa e transformers",
+            functionality: "GPU H100 com arquitetura Hopper para máxima performance em IA generativa",
+            applicability: "LLMs, IA generativa, transformers, inferência em tempo real",
+            example: "Inferência de GPT-4 com baixa latência para produção",
+            price: 2800,
+            characteristics: [
+              "80GB HBM3 memory",
+              "Hopper architecture",
+              "Transformer engine",
+              "FP8 precision",
+              "NVLink 4.0",
+              "4th gen Tensor cores",
+              "Confidential computing"
+            ],
+            externalLink: "https://gpuaas.com/",
+            tags: ["gpu", "h100", "generative", "hopper", "inference"],
+            observations: "Estado da arte para IA generativa - performance 6x superior ao A100"
+          },
+          {
+            id: "12.1.3",
+            name: "GPU NVIDIA RTX 4090",
+            description: "GPU consumer de alta performance para desenvolvimento e prototipagem",
+            functionality: "RTX 4090 otimizada para desenvolvimento, fine-tuning e inferência de modelos médios",
+            applicability: "Desenvolvimento de IA, fine-tuning, prototipagem, computer vision",
+            example: "Fine-tuning de modelo Llama 7B para caso específico",
+            price: 650,
+            characteristics: [
+              "24GB GDDR6X",
+              "16384 CUDA cores",
+              "3rd gen RT cores",
+              "4th gen Tensor cores",
+              "Ada Lovelace arch",
+              "AV1 encoding",
+              "DLSS 3.0"
+            ],
+            externalLink: "https://gpuaas.com/",
+            tags: ["gpu", "rtx4090", "development", "finetuning", "prototype"],
+            observations: "Excelente custo-benefício para desenvolvimento e modelos médios"
+          },
+          {
+            id: "12.1.4",
+            name: "GPU Cluster Multi-Node",
+            description: "Cluster de GPUs para treinamento distribuído de modelos grandes",
+            functionality: "Cluster interconectado de GPUs para treinamento paralelo e distribuído",
+            applicability: "Modelos com 100B+ parâmetros, pesquisa avançada, simulações complexas",
+            example: "Treinamento de LLM com 175B parâmetros em cluster de 8x A100",
+            characteristics: [
+              "Multi-GPU setup",
+              "InfiniBand networking",
+              "Distributed training",
+              "Model parallelism",
+              "High-speed storage",
+              "Container orchestration",
+              "Monitoring integrado"
+            ],
+            externalLink: "https://gpuaas.com/",
+            tags: ["cluster", "distributed", "multi-gpu", "large-models", "research"],
+            observations: "Configuração sob medida - consulte especialistas para arquitetura"
+          }
+        ]
+      },
+      {
+        id: "12.2",
+        name: "AI Consulting",
+        description: "Consultoria especializada em implementação de soluções de IA",
+        items: [
+          {
+            id: "12.2.1",
+            name: "Private LLM Implementation",
+            description: "Implementação completa de Large Language Model privado",
+            functionality: "Solução end-to-end de LLM privado com treinamento customizado e interface",
+            applicability: "Empresas com dados sensíveis, compliance LGPD, conhecimento específico",
+            example: "LLM privado para análise de documentos jurídicos com 99% de precisão",
+            characteristics: [
+              "LLM dedicado privado",
+              "Treinamento customizado",
+              "Fine-tuning específico",
+              "Interface web moderna",
+              "API para integração",
+              "Compliance LGPD/GDPR",
+              "Controle total dos dados"
+            ],
+            externalLink: "https://hostdime.com.br/contato",
+            tags: ["llm", "private", "compliance", "customizado", "legal"],
+            observations: "Solução completa - da infraestrutura ao treinamento do modelo"
+          },
+          {
+            id: "12.2.2",
+            name: "Support Agent AI",
+            description: "Agente de IA para automação inteligente de suporte técnico",
+            functionality: "IA especializada em triagem, resolução automática e escalação inteligente",
+            applicability: "Service desk, help desk, atendimento ao cliente, suporte técnico",
+            example: "Bot que resolve 70% dos tickets Nível 1 automaticamente",
+            characteristics: [
+              "Processamento de linguagem natural",
+              "Base de conhecimento integrada",
+              "Escalação inteligente",
+              "Integração ITSM",
+              "Aprendizado contínuo",
+              "Multi-idioma",
+              "Analytics avançado"
+            ],
+            externalLink: "https://hostdime.com.br/contato",
+            tags: ["support", "automation", "nlp", "helpdesk", "tickets"],
+            observations: "ROI típico em 4-6 meses com redução de 60-80% no workload manual"
+          },
+          {
+            id: "12.2.3",
+            name: "AI Strategy Consulting",
+            description: "Consultoria estratégica para adoção de IA na empresa",
+            functionality: "Definição de roadmap de IA alinhado aos objetivos de negócio",
+            applicability: "Empresas iniciando jornada de IA, transformação digital, inovação",
+            example: "Roadmap de IA para banco com foco em detecção de fraude e chatbot",
+            characteristics: [
+              "Assessment de maturidade IA",
+              "Identificação de use cases",
+              "ROI e viabilidade",
+              "Roadmap executivo",
+              "Arquitetura de dados",
+              "Governance de IA",
+              "Change management"
+            ],
+            externalLink: "https://hostdime.com.br/contato",
+            tags: ["strategy", "roadmap", "assessment", "governance", "transformation"],
+            observations: "Consultoria executiva - foco em casos de uso com maior impacto"
+          }
+        ]
+      },
+      {
+        id: "12.3",
+        name: "AI Cloud",
+        description: "Infraestrutura cloud otimizada para aplicações de IA e automação",
+        items: [
+          {
+            id: "12.3.1",
+            name: "N8N Automation Cloud",
+            description: "Instância cloud dedicada para automação N8N",
+            functionality: "Ambiente gerenciado para criação e execução de workflows de automação",
+            applicability: "Automação de processos, integração de sistemas, workflows complexos",
+            example: "Automação de pipeline de vendas integrando CRM, email e WhatsApp",
+            price: 299,
+            characteristics: [
+              "N8N pré-configurado",
+              "Interface visual drag-drop",
+              "500+ integrações nativas",
+              "Workflows ilimitados",
+              "Backup automático",
+              "SSL incluído",
+              "Suporte técnico"
+            ],
+            tags: ["n8n", "automation", "workflow", "integration", "nocode"],
+            observations: "Solução plug-and-play para automação sem código"
+          },
+          {
+            id: "12.3.2",
+            name: "LLM Inference Cloud",
+            description: "Infraestrutura otimizada para inferência de modelos de linguagem",
+            functionality: "Ambiente cloud com GPUs otimizado para servir modelos de IA em produção",
+            applicability: "APIs de IA, chatbots inteligentes, análise de texto, content generation",
+            example: "API de chatbot para e-commerce com 10k consultas/dia",
+            price: 899,
+            characteristics: [
+              "GPU dedicada",
+              "Auto-scaling",
+              "Load balancing",
+              "API management",
+              "Monitoring avançado",
+              "Cache inteligente",
+              "SLA 99.9%"
+            ],
+            tags: ["inference", "api", "chatbot", "gpu", "production"],
+            observations: "Inclui GPU T4 - upgrade para A100/H100 disponível"
+          },
+          {
+            id: "12.3.3",
+            name: "Computer Vision Cloud",
+            description: "Plataforma cloud para processamento de imagens e vídeo com IA",
+            functionality: "Ambiente especializado para aplicações de visão computacional e análise visual",
+            applicability: "Análise de imagens, detecção de objetos, OCR, análise de vídeo",
+            example: "Sistema de análise de qualidade em linha de produção industrial",
+            price: 1299,
+            characteristics: [
+              "GPUs otimizadas para CV",
+              "Frameworks pré-instalados",
+              "Pipeline de processamento",
+              "APIs REST prontas",
+              "Storage otimizado",
+              "Real-time processing",
+              "Edge deployment"
+            ],
+            tags: ["computer-vision", "image", "video", "detection", "ocr"],
+            observations: "Inclui OpenCV, TensorFlow, PyTorch e frameworks populares"
+          },
+          {
+            id: "12.3.4",
+            name: "MLOps Platform",
+            description: "Plataforma completa para desenvolvimento e deploy de modelos ML",
+            functionality: "Ambiente end-to-end para ciclo de vida de machine learning",
+            applicability: "Equipes de data science, desenvolvimento de ML, modelos em produção",
+            example: "Pipeline completo de ML para previsão de demanda com CI/CD",
+            price: 1899,
+            characteristics: [
+              "Jupyter notebooks",
+              "Model versioning",
+              "Experiment tracking",
+              "CI/CD para ML",
+              "Model serving",
+              "A/B testing",
+              "Monitoring de drift"
+            ],
+            tags: ["mlops", "datascience", "jupyter", "cicd", "serving"],
+            observations: "Plataforma completa com ferramentas de MLOps integradas"
+          }
+        ]
+      }
+    ]
   }
 ];
