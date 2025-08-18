@@ -1117,5 +1117,414 @@ export const categories: Category[] = [
         ]
       }
     ]
+  },
+  {
+    id: "5",
+    name: "NETWORKING",
+    description: "Soluções completas de conectividade e infraestrutura de rede",
+    subcategories: [
+      {
+        id: "5.1",
+        name: "Cross Connection",
+        description: "Interconexões dedicadas para conectividade ponto-a-ponto",
+        items: [
+          // LAN to LAN
+          {
+            id: "5.1.1.1",
+            name: "Cross Connect LAN to LAN - JPA",
+            description: "Interconexão LAN to LAN no Data Center JPA",
+            price: 1200.00,
+            functionality: "Link dedicado ponto-a-ponto fornecido por operadora de telecom escolhida pelo cliente",
+            applicability: "Conectividade com provedores, links dedicados, interconexão com outras redes",
+            example: "Conexão dedicada com provedor de internet ou link com matriz da empresa",
+            characteristics: [
+              "Link dedicado ponto-a-ponto",
+              "Operadora de telecom à escolha",
+              "Viabilidade técnica avaliada",
+              "Data center: JPA",
+              "Conectividade com Mob Telecom, 1Telecom, Tely, Cabo Telecom"
+            ],
+            tags: ["cross-connect", "lan-to-lan", "jpa", "dedicated", "telecom"],
+            observations: "Viabilidade técnica depende de avaliação da HostDime e disponibilidade da operadora no DC"
+          },
+          {
+            id: "5.1.1.2",
+            name: "Cross Connect LAN to LAN - SPO",
+            description: "Interconexão LAN to LAN no Data Center SPO",
+            price: 1350.00,
+            functionality: "Link dedicado ponto-a-ponto no principal hub tecnológico e financeiro do Brasil",
+            applicability: "Conectividade premium, links corporativos, interconexão com carriers nacionais",
+            example: "Conexão com principais carriers nacionais ou link corporativo de alta performance",
+            characteristics: [
+              "Link dedicado ponto-a-ponto",
+              "Hub tecnológico e financeiro",
+              "Acesso a principais carriers",
+              "Data center: SPO",
+              "Conectividade premium nacional e internacional"
+            ],
+            tags: ["cross-connect", "lan-to-lan", "spo", "premium", "carriers"],
+            observations: "Necessário informar provedor do L2L. Oferta disponível desde que provedor tenha abordagem em SPO"
+          },
+          // Server to Server JPA
+          {
+            id: "5.1.2.1.1",
+            name: "Cross Connect Server to Server JPA - Fibra",
+            description: "Interconexão servidor para servidor via fibra óptica em JPA",
+            price: 600.00,
+            functionality: "Conectividade de alta performance entre servidores via fibra óptica para máxima velocidade",
+            applicability: "Clusters de alta performance, replicação de dados, aplicações distribuídas",
+            example: "Cluster de database com replicação em tempo real ou aplicação distribuída",
+            characteristics: [
+              "Conectividade via fibra óptica",
+              "Alta velocidade e baixa latência",
+              "Ideal para clusters críticos",
+              "Data center: JPA",
+              "Performance máxima"
+            ],
+            tags: ["cross-connect", "server-to-server", "jpa", "fiber", "high-performance"],
+            observations: "Solução premium para aplicações que exigem máxima performance de conectividade"
+          },
+          {
+            id: "5.1.2.1.2",
+            name: "Cross Connect Server to Server JPA - UTP",
+            description: "Interconexão servidor para servidor via UTP em JPA",
+            price: 200.00,
+            functionality: "Conectividade econômica entre servidores via cabo UTP para aplicações padrão",
+            applicability: "Aplicações básicas, conectividade entre servidores, ambientes de desenvolvimento",
+            example: "Conexão entre servidor web e database ou ambiente de desenvolvimento",
+            characteristics: [
+              "Conectividade via cabo UTP",
+              "Solução econômica",
+              "Ideal para aplicações padrão",
+              "Data center: JPA",
+              "Custo-benefício otimizado"
+            ],
+            tags: ["cross-connect", "server-to-server", "jpa", "utp", "cost-effective"],
+            observations: "Opção econômica para conectividade básica entre servidores"
+          },
+          // Server to Server SPO
+          {
+            id: "5.1.2.2.1", 
+            name: "Cross Connect Server to Server SPO - Fibra",
+            description: "Interconexão servidor para servidor via fibra óptica em SPO",
+            price: 1350.00,
+            functionality: "Conectividade premium via fibra no principal hub tecnológico do Brasil",
+            applicability: "Aplicações mission-critical, clusters enterprise, alta disponibilidade",
+            example: "Cluster de aplicação financeira ou sistema de alta disponibilidade enterprise",
+            characteristics: [
+              "Conectividade via fibra óptica",
+              "Hub tecnológico principal",
+              "Performance enterprise",
+              "Data center: SPO",
+              "Máxima confiabilidade"
+            ],
+            tags: ["cross-connect", "server-to-server", "spo", "fiber", "enterprise"],
+            observations: "Solução premium no principal hub tecnológico e financeiro do Brasil"
+          },
+          {
+            id: "5.1.2.2.2",
+            name: "Cross Connect Server to Server SPO - UTP", 
+            description: "Interconexão servidor para servidor via UTP em SPO",
+            price: 990.00,
+            functionality: "Conectividade padrão via UTP no data center premium de São Paulo",
+            applicability: "Aplicações corporativas, conectividade entre servidores, projetos médios",
+            example: "Conectividade entre servidores de aplicação corporativa ou sistema ERP",
+            characteristics: [
+              "Conectividade via cabo UTP",
+              "Data center premium SPO",
+              "Solução corporativa",
+              "Confiabilidade enterprise",
+              "Localização estratégica"
+            ],
+            tags: ["cross-connect", "server-to-server", "spo", "utp", "corporate"],
+            observations: "Conectividade corporativa no principal hub de negócios do país"
+          }
+        ]
+      },
+      {
+        id: "5.2",
+        name: "Switch Port",
+        description: "Portas de switch compartilhadas para conectividade LAN",
+        items: [
+          {
+            id: "5.2.1",
+            name: "Switch Port LAN 10G",
+            description: "Porta de switch 10 Gigabit compartilhada",
+            price: 250.00,
+            functionality: "Porta 10G compartilhada via Virtual Chassis para alta performance e gerência exclusiva",
+            applicability: "Ambientes de alta performance, HA, clientes com poucas portas mas alta demanda",
+            example: "Cluster de servidores com alta demanda de largura de banda ou aplicação de streaming",
+            characteristics: [
+              "Velocidade: 10 Gigabit",
+              "Virtual Chassis compartilhado",
+              "Gerência exclusiva HostDime",
+              "Ideal para HA",
+              "Addon por número de portas"
+            ],
+            tags: ["switch", "10g", "high-performance", "virtual-chassis", "ha"],
+            observations: "Produto para clientes com HA ou poucas portas. Gerência exclusiva HostDime. Addon por número de portas."
+          },
+          {
+            id: "5.2.2",
+            name: "Switch Port LAN 1G",
+            description: "Porta de switch 1 Gigabit compartilhada", 
+            price: 150.00,
+            functionality: "Porta 1G compartilhada via Virtual Chassis para conectividade padrão com gerência profissional",
+            applicability: "Aplicações padrão, conectividade básica, ambientes com demanda moderada",
+            example: "Servidores de aplicação padrão ou ambiente de desenvolvimento",
+            characteristics: [
+              "Velocidade: 1 Gigabit",
+              "Virtual Chassis compartilhado",
+              "Gerência exclusiva HostDime",
+              "Conectividade padrão",
+              "Modelo flexível de portas"
+            ],
+            tags: ["switch", "1g", "standard", "virtual-chassis", "flexible"],
+            observations: "Solução econômica para conectividade padrão com gerência profissional"
+          }
+        ]
+      },
+      {
+        id: "5.3",
+        name: "Bandwidth",
+        description: "Largura de banda dedicada e compartilhada",
+        items: [
+          {
+            id: "5.3.1",
+            name: "Banda AS HostDime Brasil",
+            description: "Banda disponível no AS da HostDime Brasil",
+            price: 500.00,
+            functionality: "Porta 10Gbps + 1Gbps padrão com 320TB inclusos e cobrança por 95th percentile",
+            applicability: "Websites de alto tráfego, aplicações bandwidth-intensive, streaming",
+            example: "Portal de notícias com alto tráfego ou plataforma de streaming de vídeo",
+            characteristics: [
+              "Porta: 10Gbps + 1Gbps padrão",
+              "Tráfego: 320TB inclusos",
+              "Cobrança: 95th percentile",
+              "ASN 53055 - HostDime Brasil",
+              "Conectividade: 98Gbps total JPA"
+            ],
+            tags: ["bandwidth", "10gbps", "95th-percentile", "high-traffic", "streaming"],
+            observations: "Banda JPA: 98Gbps total. Conectividade com TELY (2x40Gb), ALGAR (10Gb/4Gb), MOB (1Gb), 1TELECOM (10Gb/3Gb), Nic.Br (10Gb)",
+            externalLink: "https://www.hostdime.com.br/conectividade/"
+          }
+        ]
+      },
+      {
+        id: "5.4",
+        name: "Bloco de IP",
+        description: "Blocos de endereços IP dedicados para seus projetos",
+        items: [
+          // Brasil - JPA/SPO
+          {
+            id: "5.4.1.1",
+            name: "Bloco IP /24 - Brasil",
+            description: "Bloco /24 - 256 IPs (254 utilizáveis) - JPA/SPO",
+            price: 17920.00,
+            functionality: "Bloco completo /24 com 254 IPs utilizáveis para grandes projetos ou múltiplas aplicações",
+            applicability: "Grandes corporações, múltiplos projetos, provedores de serviço",
+            example: "Provedor de hosting ou grande corporação com múltiplas aplicações",
+            characteristics: [
+              "256 IPs total (254 utilizáveis)",
+              "Máscara: /24",
+              "Data centers: JPA/SPO",
+              "IPs brasileiros",
+              "Ideal para grandes projetos"
+            ],
+            tags: ["ip-block", "/24", "brasil", "large-scale", "provider"],
+            observations: "Maior bloco disponível no Brasil, ideal para provedores e grandes corporações"
+          },
+          {
+            id: "5.4.1.2",
+            name: "Bloco IP /25 - Brasil", 
+            description: "Bloco /25 - 128 IPs (126 utilizáveis) - JPA/SPO",
+            price: 7680.00,
+            functionality: "Bloco /25 para projetos de médio porte com necessidade de múltiplos IPs",
+            applicability: "Médias empresas, múltiplas aplicações, ambientes de desenvolvimento",
+            example: "Empresa com múltiplos websites ou ambiente de desenvolvimento/produção",
+            characteristics: [
+              "128 IPs total (126 utilizáveis)",
+              "Máscara: /25",
+              "Data centers: JPA/SPO", 
+              "IPs brasileiros",
+              "Médios projetos"
+            ],
+            tags: ["ip-block", "/25", "brasil", "medium-scale", "multiple-apps"],
+            observations: "Equilibrio entre quantidade e custo para projetos médios"
+          },
+          {
+            id: "5.4.1.3",
+            name: "Bloco IP /26 - Brasil",
+            description: "Bloco /26 - 64 IPs (62 utilizáveis) - JPA/SPO", 
+            price: 3200.00,
+            functionality: "Bloco /26 para pequenos grupos de aplicações ou departamentos",
+            applicability: "Pequenas empresas, departamentos, projetos específicos",
+            example: "Departamento de TI com múltiplos serviços ou pequena empresa",
+            characteristics: [
+              "64 IPs total (62 utilizáveis)",
+              "Máscara: /26",
+              "Data centers: JPA/SPO",
+              "IPs brasileiros", 
+              "Pequenos grupos"
+            ],
+            tags: ["ip-block", "/26", "brasil", "small-scale", "department"],
+            observations: "Ideal para pequenos grupos de aplicações ou departamentos"
+          },
+          {
+            id: "5.4.1.4",
+            name: "Bloco IP /27 - Brasil",
+            description: "Bloco /27 - 32 IPs (30 utilizáveis) - JPA/SPO",
+            price: 1440.00,
+            functionality: "Bloco /27 para projetos pequenos com necessidades específicas de IPs",
+            applicability: "Startups, projetos piloto, aplicações específicas",
+            example: "Startup com múltiplos microserviços ou projeto piloto",
+            characteristics: [
+              "32 IPs total (30 utilizáveis)",
+              "Máscara: /27",
+              "Data centers: JPA/SPO",
+              "IPs brasileiros",
+              "Projetos específicos"
+            ],
+            tags: ["ip-block", "/27", "brasil", "startup", "microservices"],
+            observations: "Adequado para startups e projetos com arquitetura distribuída"
+          },
+          {
+            id: "5.4.1.5",
+            name: "Bloco IP /28 - Brasil",
+            description: "Bloco /28 - 16 IPs (14 utilizáveis) - JPA/SPO",
+            price: 640.00,
+            functionality: "Bloco /28 para pequenos projetos ou testes com poucos serviços",
+            applicability: "Pequenos projetos, ambiente de testes, POCs",
+            example: "Ambiente de testes ou POC com poucos serviços",
+            characteristics: [
+              "16 IPs total (14 utilizáveis)",
+              "Máscara: /28", 
+              "Data centers: JPA/SPO",
+              "IPs brasileiros",
+              "Pequenos projetos"
+            ],
+            tags: ["ip-block", "/28", "brasil", "small-projects", "testing"],
+            observations: "Ideal para pequenos projetos e ambientes de teste"
+          },
+          {
+            id: "5.4.1.6",
+            name: "Bloco IP /29 - Brasil",
+            description: "Bloco /29 - 8 IPs (6 utilizáveis) - JPA/SPO",
+            price: 280.00,
+            functionality: "Bloco /29 mínimo para projetos básicos com poucos componentes",
+            applicability: "Projetos básicos, MVPs, aplicações simples",
+            example: "MVP ou aplicação simples com poucos componentes",
+            characteristics: [
+              "8 IPs total (6 utilizáveis)",
+              "Máscara: /29",
+              "Data centers: JPA/SPO", 
+              "IPs brasileiros",
+              "Projetos básicos"
+            ],
+            tags: ["ip-block", "/29", "brasil", "basic", "mvp"],
+            observations: "Bloco mínimo para projetos básicos e MVPs"
+          },
+          {
+            id: "5.4.1.7",
+            name: "Bloco IP /30 - Brasil",
+            description: "Bloco /30 - 4 IPs (2 utilizáveis) - JPA/SPO",
+            price: 140.00,
+            functionality: "Bloco /30 para conectividade ponto-a-ponto ou aplicações muito específicas",
+            applicability: "Links ponto-a-ponto, aplicações específicas, conectividade dedicada",
+            example: "Link dedicado entre data centers ou aplicação muito específica",
+            characteristics: [
+              "4 IPs total (2 utilizáveis)",
+              "Máscara: /30",
+              "Data centers: JPA/SPO",
+              "IPs brasileiros",
+              "Conectividade específica"
+            ],
+            tags: ["ip-block", "/30", "brasil", "point-to-point", "specific"],
+            observations: "Usado principalmente para links ponto-a-ponto ou casos muito específicos"
+          },
+          // USA
+          {
+            id: "5.4.2.1", 
+            name: "Bloco IP /24 - USA",
+            description: "Bloco /24 - 256 IPs (254 utilizáveis) - Orlando",
+            price: 6840.00,
+            functionality: "Bloco completo /24 nos EUA com melhor custo-benefício para expansão internacional",
+            applicability: "Expansão para mercado americano, aplicações globais, CDN",
+            example: "Expansão de e-commerce para EUA ou CDN para mercado americano",
+            characteristics: [
+              "256 IPs total (254 utilizáveis)",
+              "Máscara: /24",
+              "Data center: Orlando, FL",
+              "IPs americanos",
+              "Gateway para expansão EUA"
+            ],
+            tags: ["ip-block", "/24", "usa", "expansion", "international"],
+            observations: "Melhor custo-benefício para expansão no mercado americano"
+          },
+          {
+            id: "5.4.2.2",
+            name: "Bloco IP /25 - USA",
+            description: "Bloco /25 - 128 IPs (126 utilizáveis) - Orlando", 
+            price: 3375.00,
+            functionality: "Bloco /25 para projetos de médio porte no mercado americano",
+            applicability: "Médios projetos internacionais, testes de mercado americano",
+            example: "Teste de mercado americano ou projeto médio nos EUA",
+            characteristics: [
+              "128 IPs total (126 utilizáveis)",
+              "Máscara: /25",
+              "Data center: Orlando, FL",
+              "IPs americanos",
+              "Projetos médios EUA"
+            ],
+            tags: ["ip-block", "/25", "usa", "medium-projects", "market-test"],
+            observations: "Ideal para testes de mercado e projetos médios nos EUA"
+          },
+          {
+            id: "5.4.2.3",
+            name: "Bloco IP /26 - USA",
+            description: "Bloco /26 - 64 IPs (62 utilizáveis) - Orlando",
+            price: 1620.00,
+            functionality: "Bloco /26 para entrada no mercado americano com projetos menores",
+            applicability: "Entrada no mercado americano, projetos piloto nos EUA",
+            example: "Projeto piloto nos EUA ou entrada inicial no mercado americano",
+            characteristics: [
+              "64 IPs total (62 utilizáveis)",
+              "Máscara: /26",
+              "Data center: Orlando, FL", 
+              "IPs americanos",
+              "Entrada no mercado"
+            ],
+            tags: ["ip-block", "/26", "usa", "market-entry", "pilot"],
+            observations: "Porta de entrada econômica para o mercado americano"
+          }
+        ]
+      },
+      {
+        id: "5.5",
+        name: "IP Announcements & BGP",
+        description: "Anúncio de IPs e configuração BGP para roteamento avançado",
+        items: [
+          {
+            id: "5.5.1",
+            name: "IP Announcements & BGP",
+            description: "Serviço de anúncio de IPs e configuração BGP",
+            price: 500.00,
+            functionality: "Configuração e gerenciamento de anúncios BGP para seus blocos de IP com roteamento otimizado",
+            applicability: "Provedores de serviço, grandes corporações, otimização de roteamento",
+            example: "Provedor de hosting que precisa anunciar seus próprios blocos de IP",
+            characteristics: [
+              "Configuração BGP profissional",
+              "Anúncio de blocos próprios",
+              "Roteamento otimizado",
+              "Disponível em JPA, SPO, USA",
+              "Gerenciamento completo"
+            ],
+            tags: ["bgp", "ip-announcement", "routing", "provider", "optimization"],
+            observations: "Essencial para provedores de serviço e organizações que precisam de controle total sobre roteamento",
+            externalLink: "https://www.hostdime.com.br/conectividade/"
+          }
+        ]
+      }
+    ]
   }
 ];
