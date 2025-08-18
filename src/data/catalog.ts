@@ -1783,5 +1783,218 @@ export const categories: Category[] = [
         ]
       }
     ]
+  },
+  {
+    id: "7",
+    name: "COLOCATION",
+    description: "Soluções de colocation e infraestrutura física 🏢",
+    subcategories: [
+      {
+        id: "7.1",
+        name: "Espaço de RACK",
+        description: "Soluções flexíveis de espaço em rack para sua infraestrutura",
+        items: [
+          {
+            id: "7.1.1",
+            name: "1/4 de Rack (10U)",
+            description: "Espaço de 10U em rack 42U para pequenas infraestruturas",
+            functionality: "Fornece espaço físico seguro e refrigerado para equipamentos de até 10 unidades de rack",
+            applicability: "Pequenas empresas, startups, projetos piloto, infraestrutura de desenvolvimento",
+            example: "Servidor, switch, firewall e storage em configuração básica",
+            price: 890,
+            characteristics: [
+              "10U de espaço útil",
+              "Energia redundante incluída",
+              "Refrigeração dedicada",
+              "Acesso 24x7x365",
+              "Monitoramento NOC",
+              "Conectividade básica incluída"
+            ],
+            tags: ["colocation", "rack", "10u", "pequeno", "basico"],
+            observations: "Ideal para começar com colocation sem grande investimento inicial"
+          },
+          {
+            id: "7.1.2",
+            name: "1/2 Rack (21U)",
+            description: "Espaço de 21U em rack 42U para infraestruturas médias",
+            functionality: "Oferece espaço físico para infraestrutura de médio porte com alta disponibilidade",
+            applicability: "Empresas de médio porte, e-commerce, aplicações corporativas",
+            example: "Múltiplos servidores, storage, backup, equipamentos de rede",
+            price: 1650,
+            characteristics: [
+              "21U de espaço útil",
+              "Energia redundante N+1",
+              "Refrigeração otimizada",
+              "Acesso 24x7x365",
+              "Monitoramento avançado",
+              "Conectividade premium"
+            ],
+            tags: ["colocation", "rack", "21u", "medio", "empresarial"],
+            observations: "Equilibrio perfeito entre espaço e custo-benefício"
+          },
+          {
+            id: "7.1.3",
+            name: "Rack Completo (42U)",
+            description: "Rack dedicado completo de 42U para infraestruturas robustas",
+            functionality: "Rack exclusivo com máxima capacidade para infraestruturas críticas e de grande escala",
+            applicability: "Grandes empresas, provedores de serviço, aplicações mission-critical",
+            example: "Infraestrutura completa de produção, disaster recovery, cloud privado",
+            price: 2890,
+            characteristics: [
+              "42U de capacidade total",
+              "Energia dedicada redundante",
+              "Refrigeração exclusiva",
+              "Acesso ilimitado 24x7x365",
+              "Monitoramento dedicado",
+              "Conectividade premium dedicada",
+              "Suporte técnico prioritário"
+            ],
+            tags: ["colocation", "rack", "42u", "completo", "dedicado", "premium"],
+            observations: "Máxima capacidade e flexibilidade para infraestruturas críticas"
+          },
+          {
+            id: "7.1.4",
+            name: "Multiple Racks",
+            description: "Múltiplos racks para infraestruturas de grande escala",
+            functionality: "Solução escalável com múltiplos racks para infraestruturas enterprise",
+            applicability: "Enterprises, cloud providers, grandes aplicações distribuídas",
+            example: "Data center privado, cloud híbrido, infraestrutura distribuída",
+            characteristics: [
+              "Múltiplos racks dedicados",
+              "Energia dedicada por rack",
+              "Refrigeração otimizada",
+              "Área privativa opcional",
+              "Conectividade dedicada",
+              "Gestão personalizada",
+              "SLA premium"
+            ],
+            externalLink: "https://hostdime.com.br/contato",
+            tags: ["colocation", "multiple", "enterprise", "escalavel", "customizado"],
+            observations: "Solução sob medida - consulte nossos especialistas para cotação personalizada"
+          }
+        ]
+      },
+      {
+        id: "7.2",
+        name: "Colocation Addons",
+        description: "Serviços adicionais para potencializar sua infraestrutura de colocation",
+        items: [
+          {
+            id: "7.2.1",
+            name: "Hands-On Técnico",
+            description: "Suporte técnico presencial para manipulação de equipamentos",
+            functionality: "Técnicos especializados executam tarefas físicas em seus equipamentos no data center",
+            applicability: "Empresas remotas, manutenção de equipamentos, troubleshooting físico",
+            example: "Reinicialização de servidores, troca de componentes, verificação de cabos",
+            price: 180,
+            characteristics: [
+              "Técnico certificado",
+              "Execução em horário comercial",
+              "Relatório detalhado",
+              "Fotos do procedimento",
+              "Comunicação em tempo real",
+              "SLA de 4 horas"
+            ],
+            tags: ["addon", "hands-on", "tecnico", "presencial", "manutencao"],
+            observations: "Cobrança por hora técnica - mínimo 1 hora"
+          },
+          {
+            id: "7.2.2",
+            name: "Remote Hands 24x7",
+            description: "Suporte técnico presencial disponível 24 horas por dia",
+            functionality: "Equipe técnica disponível 24x7 para atendimento presencial emergencial",
+            applicability: "Aplicações críticas, infraestrutura que requer suporte contínuo",
+            example: "Resolução de emergências, manutenção fora do horário comercial",
+            price: 95,
+            characteristics: [
+              "Disponibilidade 24x7x365",
+              "Tempo de resposta < 15 minutos",
+              "Técnicos especializados",
+              "Comunicação imediata",
+              "Documentação completa",
+              "SLA premium"
+            ],
+            tags: ["addon", "remote-hands", "24x7", "emergencial", "premium"],
+            observations: "Cobrança por evento - ideal para infraestruturas críticas"
+          },
+          {
+            id: "7.2.3",
+            name: "Armazenamento de Equipamentos",
+            description: "Guarda segura de equipamentos sobressalentes e componentes",
+            functionality: "Área segura e climatizada para armazenamento de equipamentos não utilizados",
+            applicability: "Empresas com equipamentos de backup, componentes sobressalentes",
+            example: "Servidores de contingência, peças de reposição, equipamentos sazonais",
+            price: 45,
+            characteristics: [
+              "Área climatizada",
+              "Segurança 24x7",
+              "Controle de acesso",
+              "Inventário detalhado",
+              "Seguro incluso",
+              "Acesso sob demanda"
+            ],
+            tags: ["addon", "storage", "equipamentos", "backup", "seguro"],
+            observations: "Cobrança mensal por m³ - mínimo 1m³"
+          },
+          {
+            id: "7.2.4",
+            name: "Instalação de Equipamentos",
+            description: "Serviço profissional de instalação e configuração física",
+            functionality: "Instalação profissional de equipamentos no rack com cabeamento e configuração básica",
+            applicability: "Novos deployments, migração de equipamentos, expansão de infraestrutura",
+            example: "Instalação de servidores, switches, storage, organização de cabos",
+            price: 320,
+            characteristics: [
+              "Instalação profissional",
+              "Organização de cabos",
+              "Teste de conectividade",
+              "Documentação da instalação",
+              "Configuração básica",
+              "Garantia do serviço"
+            ],
+            tags: ["addon", "instalacao", "deployment", "cabeamento", "configuracao"],
+            observations: "Preço por equipamento - configuração avançada com cobrança adicional"
+          },
+          {
+            id: "7.2.5",
+            name: "Acesso de Terceiros",
+            description: "Credenciamento e acompanhamento de fornecedores e técnicos externos",
+            functionality: "Processo de credenciamento e acompanhamento para acesso de fornecedores ao data center",
+            applicability: "Manutenção por fornecedores, auditoria externa, instalação especializada",
+            example: "Técnicos de hardware, auditores de segurança, fornecedores especializados",
+            price: 125,
+            characteristics: [
+              "Processo de credenciamento",
+              "Acompanhamento técnico",
+              "Controle de acesso rigoroso",
+              "Documentação de visita",
+              "Protocolo de segurança",
+              "Relatório de atividades"
+            ],
+            tags: ["addon", "terceiros", "credenciamento", "seguranca", "auditoria"],
+            observations: "Cobrança por visita - agendamento prévio obrigatório"
+          },
+          {
+            id: "7.2.6",
+            name: "Backup de Energia Estendido",
+            description: "Capacidade adicional de backup de energia para equipamentos de alto consumo",
+            functionality: "Provisão de energia de backup adicional para equipamentos com demanda energética elevada",
+            applicability: "Equipamentos de alto desempenho, GPUs, storage de alta densidade",
+            example: "Servidores GPU, storage NVMe, equipamentos de mineração",
+            price: 290,
+            characteristics: [
+              "Capacidade energética adicional",
+              "UPS dedicado",
+              "Monitoramento individual",
+              "Redundância N+1",
+              "Alarmes personalizados",
+              "Relatórios de consumo"
+            ],
+            tags: ["addon", "energia", "backup", "ups", "alta-densidade"],
+            observations: "Cobrança mensal por kW adicional - análise técnica necessária"
+          }
+        ]
+      }
+    ]
   }
 ];
