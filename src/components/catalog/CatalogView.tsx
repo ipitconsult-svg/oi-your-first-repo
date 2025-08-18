@@ -61,111 +61,113 @@ export const CatalogView = ({
     if (!category) return null;
 
     return (
-      <div className="space-y-6">
-        <div className="flex items-center justify-between gap-4">
-          <div className="flex items-center gap-4">
-            <Button variant="outline" onClick={handleBackClick}>
-              <ArrowLeft className="h-4 w-4 mr-2" />
-              Voltar
-            </Button>
-            <div>
-              <h2 className="text-2xl font-bold">{category.name}</h2>
-              <p className="text-muted-foreground">{category.description}</p>
+      <div className="min-h-screen bg-background">
+        <div className="space-y-6 py-8">
+          <div className="flex items-center justify-between gap-4">
+            <div className="flex items-center gap-4">
+              <Button variant="outline" onClick={handleBackClick}>
+                <ArrowLeft className="h-4 w-4 mr-2" />
+                Voltar
+              </Button>
+              <div>
+                <h2 className="text-2xl font-bold">{category.name}</h2>
+                <p className="text-muted-foreground">{category.description}</p>
+              </div>
             </div>
+            <Button variant="outline" onClick={() => setShowPrices(!showPrices)} className="flex items-center gap-2">
+              {showPrices ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+              {showPrices ? 'Ocultar Preços' : 'Mostrar Preços'}
+            </Button>
           </div>
-          <Button variant="outline" onClick={() => setShowPrices(!showPrices)} className="flex items-center gap-2">
-            {showPrices ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
-            {showPrices ? 'Ocultar Preços' : 'Mostrar Preços'}
-          </Button>
-        </div>
 
-        <Accordion type="single" collapsible className="space-y-4">
-          {category.subcategories.map(subcategory => {
-            const renderSubcategoryContent = (subcat: any, level: number = 0) => {
-              const filteredItems = filterItems(subcat.items);
-              return (
-                <div className="space-y-4">
-                  {filteredItems.length > 0 && (
-                    <div className="space-y-3">
-                      <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
-                        {filteredItems.map(item => (
-                          <ItemCard key={item.id} item={item} showPrice={showPrices} />
-                        ))}
+          <Accordion type="single" collapsible className="space-y-4">
+            {category.subcategories.map(subcategory => {
+              const renderSubcategoryContent = (subcat: any, level: number = 0) => {
+                const filteredItems = filterItems(subcat.items);
+                return (
+                  <div className="space-y-4">
+                    {filteredItems.length > 0 && (
+                      <div className="space-y-3">
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
+                          {filteredItems.map(item => (
+                            <ItemCard key={item.id} item={item} showPrice={showPrices} />
+                          ))}
+                        </div>
                       </div>
-                    </div>
-                  )}
-                  
-                  {subcat.subcategories && subcat.subcategories.length > 0 && (
-                    <Accordion type="single" collapsible className="space-y-2">
-                      {subcat.subcategories.map((nestedSubcat: any) => {
-                        const nestedFilteredItems = filterItems(nestedSubcat.items);
-                        const hasContent = nestedFilteredItems.length > 0 || (nestedSubcat.subcategories && nestedSubcat.subcategories.length > 0);
-                        if (searchValue && !hasContent) return null;
-                        
-                        return (
-                          <AccordionItem key={nestedSubcat.id} value={nestedSubcat.id} className="border rounded-lg">
-                            <AccordionTrigger className="text-left hover:no-underline px-4 py-3">
-                              <div className="text-left">
-                                <h4 className={`font-medium ${level > 0 ? 'text-sm' : 'text-base'}`}>
-                                  {nestedSubcat.name}
-                                  {nestedFilteredItems.length > 0 && (
-                                    <span className="ml-2 text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">
-                                      {nestedFilteredItems.length} itens
-                                    </span>
+                    )}
+                    
+                    {subcat.subcategories && subcat.subcategories.length > 0 && (
+                      <Accordion type="single" collapsible className="space-y-2">
+                        {subcat.subcategories.map((nestedSubcat: any) => {
+                          const nestedFilteredItems = filterItems(nestedSubcat.items);
+                          const hasContent = nestedFilteredItems.length > 0 || (nestedSubcat.subcategories && nestedSubcat.subcategories.length > 0);
+                          if (searchValue && !hasContent) return null;
+                          
+                          return (
+                            <AccordionItem key={nestedSubcat.id} value={nestedSubcat.id} className="border rounded-lg bg-white/80 backdrop-blur-sm">
+                              <AccordionTrigger className="text-left hover:no-underline px-4 py-3">
+                                <div className="text-left">
+                                  <h4 className={`font-medium ${level > 0 ? 'text-sm' : 'text-base'}`}>
+                                    {nestedSubcat.name}
+                                    {nestedFilteredItems.length > 0 && (
+                                      <span className="ml-2 text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">
+                                        {nestedFilteredItems.length} itens
+                                      </span>
+                                    )}
+                                  </h4>
+                                  {nestedSubcat.description && (
+                                    <p className="text-xs text-muted-foreground mt-1 line-clamp-2">
+                                      {nestedSubcat.description}
+                                    </p>
                                   )}
-                                </h4>
-                                {nestedSubcat.description && (
-                                  <p className="text-xs text-muted-foreground mt-1 line-clamp-2">
-                                    {nestedSubcat.description}
-                                  </p>
-                                )}
-                              </div>
-                            </AccordionTrigger>
-                            <AccordionContent className="px-4 pb-3">
-                              {renderSubcategoryContent(nestedSubcat, level + 1)}
-                            </AccordionContent>
-                          </AccordionItem>
-                        );
-                      })}
-                    </Accordion>
-                  )}
-                </div>
-              );
-            };
-
-            const filteredItems = filterItems(subcategory.items);
-            const hasNestedSubcategories = subcategory.subcategories && subcategory.subcategories.length > 0;
-            const hasContent = filteredItems.length > 0 || hasNestedSubcategories;
-            if (searchValue && !hasContent) return null;
-
-            return (
-              <AccordionItem key={subcategory.id} value={subcategory.id} className="border rounded-lg">
-                <AccordionTrigger className="text-left hover:no-underline px-6 py-4">
-                  <div className="text-left">
-                    <h3 className="text-lg font-semibold">
-                      {subcategory.name}
-                      {filteredItems.length > 0 && (
-                        <span className="ml-3 text-sm bg-primary/10 text-primary px-3 py-1 rounded-full">
-                          {filteredItems.length} itens
-                        </span>
-                      )}
-                    </h3>
-                    {subcategory.description && (
-                      <p className="text-sm text-muted-foreground mt-1 line-clamp-2">
-                        {subcategory.description}
-                      </p>
+                                </div>
+                              </AccordionTrigger>
+                              <AccordionContent className="px-4 pb-3">
+                                {renderSubcategoryContent(nestedSubcat, level + 1)}
+                              </AccordionContent>
+                            </AccordionItem>
+                          );
+                        })}
+                      </Accordion>
                     )}
                   </div>
-                </AccordionTrigger>
-                <AccordionContent className="px-6 pb-4">
-                  <div className="pt-2">
-                    {renderSubcategoryContent(subcategory)}
-                  </div>
-                </AccordionContent>
-              </AccordionItem>
-            );
-          })}
-        </Accordion>
+                );
+              };
+
+              const filteredItems = filterItems(subcategory.items);
+              const hasNestedSubcategories = subcategory.subcategories && subcategory.subcategories.length > 0;
+              const hasContent = filteredItems.length > 0 || hasNestedSubcategories;
+              if (searchValue && !hasContent) return null;
+
+              return (
+                <AccordionItem key={subcategory.id} value={subcategory.id} className="border rounded-lg bg-white/90 backdrop-blur-sm shadow-card">
+                  <AccordionTrigger className="text-left hover:no-underline px-6 py-4">
+                    <div className="text-left">
+                      <h3 className="text-lg font-semibold">
+                        {subcategory.name}
+                        {filteredItems.length > 0 && (
+                          <span className="ml-3 text-sm bg-primary/10 text-primary px-3 py-1 rounded-full">
+                            {filteredItems.length} itens
+                          </span>
+                        )}
+                      </h3>
+                      {subcategory.description && (
+                        <p className="text-sm text-muted-foreground mt-1 line-clamp-2">
+                          {subcategory.description}
+                        </p>
+                      )}
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="px-6 pb-4">
+                    <div className="pt-2">
+                      {renderSubcategoryContent(subcategory)}
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+              );
+            })}
+          </Accordion>
+        </div>
       </div>
     );
   }
@@ -176,8 +178,8 @@ export const CatalogView = ({
   // Don't show home section if showHome is false (i.e., user is in a category)
   if (!showHome) {
     return (
-      <div className="space-y-12">
-        <section>
+      <div className="space-y-12 min-h-screen bg-background">
+        <section className="py-8">
           <div className="mb-8 text-center">
             <h2 className="text-2xl font-bold mb-3">Categorias Principais</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -216,7 +218,7 @@ export const CatalogView = ({
   }
 
   return (
-    <div className="space-y-16">
+    <div className="space-y-16 min-h-screen bg-background">
       {/* Hero Section - Modern with subtle background */}
       {!searchValue && (
         <section className="relative py-20 px-4 overflow-hidden">
