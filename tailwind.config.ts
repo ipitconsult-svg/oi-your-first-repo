@@ -78,7 +78,8 @@ export default {
 				'gradient-hero': 'var(--gradient-hero)',
 				'gradient-subtle': 'var(--gradient-subtle)',
 				'gradient-card': 'var(--gradient-card)',
-				'gradient-datacenter': 'var(--gradient-datacenter)'
+				'gradient-datacenter': 'var(--gradient-datacenter)',
+				'gradient-background': 'var(--gradient-background)'
 			},
 			boxShadow: {
 				'elegant': 'var(--shadow-elegant)',

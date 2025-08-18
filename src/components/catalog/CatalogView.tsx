@@ -217,10 +217,17 @@ export const CatalogView = ({
 
   return (
     <div className="space-y-16">
-      {/* Hero Section - iOS Modern Style */}
+      {/* Hero Section - Modern with subtle background */}
       {!searchValue && (
-        <section className="relative py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
+        <section className="relative py-20 px-4 overflow-hidden">
+          {/* Background pattern */}
+          <div className="absolute inset-0">
+            <div className="absolute inset-0 bg-gradient-hero opacity-60"></div>
+            <div className="absolute top-20 left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary/3 rounded-full blur-3xl"></div>
+          </div>
+          
+          <div className="relative z-10 max-w-4xl mx-auto text-center">
             <div className="animate-slide-up">
               <h1 className="text-5xl md:text-7xl font-light text-foreground mb-8 tracking-tight leading-tight">
                 Infraestrutura
@@ -238,23 +245,23 @@ export const CatalogView = ({
         </section>
       )}
 
-      {/* Stats - iOS Card Style */}
+      {/* Stats - Modern Cards with depth */}
       {!searchValue && (
-        <section className="relative px-4 mb-20">
+        <section className="relative px-4 mb-20 -mt-8">
           <div className="max-w-5xl mx-auto">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {[
-                { value: filteredDataCenters.length, label: "Data Centers" },
-                { value: filteredCategories.length, label: "Categorias" },
-                { value: "50+", label: "Serviços" },
-                { value: "24/7", label: "Suporte" }
+                { value: filteredDataCenters.length, label: "Data Centers", color: "from-blue-500/10 to-blue-600/5" },
+                { value: filteredCategories.length, label: "Categorias", color: "from-green-500/10 to-green-600/5" },
+                { value: "50+", label: "Serviços", color: "from-purple-500/10 to-purple-600/5" },
+                { value: "24/7", label: "Suporte", color: "from-orange-500/10 to-orange-600/5" }
               ].map((stat, index) => (
                 <div 
                   key={stat.label}
-                  className="bg-white/80 backdrop-blur-xl border border-white/20 rounded-2xl p-6 text-center hover:bg-white/90 transition-all duration-300 animate-slide-up"
+                  className={`relative bg-white/90 backdrop-blur-xl border border-white/40 rounded-2xl p-6 text-center hover:bg-white/95 hover:shadow-elegant transition-all duration-500 hover:-translate-y-2 animate-slide-up bg-gradient-to-br ${stat.color}`}
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
-                  <div className="text-2xl md:text-3xl font-light text-primary mb-2">
+                  <div className="text-3xl md:text-4xl font-light text-primary mb-2">
                     {stat.value}
                   </div>
                   <div className="text-sm font-medium text-muted-foreground uppercase tracking-wide">
@@ -267,12 +274,19 @@ export const CatalogView = ({
         </section>
       )}
 
-      {/* Data Centers - Minimal Design */}
+      {/* Data Centers - Enhanced Visual Design */}
       {!searchValue && (
-        <section className="py-16 px-4">
-          <div className="max-w-6xl mx-auto">
+        <section className="py-20 px-4 relative">
+          {/* Section background */}
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-50 to-white opacity-80"></div>
+          
+          <div className="relative z-10 max-w-6xl mx-auto">
             <div className="text-center mb-16 animate-slide-up">
-              <h2 className="text-3xl md:text-4xl font-light text-foreground mb-4 tracking-tight">
+              <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
+                <Building2 className="h-4 w-4" />
+                <span>Infraestrutura Global</span>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-light text-foreground mb-6 tracking-tight">
                 Nossos Data Centers
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-light">
@@ -280,37 +294,41 @@ export const CatalogView = ({
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
               {filteredDataCenters.map((dc, index) => (
                 <div 
                   key={dc.id} 
                   className="animate-slide-up"
                   style={{ animationDelay: `${index * 150}ms` }}
                 >
-                  <div className="bg-white/50 backdrop-blur-lg border border-white/20 rounded-3xl p-8 hover:bg-white/70 transition-all duration-300 hover:-translate-y-1">
-                    <div className="flex items-start justify-between mb-6">
-                      <div>
-                        <h3 className="text-xl font-medium text-foreground mb-2">{dc.name}</h3>
-                        <div className="flex items-center gap-2 text-muted-foreground">
-                          <MapPin className="h-4 w-4" />
-                          <span className="text-sm">{dc.location}</span>
+                  <div className="group relative bg-white/80 backdrop-blur-xl border border-white/40 rounded-3xl p-8 hover:bg-white/90 hover:shadow-elegant transition-all duration-500 hover:-translate-y-2">
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    
+                    <div className="relative z-10">
+                      <div className="flex items-start justify-between mb-6">
+                        <div>
+                          <h3 className="text-xl font-medium text-foreground mb-2">{dc.name}</h3>
+                          <div className="flex items-center gap-2 text-muted-foreground">
+                            <MapPin className="h-4 w-4 text-primary" />
+                            <span className="text-sm">{dc.location}</span>
+                          </div>
                         </div>
+                        <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
                       </div>
-                      <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                    </div>
-                    
-                    <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
-                      {dc.description}
-                    </p>
-                    
-                    <div className="grid grid-cols-2 gap-4">
-                      <div className="text-center p-4 bg-white/30 rounded-2xl">
-                        <div className="text-lg font-medium text-primary">99.9%</div>
-                        <div className="text-xs text-muted-foreground">Uptime</div>
-                      </div>
-                      <div className="text-center p-4 bg-white/30 rounded-2xl">
-                        <div className="text-lg font-medium text-primary">&lt;2ms</div>
-                        <div className="text-xs text-muted-foreground">Latência</div>
+                      
+                      <p className="text-sm text-muted-foreground mb-8 leading-relaxed">
+                        {dc.description}
+                      </p>
+                      
+                      <div className="grid grid-cols-2 gap-4">
+                        <div className="text-center p-4 bg-gradient-to-br from-blue-50 to-blue-100/50 rounded-2xl">
+                          <div className="text-lg font-medium text-primary">99.9%</div>
+                          <div className="text-xs text-muted-foreground font-medium">Uptime</div>
+                        </div>
+                        <div className="text-center p-4 bg-gradient-to-br from-green-50 to-green-100/50 rounded-2xl">
+                          <div className="text-lg font-medium text-primary">&lt;2ms</div>
+                          <div className="text-xs text-muted-foreground font-medium">Latência</div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -321,11 +339,17 @@ export const CatalogView = ({
         </section>
       )}
 
-      {/* Categories - iOS Card Grid */}
-      <section className="py-16 px-4">
-        <div className="max-w-6xl mx-auto">
+      {/* Categories - Enhanced Grid with Visual Interest */}
+      <section className="py-20 px-4 relative">
+        {/* Background elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-20 right-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 left-10 w-80 h-80 bg-blue-500/3 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="relative z-10 max-w-6xl mx-auto">
           <div className="text-center mb-16 animate-slide-up">
-            <h2 className="text-3xl md:text-4xl font-light text-foreground mb-4 tracking-tight">
+            <h2 className="text-4xl md:text-5xl font-light text-foreground mb-6 tracking-tight">
               Explore por Categoria
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-light">
@@ -333,30 +357,33 @@ export const CatalogView = ({
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredCategories.map((category, index) => (
               <div 
                 key={category.id} 
-                className="animate-slide-up cursor-pointer" 
+                className="animate-slide-up cursor-pointer group" 
                 style={{ animationDelay: `${index * 100}ms` }}
                 onClick={() => handleCategoryClick(category.id)}
               >
-                <div className="bg-white/50 backdrop-blur-lg border border-white/20 rounded-3xl p-8 hover:bg-white/70 transition-all duration-300 hover:-translate-y-1 h-full">
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <div className="relative h-full bg-white/80 backdrop-blur-xl border border-white/40 rounded-3xl p-8 hover:bg-white/90 hover:shadow-elegant transition-all duration-500 hover:-translate-y-2">
+                  {/* Gradient overlay on hover */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-blue-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  
+                  <div className="relative z-10 text-center">
+                    <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                       <Package className="h-8 w-8 text-primary" />
                     </div>
                     
-                    <h3 className="text-xl font-medium text-foreground mb-3">
+                    <h3 className="text-xl font-medium text-foreground mb-4 group-hover:text-primary transition-colors duration-300">
                       {category.name}
                     </h3>
                     
-                    <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
+                    <p className="text-sm text-muted-foreground mb-6 leading-relaxed line-clamp-3">
                       {category.description}
                     </p>
                     
-                    <div className="flex justify-center gap-3">
-                      <div className="text-center">
+                    <div className="flex justify-center gap-4">
+                      <div className="text-center px-4 py-2 bg-gradient-to-r from-primary/10 to-primary/5 rounded-xl">
                         <div className="text-lg font-medium text-primary">
                           {category.subcategories.reduce((total, subcat) => {
                             const subcatItems = subcat.items.length;
@@ -365,7 +392,7 @@ export const CatalogView = ({
                             return total + subcatItems + nestedItems;
                           }, 0)}
                         </div>
-                        <div className="text-xs text-muted-foreground">itens</div>
+                        <div className="text-xs text-muted-foreground font-medium">itens disponíveis</div>
                       </div>
                     </div>
                   </div>
