@@ -25,7 +25,7 @@ export const Header = ({ onSearchChange, searchValue, onMenuToggle, onHomeClick 
         <div className="flex items-center space-x-4">
           <div className="flex items-center space-x-2 cursor-pointer" onClick={onHomeClick}>
             <div className="h-8 w-8 rounded-lg bg-gradient-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">HD</span>
+              <span className="text-foreground font-bold text-sm">HD</span>
             </div>
             <h1 className="text-lg font-semibold text-foreground hidden sm:block">
               Catálogo de Infraestrutura

@@ -176,7 +176,7 @@ export const ItemCard = ({ item, showPrice = false }: ItemCardProps) => {
           {item.externalLink && (
             <Tooltip>
               <TooltipTrigger asChild>
-                <Button variant="outline" size="sm" className="flex-1 hover:bg-primary hover:text-primary-foreground transition-colors" asChild>
+                <Button variant="outline" size="sm" className="flex-1 hover:bg-primary hover:text-foreground transition-colors" asChild>
                   <a href={item.externalLink} target="_blank" rel="noopener noreferrer">
                     <ExternalLink className="h-3 w-3 mr-2" />
                     Mais Info

@@ -25,7 +25,7 @@ export const CategoryCard = ({ category, onCategoryClick }: CategoryCardProps) =
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="h-10 w-10 rounded-lg bg-gradient-primary flex items-center justify-center">
-              <IconComponent className="h-5 w-5 text-primary-foreground" />
+              <IconComponent className="h-5 w-5 text-foreground" />
             </div>
             <div>
               <CardTitle className="text-lg">{category.name}</CardTitle>
