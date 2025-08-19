@@ -100,31 +100,398 @@ export const securityCategory: Category = {
           ],
           tags: ["soc", "application", "transactions", "authentication", "business-logic"],
           observations: "Ideal para aplicações que processam dados sensíveis ou transações de valor"
+        },
+        {
+          id: "4.1.1.6",
+          name: "SOC Server Monitoring",
+          description: "Ativo que armazena dados vitais, sendo um alvo monitorado contra acessos indevidos e exfiltração",
+          price: 40.00,
+          functionality: "Monitoramento contínuo de servidores críticos com detecção de anomalias, tentativas de exfiltração e acessos não autorizados",
+          applicability: "Servidores de bancos de dados, servidores de aplicações críticas, servidores de arquivos sensíveis",
+          example: "Monitoramento de servidor de produção com dados de clientes ou informações financeiras",
+          characteristics: [
+            "Detecção de escalação de privilégios",
+            "Monitoramento de acesso a dados sensíveis",
+            "Análise de comportamento de usuários privilegiados",
+            "Detecção de exfiltração de dados",
+            "Alertas em tempo real de atividades suspeitas"
+          ],
+          tags: ["soc", "server", "monitoring", "data-protection", "access-control"],
+          observations: "Proteção especializada para servidores que armazenam dados críticos para o negócio"
+        },
+        {
+          id: "4.1.1.7",
+          name: "SOC Firewall Monitoring",
+          description: "Primeira linha de defesa que filtra o tráfego de rede, gerando logs essenciais para a detecção de tentativas de intrusão",
+          price: 75.00,
+          functionality: "Monitoramento avançado de logs e eventos de firewall para identificação proativa de tentativas de intrusão e tráfego malicioso",
+          applicability: "Firewalls perimetrais, Next-Gen Firewalls, dispositivos UTM, gateways de segurança",
+          example: "Monitoramento de firewall corporativo que protege o acesso à rede interna",
+          characteristics: [
+            "Análise em tempo real de logs de firewall",
+            "Correlação de eventos de segurança",
+            "Detecção de scanning e reconhecimento",
+            "Identificação de padrões de ataque",
+            "Monitoramento de regras e configurações"
+          ],
+          tags: ["soc", "firewall", "monitoring", "intrusion-detection", "perimeter-security"],
+          observations: "Essencial para proteção efetiva do perímetro e detecção precoce de tentativas de intrusão"
+        },
+        {
+          id: "4.1.1.8",
+          name: "SOC Network Assets Monitoring",
+          description: "Equipamentos como switches e roteadores que controlam o fluxo de dados, analisados para identificar movimentação lateral de atacantes",
+          price: 30.00,
+          functionality: "Monitoramento de dispositivos de rede para detectar anomalias, movimentação lateral e comportamentos suspeitos na infraestrutura",
+          applicability: "Switches corporativos, roteadores, controllers wireless, dispositivos de core networking",
+          example: "Monitoramento de switches de core ou roteadores de borda para detecção de tráfego anômalo",
+          characteristics: [
+            "Análise de fluxos de rede (NetFlow)",
+            "Detecção de movimentação lateral",
+            "Identificação de dispositivos não autorizados",
+            "Monitoramento de alterações de configuração",
+            "Alerta de desvios de baseline de tráfego"
+          ],
+          tags: ["soc", "network", "monitoring", "lateral-movement", "traffic-analysis"],
+          observations: "Fundamental para detecção de atacantes que já penetraram o perímetro e tentam se movimentar lateralmente"
+        },
+        {
+          id: "4.1.2.1",
+          name: "SOC Events - Até 50 EPS",
+          description: "Processamento de até 50 eventos por segundo (~129 milhões de eventos por mês)",
+          price: 0.00,
+          functionality: "Coleta, armazenamento e análise de até 50 eventos por segundo dos diversos dispositivos monitorados",
+          applicability: "Pequenas e médias empresas, ambientes com volume controlado de logs",
+          example: "Processamento de logs de firewall, endpoints e servidores de pequena empresa",
+          characteristics: [
+            "Processamento em tempo real",
+            "Correlação de eventos",
+            "Armazenamento seguro",
+            "Análise de comportamento",
+            "Detecção de anomalias"
+          ],
+          tags: ["soc", "events", "logs", "analysis", "small-business"],
+          observations: "Sob consulta - Ideal para ambientes menores com volume moderado de eventos"
+        },
+        {
+          id: "4.1.2.2",
+          name: "SOC Events - 51 a 200 EPS",
+          description: "Processamento de 51 a 200 eventos por segundo (~516 milhões de eventos por mês)",
+          price: 0.00,
+          functionality: "Coleta, armazenamento e análise de até 200 eventos por segundo com capacidade expandida de correlação",
+          applicability: "Empresas de médio porte, ambientes com múltiplas fontes de logs",
+          example: "Processamento de logs de infraestrutura corporativa de médio porte",
+          characteristics: [
+            "Processamento escalonável",
+            "Correlação avançada de eventos",
+            "Armazenamento otimizado",
+            "Machine learning para detecção",
+            "Relatórios de compliance avançados"
+          ],
+          tags: ["soc", "events", "logs", "medium-business", "compliance"],
+          observations: "Sob consulta - Apropriado para ambientes com volume moderado a alto de eventos"
+        },
+        {
+          id: "4.1.2.3",
+          name: "SOC Events - 201 a 500 EPS",
+          description: "Processamento de 201 a 500 eventos por segundo (~1,29 bilhão de eventos por mês)",
+          price: 0.00,
+          functionality: "Processamento de alto volume de eventos com capacidade avançada de análise e correlação para ambientes complexos",
+          applicability: "Grandes empresas, ambientes corporativos complexos, múltiplos locais",
+          example: "Monitoramento de infraestrutura completa de grande empresa",
+          characteristics: [
+            "Processamento distribuído",
+            "Correlação de eventos multi-fonte",
+            "Análise de comportamento avançada",
+            "Detecção de ameaças persistentes",
+            "Investigação forense simplificada"
+          ],
+          tags: ["soc", "events", "logs", "enterprise", "advanced-correlation"],
+          observations: "Sob consulta - Solução robusta para grandes volumes de dados de segurança"
+        },
+        {
+          id: "4.1.2.4",
+          name: "SOC Events - 501 a 1000 EPS",
+          description: "Processamento de 501 a 1000 eventos por segundo (~2,58 bilhões de eventos por mês)",
+          price: 0.00,
+          functionality: "Processamento de alto volume com tecnologias de big data para análise de segurança em tempo real",
+          applicability: "Grandes corporações, ambientes críticos, setores altamente regulados",
+          example: "Monitoramento de segurança para instituição financeira ou empresa multinacional",
+          characteristics: [
+            "Arquitetura distribuída de alto desempenho",
+            "Análise de big data em tempo real",
+            "Automação avançada de resposta",
+            "Machine learning e IA para detecção",
+            "Retenção estendida de dados"
+          ],
+          tags: ["soc", "events", "logs", "enterprise", "big-data"],
+          observations: "Sob consulta - Para organizações com necessidades avançadas de processamento de eventos"
+        },
+        {
+          id: "4.1.2.5",
+          name: "SOC Events - Acima de 1000 EPS",
+          description: "Processamento personalizado para volumes extremamente altos de eventos de segurança",
+          price: 0.00,
+          functionality: "Solução personalizada para processamento massivo de eventos com tecnologia de ponta e capacidade elástica",
+          applicability: "Conglomerados, infraestruturas críticas, provedores de serviços",
+          example: "Monitoramento de segurança para grande instituição financeira ou infraestrutura governamental",
+          characteristics: [
+            "Arquitetura elástica personalizada",
+            "Processamento massivamente paralelo",
+            "Algoritmos de IA avançados",
+            "Capacidade preditiva de ameaças",
+            "Integração com threat intelligence premium"
+          ],
+          tags: ["soc", "events", "logs", "enterprise", "massive-scale"],
+          observations: "Sob consulta - Solução enterprise para volumes extremamente altos de dados de segurança"
+        },
+        {
+          id: "4.1.3.1",
+          name: "LGPD Storage - 2TB/mês",
+          description: "Armazenamento criptografado e seguro para 2TB de dados mensais",
+          price: 9600.00,
+          functionality: "Storage dedicado de 24TB (LUN) com 6k IOPs para armazenamento seguro de logs e dados de segurança",
+          applicability: "Empresas com requisitos de compliance LGPD, armazenamento de logs de segurança",
+          example: "Armazenamento de logs de segurança para empresa de médio a grande porte",
+          characteristics: [
+            "Criptografia avançada em repouso",
+            "Controle de acesso granular",
+            "Trilhas de auditoria completas",
+            "Retenção configurable (mínimo 12 meses)",
+            "Hospedagem em datacenter nacional"
+          ],
+          tags: ["storage", "lgpd", "compliance", "security", "logs"],
+          observations: "Em conformidade com a LGPD, com todos os dados mantidos em território nacional"
+        },
+        {
+          id: "4.1.3.2",
+          name: "LGPD Storage - Acima de 3TB/mês",
+          description: "Armazenamento criptografado escalável para volumes acima de 3TB mensais",
+          price: 0.35,
+          functionality: "Storage escalável com 6k IOPs por GB para volumes maiores de dados de segurança",
+          applicability: "Grandes corporações, ambientes com alto volume de logs, retenção extendida",
+          example: "Armazenamento de logs para multinacional ou instituição financeira (preço por GB)",
+          characteristics: [
+            "Escalabilidade sob demanda",
+            "Criptografia avançada em repouso",
+            "Controle de acesso baseado em papéis",
+            "Conformidade com regulações de armazenamento",
+            "Retenção customizável de longo prazo"
+          ],
+          tags: ["storage", "lgpd", "compliance", "enterprise", "scalable"],
+          observations: "Preço por GB para volumes acima de 3TB/mês, mantendo conformidade com LGPD"
         }
       ]
     },
     {
       id: "4.2",
+      name: "Proteção DDoS",
+      description: "Soluções de proteção contra ataques distribuídos de negação de serviço",
+      items: [
+        {
+          id: "4.2.1",
+          name: "Proteção DDoS | Nacional Basic",
+          description: "Proteção DDoS de nível básico com 20Gbps por servidor",
+          price: 149.99,
+          functionality: "Proteção contra ataques DDoS com capacidade de mitigação de até 20Gbps por servidor em datacenter nacional",
+          applicability: "Websites, aplicações web, pequenos e-commerces, blogs corporativos",
+          example: "Proteção para site institucional ou aplicação web de pequeno porte",
+          characteristics: [
+            "Mitigação de até 20Gbps",
+            "Proteção volumétrica básica",
+            "Proteção contra ataques de protocolo",
+            "Relatórios básicos de ataques",
+            "SLA de 6h para resposta"
+          ],
+          tags: ["ddos", "protection", "basic", "mitigation", "security"],
+          observations: "SLA 6h / null route / atendimento via ticket. Datacenter: SPO"
+        },
+        {
+          id: "4.2.2",
+          name: "Proteção DDoS | Nacional Standard",
+          description: "Proteção DDoS de nível intermediário com 40Gbps por servidor",
+          price: 249.99,
+          functionality: "Proteção contra ataques DDoS com capacidade de mitigação de até 40Gbps por servidor em datacenter nacional",
+          applicability: "E-commerces médios, portais corporativos, aplicações de negócio, APIs expostas",
+          example: "Proteção para loja online de médio porte ou portal de serviços",
+          characteristics: [
+            "Mitigação de até 40Gbps",
+            "Proteção volumétrica avançada",
+            "Proteção contra ataques de camada 7",
+            "Relatórios detalhados de ataques",
+            "SLA de 3h para resposta"
+          ],
+          tags: ["ddos", "protection", "standard", "mitigation", "layer7"],
+          observations: "SLA 3h / atendimento via ticket. Datacenter: SPO"
+        },
+        {
+          id: "4.2.3",
+          name: "Proteção DDoS | Nacional Premium",
+          description: "Proteção DDoS premium com capacidade ilimitada por servidor",
+          price: 499.99,
+          functionality: "Proteção ilimitada contra ataques DDoS com capacidade de mitigação sem limites por servidor em datacenter nacional",
+          applicability: "E-commerces grandes, sistemas financeiros, aplicações críticas, serviços essenciais",
+          example: "Proteção para plataforma de e-banking ou e-commerce de grande porte",
+          characteristics: [
+            "Mitigação de capacidade ilimitada",
+            "Proteção multicamada avançada",
+            "Mitigação adaptativa e inteligente",
+            "Análise comportamental de tráfego",
+            "SLA de 1h para resposta"
+          ],
+          tags: ["ddos", "protection", "premium", "unlimited", "mission-critical"],
+          observations: "SLA 1h / atendimento via ticket e WhatsApp. Datacenter: SPO"
+        }
+      ]
+    },
+    {
+      id: "4.3",
       name: "Firewall as a Service",
       description: "Proteção de perímetro como serviço com gestão contínua",
       items: [
         {
-          id: "4.2.1",
-          name: "Next-Gen Firewall - Essential",
-          description: "Firewall de próxima geração com recursos essenciais",
+          id: "4.3.1.1",
+          name: "Secure Private Cloud 1",
+          description: "SPC1 (Até 2 servidores) com proteção básica",
           price: 300.00,
-          functionality: "Proteção de perímetro com inspeção profunda de pacotes, IPS e filtro de aplicações básico",
-          applicability: "Pequenas empresas, filiais remotas, perímetro básico, conexões de internet",
-          example: "Proteção de perímetro de escritório pequeno ou filial remota",
+          functionality: "Ambiente seguro para até 2 servidores com regras de firewall e conectividade VPN básicas",
+          applicability: "Pequenas empresas, startups, ambiente de desenvolvimento, aplicações de pequeno porte",
+          example: "Ambiente seguro para servidor web e banco de dados de aplicação departamental",
           characteristics: [
-            "Stateful inspection",
-            "Intrusion Prevention básico",
-            "Application control básico",
-            "VPN site-to-site",
-            "Gestão centralizada"
+            "5x regras de firewall",
+            "5x contas VPN local",
+            "Até 3x Contas VPN site to site",
+            "2x solicitações de alterações de regras",
+            "IPS Padrão"
           ],
-          tags: ["firewall", "essential", "perimeter", "small-business", "remote-office"],
-          observations: "Solução econômica com proteção efetiva para necessidades básicas de segurança"
+          tags: ["firewall", "secure-cloud", "vpn", "small-business", "perimeter"],
+          observations: "Solução econômica para pequenas implementações em datacenter BRA"
+        },
+        {
+          id: "4.3.1.2",
+          name: "Secure Private Cloud 2",
+          description: "SPC2 (Até 2 servidores) com proteção intermediária",
+          price: 450.00,
+          functionality: "Ambiente seguro para até 2 servidores com conjunto expandido de regras e conectividade",
+          applicability: "Pequenas e médias empresas, ambientes de homologação, aplicações de departamento",
+          example: "Proteção para ambiente de aplicação de negócio com requisitos de segurança intermediários",
+          characteristics: [
+            "10x regras de firewall",
+            "10x contas VPN local",
+            "Até 5x Contas VPN site to site",
+            "3x solicitações de alterações de regras",
+            "IPS Padrão"
+          ],
+          tags: ["firewall", "secure-cloud", "vpn", "medium-business", "protection"],
+          observations: "Equilíbrio entre recursos e custo para implementações em datacenter BRA"
+        },
+        {
+          id: "4.3.1.3",
+          name: "Secure Private Cloud 3",
+          description: "SPC3 (Até 2 servidores) com proteção avançada",
+          price: 600.00,
+          functionality: "Ambiente seguro para até 2 servidores com conjunto robusto de regras e conectividade VPN",
+          applicability: "Empresas médias, aplicações de negócio, ambientes com necessidades avançadas de segurança",
+          example: "Proteção para aplicação crítica de departamento com múltiplas conexões externas",
+          characteristics: [
+            "20x regras de firewall",
+            "20x contas VPN local",
+            "Até 8x Contas VPN site to site",
+            "5x solicitações de alterações de regras",
+            "IPS Padrão"
+          ],
+          tags: ["firewall", "secure-cloud", "vpn", "business", "advanced-security"],
+          observations: "Solução robusta para aplicações importantes em datacenter BRA"
+        },
+        {
+          id: "4.3.1.4",
+          name: "Secure Private Cloud 4",
+          description: "SPC4 (Até 2 servidores) com proteção premium",
+          price: 900.00,
+          functionality: "Ambiente seguro premium para até 2 servidores com proteção multicamada avançada",
+          applicability: "Aplicações críticas, empresas com altos requisitos de segurança, ambientes regulados",
+          example: "Proteção para sistema financeiro ou aplicação com dados sensíveis de clientes",
+          characteristics: [
+            "35x regras de firewall",
+            "30x contas VPN local",
+            "Até 12x Contas VPN site to site",
+            "10x solicitações de alterações de regras",
+            "Antivírus e IPS Padrão integrados"
+          ],
+          tags: ["firewall", "secure-cloud", "vpn", "enterprise", "premium-security"],
+          observations: "Solução premium para aplicações críticas em datacenter BRA"
+        },
+        {
+          id: "4.3.2.1",
+          name: "FortiGate 40F",
+          description: "Appliance de segurança com 5 portas RJ45 GE",
+          price: 520.00,
+          functionality: "Appliance Fortinet para pequenos escritórios com recursos de segurança integrados",
+          applicability: "Pequenos escritórios, filiais remotas, lojas, consultórios",
+          example: "Proteção de rede para escritório pequeno ou consultório médico",
+          characteristics: [
+            "5 portas RJ45 GE (1 WAN, 4 Internas)",
+            "Firewall integrado com UTM",
+            "VPN para acesso remoto",
+            "Filtragem de conteúdo básica",
+            "Gerenciamento centralizado"
+          ],
+          tags: ["firewall", "fortinet", "appliance", "small-office", "utm"],
+          observations: "Valor/Mês: R$520,00. Com UTP: R$897,55. Com ATP: R$749,82"
+        },
+        {
+          id: "4.3.2.2",
+          name: "FortiGate 60F",
+          description: "Appliance de segurança com 10 portas RJ45 GE",
+          price: 680.00,
+          functionality: "Appliance Fortinet para pequenas e médias empresas com recursos avançados de segurança",
+          applicability: "Pequenas e médias empresas, escritórios profissionais, clínicas, pequenas lojas",
+          example: "Proteção para escritório de advocacia ou clínica médica com várias estações",
+          characteristics: [
+            "10 portas RJ45 GE (2 WAN, 1 DMZ, 7 Internas)",
+            "Firewall NGFW com inspeção SSL",
+            "SD-WAN básico integrado",
+            "Segmentação de rede interna",
+            "Proteção contra malware"
+          ],
+          tags: ["firewall", "fortinet", "appliance", "medium-business", "ngfw"],
+          observations: "Valor/Mês: R$680,00. Com UTP: R$1.210,10. Com ATP: R$1.002,67"
+        },
+        {
+          id: "4.3.2.3",
+          name: "FortiGate 100F",
+          description: "Appliance de segurança enterprise com 22 portas RJ45 GE",
+          price: 2500.00,
+          functionality: "Appliance Fortinet potente para empresas com alto throughput e recursos avançados de segurança",
+          applicability: "Empresas de médio porte, escritórios corporativos, ambientes com múltiplas VLANs",
+          example: "Proteção para matriz de empresa de médio porte ou datacenter departamental",
+          characteristics: [
+            "22 portas RJ45 GE + 2 SFP + 2 SFP+",
+            "1 DMZ, 1 Mgmt, 2 HA, 14 switch compartilhadas",
+            "NGFW com inspeção de conteúdo avançada",
+            "SD-WAN corporativo integrado",
+            "Alta disponibilidade (HA)"
+          ],
+          tags: ["firewall", "fortinet", "appliance", "enterprise", "high-performance"],
+          observations: "Valor/Mês: R$2.500,00. Com UTP: R$3.733,54"
+        },
+        {
+          id: "4.3.2.4",
+          name: "FortiGate 200F",
+          description: "Appliance de segurança enterprise avançado",
+          price: 4900.00,
+          functionality: "Appliance Fortinet de alto desempenho para empresas e datacenters com necessidades avançadas de segurança",
+          applicability: "Grandes empresas, datacenters, infraestrutura crítica, ambientes de alta performance",
+          example: "Proteção para datacenter corporativo ou backbone de rede empresarial",
+          characteristics: [
+            "2 portas RJ45 GE (HA/MGMT), 16 portas RJ45 GE",
+            "2 slots SFP FortiLink, 8 slots SFP GE",
+            "Processamento de SSL em hardware dedicado",
+            "Virtual domains para multi-tenancy",
+            "Throughput de firewall de alto desempenho"
+          ],
+          tags: ["firewall", "fortinet", "appliance", "datacenter", "high-throughput"],
+          observations: "Valor/Mês: R$4.900,00. Com UTP: R$7.473,94"
         },
         {
           id: "4.2.2",
@@ -300,6 +667,139 @@ export const securityCategory: Category = {
     },
     {
       id: "4.4",
+      name: "Acronis Security Suite",
+      description: "Soluções avançadas de cibersegurança e proteção de endpoints da Acronis",
+      items: [
+        {
+          id: "4.4.1.1",
+          name: "Security + EDR",
+          description: "Advanced Security + EDR - Proteção avançada com detecção e resposta a ameaças",
+          price: 7.78,
+          functionality: "Proteção completa para endpoints com capacidades avançadas de EDR (Endpoint Detection and Response)",
+          applicability: "Estações de trabalho corporativas, servidores críticos, dispositivos com acesso a dados sensíveis",
+          example: "Proteção para laptops corporativos de executivos ou departamento financeiro",
+          characteristics: [
+            "Detecção de ameaças avançada por IA",
+            "Análise comportamental de processos",
+            "Resposta automatizada a incidentes",
+            "Forensics e rollback de ameaças",
+            "Proteção contra ransomware"
+          ],
+          tags: ["acronis", "security", "edr", "endpoint", "advanced-threat"],
+          observations: "Solução standalone da Acronis com recursos completos de proteção e EDR"
+        },
+        {
+          id: "4.4.2.1",
+          name: "Security + XDR",
+          description: "Advanced Security + XDR - Proteção estendida com detecção e resposta cross-platform",
+          price: 24.40,
+          functionality: "Plataforma unificada de proteção com recursos avançados de XDR para detecção e resposta além do endpoint",
+          applicability: "Ambientes corporativos complexos, infraestrutura híbrida, organizações com requisitos avançados de segurança",
+          example: "Proteção para ambiente empresarial completo incluindo endpoints, servidores e infraestrutura de rede",
+          characteristics: [
+            "Telemetria correlacionada multi-fonte",
+            "Detecção avançada cross-platform",
+            "Hunting automatizado de ameaças",
+            "Investigação simplificada de incidentes",
+            "Resposta orquestrada em múltiplos vetores"
+          ],
+          tags: ["acronis", "security", "xdr", "cross-platform", "advanced"],
+          observations: "Solução standalone da Acronis com visão unificada de segurança em toda a infraestrutura"
+        },
+        {
+          id: "4.4.3.1",
+          name: "MDR Standard",
+          description: "Managed Detection and Response - Standard - Detecção e resposta gerenciada por especialistas",
+          price: 34.85,
+          functionality: "Serviço de MDR que combina tecnologia avançada com monitoramento humano especializado 24/7",
+          applicability: "Empresas sem equipe de segurança dedicada, complemento para equipes internas, ambientes críticos",
+          example: "Monitoramento de segurança para empresa de médio porte sem SOC interno",
+          characteristics: [
+            "Monitoramento 24/7 por especialistas",
+            "Análise humana de alertas",
+            "Resposta assistida a incidentes",
+            "Hunting proativo de ameaças",
+            "Recomendações de segurança"
+          ],
+          tags: ["acronis", "mdr", "managed", "detection", "response"],
+          observations: "Requer Advanced Security + EDR como pré-requisito"
+        },
+        {
+          id: "4.4.3.2",
+          name: "MDR Advanced",
+          description: "Managed Detection and Response - Advanced - Detecção e resposta gerenciada premium",
+          price: 69.85,
+          functionality: "Serviço premium de MDR com recursos avançados de hunting, resposta e consultoria de segurança",
+          applicability: "Organizações com alto perfil de risco, ambientes regulados, empresas que processam dados sensíveis",
+          example: "Proteção gerenciada para instituição financeira ou empresa com propriedade intelectual valiosa",
+          characteristics: [
+            "Monitoramento premium 24/7/365",
+            "Resposta a incidentes com SLA garantido",
+            "Threat hunting avançado e personalizado",
+            "Consultoria de segurança dedicada",
+            "Análise forense completa"
+          ],
+          tags: ["acronis", "mdr", "advanced", "premium", "managed-security"],
+          observations: "Requer Advanced Security + EDR como pré-requisito"
+        },
+        {
+          id: "4.4.4.1",
+          name: "Advanced Email Security",
+          description: "Advanced Email Security (Perception Point) - Proteção avançada para email corporativo",
+          price: 28.44,
+          functionality: "Proteção de email de próxima geração contra phishing, malware, BEC e ataques avançados",
+          applicability: "Empresas com uso intensivo de email, organizações que processam informações sensíveis por email",
+          example: "Proteção para emails corporativos em empresa financeira ou equipe executiva",
+          characteristics: [
+            "Detecção avançada de phishing",
+            "Prevenção de ataques BEC",
+            "Sandboxing de anexos em tempo real",
+            "Análise comportamental de URLs",
+            "Prevenção de vazamento de dados via email"
+          ],
+          tags: ["acronis", "email", "security", "phishing", "perception-point"],
+          observations: "Solução standalone da Acronis powered by Perception Point"
+        },
+        {
+          id: "4.4.4.2",
+          name: "Advanced Collaboration Apps Security",
+          description: "Advanced Collaboration Apps Security (Perception Point) - Proteção para aplicações colaborativas",
+          price: 19.14,
+          functionality: "Segurança avançada para plataformas de colaboração como Teams, Slack e aplicações web",
+          applicability: "Empresas que utilizam plataformas colaborativas, equipes remotas, organizações com uso intenso de SaaS",
+          example: "Proteção para comunicações via Microsoft Teams ou Slack em ambiente corporativo",
+          characteristics: [
+            "Monitoramento de conteúdo em tempo real",
+            "Detecção de malware em arquivos compartilhados",
+            "Análise de links em chats e mensagens",
+            "Prevenção de vazamentos em plataformas colaborativas",
+            "Proteção contra ameaças em aplicações web"
+          ],
+          tags: ["acronis", "collaboration", "teams", "slack", "perception-point"],
+          observations: "Solução standalone da Acronis powered by Perception Point"
+        },
+        {
+          id: "4.4.5.1",
+          name: "Advanced Security Awareness Training",
+          description: "Treinamento avançado de conscientização em segurança",
+          price: 8.84,
+          functionality: "Plataforma completa de treinamento e simulação para conscientização em segurança cibernética",
+          applicability: "Todos os funcionários, especialmente usuários finais, equipes com acesso a dados sensíveis",
+          example: "Treinamento anti-phishing para todos os colaboradores da empresa (preço por usuário)",
+          characteristics: [
+            "Módulos de treinamento personalizados",
+            "Simulações realistas de phishing",
+            "Gamificação e premiações",
+            "Dashboards de progresso e métricas",
+            "Conteúdo atualizado sobre novas ameaças"
+          ],
+          tags: ["acronis", "training", "awareness", "phishing", "education"],
+          observations: "Solução standalone da Acronis com preço por usuário"
+        }
+      ]
+    },
+    {
+      id: "4.5",
       name: "Gestão de Identidade e Acesso",
       description: "Soluções para controle de acesso e gestão de identidades",
       items: [
@@ -392,6 +892,32 @@ export const securityCategory: Category = {
           ],
           tags: ["casb", "cloud", "saas", "shadow-it", "data-protection"],
           observations: "Essencial para organizações que utilizam múltiplas aplicações SaaS e armazenam dados na nuvem"
+        }
+      ]
+    },
+    {
+      id: "4.6",
+      name: "Licenças de Software de Segurança",
+      description: "Licenças de software especializado para proteção e segurança da informação",
+      items: [
+        {
+          id: "4.6.1",
+          name: "Link para Catálogo de Licenças",
+          description: "Acesso ao catálogo completo de licenças de software de segurança",
+          price: 0.00,
+          functionality: "Acesso ao catálogo de licenças e softwares de segurança da informação com produtos líderes de mercado",
+          applicability: "Todos os tipos de organizações que necessitam de software de segurança licenciado",
+          example: "Licenças para software antivírus, firewalls, VPNs e outras soluções de segurança",
+          characteristics: [
+            "Ampla variedade de soluções",
+            "Produtos líderes de mercado",
+            "Opções para diferentes tamanhos de empresa",
+            "Suporte técnico especializado",
+            "Modelos de licenciamento flexíveis"
+          ],
+          tags: ["licenças", "software", "segurança", "antivírus", "firewall"],
+          observations: "Consulte o catálogo completo de licenças MACRO para detalhes de produtos e preços",
+          externalLink: "/softwares-licencas"
         }
       ]
     }
