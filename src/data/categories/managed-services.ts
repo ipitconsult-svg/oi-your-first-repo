@@ -3,281 +3,277 @@ import { Category } from "@/types/catalog";
 export const managedServicesCategory: Category = {
   id: "6",
   name: "MANAGED SERVICES",
-  description: "Serviços gerenciados para operação, monitoramento e administração de infraestrutura de TI",
+  description: "Serviços gerenciados para operação, monitoramento e administração de infraestrutura de TI com diferentes níveis de suporte",
   subcategories: [
     {
       id: "6.1",
-      name: "Administração de Sistemas",
-      description: "Serviços de gerenciamento e administração de sistemas operacionais e plataformas",
+      name: "Gerenciamento Padrão",
+      description: "Serviços básicos de gerenciamento com bundle de 5 horas mensais e opções de suporte flexíveis",
       items: [
         {
           id: "6.1.1",
-          name: "Gerenciamento Linux Basic",
-          description: "Gerenciamento básico de servidores Linux com monitoramento e manutenção",
+          name: "Gerenciamento Padrão 8x5",
+          description: "Gerenciamento básico com 5 horas mensais e suporte das 9h às 18h",
           price: 199.00,
-          functionality: "Administração terceirizada de servidores Linux com suporte 24/7",
-          applicability: "Empresas sem equipe interna de Linux ou com necessidade de suporte contínuo",
-          example: "Administração de servidores web, aplicação ou banco de dados em Linux",
+          functionality: "Bundle de 5 horas mensais para atividades básicas de gerenciamento com suporte comercial",
+          applicability: "Pequenas empresas, ambientes não críticos, infraestruturas simples que não requerem suporte 24x7",
+          example: "Servidor web corporativo, pequeno e-commerce, aplicação interna de departamento",
           characteristics: [
-            "Monitoramento 24/7",
-            "Atualizações de segurança",
-            "Resposta a incidentes",
-            "Backups gerenciados",
-            "Relatórios mensais"
+            "5 horas mensais de gerenciamento",
+            "Suporte 8x5 (das 9h às 18h)",
+            "Atualizações de segurança básicas",
+            "Monitoramento durante horário comercial",
+            "Suporte técnico reativo",
+            "Relatórios mensais básicos",
+            "Backup verification"
           ],
-          tags: ["linux", "managed", "admin", "server", "support"]
+          tags: ["managed", "standard", "8x5", "basic", "small-business"],
+          observations: "Ideal para empresas que operam apenas em horário comercial e possuem tolerância a interrupções noturnas"
         },
         {
-          id: "6.1.2",
-          name: "Gerenciamento Linux Advanced",
-          description: "Administração avançada de servidores Linux com otimização e automação",
-          price: 349.00,
-          functionality: "Administração especializada de ambiente Linux com otimização contínua",
-          applicability: "Ambientes críticos Linux que exigem alta performance e disponibilidade",
-          example: "Clusters de alta disponibilidade, ambientes de e-commerce ou finanças",
+          id: "6.1.2", 
+          name: "Gerenciamento Padrão 24x7",
+          description: "Gerenciamento básico com 5 horas mensais e suporte 24 horas por dia",
+          price: 299.00,
+          functionality: "Bundle de 5 horas mensais para atividades básicas de gerenciamento com suporte contínuo",
+          applicability: "Empresas com operação contínua, e-commerce, aplicações que não podem parar durante a noite",
+          example: "Loja virtual, sistema de vendas online, aplicação móvel com usuários 24x7",
           characteristics: [
-            "Monitoramento avançado",
-            "Otimização de performance",
-            "Automação e scripts personalizados",
-            "Planejamento de capacidade",
-            "Suporte premium 24/7"
+            "5 horas mensais de gerenciamento",
+            "Suporte 24x7 (24 horas, 7 dias)",
+            "Monitoramento contínuo",
+            "Resposta a incidentes críticos",
+            "Atualizações programadas",
+            "Suporte técnico reativo",
+            "Backup verification diário"
           ],
-          tags: ["linux", "managed", "advanced", "performance", "automation"]
-        },
-        {
-          id: "6.1.3",
-          name: "Gerenciamento Windows Basic",
-          description: "Gerenciamento básico de servidores Windows com monitoramento e manutenção",
-          price: 229.00,
-          functionality: "Administração terceirizada de servidores Windows com suporte 24/7",
-          applicability: "Empresas que utilizam plataforma Microsoft sem equipe especializada",
-          example: "Administração de servidores Windows para Active Directory, Exchange, SharePoint",
-          characteristics: [
-            "Monitoramento 24/7",
-            "Atualizações de segurança",
-            "Resposta a incidentes",
-            "Backups gerenciados",
-            "Relatórios mensais"
-          ],
-          tags: ["windows", "managed", "admin", "server", "support"]
-        },
-        {
-          id: "6.1.4",
-          name: "Gerenciamento Windows Advanced",
-          description: "Administração avançada de servidores Windows com otimização e automação",
-          price: 399.00,
-          functionality: "Administração especializada de ambiente Windows com otimização contínua",
-          applicability: "Ambientes críticos Windows que exigem alta performance e disponibilidade",
-          example: "Clusters SQL Server, Exchange Enterprise, ambientes corporativos complexos",
-          characteristics: [
-            "Monitoramento avançado",
-            "Otimização de performance",
-            "PowerShell avançado e automação",
-            "Planejamento de capacidade",
-            "Suporte premium 24/7"
-          ],
-          tags: ["windows", "managed", "advanced", "performance", "automation"]
-        },
-        {
-          id: "6.1.5",
-          name: "Database Management",
-          description: "Administração especializada de bancos de dados relacionais e NoSQL",
-          price: 499.00,
-          functionality: "Gerenciamento completo de bancos de dados por DBAs especializados",
-          applicability: "Empresas com bancos de dados críticos sem DBA dedicado",
-          example: "Gerenciamento de PostgreSQL, MySQL, SQL Server, MongoDB, etc.",
-          characteristics: [
-            "Monitoramento de performance",
-            "Otimização de queries",
-            "Planejamento de capacidade",
-            "Backup e restore avançados",
-            "Alta disponibilidade e replicação"
-          ],
-          tags: ["database", "dba", "sql", "nosql", "optimization"]
+          tags: ["managed", "standard", "24x7", "continuous", "ecommerce"],
+          observations: "Recomendado para empresas com operação 24x7 mas com infraestrutura relativamente simples"
         }
       ]
     },
     {
       id: "6.2",
-      name: "Operações de Rede",
-      description: "Gerenciamento de infraestrutura de rede, equipamentos e conectividade",
+      name: "Gerenciamento Avançado",
+      description: "Serviços intermediários de gerenciamento com bundle de 7 horas mensais e recursos aprimorados",
       items: [
         {
           id: "6.2.1",
-          name: "Gerenciamento de Firewall",
-          description: "Administração e monitoramento de firewalls com políticas de segurança",
-          price: 349.00,
-          functionality: "Gerenciamento completo de firewalls com monitoramento contínuo",
-          applicability: "Empresas com necessidade de segurança de perímetro gerenciada",
-          example: "Administração de firewalls Fortinet, Palo Alto, Cisco, pfSense",
+          name: "Gerenciamento Avançado 8x5",
+          description: "Gerenciamento intermediário com 7 horas mensais e suporte das 9h às 18h",
+          price: 399.00,
+          functionality: "Bundle de 7 horas mensais para atividades avançadas de gerenciamento com suporte comercial",
+          applicability: "Empresas médias, infraestruturas mais complexas, múltiplos serviços que requerem configurações avançadas",
+          example: "Ambiente com múltiplos servidores, cluster de aplicação, infraestrutura corporativa média",
           characteristics: [
-            "Configuração de políticas",
-            "Monitoramento de tráfego",
-            "Análise de logs",
-            "Resposta a incidentes",
-            "Relatórios de segurança"
+            "7 horas mensais de gerenciamento",
+            "Suporte 8x5 (das 9h às 18h)",
+            "Otimização de performance",
+            "Configurações avançadas",
+            "Planejamento de capacidade básico",
+            "Monitoramento proativo",
+            "Análise de logs e métricas",
+            "Automação básica"
           ],
-          tags: ["firewall", "security", "network", "managed", "protection"]
+          tags: ["managed", "advanced", "8x5", "optimization", "medium-business"],
+          observations: "Adequado para empresas que necessitam otimizações e configurações mais sofisticadas durante horário comercial"
         },
         {
           id: "6.2.2",
-          name: "Gerenciamento de Switches",
-          description: "Administração e configuração de switches e infraestrutura de rede local",
-          price: 299.00,
-          functionality: "Gerenciamento de switches, VLANs e configurações de rede",
-          applicability: "Empresas com infraestrutura de rede que necessita administração especializada",
-          example: "Administração de switches Cisco, Juniper, HPE/Aruba, Dell",
+          name: "Gerenciamento Avançado 24x7",
+          description: "Gerenciamento intermediário com 7 horas mensais e suporte contínuo",
+          price: 499.00,
+          functionality: "Bundle de 7 horas mensais para atividades avançadas de gerenciamento com suporte contínuo",
+          applicability: "Empresas médias com operação contínua, aplicações críticas, ambientes que exigem disponibilidade alta",
+          example: "Sistema ERP corporativo, plataforma SaaS, aplicação financeira, serviços críticos 24x7",
           characteristics: [
-            "Configuração de VLANs",
-            "Monitoramento de portas e tráfego",
-            "Otimização de performance",
-            "Gestão de firmware",
-            "Documentação de rede"
+            "7 horas mensais de gerenciamento",
+            "Suporte 24x7 (24 horas, 7 dias)",
+            "Monitoramento proativo avançado",
+            "Otimização contínua de performance",
+            "Resposta rápida a incidentes",
+            "Configurações de alta disponibilidade",
+            "Análise preventiva",
+            "Automação intermediária"
           ],
-          tags: ["switch", "network", "vlan", "managed", "infrastructure"]
+          tags: ["managed", "advanced", "24x7", "critical", "high-availability"],
+          observations: "Recomendado para aplicações críticas que exigem alta disponibilidade e otimização contínua"
         },
         {
           id: "6.2.3",
-          name: "SD-WAN Management",
-          description: "Gerenciamento de soluções SD-WAN para conectividade entre filiais",
-          price: 549.00,
-          functionality: "Administração completa de ambientes SD-WAN multi-site",
-          applicability: "Empresas com múltiplas localidades e necessidade de WAN inteligente",
-          example: "Gestão de SD-WAN Cisco Viptela, VMware VeloCloud, Fortinet",
+          name: "Gerenciamento Avançado Cloud",
+          description: "Gerenciamento especializado para ambientes cloud com recursos específicos",
+          price: 0,
+          functionality: "Gerenciamento específico para ambientes cloud seguindo lógica do bundle contratado",
+          applicability: "Empresas com infraestrutura cloud que necessitam gerenciamento especializado de recursos nativos",
+          example: "Ambiente AWS/Azure/GCP, arquitetura cloud-native, aplicações distribuídas na nuvem",
           characteristics: [
-            "Políticas de tráfego e QoS",
-            "Monitoramento de circuitos",
-            "Failover automático",
-            "Otimização de rotas",
-            "Relatórios de utilização"
+            "Bundle conforme contrato (mesma lógica GA)",
+            "Suporte especializado em cloud",
+            "Gerenciamento de rede cloud",
+            "Backup cloud gerenciado",
+            "Firewall as a Service",
+            "Ferramentas WHM/cPanel incluídas",
+            "Otimização de custos cloud",
+            "Automação cloud-native"
           ],
-          tags: ["sdwan", "wan", "network", "optimization", "multi-site"]
-        },
-        {
-          id: "6.2.4",
-          name: "Load Balancer Management",
-          description: "Gerenciamento de balanceadores de carga para alta disponibilidade",
-          price: 399.00,
-          functionality: "Administração de balanceadores de carga para aplicações críticas",
-          applicability: "Empresas com aplicações que exigem alta disponibilidade e escalabilidade",
-          example: "Gestão de F5, NGINX, HAProxy, AWS ELB ou balanceadores similares",
-          characteristics: [
-            "Configuração de pools e nodes",
-            "Health checks avançados",
-            "Otimização de algoritmos",
-            "Monitoramento de performance",
-            "Alta disponibilidade (HA)"
-          ],
-          tags: ["load-balancer", "high-availability", "network", "performance", "scaling"]
-        },
-        {
-          id: "6.2.5",
-          name: "Network Monitoring & Alerting",
-          description: "Monitoramento completo de rede com alertas e resposta a incidentes",
-          price: 299.00,
-          functionality: "Monitoramento 24/7 de toda infraestrutura de rede com alertas em tempo real",
-          applicability: "Empresas que necessitam visibilidade e gestão proativa de rede",
-          example: "Monitoramento de WAN, LAN, ativos de rede, latência e disponibilidade",
-          characteristics: [
-            "Monitoramento 24/7/365",
-            "Alertas em tempo real",
-            "Dashboards personalizados",
-            "Análise de tendências",
-            "Resposta a incidentes"
-          ],
-          tags: ["monitoring", "network", "alerts", "visibility", "management"]
+          tags: ["managed", "advanced", "cloud", "native", "whm-cpanel"],
+          observations: "Preço varia conforme bundle contratado. Inclui ferramentas especializadas para ambiente cloud como WHM/cPanel"
         }
       ]
     },
     {
       id: "6.3",
-      name: "Cloud Management",
-      description: "Gerenciamento especializado de ambientes em nuvem pública e híbrida",
+      name: "Gerenciamento Full",
+      description: "Serviços completos de gerenciamento com bundle de 10 horas mensais e máximo nível de suporte",
       items: [
         {
           id: "6.3.1",
-          name: "AWS Managed Services",
-          description: "Gerenciamento especializado de ambiente AWS com otimização contínua",
-          price: 799.00,
-          functionality: "Administração completa de ambientes AWS por especialistas certificados",
-          applicability: "Empresas com workloads na AWS sem expertise interna completa",
-          example: "Gerenciamento de EC2, RDS, Lambda, S3 e outros serviços AWS",
+          name: "Gerenciamento Full 8x5",
+          description: "Gerenciamento completo com 10 horas mensais e suporte das 9h às 18h",
+          price: 599.00,
+          functionality: "Bundle de 10 horas mensais para gerenciamento completo da infraestrutura com suporte comercial",
+          applicability: "Grandes empresas, infraestruturas complexas, múltiplos ambientes que requerem gestão especializada",
+          example: "Datacenter corporativo, infraestrutura híbrida, ambiente multi-aplicação crítico",
           characteristics: [
-            "Arquitetura Well-Architected",
-            "Otimização de custos",
-            "Segurança e compliance",
-            "Automação via CloudFormation/CDK",
-            "Monitoramento avançado"
+            "10 horas mensais de gerenciamento",
+            "Suporte 8x5 (das 9h às 18h)",
+            "Gerenciamento completo da infraestrutura",
+            "Planejamento estratégico de capacidade",
+            "Otimização avançada de performance",
+            "Automação completa de processos",
+            "Análise preditiva e preventiva",
+            "Consultoria técnica incluída",
+            "Documentação completa"
           ],
-          tags: ["aws", "cloud", "managed", "iaas", "optimization"]
+          tags: ["managed", "full", "8x5", "complete", "enterprise"],
+          observations: "Nível máximo de gerenciamento para empresas que necessitam de gestão completa durante horário comercial"
         },
         {
           id: "6.3.2",
-          name: "Azure Managed Services",
-          description: "Gerenciamento especializado de ambiente Azure com otimização contínua",
-          price: 749.00,
-          functionality: "Administração completa de ambientes Azure por especialistas certificados",
-          applicability: "Empresas com workloads no Azure sem expertise interna completa",
-          example: "Gerenciamento de VMs, Azure SQL, App Services e outros serviços Azure",
+          name: "Gerenciamento Full 24x7",
+          description: "Gerenciamento completo com 10 horas mensais e suporte contínuo premium",
+          price: 699.00,
+          functionality: "Bundle de 10 horas mensais para gerenciamento completo da infraestrutura com suporte premium contínuo",
+          applicability: "Grandes corporações, aplicações mission-critical, infraestruturas que não podem parar nunca",
+          example: "Sistemas bancários, trading systems, infraestrutura de saúde crítica, grandes e-commerces",
           characteristics: [
-            "Arquitetura Azure Well-Architected",
-            "Otimização de custos",
-            "Segurança e compliance",
-            "Automação via ARM/Bicep",
-            "Monitoramento avançado"
+            "10 horas mensais de gerenciamento",
+            "Suporte premium 24x7",
+            "Gerenciamento completo da infraestrutura",
+            "Monitoramento proativo avançado",
+            "Resposta imediata a incidentes críticos",
+            "Otimização contínua automatizada",
+            "Planejamento estratégico avançado",
+            "Consultoria especializada",
+            "SLA premium garantido"
           ],
-          tags: ["azure", "cloud", "managed", "iaas", "optimization"]
+          tags: ["managed", "full", "24x7", "mission-critical", "premium"],
+          observations: "Máximo nível de serviço para infraestruturas mission-critical que exigem disponibilidade absoluta"
+        }
+      ]
+    },
+    {
+      id: "6.4",
+      name: "Sustentação",
+      description: "Serviços especializados de sustentação e administração seguindo padrões ISO 20000-1",
+      items: [
+        {
+          id: "6.4.1",
+          name: "Suporte e Monitoramento Reativo e Proativo",
+          description: "Combinação de suporte reativo para incidentes e monitoramento proativo para prevenção",
+          functionality: "Sistema híbrido que combina resposta rápida a problemas com prevenção através de monitoramento inteligente",
+          applicability: "Organizações que necessitam de suporte completo com prevenção de problemas e resposta eficiente",
+          example: "Infraestrutura corporativa crítica, ambientes de produção com alta disponibilidade exigida",
+          characteristics: [
+            "Monitoramento 24x7 com alertas inteligentes",
+            "Resposta reativa a incidentes em tempo hábil",
+            "Análise proativa de tendências e padrões",
+            "Prevenção de problemas através de insights",
+            "Dashboards em tempo real",
+            "Relatórios preditivos",
+            "Escalation automático para situações críticas"
+          ],
+          tags: ["sustentacao", "proactive", "reactive", "monitoring", "prevention"],
+          observations: "Combina o melhor dos dois mundos: prevenção proativa e resposta reativa eficiente"
         },
         {
-          id: "6.3.3",
-          name: "Google Cloud Managed Services",
-          description: "Gerenciamento especializado de ambiente GCP com otimização contínua",
-          price: 729.00,
-          functionality: "Administração completa de ambientes GCP por especialistas certificados",
-          applicability: "Empresas com workloads no Google Cloud sem expertise interna completa",
-          example: "Gerenciamento de GCE, GKE, BigQuery e outros serviços GCP",
+          id: "6.4.2",
+          name: "Administração Física e Lógica de Nós Computacionais",
+          description: "Gestão completa tanto dos aspectos físicos quanto lógicos da infraestrutura computacional",
+          functionality: "Administração completa cobrindo desde hardware físico até configurações lógicas e software",
+          applicability: "Datacenters, infraestruturas híbridas, ambientes que requerem gestão tanto física quanto virtual",
+          example: "Gestão de servidores físicos, VMs, containers, storage físico e virtual, redes físicas e SDN",
           characteristics: [
-            "Arquitetura otimizada",
-            "Controle de custos",
-            "Segurança e compliance",
-            "Automação via Terraform/Deployment Manager",
-            "Monitoramento avançado"
+            "Gestão de hardware físico (servidores, storage, rede)",
+            "Administração de ambientes virtualizados",
+            "Configuração e otimização de sistemas operacionais",
+            "Gestão de containers e orquestração",
+            "Administração de storage físico e virtual",
+            "Controle de acesso físico e lógico",
+            "Documentação completa da infraestrutura"
           ],
-          tags: ["gcp", "cloud", "managed", "iaas", "optimization"]
+          tags: ["sustentacao", "physical", "logical", "infrastructure", "hybrid"],
+          observations: "Cobertura completa desde o nível físico de hardware até as camadas mais abstratas de software"
         },
         {
-          id: "6.3.4",
-          name: "Multi-Cloud Management",
-          description: "Gerenciamento unificado de múltiplos provedores cloud",
-          price: 1299.00,
-          functionality: "Administração centralizada de ambientes multi-cloud com governança unificada",
-          applicability: "Empresas com estratégia multi-cloud e necessidade de gestão unificada",
-          example: "Gerenciamento integrado de AWS, Azure e GCP com políticas consistentes",
+          id: "6.4.3",
+          name: "Administração de Incidentes, Problemas e Solicitações ISO 20000-1",
+          description: "Gestão formal de incidentes, problemas e solicitações seguindo padrões internacionais",
+          functionality: "Processo estruturado de ITSM seguindo ISO 20000-1 para garantir qualidade e rastreabilidade",
+          applicability: "Organizações que exigem conformidade com padrões internacionais e processos estruturados",
+          example: "Empresas regulamentadas, grandes corporações, ambientes que exigem auditoria e compliance",
           characteristics: [
-            "Dashboard unificado",
-            "Governança centralizada",
-            "Otimização de custos cross-cloud",
-            "Segurança padronizada",
-            "Automação multi-plataforma"
+            "Processos baseados em ISO 20000-1",
+            "Gestão formal de incidentes com SLA",
+            "Análise de causa raiz para problemas",
+            "Catálogo de serviços estruturado",
+            "Portal de solicitações integrado",
+            "Métricas e KPIs de qualidade",
+            "Auditoria e compliance garantidos",
+            "Melhoria contínua dos processos"
           ],
-          tags: ["multi-cloud", "hybrid", "management", "governance", "optimization"]
+          tags: ["sustentacao", "iso-20000", "itsm", "compliance", "quality"],
+          observations: "Garante conformidade com padrões internacionais e qualidade nos processos de TI"
         },
         {
-          id: "6.3.5",
-          name: "FinOps as a Service",
-          description: "Otimização contínua de custos em ambiente cloud com práticas de FinOps",
-          price: 599.00,
-          functionality: "Serviço especializado em otimização de custos de nuvem",
-          applicability: "Empresas com gastos significativos em cloud buscando eficiência financeira",
-          example: "Otimização de custos AWS/Azure/GCP, rightsizing, Reserved Instances, Spot",
+          id: "6.4.4",
+          name: "Criação de Hotline para Demandas Críticas",
+          description: "Canal prioritário e dedicado para situações críticas que exigem resposta imediata",
+          functionality: "Linha direta especializada para emergências com escalation automático e resposta prioritária",
+          applicability: "Ambientes mission-critical, sistemas financeiros, infraestruturas de saúde, aplicações críticas",
+          example: "Sistemas bancários em produção, infraestrutura hospitalar, trading systems, aplicações de segurança",
           characteristics: [
-            "Análise de utilização e custos",
-            "Recomendações de rightsizing",
-            "Estratégia de reservas e compromissos",
-            "Automação de shutdown",
-            "Relatórios detalhados"
+            "Linha direta 24x7 para emergências",
+            "Equipe especializada dedicada",
+            "Tempo de resposta garantido (< 15 minutos)",
+            "Escalation automático para gerência",
+            "War room virtual para situações críticas",
+            "Comunicação proativa com stakeholders",
+            "Post-mortem detalhado para aprendizado"
           ],
-          tags: ["finops", "cost-optimization", "cloud", "efficiency", "financial"]
+          tags: ["sustentacao", "hotline", "critical", "emergency", "response"],
+          observations: "Essencial para ambientes onde cada minuto de indisponibilidade representa impacto significativo"
+        },
+        {
+          id: "6.4.5",
+          name: "Auxílio e Projeção e Planejamento da Infraestrutura Computacional",
+          description: "Consultoria estratégica para evolução e planejamento futuro da infraestrutura",
+          functionality: "Serviço consultivo para planejamento estratégico de crescimento e evolução tecnológica",
+          applicability: "Organizações em crescimento, projetos de transformação digital, modernização de infraestrutura",
+          example: "Planejamento de migração para cloud, expansão de datacenter, modernização tecnológica, arquitetura futura",
+          characteristics: [
+            "Análise de capacidade atual e futura",
+            "Roadmap tecnológico personalizado",
+            "Projeções de crescimento e demanda",
+            "Análise de ROI e TCO",
+            "Recomendações de arquitetura",
+            "Planejamento de migração",
+            "Benchmarking e best practices",
+            "Acompanhamento de evolução tecnológica"
+          ],
+          tags: ["sustentacao", "planning", "strategy", "roadmap", "consulting"],
+          observations: "Fundamental para organizações que querem se manter atualizadas e preparadas para o futuro"
         }
       ]
     }
