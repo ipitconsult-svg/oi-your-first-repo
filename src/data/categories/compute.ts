@@ -1203,7 +1203,7 @@ export const computeCategory: Category = {
     {
       id: "1.3",
       name: "DBaaS (Database as a Service)",
-      description: "Banco de dados como serviço com gerenciamento automatizado e otimização contínua",
+      description: "Banco de dados como serviço na nuvem com gerenciamento automatizado, economia de até 40% em licenciamento e otimização contínua",
       items: [],
       subcategories: [
         {
@@ -1227,8 +1227,30 @@ export const computeCategory: Category = {
                 "SSL incluído",
                 "Restore point-in-time"
               ],
+              price: 249,
               tags: ["dbaas", "essencial", "development", "small", "basic"],
               observations: "Ideal para começar projetos com possibilidade de upgrade conforme crescimento",
+              externalLink: "https://www.hostdime.com.br/dbaas-40-de-economia-e-como-usar/"
+            },
+            {
+              id: "1.3.1.2",
+              name: "DBaaS Essencial (1 CORE / 8GB RAM / 100GB STG)",
+              description: "Database gerenciado com economia de até 40% em licenciamento SQL Server",
+              functionality: "Solução completa de banco de dados com gerenciamento automatizado e economia significativa",
+              applicability: "Startups, pequenas empresas, ambientes de desenvolvimento e teste",
+              example: "Sistemas de gestão para pequenas empresas, aplicações web de pequeno porte, ambientes de QA",
+              characteristics: [
+                "1 vCORE dedicado",
+                "8GB RAM garantida",
+                "100GB Storage SSD",
+                "Backup automático diário",
+                "Alta disponibilidade",
+                "Monitoramento 24/7",
+                "Economia de até 40% em licenciamento"
+              ],
+              price: 249,
+              tags: ["dbaas", "essencial", "cost-effective", "small-business", "sql-server"],
+              observations: "Substitui servidores locais eliminando custos de hardware e manutenção",
               externalLink: "https://www.hostdime.com.br/dbaas-40-de-economia-e-como-usar/"
             }
           ]
@@ -1254,7 +1276,27 @@ export const computeCategory: Category = {
                 "SSL certificado",
                 "Replication read-only"
               ],
+              price: 399,
               tags: ["dbaas", "standard", "medium", "ecommerce", "business"]
+            },
+            {
+              id: "1.3.2.2",
+              name: "DBaaS Standard (2 CORE / 8GB RAM / 200GB STG)",
+              description: "Solução gerenciada para empresas em crescimento com economia em licenciamento",
+              functionality: "Banco de dados na nuvem com recursos adequados para empresas de médio porte",
+              applicability: "Empresas em crescimento, e-commerces, sistemas de gestão, CRMs",
+              example: "Sistemas ERP para pequenas e médias empresas, plataformas de vendas online",
+              characteristics: [
+                "2 vCORE dedicados",
+                "8GB RAM garantida",
+                "200GB Storage SSD",
+                "Backups automáticos",
+                "Alta disponibilidade",
+                "Escalabilidade sob demanda",
+                "Monitoramento avançado"
+              ],
+              price: 399,
+              tags: ["dbaas", "standard", "sql-server", "business", "cost-efficient"]
             }
           ]
         },
@@ -1279,6 +1321,7 @@ export const computeCategory: Category = {
                 "Query optimization",
                 "Connection pooling"
               ],
+              price: 599,
               tags: ["dbaas", "performance", "critical", "analytics", "nvme"]
             },
             {
@@ -1297,7 +1340,46 @@ export const computeCategory: Category = {
                 "Advanced monitoring",
                 "Automatic failover"
               ],
+              price: 799,
               tags: ["dbaas", "performance-plus", "concurrent", "saas", "bi"]
+            },
+            {
+              id: "1.3.3.3",
+              name: "DBaaS Performance 1 (4 CORE / 8GB RAM / 300GB STG)",
+              description: "Solução de banco de dados para cargas de trabalho exigentes com economia em licenciamento",
+              functionality: "Banco de dados otimizado para alta performance e análises complexas sem custos adicionais de licença",
+              applicability: "Aplicações de negócios críticas, sistemas de analytics, ERPs de médio porte",
+              example: "Plataformas de Business Intelligence, sistemas de gestão integrados, aplicações financeiras",
+              characteristics: [
+                "4 vCORE de alta performance",
+                "8GB RAM otimizada",
+                "300GB Storage NVMe",
+                "Economia de até 40% em licenciamento",
+                "Alta disponibilidade",
+                "Monitoramento avançado",
+                "Backups automatizados"
+              ],
+              price: 599,
+              tags: ["dbaas", "performance", "cost-savings", "business-critical", "sql-server"]
+            },
+            {
+              id: "1.3.3.4",
+              name: "DBaaS Performance 2 (6 CORE / 8GB RAM / 300GB STG)",
+              description: "Banco de dados na nuvem de alto desempenho com economia significativa em custos operacionais",
+              functionality: "Banco de dados gerenciado com alta capacidade de processamento para operações complexas",
+              applicability: "Sistemas com alta concorrência, aplicações corporativas, databases com muitas transações",
+              example: "Sistemas financeiros, ERPs corporativos, plataformas SaaS multiusuários",
+              characteristics: [
+                "6 vCORE de alta performance",
+                "8GB RAM otimizada",
+                "300GB Storage NVMe",
+                "Economia de até 40% em licenciamento",
+                "Monitoramento 24/7",
+                "Alta disponibilidade garantida",
+                "Backups automatizados"
+              ],
+              price: 799,
+              tags: ["dbaas", "performance-plus", "enterprise", "multi-tenant", "cost-effective"]
             }
           ]
         },
@@ -1322,10 +1404,49 @@ export const computeCategory: Category = {
                 "Encryption at rest",
                 "24x7 Enterprise Support"
               ],
+              price: 999,
               tags: ["dbaas", "enterprise", "ha", "critical", "compliance"]
             },
             {
               id: "1.3.4.2",
+              name: "DBaaS Enterprise 2 (10 CORE / 16GB RAM / 300GB STG)",
+              description: "Solução enterprise de alta performance para cargas de trabalho intensivas",
+              functionality: "Database corporativo com performance elevada e garantia de recursos",
+              applicability: "Aplicações corporativas críticas, bancos de dados de grande porte, sistemas de gestão integrada",
+              example: "Grandes ERPs, sistemas financeiros, plataformas de gestão de dados massivos",
+              characteristics: [
+                "10 vCORE enterprise",
+                "16GB RAM ECC",
+                "300GB Storage enterprise NVMe",
+                "High Availability (HA)",
+                "Disaster Recovery automático",
+                "Monitoramento avançado 24/7",
+                "Suporte prioritário"
+              ],
+              price: 1299,
+              tags: ["dbaas", "enterprise", "high-performance", "critical-systems", "financial"]
+            },
+            {
+              id: "1.3.4.3",
+              name: "DBaaS Enterprise 3 (12 CORE / 16GB RAM / 300GB STG)",
+              description: "Solução premium para aplicações corporativas com requisitos elevados de performance",
+              functionality: "Database enterprise com recursos avançados para aplicações mission-critical",
+              applicability: "Sistemas financeiros, grandes ERPs, aplicações de missão crítica, alta concorrência",
+              example: "Sistemas de transação bancária, plataformas enterprise com milhares de usuários simultâneos",
+              characteristics: [
+                "12 vCORE enterprise",
+                "16GB RAM ECC",
+                "300GB Storage enterprise NVMe",
+                "Multi-AZ High Availability",
+                "Disaster Recovery automático",
+                "Monitoramento proativo",
+                "Atendimento prioritário 24/7"
+              ],
+              price: 1499,
+              tags: ["dbaas", "enterprise-premium", "mission-critical", "high-availability", "financial"]
+            },
+            {
+              id: "1.3.4.4",
               name: "DBaaS Enterprise + (16 CORE / 16GB RAM / 600GB STG)",
               description: "Database enterprise de máxima capacidade para cargas extremas",
               functionality: "Configuração máxima com todos os recursos enterprise e performance extrema",
@@ -1340,7 +1461,84 @@ export const computeCategory: Category = {
                 "Advanced encryption",
                 "Dedicated support engineer"
               ],
+              price: 1999,
               tags: ["dbaas", "enterprise-plus", "maximum", "mission-critical", "tier-1"]
+            },
+            {
+              id: "1.3.4.5",
+              name: "DBaaS Enterprise 1 (8 CORE / 8GB RAM / 300GB STG)",
+              description: "Solução corporativa de banco de dados com economia significativa em licenciamento",
+              functionality: "Database gerenciado de nível empresarial com alta disponibilidade e custo reduzido",
+              applicability: "Aplicações empresariais críticas, sistemas com alto requisito de compliance",
+              example: "Sistemas financeiros, ERPs corporativos, aplicações com certificações de segurança",
+              characteristics: [
+                "8 vCORE enterprise",
+                "8GB RAM ECC",
+                "300GB Storage enterprise",
+                "Economia de até 40% em licenciamento SQL",
+                "Alta disponibilidade garantida",
+                "Criptografia avançada",
+                "Suporte dedicado 24/7"
+              ],
+              price: 999,
+              tags: ["dbaas", "enterprise", "cost-savings", "compliance", "sql-server"]
+            },
+            {
+              id: "1.3.4.6",
+              name: "DBaaS Enterprise 2 (10 CORE / 16GB RAM / 300GB STG)",
+              description: "Database corporativo de alto desempenho com economia significativa em licenciamento",
+              functionality: "Solução gerenciada para empresas que buscam alto desempenho com custos otimizados",
+              applicability: "Grandes empresas com necessidade de processamento intensivo de dados",
+              example: "Sistemas ERP de grande porte, aplicações de gestão integrada empresarial",
+              characteristics: [
+                "10 vCORE enterprise",
+                "16GB RAM ECC",
+                "300GB Storage enterprise NVMe",
+                "Economia de até 40% em licenciamento",
+                "Garantia de alta disponibilidade",
+                "Backups automáticos",
+                "Monitoramento proativo"
+              ],
+              price: 1299,
+              tags: ["dbaas", "enterprise", "cost-effective", "high-performance", "sql-server"]
+            },
+            {
+              id: "1.3.4.7",
+              name: "DBaaS Enterprise 3 (12 CORE / 16GB RAM / 300GB STG)",
+              description: "Solução de banco de dados premium com economia significativa em licenciamento SQL",
+              functionality: "Database de alta performance para grandes corporações com custos operacionais reduzidos",
+              applicability: "Grandes corporações com aplicações críticas e alta demanda de processamento",
+              example: "Instituições financeiras, corporações multinacionais, grandes operações de e-commerce",
+              characteristics: [
+                "12 vCORE enterprise",
+                "16GB RAM ECC",
+                "300GB Storage enterprise NVMe",
+                "Economia de até 40% em licenciamento",
+                "Multi-AZ para alta disponibilidade",
+                "SLA de 99,99% de uptime",
+                "Suporte prioritário"
+              ],
+              price: 1499,
+              tags: ["dbaas", "enterprise-premium", "cost-optimization", "mission-critical", "sql-server"]
+            },
+            {
+              id: "1.3.4.8",
+              name: "DBaaS Enterprise + (16 CORE / 16GB RAM / 600GB STG)",
+              description: "Solução máxima para bancos de dados críticos com economia significativa em licenciamento",
+              functionality: "Database enterprise para as cargas mais exigentes com custos operacionais otimizados",
+              applicability: "Sistemas de missão crítica com necessidade de máxima performance e disponibilidade",
+              example: "Sistemas bancários centrais, plataformas de trading, data warehouses corporativos",
+              characteristics: [
+                "16 vCORE enterprise",
+                "16GB RAM ECC registered",
+                "600GB Storage enterprise NVMe",
+                "Economia de até 40% em licenciamento",
+                "Arquitetura multi-região",
+                "Disaster recovery automatizado",
+                "Engenheiro de suporte dedicado"
+              ],
+              price: 1999,
+              tags: ["dbaas", "enterprise-max", "cost-efficiency", "mission-critical", "sql-server"]
             }
           ]
         },
@@ -1351,42 +1549,46 @@ export const computeCategory: Category = {
           items: [
             {
               id: "1.3.5.1",
-              name: "Armazenamento Extra (50 GB)",
+              name: "DBaaS Recursos Adicionais - Armazenamento extra (50 GB)",
               description: "Storage adicional para expandir capacidade do database",
               functionality: "Expansão de storage sem downtime com performance mantida",
               applicability: "Quando o database precisa de mais espaço para dados",
               example: "Expansão para acomodar crescimento de dados históricos",
-              characteristics: ["50GB storage adicional", "SSD performance", "Expansão online"],
+              characteristics: ["50GB storage adicional", "SSD performance", "Expansão online", "Sem interrupção do serviço"],
+              price: 75,
               tags: ["dbaas", "addon", "storage", "expansion"]
             },
             {
               id: "1.3.5.2", 
-              name: "Memória RAM Adicional (1 GB)",
+              name: "DBaaS Recursos Adicionais - Memória RAM adicional (1 GB)",
               description: "RAM extra para melhorar performance de cache",
               functionality: "Mais memória para cache e queries complexas",
               applicability: "Otimização de performance para queries pesadas",
               example: "Melhoria de performance para relatórios complexos",
-              characteristics: ["1GB RAM adicional", "Cache expansion", "Performance boost"],
+              characteristics: ["1GB RAM adicional", "Cache expansion", "Performance boost", "Melhor resposta para consultas"],
+              price: 30,
               tags: ["dbaas", "addon", "memory", "performance"]
             },
             {
               id: "1.3.5.3",
-              name: "vCORE Adicional (1 vCORE)",
+              name: "DBaaS Recursos Adicionais - CORE adicional (1 vCORE)",
               description: "Processamento extra para workloads mais intensivos",
               functionality: "CPU adicional para paralelização de queries",
               applicability: "Workloads com maior demanda de processamento",
               example: "Otimização para analytics ou indexação pesada",
-              characteristics: ["1 vCORE adicional", "Parallel processing", "Workload optimization"],
+              characteristics: ["1 vCORE adicional", "Parallel processing", "Workload optimization", "Escalabilidade vertical"],
+              price: 150,
               tags: ["dbaas", "addon", "cpu", "processing"]
             },
             {
               id: "1.3.5.4",
-              name: "Retenção de Backup Estendida (30D)",
+              name: "DBaaS Recursos Adicionais - Retenção de backup estendida (30D)",
               description: "Extensão do período de retenção de backups",
               functionality: "Backup com retenção estendida para compliance",
               applicability: "Requisitos de compliance e auditoria",
               example: "Conformidade com políticas de retenção corporativas",
-              characteristics: ["30 dias retenção", "Compliance ready", "Point-in-time recovery"],
+              characteristics: ["30 dias retenção", "Compliance ready", "Point-in-time recovery", "Recuperação granular"],
+              price: 100,
               tags: ["dbaas", "addon", "backup", "compliance"]
             }
           ]
