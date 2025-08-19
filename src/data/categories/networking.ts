@@ -7,277 +7,513 @@ export const networkingCategory: Category = {
   subcategories: [
     {
       id: "5.1",
-      name: "Conectividade Internet",
-      description: "Conexões de internet dedicadas e redundantes para máxima disponibilidade",
-      items: [
+      name: "Cross Connection",
+      description: "Interconexões dedicadas LAN to LAN e Server to Server",
+      items: [],
+      subcategories: [
         {
           id: "5.1.1",
-          name: "Internet Dedicada 100 Mbps",
-          description: "Conexão de internet dedicada com garantia de banda e baixa latência",
-          price: 499.00,
-          functionality: "Conexão de internet com banda 100% garantida e SLA de disponibilidade",
-          applicability: "Empresas que necessitam de conexão confiável e sem compartilhamento",
-          example: "Conexão dedicada para escritório com operações críticas ou datacenter local",
-          characteristics: [
-            "Banda 100% garantida",
-            "SLA de disponibilidade 99.9%",
-            "Latência máxima garantida",
-            "Suporte 24/7",
-            "Monitoramento em tempo real"
-          ],
-          tags: ["internet", "dedicated", "bandwidth", "sla", "business"]
+          name: "Cross Connection (LAN to LAN)",
+          description: "Interconexão dedicada ponto-a-ponto fornecida por operadoras de telecom",
+          items: [
+            {
+              id: "5.1.1.1",
+              name: "Cross Connect LAN to LAN - JPA",
+              description: "Interconexão LAN to LAN através de link dedicado em João Pessoa",
+              price: 1200.00,
+              functionality: "Link dedicado ponto-a-ponto fornecido por operadora de telecom escolhida pelo cliente",
+              applicability: "Empresas que necessitam conectar sua infraestrutura local com o datacenter JPA",
+              example: "Conexão dedicada entre escritório corporativo em Recife e datacenter JPA",
+              characteristics: [
+                "Link dedicado ponto-a-ponto",
+                "Operadora de escolha do cliente",
+                "Avaliação de viabilidade técnica",
+                "Disponível para DC JPA",
+                "Operadoras: Mob Telecom, 1Telecom, Tely, Cabo Telecom"
+              ],
+              tags: ["cross-connect", "lan-to-lan", "jpa", "dedicated", "telecom"],
+              observations: "Operadoras disponíveis em Recife/PE: Mob Telecom, 1Telecom, Tely. Em Natal/RN: Cabo Telecom, 1Telecom, Tely"
+            },
+            {
+              id: "5.1.1.2",
+              name: "Cross Connect LAN to LAN - SPO",
+              description: "Interconexão LAN to LAN através de link dedicado em São Paulo",
+              price: 1350.00,
+              functionality: "Link dedicado ponto-a-ponto fornecido por operadora de telecom escolhida pelo cliente",
+              applicability: "Empresas que necessitam conectar sua infraestrutura local com o datacenter SPO",
+              example: "Conexão dedicada entre matriz corporativa e datacenter SPO",
+              characteristics: [
+                "Link dedicado ponto-a-ponto",
+                "Operadora de escolha do cliente",
+                "Avaliação de viabilidade técnica",
+                "Disponível para DC SPO",
+                "Necessário informar provedor do L2L"
+              ],
+              tags: ["cross-connect", "lan-to-lan", "spo", "dedicated", "telecom"],
+              observations: "Necessário informar qual provedor será utilizado. Cross connect oferecido apenas se o provedor já tiver abordagem na infraestrutura de SPO"
+            }
+          ]
         },
         {
           id: "5.1.2",
-          name: "Internet Dedicada 500 Mbps",
-          description: "Conexão de internet dedicada de alta performance para aplicações exigentes",
-          price: 1499.00,
-          functionality: "Conexão de internet dedicada de alta capacidade para aplicações críticas",
-          applicability: "Empresas médias a grandes com alta demanda de tráfego e múltiplos serviços",
-          example: "Serviços de streaming, cloud computing, backup online ou múltiplas VPNs",
-          characteristics: [
-            "Banda 100% garantida",
-            "SLA de disponibilidade 99.95%",
-            "Baixa latência garantida",
-            "Suporte premium 24/7",
-            "Monitoramento avançado"
-          ],
-          tags: ["internet", "dedicated", "high-bandwidth", "premium", "business"]
-        },
-        {
-          id: "5.1.3",
-          name: "Internet Dedicada 1 Gbps",
-          description: "Conexão de internet dedicada de altíssima capacidade para grandes operações",
-          price: 2499.00,
-          functionality: "Conexão de internet dedicada de capacidade empresarial para operações intensivas",
-          applicability: "Grandes empresas, datacenters, provedores de serviços, operações intensivas em rede",
-          example: "Datacenter corporativo, serviços de hospedagem, aplicações em nuvem distribuídas",
-          characteristics: [
-            "Banda 100% garantida",
-            "SLA de disponibilidade 99.99%",
-            "Mínima latência garantida",
-            "Suporte dedicado 24/7",
-            "Monitoramento em tempo real com analytics"
-          ],
-          tags: ["internet", "dedicated", "gigabit", "enterprise", "datacenter"]
-        },
-        {
-          id: "5.1.4",
-          name: "Internet Redundante",
-          description: "Conexão de internet com redundância de operadoras para máxima disponibilidade",
-          price: 1899.00,
-          functionality: "Solução de conectividade com dupla abordagem e balanceamento automático",
-          applicability: "Empresas que não podem ficar sem internet em nenhuma circunstância",
-          example: "Instituições financeiras, e-commerce, serviços críticos online",
-          characteristics: [
-            "Duas operadoras distintas",
-            "Balanceamento automático de carga",
-            "Failover instantâneo",
-            "SLA de disponibilidade 99.999%",
-            "Monitoramento constante de roteamento"
-          ],
-          tags: ["internet", "redundant", "high-availability", "critical", "failover"]
-        },
-        {
-          id: "5.1.5",
-          name: "DDoS Protection",
-          description: "Proteção avançada contra ataques de negação de serviço",
-          price: 799.00,
-          functionality: "Mitigação de ataques DDoS em tempo real com capacidade de absorção massiva",
-          applicability: "Sites e serviços online expostos a risco de ataques",
-          example: "E-commerce, jogos online, serviços financeiros, sites de alto perfil",
-          characteristics: [
-            "Proteção contra ataques volumétricos",
-            "Mitigação de ataques de camada 7",
-            "Filtragem geográfica",
-            "Traffic scrubbing",
-            "Relatórios detalhados de ataques"
-          ],
-          tags: ["security", "ddos", "protection", "mitigation", "attack"]
+          name: "Cross Connection (Server to Server)",
+          description: "Interconexões físicas entre servidores dentro do datacenter",
+          items: [],
+          subcategories: [
+            {
+              id: "5.1.2.1",
+              name: "DC JPA",
+              description: "Cross connects server to server no datacenter de João Pessoa",
+              items: [
+                {
+                  id: "5.1.2.1.1",
+                  name: "Cross Connect Server to Server JPA - Fibra",
+                  description: "Interconexão via fibra ótica entre servidores no DC JPA",
+                  price: 600.00,
+                  functionality: "Conexão direta via fibra ótica entre equipamentos do cliente no datacenter",
+                  applicability: "Interconexão de alta performance entre servidores no mesmo datacenter",
+                  example: "Conexão entre servidor de aplicação e servidor de banco de dados",
+                  characteristics: [
+                    "Conexão via fibra ótica",
+                    "Alta performance e baixa latência",
+                    "Disponível no DC JPA",
+                    "Conexão física dedicada",
+                    "Instalação profissional"
+                  ],
+                  tags: ["cross-connect", "server-to-server", "jpa", "fiber", "high-performance"]
+                },
+                {
+                  id: "5.1.2.1.2",
+                  name: "Cross Connect Server to Server JPA - UTP",
+                  description: "Interconexão via cabo UTP entre servidores no DC JPA",
+                  price: 200.00,
+                  functionality: "Conexão direta via cabo UTP entre equipamentos do cliente no datacenter",
+                  applicability: "Interconexão econômica entre servidores no mesmo datacenter",
+                  example: "Conexão de gerenciamento ou baixa demanda entre equipamentos",
+                  characteristics: [
+                    "Conexão via cabo UTP",
+                    "Solução econômica",
+                    "Disponível no DC JPA",
+                    "Conexão física dedicada",
+                    "Instalação profissional"
+                  ],
+                  tags: ["cross-connect", "server-to-server", "jpa", "utp", "economical"]
+                }
+              ]
+            },
+            {
+              id: "5.1.2.2",
+              name: "DC SPO",
+              description: "Cross connects server to server no datacenter de São Paulo",
+              items: [
+                {
+                  id: "5.1.2.2.1",
+                  name: "Cross Connect Server to Server SPO - Fibra",
+                  description: "Interconexão via fibra ótica entre servidores no DC SPO",
+                  price: 1350.00,
+                  functionality: "Conexão direta via fibra ótica entre equipamentos do cliente no datacenter",
+                  applicability: "Interconexão de alta performance entre servidores no mesmo datacenter",
+                  example: "Conexão entre cluster de servidores ou storage dedicado",
+                  characteristics: [
+                    "Conexão via fibra ótica",
+                    "Alta performance e baixa latência",
+                    "Disponível no DC SPO",
+                    "Conexão física dedicada",
+                    "Instalação profissional"
+                  ],
+                  tags: ["cross-connect", "server-to-server", "spo", "fiber", "high-performance"]
+                },
+                {
+                  id: "5.1.2.2.2",
+                  name: "Cross Connect Server to Server SPO - UTP",
+                  description: "Interconexão via cabo UTP entre servidores no DC SPO",
+                  price: 990.00,
+                  functionality: "Conexão direta via cabo UTP entre equipamentos do cliente no datacenter",
+                  applicability: "Interconexão entre servidores no mesmo datacenter com custo reduzido",
+                  example: "Conexão de gerenciamento ou aplicações de menor demanda",
+                  characteristics: [
+                    "Conexão via cabo UTP",
+                    "Custo reduzido comparado à fibra",
+                    "Disponível no DC SPO",
+                    "Conexão física dedicada",
+                    "Instalação profissional"
+                  ],
+                  tags: ["cross-connect", "server-to-server", "spo", "utp", "cost-effective"]
+                }
+              ]
+            }
+          ]
         }
       ]
     },
     {
       id: "5.2",
-      name: "IP e BGP",
-      description: "Recursos de endereçamento IP e protocolo BGP para autonomia de rede",
+      name: "Switch Port (LAN)",
+      description: "Portas de switch compartilhadas via Virtual Chassis para alta disponibilidade",
       items: [
         {
           id: "5.2.1",
-          name: "Bloco IP /29 (5 IPs utilizáveis)",
-          description: "Bloco de endereços IPv4 para recursos com necessidade de IPs públicos",
-          price: 120.00,
-          functionality: "Bloco de endereços IPv4 públicos roteáveis globalmente",
-          applicability: "Servidores que precisam ser acessados diretamente da internet",
-          example: "Servidores web, email, VPN ou aplicações expostas na internet",
+          name: "Switch Port LAN 10G",
+          description: "Porta de switch 10 Gigabit compartilhada via Virtual Chassis",
+          price: 250.00,
+          functionality: "Porta compartilhada via Virtual Chassis com gerência exclusiva NSOBR",
+          applicability: "Clientes com necessidade de alta disponibilidade ou poucas portas",
+          example: "Conexão de servidor com necessidade de 10Gbps ou ambiente com HA",
           characteristics: [
-            "5 endereços IPs utilizáveis",
-            "Roteáveis globalmente",
-            "Delegação reversa disponível",
-            "Não listados em blacklists",
-            "Documentação LACNIC/ARIN"
+            "Velocidade 10 Gigabit",
+            "Portas compartilhadas via Virtual Chassis",
+            "Gerência exclusiva NSOBR",
+            "Addon por número de portas",
+            "Alta disponibilidade"
           ],
-          tags: ["ip", "address", "public", "ipv4", "block"]
+          tags: ["switch-port", "10g", "virtual-chassis", "high-availability", "managed"]
         },
         {
           id: "5.2.2",
-          name: "Bloco IP /28 (14 IPs utilizáveis)",
-          description: "Bloco médio de endereços IPv4 para infraestruturas maiores",
-          price: 220.00,
-          functionality: "Bloco IPv4 de tamanho médio para múltiplos serviços e servidores",
-          applicability: "Empresas com múltiplos serviços expostos e necessidade de vários IPs",
-          example: "Ambiente com diversos servidores web, mail, aplicações e serviços",
+          name: "Switch Port LAN 1G",
+          description: "Porta de switch 1 Gigabit compartilhada via Virtual Chassis",
+          price: 150.00,
+          functionality: "Porta compartilhada via Virtual Chassis com gerência exclusiva NSOBR",
+          applicability: "Clientes com necessidade de alta disponibilidade ou poucas portas com menor demanda",
+          example: "Conexão de servidor padrão ou equipamento de gerenciamento",
           characteristics: [
-            "14 endereços IPs utilizáveis",
-            "Roteáveis globalmente",
-            "Delegação reversa disponível",
-            "Não listados em blacklists",
-            "Documentação LACNIC/ARIN"
+            "Velocidade 1 Gigabit",
+            "Portas compartilhadas via Virtual Chassis",
+            "Gerência exclusiva NSOBR",
+            "Addon por número de portas",
+            "Custo-benefício otimizado"
           ],
-          tags: ["ip", "address", "public", "ipv4", "block", "medium"]
-        },
-        {
-          id: "5.2.3",
-          name: "Bloco IP /27 (30 IPs utilizáveis)",
-          description: "Bloco grande de endereços IPv4 para infraestruturas complexas",
-          price: 350.00,
-          functionality: "Bloco IPv4 substancial para ambientes enterprise com múltiplos serviços",
-          applicability: "Grandes empresas ou provedores de serviço com muitas necessidades de IPs",
-          example: "Provedores de hospedagem, grandes ambientes corporativos, serviços de nuvem",
-          characteristics: [
-            "30 endereços IPs utilizáveis",
-            "Roteáveis globalmente",
-            "Delegação reversa disponível",
-            "Não listados em blacklists",
-            "Documentação LACNIC/ARIN"
-          ],
-          tags: ["ip", "address", "public", "ipv4", "block", "large"]
-        },
-        {
-          id: "5.2.4",
-          name: "IPv6 /64",
-          description: "Bloco de endereços IPv6 para preparação para o futuro da internet",
-          price: 50.00,
-          functionality: "Bloco IPv6 para implementação de conectividade de próxima geração",
-          applicability: "Organizações que desejam implementar IPv6 em sua infraestrutura",
-          example: "Ambientes de rede dual-stack ou preparação para futuro sem IPv4",
-          characteristics: [
-            "Bloco /64 (trilhões de endereços)",
-            "Roteabilidade global",
-            "Suporte a configurações modernas",
-            "Preparação para futuro da internet",
-            "Documentação LACNIC/ARIN"
-          ],
-          tags: ["ip", "address", "public", "ipv6", "block", "future"]
-        },
-        {
-          id: "5.2.5",
-          name: "BGP Full-Route",
-          description: "Autonomia de roteamento com BGP e anúncio de blocos próprios",
-          price: 400.00,
-          functionality: "Implementação de BGP para autonomia de roteamento e redundância avançada",
-          applicability: "Organizações com AS próprio e necessidade de controle de roteamento",
-          example: "Provedores, grandes empresas com múltiplas conexões e blocos próprios",
-          characteristics: [
-            "Anúncio de blocos próprios",
-            "Recebimento de tabela full-route",
-            "Controle de rotas de entrada/saída",
-            "Suporte a múltiplos upstreams",
-            "Configuração personalizada de políticas"
-          ],
-          tags: ["bgp", "routing", "autonomous-system", "redundancy", "control"]
+          tags: ["switch-port", "1g", "virtual-chassis", "high-availability", "managed"]
         }
       ]
     },
     {
       id: "5.3",
-      name: "Cross-Connect",
-      description: "Interconexões físicas e virtuais dentro do datacenter e entre parceiros",
+      name: "Bandwidth/Banda",
+      description: "Largura de banda disponível nos datacenters com conectividade otimizada",
       items: [
         {
           id: "5.3.1",
-          name: "Cross-Connect Fibra (Single Mode)",
-          description: "Interconexão física via fibra single-mode entre racks ou parceiros",
-          price: 199.00,
-          functionality: "Conexão física de fibra direta para interligação de equipamentos",
-          applicability: "Interligação entre racks ou com parceiros dentro do mesmo datacenter",
-          example: "Conexão entre seu rack e um provedor de cloud ou telecom no datacenter",
+          name: "Banda Disponível AS JPA",
+          description: "Largura de banda no datacenter JPA com múltiplas conexões redundantes",
+          price: 500.00,
+          functionality: "Porta 10Gbps + 1Gbps padrão com 320TB de tráfego incluído (cobrança 95th percentile)",
+          applicability: "Empresas que necessitam de alta largura de banda com redundância",
+          example: "Aplicações de streaming, backup online ou serviços de alta demanda",
           characteristics: [
-            "Fibra single-mode LC-LC",
-            "Baixíssima latência",
-            "Alta confiabilidade",
-            "Instalação profissional",
-            "Documentação e testes"
+            "Porta 10Gbps + 1Gbps padrão",
+            "320TB incluídos (95th percentile)",
+            "Total: 98Gbps disponível",
+            "ASN 53055 (HostDime Brasil)",
+            "Múltiplas conexões redundantes",
+            "Conectividade com IX.br (10Gbps)"
           ],
-          tags: ["cross-connect", "fiber", "interconnect", "physical", "datacenter"]
+          tags: ["bandwidth", "jpa", "high-capacity", "redundant", "95th-percentile"],
+          observations: "Conectividade: TELY (2x40Gb), ALGAR (10Gb/4Gb), MOB (1Gb), 1TELECOM (10Gb/3Gb), IX.br (10Gb)"
         },
         {
           id: "5.3.2",
-          name: "Cross-Connect Cobre (CAT6a)",
-          description: "Interconexão física via cabo de cobre CAT6a para curtas distâncias",
-          price: 149.00,
-          functionality: "Conexão física via cabo de cobre para interligações de curta distância",
-          applicability: "Interconexões dentro do mesmo datacenter para distâncias curtas",
-          example: "Conexão entre racks adjacentes ou equipamentos próximos",
+          name: "Banda Disponível AS SPO",
+          description: "Largura de banda no datacenter SPO com conectividade premium",
+          price: 500.00,
+          functionality: "Porta 10Gbps + 1Gbps padrão com 320TB de tráfego incluído (cobrança 95th percentile)",
+          applicability: "Empresas que necessitam de conectividade premium em São Paulo",
+          example: "Aplicações corporativas, serviços financeiros ou alta demanda de conectividade",
           characteristics: [
-            "Cabo CAT6a certificado",
-            "Suporte até 10Gbps",
-            "Baixa latência",
-            "Instalação profissional",
-            "Testes de certificação"
+            "Porta 10Gbps + 1Gbps padrão",
+            "320TB incluídos (95th percentile)",
+            "Conectividade premium SPO",
+            "ASN dedicado",
+            "Múltiplas operadoras",
+            "Hub de conectividade nacional"
           ],
-          tags: ["cross-connect", "copper", "interconnect", "physical", "datacenter"]
+          tags: ["bandwidth", "spo", "premium", "financial", "95th-percentile"]
+        }
+      ]
+    },
+    {
+      id: "5.4",
+      name: "Bloco de IP",
+      description: "Blocos de endereços IPv4 para diferentes datacenters e necessidades",
+      items: [],
+      subcategories: [
+        {
+          id: "5.4.1",
+          name: "DC JPA e SPO",
+          description: "Blocos de IP para datacenters brasileiros (João Pessoa e São Paulo)",
+          items: [
+            {
+              id: "5.4.1.1",
+              name: "Bloco IP /30 (2 IPs utilizáveis)",
+              description: "Bloco mínimo para conexões ponto-a-ponto",
+              price: 140.00,
+              functionality: "Menor bloco disponível para conexões diretas ou links dedicados",
+              applicability: "Conexões ponto-a-ponto, links dedicados, configurações mínimas",
+              example: "Conexão dedicada entre dois pontos ou link de interconexão",
+              characteristics: [
+                "4 IPs totais (2 utilizáveis)",
+                "Ideal para conexões P2P",
+                "Disponível em JPA e SPO",
+                "Roteamento direto",
+                "Configuração simples"
+              ],
+              tags: ["ip", "block", "jpa", "spo", "p2p", "minimal"]
+            },
+            {
+              id: "5.4.1.2",
+              name: "Bloco IP /29 (6 IPs utilizáveis)",
+              description: "Bloco pequeno para servidores básicos",
+              price: 280.00,
+              functionality: "Bloco de endereços IPv4 públicos para pequenas infraestruturas",
+              applicability: "Pequenos servidores, aplicações básicas, ambientes de teste",
+              example: "Servidores web básicos, email ou aplicações simples",
+              characteristics: [
+                "8 IPs totais (6 utilizáveis)",
+                "Ideal para pequenas aplicações",
+                "Disponível em JPA e SPO",
+                "Roteamento direto",
+                "Custo-benefício para pequenas demandas"
+              ],
+              tags: ["ip", "block", "jpa", "spo", "small", "basic"]
+            },
+            {
+              id: "5.4.1.3",
+              name: "Bloco IP /28 (14 IPs utilizáveis)",
+              description: "Bloco médio para infraestruturas intermediárias",
+              price: 640.00,
+              functionality: "Bloco IPv4 para múltiplos serviços e aplicações médias",
+              applicability: "Empresas médias com múltiplos serviços e aplicações",
+              example: "Ambiente com web servers, mail, aplicações e serviços diversos",
+              characteristics: [
+                "16 IPs totais (14 utilizáveis)",
+                "Adequado para múltiplos serviços",
+                "Disponível em JPA e SPO",
+                "Balanceamento de serviços",
+                "Flexibilidade de configuração"
+              ],
+              tags: ["ip", "block", "jpa", "spo", "medium", "multi-service"]
+            },
+            {
+              id: "5.4.1.4",
+              name: "Bloco IP /27 (30 IPs utilizáveis)",
+              description: "Bloco grande para infraestruturas empresariais",
+              price: 1440.00,
+              functionality: "Bloco substancial para ambientes enterprise com diversos serviços",
+              applicability: "Empresas grandes com múltiplas aplicações e serviços críticos",
+              example: "Infraestrutura corporativa com diversos servidores e aplicações",
+              characteristics: [
+                "32 IPs totais (30 utilizáveis)",
+                "Ideal para ambiente enterprise",
+                "Disponível em JPA e SPO",
+                "Múltiplas aplicações simultâneas",
+                "Segmentação de serviços"
+              ],
+              tags: ["ip", "block", "jpa", "spo", "large", "enterprise"]
+            },
+            {
+              id: "5.4.1.5",
+              name: "Bloco IP /26 (62 IPs utilizáveis)",
+              description: "Bloco extenso para grandes infraestruturas",
+              price: 3200.00,
+              functionality: "Bloco extenso para grandes operações e múltiplos serviços",
+              applicability: "Grandes empresas, provedores de serviço, infraestruturas complexas",
+              example: "Provedores de hospedagem, grandes ambientes corporativos",
+              characteristics: [
+                "64 IPs totais (62 utilizáveis)",
+                "Grande capacidade de endereçamento",
+                "Disponível em JPA e SPO",
+                "Infraestruturas complexas",
+                "Múltiplas sub-redes possíveis"
+              ],
+              tags: ["ip", "block", "jpa", "spo", "extensive", "provider"]
+            },
+            {
+              id: "5.4.1.6",
+              name: "Bloco IP /25 (126 IPs utilizáveis)",
+              description: "Bloco massivo para operações de grande escala",
+              price: 7680.00,
+              functionality: "Bloco massivo para operações de grande escala e múltiplos clientes",
+              applicability: "Provedores de serviços, grandes corporações, operações massivas",
+              example: "Provedores de cloud, grandes datacenters, operações multi-tenant",
+              characteristics: [
+                "128 IPs totais (126 utilizáveis)",
+                "Capacidade massiva",
+                "Disponível em JPA e SPO",
+                "Operações de grande escala",
+                "Sub-divisão flexível"
+              ],
+              tags: ["ip", "block", "jpa", "spo", "massive", "multi-tenant"]
+            },
+            {
+              id: "5.4.1.7",
+              name: "Bloco IP /24 (254 IPs utilizáveis)",
+              description: "Bloco máximo para operações de escala empresarial",
+              price: 17920.00,
+              functionality: "Bloco máximo disponível para operações de escala empresarial",
+              applicability: "Grandes provedores, corporações multinacionais, operações críticas",
+              example: "Grandes provedores de nuvem, corporações globais, datacenters enterprise",
+              characteristics: [
+                "256 IPs totais (254 utilizáveis)",
+                "Máxima capacidade disponível",
+                "Disponível em JPA e SPO",
+                "Operações enterprise",
+                "Máxima flexibilidade de sub-redes"
+              ],
+              tags: ["ip", "block", "jpa", "spo", "maximum", "enterprise-scale"]
+            }
+          ]
         },
         {
-          id: "5.3.3",
-          name: "Cross-Connect Virtual (VXLAN)",
-          description: "Interconexão virtual via VXLAN entre ambientes virtualizados",
-          price: 99.00,
-          functionality: "Interconexão via software definida por VXLAN entre ambientes",
-          applicability: "Conexão entre ambientes virtualizados sem necessidade de cabo físico",
-          example: "Conexão entre seu ambiente virtual e um cloud provider no mesmo datacenter",
-          characteristics: [
-            "Overlay network via VXLAN",
-            "Performance próxima ao físico",
-            "Configuração flexível",
-            "Provisionamento rápido",
-            "Monitoramento integrado"
-          ],
-          tags: ["cross-connect", "virtual", "vxlan", "sdn", "overlay"]
-        },
+          id: "5.4.2",
+          name: "DC USA",
+          description: "Blocos de IP para datacenter americano com preços otimizados",
+          items: [
+            {
+              id: "5.4.2.1",
+              name: "Bloco IP /30 (1 IP utilizável) - USA",
+              description: "Bloco mínimo para datacenter americano",
+              price: 90.00,
+              functionality: "Menor bloco disponível para operações nos EUA",
+              applicability: "Conexões mínimas, testes, configurações específicas",
+              example: "Conexão dedicada ou configuração específica nos EUA",
+              characteristics: [
+                "4 IPs totais (1 utilizável)",
+                "Localização: USA",
+                "Preço otimizado para mercado americano",
+                "Conectividade internacional",
+                "Compliance americano"
+              ],
+              tags: ["ip", "block", "usa", "minimal", "international"]
+            },
+            {
+              id: "5.4.2.2",
+              name: "Bloco IP /29 (5 IPs utilizáveis) - USA",
+              description: "Bloco pequeno para operações básicas nos EUA",
+              price: 135.00,
+              functionality: "Bloco básico para pequenas operações no mercado americano",
+              applicability: "Pequenas aplicações, testes, expansão inicial para EUA",
+              example: "Aplicação web básica ou serviço de teste nos EUA",
+              characteristics: [
+                "8 IPs totais (5 utilizáveis)",
+                "Localização: USA",
+                "Ideal para pequenas operações",
+                "Conectividade otimizada EUA",
+                "Compliance americano"
+              ],
+              tags: ["ip", "block", "usa", "small", "basic"]
+            },
+            {
+              id: "5.4.2.3",
+              name: "Bloco IP /28 (13 IPs utilizáveis) - USA",
+              description: "Bloco médio para operações intermediárias nos EUA",
+              price: 360.00,
+              functionality: "Bloco médio para operações empresariais no mercado americano",
+              applicability: "Empresas médias expandindo para EUA, múltiplos serviços",
+              example: "Infraestrutura corporativa nos EUA ou serviços múltiplos",
+              characteristics: [
+                "16 IPs totais (13 utilizáveis)",
+                "Localização: USA",
+                "Múltiplos serviços possíveis",
+                "Conectividade premium EUA",
+                "Flexibilidade empresarial"
+              ],
+              tags: ["ip", "block", "usa", "medium", "business"]
+            },
+            {
+              id: "5.4.2.4",
+              name: "Bloco IP /27 (29 IPs utilizáveis) - USA",
+              description: "Bloco grande para operações empresariais nos EUA",
+              price: 765.00,
+              functionality: "Bloco substancial para operações enterprise no mercado americano",
+              applicability: "Grandes empresas, operações críticas, múltiplas aplicações nos EUA",
+              example: "Operação empresarial nos EUA ou expansão significativa",
+              characteristics: [
+                "32 IPs totais (29 utilizáveis)",
+                "Localização: USA",
+                "Operações enterprise",
+                "Conectividade robusta EUA",
+                "Múltiplas aplicações"
+              ],
+              tags: ["ip", "block", "usa", "large", "enterprise"]
+            },
+            {
+              id: "5.4.2.5",
+              name: "Bloco IP /26 (61 IPs utilizáveis) - USA",
+              description: "Bloco extenso para grandes operações nos EUA",
+              price: 1620.00,
+              functionality: "Bloco extenso para grandes operações e infraestruturas complexas",
+              applicability: "Grandes corporações, provedores, operações massivas nos EUA",
+              example: "Grande infraestrutura corporativa ou operação de provedor nos EUA",
+              characteristics: [
+                "64 IPs totais (61 utilizáveis)",
+                "Localização: USA",
+                "Grandes operações",
+                "Infraestrutura robusta EUA",
+                "Capacidade extensiva"
+              ],
+              tags: ["ip", "block", "usa", "extensive", "corporate"]
+            },
+            {
+              id: "5.4.2.6",
+              name: "Bloco IP /25 (125 IPs utilizáveis) - USA",
+              description: "Bloco massivo para operações de escala nos EUA",
+              price: 3375.00,
+              functionality: "Bloco massivo para operações de grande escala no mercado americano",
+              applicability: "Provedores de serviços, grandes corporações, operações críticas",
+              example: "Provedor de nuvem nos EUA ou grande corporação multinacional",
+              characteristics: [
+                "128 IPs totais (125 utilizáveis)",
+                "Localização: USA",
+                "Operações de escala",
+                "Infraestrutura massiva EUA",
+                "Flexibilidade máxima"
+              ],
+              tags: ["ip", "block", "usa", "massive", "scale"]
+            },
+            {
+              id: "5.4.2.7",
+              name: "Bloco IP /24 (254 IPs utilizáveis) - USA",
+              description: "Bloco máximo para operações enterprise nos EUA",
+              price: 6840.00,
+              functionality: "Bloco máximo para operações de escala enterprise no mercado americano",
+              applicability: "Grandes provedores, corporações globais, operações críticas massivas",
+              example: "Grande provedor de cloud nos EUA ou corporação global",
+              characteristics: [
+                "256 IPs totais (254 utilizáveis)",
+                "Localização: USA",
+                "Máxima capacidade",
+                "Infraestrutura enterprise EUA",
+                "Operações globais"
+              ],
+              tags: ["ip", "block", "usa", "maximum", "global"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      id: "5.5",
+      name: "IP Announcements & BGP",
+      description: "Anúncio de IPs e configuração BGP para autonomia de roteamento",
+      items: [
         {
-          id: "5.3.4",
-          name: "Metro Connect",
-          description: "Interconexão de fibra entre datacenters na mesma região metropolitana",
-          price: 999.00,
-          functionality: "Conexão dedicada de fibra entre datacenters na mesma região",
-          applicability: "Organizações com presença em múltiplos datacenters na mesma cidade",
-          example: "Conexão dedicada entre seu ambiente principal e DR na mesma cidade",
+          id: "5.5.1",
+          name: "IP Announcements & BGP",
+          description: "Serviço de anúncio de IPs e configuração BGP para todos os datacenters",
+          price: 500.00,
+          functionality: "Configuração e gerenciamento de anúncios BGP para blocos IP próprios do cliente",
+          applicability: "Organizações com AS próprio que necessitam controle de roteamento",
+          example: "Empresa com múltiplas conexões que deseja otimizar rotas e ter redundância",
           characteristics: [
-            "Circuito dedicado de fibra",
-            "Latência ultra-baixa",
-            "Banda garantida",
-            "SLA de disponibilidade 99.99%",
-            "Diversidade de rotas opcional"
+            "Disponível em todos os DCs (JPA, SPO, USA)",
+            "Anúncio de blocos próprios do cliente",
+            "Configuração BGP personalizada",
+            "Controle de políticas de roteamento",
+            "Redundância e otimização de rotas",
+            "Monitoramento de anúncios"
           ],
-          tags: ["metro-connect", "datacenter", "fiber", "dedicated", "low-latency"]
-        },
-        {
-          id: "5.3.5",
-          name: "Exchange Port (IX.br)",
-          description: "Porta de conexão com o Internet Exchange brasileiro",
-          price: 350.00,
-          functionality: "Conexão direta com o IX.br para troca de tráfego com outros AS",
-          applicability: "Organizações com AS próprio que desejam otimizar rotas e custos",
-          example: "Provedores, grandes empresas buscando melhor conectividade nacional",
-          characteristics: [
-            "Porta dedicada no IX.br",
-            "Otimização de rotas nacionais",
-            "Redução de custos de trânsito",
-            "Menor latência para destinos brasileiros",
-            "Configuração BGP incluída"
-          ],
-          tags: ["ix", "exchange", "bgp", "peering", "national"]
+          tags: ["bgp", "ip-announcements", "routing", "autonomous-system", "multi-dc"],
+          observations: "Disponível para datacenters JPA, SPO e USA. Requer AS próprio do cliente e blocos IP elegíveis para anúncio"
         }
       ]
     }
