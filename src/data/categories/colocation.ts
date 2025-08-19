@@ -7,280 +7,264 @@ export const colocationCategory: Category = {
   subcategories: [
     {
       id: "7.1",
-      name: "Racks e Espaços",
-      description: "Espaços físicos em datacenter para hospedagem de equipamentos",
+      name: "Espaço de RACK",
+      description: "Espaços físicos em datacenter para hospedagem de equipamentos com diferentes configurações",
       items: [
         {
           id: "7.1.1",
-          name: "Quarter Rack (10U)",
-          description: "Espaço de 10U em rack compartilhado em datacenter Tier III",
-          price: 699.00,
-          functionality: "Espaço físico de 10U em rack compartilhado com energia e refrigeração",
-          applicability: "Empresas com necessidade de hospedar poucos equipamentos em ambiente profissional",
-          example: "Hospedagem de 2-3 servidores, um switch e um firewall em ambiente seguro",
+          name: "Colocation 1U - JPA",
+          description: "Hospedagem de servidor 1U no datacenter de João Pessoa",
+          price: 399.00,
+          functionality: "Espaço físico de 1U em rack compartilhado com energia, refrigeração e conectividade básica",
+          applicability: "Pequenas empresas, startups, aplicações básicas que necessitam de servidor único em ambiente profissional",
+          example: "Servidor web para site corporativo, servidor de email, pequena aplicação ou desenvolvimento",
           characteristics: [
-            "10U de espaço utilizável",
-            "2kVA de energia incluídos",
+            "1U de espaço físico",
+            "1 IP público incluído",
+            "60Mbps de banda garantida",
+            "Energia incluída no preço",
             "Refrigeração redundante",
-            "Acesso 24/7 mediante agendamento",
-            "Conectividade básica incluída"
+            "Setup cortesia (sem taxa de instalação)",
+            "Acesso 24/7 mediante agendamento"
           ],
-          tags: ["colocation", "rack", "datacenter", "hosting", "physical"]
+          tags: ["colocation", "1u", "jpa", "small", "basic"],
+          observations: "Valor mínimo de oferta: R$ 349,00. Ideal para empresas que estão começando ou precisam de presença física no Nordeste"
         },
         {
           id: "7.1.2",
-          name: "Half Rack (21U)",
-          description: "Metade de um rack standard (21U) em datacenter Tier III",
-          price: 1299.00,
-          functionality: "Espaço físico de 21U em rack com energia e refrigeração redundantes",
-          applicability: "Empresas médias com múltiplos equipamentos para hospedar",
-          example: "Hospedagem de 4-8 servidores, storage, networking em ambiente seguro",
+          name: "Colocation 1U - SPO",
+          description: "Hospedagem de servidor 1U no datacenter de São Paulo",
+          price: 599.00,
+          functionality: "Espaço físico de 1U em rack compartilhado com energia, refrigeração e conectividade em São Paulo",
+          applicability: "Empresas que necessitam presença no principal hub tecnológico brasileiro com conectividade premium",
+          example: "Servidor para aplicação nacional, API para mobile apps, serviços para região Sudeste",
           characteristics: [
-            "21U de espaço utilizável",
-            "3.5kVA de energia incluídos",
-            "Refrigeração N+1",
-            "Acesso 24/7 mediante agendamento",
-            "Conectividade básica incluída"
+            "1U de espaço físico",
+            "1 IP público incluído",
+            "60Mbps de banda garantida",
+            "Energia incluída no preço",
+            "Refrigeração redundante",
+            "Setup cortesia (sem taxa de instalação)",
+            "Conectividade premium SPO",
+            "Acesso 24/7 mediante agendamento"
           ],
-          tags: ["colocation", "rack", "datacenter", "hosting", "physical"]
+          tags: ["colocation", "1u", "spo", "premium", "hub"],
+          observations: "Valor mínimo de oferta: R$ 549,00. Localização estratégica no principal centro tecnológico brasileiro"
         },
         {
           id: "7.1.3",
-          name: "Full Rack (42U)",
-          description: "Rack completo dedicado (42U) em datacenter Tier III",
-          price: 2299.00,
-          functionality: "Rack completo de 42U com energia e refrigeração redundantes",
-          applicability: "Empresas com muitos equipamentos ou necessidade de isolamento físico",
-          example: "Infraestrutura completa com servidores, storage, networking em rack dedicado",
+          name: "Colocation 1/2 Rack - JPA",
+          description: "Hospedagem de meio rack (21U) no datacenter de João Pessoa",
+          price: 6490.00,
+          functionality: "Espaço de 21U em rack semi-dedicado com energia, conectividade e infraestrutura completa",
+          applicability: "Empresas médias com múltiplos equipamentos, necessidade de escalabilidade e presença no Nordeste",
+          example: "Infraestrutura para provedor regional, empresa com múltiplos servidores, ambiente de desenvolvimento/produção",
           characteristics: [
-            "42U de espaço utilizável",
-            "6kVA de energia incluídos",
-            "Refrigeração N+1",
+            "21U de espaço físico",
+            "1 IP público incluído",
+            "200Mbps de banda garantida",
+            "1kVA de energia incluído",
+            "PDU Gerenciável 32A incluído",
+            "Refrigeração redundante",
             "Acesso 24/7 mediante agendamento",
-            "Rack com fechadura exclusiva",
-            "Conectividade básica incluída"
+            "Setup: R$ 8.000,00"
           ],
-          tags: ["colocation", "rack", "datacenter", "hosting", "physical", "dedicated"]
+          tags: ["colocation", "half-rack", "jpa", "medium", "managed-pdu"],
+          observations: "Inclui PDU Gerenciável 32A. Não inclui bandeja. Setup de R$ 8.000,00"
         },
         {
           id: "7.1.4",
-          name: "High Density Rack (42U)",
-          description: "Rack completo para equipamentos de alta densidade energética",
-          price: 3499.00,
-          functionality: "Rack 42U especial para equipamentos de alto consumo energético",
-          applicability: "Empresas com servidores de alta densidade, GPU ou HPC",
-          example: "Servidores para AI/ML, renderização, HPC ou equipamentos de alta potência",
+          name: "Colocation 1/2 Rack - SPO",
+          description: "Hospedagem de meio rack no datacenter de São Paulo",
+          price: 0,
+          functionality: "Espaço de meio rack em São Paulo com infraestrutura premium para empresas médias",
+          applicability: "Empresas que necessitam presença no hub de São Paulo com infraestrutura intermediária",
+          example: "Filial de empresa multinacional, escritório regional Sudeste, backup de infraestrutura",
           characteristics: [
-            "42U de espaço utilizável",
-            "15kVA de energia incluídos",
-            "Refrigeração de alta capacidade",
-            "Corredores quente/frio isolados",
-            "Acesso 24/7 mediante agendamento",
-            "Conectividade básica incluída"
+            "Espaço de meio rack",
+            "Infraestrutura premium SPO",
+            "Conectividade de alta qualidade",
+            "Acesso ao ecossistema tecnológico de SP",
+            "Refrigeração redundante",
+            "Acesso 24/7 mediante agendamento"
           ],
-          tags: ["colocation", "high-density", "datacenter", "hpc", "gpu"]
+          tags: ["colocation", "half-rack", "spo", "premium", "consultation"],
+          observations: "Valores sob consulta com a direção. Localização premium em São Paulo"
         },
         {
           id: "7.1.5",
-          name: "Cage Space (4+ Racks)",
-          description: "Espaço isolado com gaiola de segurança para múltiplos racks",
-          price: 7999.00,
-          functionality: "Área exclusiva e fisicamente isolada para múltiplos racks",
-          applicability: "Grandes empresas, financeiras ou com requisitos de isolamento físico",
-          example: "Ambiente bancário, governo ou empresas com alta conformidade regulatória",
+          name: "Colocation Rack Full - JPA",
+          description: "Hospedagem de rack completo (44U) no datacenter de João Pessoa",
+          price: 8000.00,
+          functionality: "Rack completo dedicado de 44U com infraestrutura completa e bloco IP dedicado",
+          applicability: "Grandes empresas, provedores de serviços, empresas com infraestrutura extensa no Nordeste",
+          example: "Provedor de internet regional, empresa com datacenter próprio, infraestrutura crítica corporativa",
           characteristics: [
-            "Espaço para 4+ racks completos",
-            "Gaiola de segurança dedicada",
-            "Sistema de controle de acesso exclusivo",
-            "Circuito fechado de TV dedicado",
-            "Opções de energia customizadas",
-            "Conectividade redundante"
+            "44U de espaço físico dedicado",
+            "Bloco /29 IP (6 IPs utilizáveis)",
+            "200Mbps de banda garantida",
+            "1kVA de energia incluído",
+            "PDU Gerenciável 32A incluído",
+            "Rack com fechadura dedicada",
+            "Refrigeração redundante",
+            "Setup: R$ 8.000,00"
           ],
-          tags: ["colocation", "cage", "security", "compliance", "enterprise"]
+          tags: ["colocation", "full-rack", "jpa", "dedicated", "enterprise"],
+          observations: "Inclui PDU Gerenciável 32A. Não inclui bandeja. Setup de R$ 8.000,00. Ideal para operações de grande porte"
+        },
+        {
+          id: "7.1.6",
+          name: "Colocation Rack Full - SPO",
+          description: "Hospedagem de rack completo (44U) no datacenter de São Paulo",
+          price: 0,
+          functionality: "Rack completo dedicado em São Paulo com bloco IP e infraestrutura premium",
+          applicability: "Grandes empresas, multinacionais, provedores que necessitam presença premium em São Paulo",
+          example: "Headquarters de multinacional, grande provedor nacional, infraestrutura financeira crítica",
+          characteristics: [
+            "44U de espaço físico dedicado",
+            "Bloco /29 IP (6 IPs utilizáveis)",
+            "200Mbps de banda garantida",
+            "1kVA de energia incluído",
+            "Localização premium em São Paulo",
+            "Conectividade de primeira linha",
+            "Acesso ao ecossistema corporativo SP",
+            "Refrigeração redundante"
+          ],
+          tags: ["colocation", "full-rack", "spo", "premium", "enterprise"],
+          observations: "Valores sob consulta com a direção. Localização estratégica no principal hub brasileiro"
         }
       ]
     },
     {
       id: "7.2",
-      name: "Smart Hands",
-      description: "Serviços de mãos remotas para operações físicas no datacenter",
+      name: "Colocation Addons",
+      description: "Acessórios e serviços adicionais para complementar a hospedagem em colocation",
       items: [
         {
           id: "7.2.1",
-          name: "Smart Hands Basic (1h)",
-          description: "Serviço de mãos remotas por 1 hora para tarefas simples",
-          price: 129.00,
-          functionality: "Técnico qualificado executando tarefas físicas sob sua orientação",
-          applicability: "Empresas com equipamentos em colocation sem equipe local",
-          example: "Reboot físico, troca de cabos, verificação visual, inserção de mídia",
+          name: "Cabo de Força C13-C14 10A",
+          description: "Cabo de força padrão para equipamentos de TI",
+          price: 60.00,
+          functionality: "Cabo de alimentação padrão C13-C14 de 10A para conexão de equipamentos ao PDU",
+          applicability: "Todos os equipamentos que necessitam alimentação padrão IEC",
+          example: "Servidores, switches, firewalls, storages com entrada C14",
           characteristics: [
-            "1 hora de técnico dedicado",
-            "Disponível 24/7",
-            "Agendamento com 4h de antecedência",
-            "Relatório fotográfico opcional",
-            "Comunicação em tempo real"
+            "Conector C13-C14",
+            "Capacidade 10A",
+            "Comprimento padrão 1,8m",
+            "Certificado para datacenter",
+            "Qualidade industrial"
           ],
-          tags: ["smart-hands", "remote-hands", "datacenter", "support", "physical"]
+          tags: ["addon", "power-cable", "c13-c14", "datacenter", "equipment"],
+          observations: "Taxa única aplicada na ativação do serviço. Essencial para conectar equipamentos ao PDU"
         },
         {
           id: "7.2.2",
-          name: "Smart Hands Advanced (4h)",
-          description: "Serviço de mãos remotas por 4 horas para tarefas complexas",
-          price: 399.00,
-          functionality: "Técnico qualificado para operações mais complexas e prolongadas",
-          applicability: "Instalações, substituições ou troubleshooting complexo",
-          example: "Instalação de novos servidores, cabeamento estruturado, migração física",
+          name: "Bandeja Fixa 1U",
+          description: "Bandeja fixa de 1U para instalação de equipamentos não-rackáveis",
+          price: 349.00,
+          functionality: "Suporte físico de 1U para instalação de equipamentos que não possuem suporte de rack",
+          applicability: "Equipamentos desktop, mini-PCs, dispositivos de rede pequenos, conversores",
+          example: "Mini-PC industrial, switch desktop, conversor de mídia, appliance pequeno",
           characteristics: [
-            "4 horas de técnico dedicado",
-            "Disponível 24/7",
-            "Agendamento com 12h de antecedência",
-            "Relatório detalhado",
-            "Documentação fotográfica"
+            "Bandeja fixa de 1U",
+            "Suporte até 15kg",
+            "Ventilação adequada",
+            "Furação padrão 19\"",
+            "Acabamento profissional"
           ],
-          tags: ["smart-hands", "installation", "datacenter", "support", "physical"]
+          tags: ["addon", "shelf", "1u", "equipment", "mounting"],
+          observations: "Taxa única aplicada na ativação do serviço. Necessária para equipamentos não-rackáveis"
         },
         {
           id: "7.2.3",
-          name: "Emergency Smart Hands",
-          description: "Serviço de emergência de mãos remotas com resposta imediata",
-          price: 199.00,
-          functionality: "Atendimento de emergência com técnico em até 30 minutos",
-          applicability: "Situações críticas que exigem intervenção física imediata",
-          example: "Falhas graves, problemas de conectividade críticos ou emergências",
+          name: "Guia de Cabos",
+          description: "Sistema de organização e passagem de cabos no rack",
+          price: 289.89,
+          functionality: "Sistema de guias para organização profissional e proteção de cabos",
+          applicability: "Todos os racks que necessitam organização profissional de cabeamento",
+          example: "Organização de cabos de rede, energia, KVM em racks com múltiplos equipamentos",
           characteristics: [
-            "1 hora de técnico dedicado",
-            "Resposta em até 30 minutos",
-            "Disponível 24/7/365",
-            "Prioridade máxima",
-            "Relatório de incidente"
+            "Sistema de guias verticais",
+            "Organização profissional",
+            "Proteção de cabos",
+            "Facilita manutenção",
+            "Melhora ventilação"
           ],
-          tags: ["emergency", "smart-hands", "critical", "support", "rapid-response"]
+          tags: ["addon", "cable-management", "organization", "rack", "professional"],
+          observations: "Taxa única aplicada na ativação do serviço. Fundamental para organização profissional"
         },
         {
           id: "7.2.4",
-          name: "Cabeamento Estruturado",
-          description: "Serviço de instalação e organização de cabeamento em rack",
-          price: 599.00,
-          functionality: "Organização e instalação profissional de cabos em seu rack",
-          applicability: "Racks com cabeamento desorganizado ou novas instalações",
-          example: "Instalação organizada de cabos de rede, energia, KVM com etiquetagem",
+          name: "Porca Gaiola Parafuso M5",
+          description: "Porca gaiola M5 para fixação de equipamentos em rack",
+          price: 1.59,
+          functionality: "Porca gaiola padrão M5 para fixação de equipamentos em trilhos de rack 19\"",
+          applicability: "Fixação de qualquer equipamento em rack padrão 19\"",
+          example: "Fixação de servidores, switches, patch panels, organizadores",
           characteristics: [
-            "Organização profissional",
-            "Material incluso (velcros, etiquetas)",
-            "Documentação completa",
-            "Etiquetagem e identificação",
-            "Certificação de cabos de rede"
+            "Padrão M5",
+            "Compatível rack 19\"",
+            "Aço galvanizado",
+            "Fácil instalação",
+            "Alta resistência"
           ],
-          tags: ["cabling", "structured", "organization", "datacenter", "installation"]
+          tags: ["addon", "mounting", "rack", "hardware", "m5"],
+          observations: "Taxa única aplicada na ativação do serviço. Vendida individualmente conforme necessidade"
         },
         {
           id: "7.2.5",
-          name: "Pacote Smart Hands (20h/mês)",
-          description: "Pacote mensal de 20 horas de serviço de mãos remotas",
-          price: 1799.00,
-          functionality: "Banco de horas mensal para serviços de mãos remotas",
-          applicability: "Empresas com necessidade frequente de intervenções físicas",
-          example: "Operações frequentes como instalações, trocas, verificações físicas",
+          name: "Meia Bandeja Fixa",
+          description: "Bandeja fixa de meio rack para equipamentos menores",
+          price: 149.99,
+          functionality: "Suporte físico de meia largura para equipamentos compactos",
+          applicability: "Equipamentos pequenos, dispositivos de rede compactos, appliances menores",
+          example: "Switch pequeno, roteador, firewall compacto, dispositivo IoT industrial",
           characteristics: [
-            "20 horas mensais",
-            "Disponível 24/7",
-            "Agendamento com 2h de antecedência",
-            "Transferência de até 5h para o mês seguinte",
-            "Relatórios consolidados"
+            "Meia largura do rack",
+            "Suporte até 8kg",
+            "Ventilação otimizada",
+            "Economia de espaço",
+            "Múltiplas unidades por U"
           ],
-          tags: ["smart-hands", "monthly", "support", "datacenter", "bundle"]
-        }
-      ]
-    },
-    {
-      id: "7.3",
-      name: "Energia e Refrigeração",
-      description: "Serviços adicionais de energia e refrigeração para equipamentos em colocation",
-      items: [
-        {
-          id: "7.3.1",
-          name: "Circuito de Energia A+B (2kVA)",
-          description: "Circuito de energia redundante A+B com 2kVA total",
-          price: 399.00,
-          functionality: "Energia redundante através de fontes independentes para alta disponibilidade",
-          applicability: "Equipamentos críticos que exigem redundância energética",
-          example: "Servidores com fontes redundantes, switches críticos, storage",
-          characteristics: [
-            "Dois circuitos independentes",
-            "Total de 2kVA disponíveis",
-            "PDUs redundantes",
-            "Fontes independentes (UPS diferentes)",
-            "Medição individual de consumo"
-          ],
-          tags: ["power", "redundant", "datacenter", "high-availability", "infrastructure"]
+          tags: ["addon", "half-shelf", "compact", "space-saving", "small"],
+          observations: "Taxa única aplicada na ativação do serviço. Ideal para equipamentos compactos"
         },
         {
-          id: "7.3.2",
-          name: "Circuito de Energia A+B (5kVA)",
-          description: "Circuito de energia redundante A+B com 5kVA total",
-          price: 899.00,
-          functionality: "Energia redundante de maior capacidade para racks com mais equipamentos",
-          applicability: "Racks com múltiplos equipamentos críticos ou maior consumo",
-          example: "Racks completos com servidores, storage e networking redundantes",
+          id: "7.2.6",
+          name: "Recebimento de Mercadorias",
+          description: "Serviço de recebimento e conferência de equipamentos no datacenter",
+          price: 150.00,
+          functionality: "Recebimento, conferência e notificação de chegada de equipamentos",
+          applicability: "Todas as entregas de equipamentos, peças e materiais para o datacenter",
+          example: "Recebimento de servidor novo, peças de reposição, equipamentos de rede",
           characteristics: [
-            "Dois circuitos independentes",
-            "Total de 5kVA disponíveis",
-            "PDUs redundantes",
-            "Fontes independentes (UPS diferentes)",
-            "Medição individual de consumo"
+            "Recebimento profissional",
+            "Conferência de integridade",
+            "Notificação imediata",
+            "Armazenamento temporário",
+            "Registro de recebimento"
           ],
-          tags: ["power", "redundant", "datacenter", "high-availability", "infrastructure"]
+          tags: ["addon", "receiving", "equipment", "delivery", "service"],
+          observations: "Por cada entrega recebida. Garante segurança e controle de equipamentos"
         },
         {
-          id: "7.3.3",
-          name: "Energia Adicional (por kVA)",
-          description: "Capacidade energética adicional por kVA para equipamentos de maior consumo",
-          price: 189.00,
-          functionality: "Ampliação da capacidade energética disponível por kVA adicional",
-          applicability: "Equipamentos que ultrapassam a franquia de energia do plano base",
-          example: "Servidores de alta densidade, GPU farms, equipamentos de alto consumo",
+          id: "7.2.7",
+          name: "Armazenamento de Mercadorias",
+          description: "Serviço de armazenamento temporário de equipamentos no datacenter",
+          price: 150.00,
+          functionality: "Armazenamento seguro e temporário de equipamentos em área controlada",
+          applicability: "Equipamentos aguardando instalação, peças de reposição, materiais temporários",
+          example: "Servidor aguardando instalação, peças para manutenção futura, equipamentos de backup",
           characteristics: [
-            "1kVA adicional de capacidade",
-            "Compatível com circuitos A ou A+B",
-            "Medição precisa de consumo",
-            "Faturamento mensal fixo",
-            "Sem tarifas adicionais por uso"
+            "Área segura e controlada",
+            "Controle de temperatura",
+            "Acesso restrito",
+            "Identificação clara",
+            "Inventário atualizado"
           ],
-          tags: ["power", "additional", "consumption", "datacenter", "high-density"]
-        },
-        {
-          id: "7.3.4",
-          name: "Refrigeração Dedicada",
-          description: "Solução de refrigeração dedicada para equipamentos de alta densidade",
-          price: 799.00,
-          functionality: "Sistema de refrigeração específico para cargas térmicas elevadas",
-          applicability: "Equipamentos que geram calor acima da média ou clusters de alta densidade",
-          example: "GPU servers, clusters de HPC, equipamentos legacy de alto calor",
-          characteristics: [
-            "Fluxo de ar direcionado",
-            "Sistema in-row opcional",
-            "Monitoramento térmico dedicado",
-            "Prevenção de pontos quentes",
-            "Distribuição otimizada de ar frio"
-          ],
-          tags: ["cooling", "high-density", "thermal", "datacenter", "infrastructure"]
-        },
-        {
-          id: "7.3.5",
-          name: "Monitoramento de Energia",
-          description: "Sistema avançado de monitoramento de consumo energético",
-          price: 149.00,
-          functionality: "Monitoramento detalhado e em tempo real do consumo energético",
-          applicability: "Empresas que precisam controlar e otimizar consumo de energia",
-          example: "Controle financeiro, sustentabilidade, auditoria de consumo",
-          characteristics: [
-            "Medição em tempo real",
-            "Granularidade por tomada",
-            "Dashboard personalizado",
-            "Alertas de consumo",
-            "Relatórios detalhados"
-          ],
-          tags: ["monitoring", "power", "energy", "efficiency", "datacenter"]
+          tags: ["addon", "storage", "equipment", "temporary", "secure"],
+          observations: "Cortesia se retirada ocorrer no mesmo dia e for direto ao rack. Ideal para logística de equipamentos"
         }
       ]
     }
