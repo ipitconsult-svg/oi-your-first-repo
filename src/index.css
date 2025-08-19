@@ -20,15 +20,15 @@ All colors MUST be HSL.
 
     /* Orange as primary (HostDime brand) */
     --primary: 22 100% 55%;
-    --primary-foreground: 30 41 59; /* Alterado de branco para azul escuro para melhor visibilidade */
+    --primary-foreground: 15 23 42; /* Azul escuro para melhor contraste em fundos claros */
     --primary-subtle: 22 100% 95%;
 
     /* Enhanced grays for better contrast */
-    --secondary: 248 250 252;
+    --secondary: 241 245 249;
     --secondary-foreground: 30 41 59;
 
-    --muted: 203 213 225;
-    --muted-foreground: 71 85 105;
+    --muted: 226 232 240;
+    --muted-foreground: 30 41 59;
 
     --accent: 241 245 249;
     --accent-foreground: 30 41 59;
@@ -60,7 +60,7 @@ All colors MUST be HSL.
     --sidebar-background: 226 232 240;
     --sidebar-foreground: 30 41 59;
     --sidebar-primary: 22 100% 55%;
-    --sidebar-primary-foreground: 255 255 255;
+    --sidebar-primary-foreground: 15 23 42; /* Mudando para consistência */
     --sidebar-accent: 241 245 249;
     --sidebar-accent-foreground: 30 41 59;
     --sidebar-border: 203 213 225;

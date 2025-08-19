@@ -34,17 +34,17 @@ export const ItemCard = ({ item, showPrice = false }: ItemCardProps) => {
   };
 
   return (
-    <Card className="group hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 animate-fade-in border-l-4 border-l-primary/20 hover:border-l-primary">
+    <Card className="group hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 animate-fade-in border-l-4 border-l-primary/20 hover:border-l-primary text-foreground">
       <CardHeader className="pb-4">
         <div className="flex items-start gap-3">
           <div className="p-2 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
             {getItemIcon()}
           </div>
           <div className="flex-1">
-            <CardTitle className="text-lg leading-tight mb-1 group-hover:text-primary transition-colors">
+            <CardTitle className="text-lg leading-tight mb-1 group-hover:text-primary transition-colors text-foreground">
               {item.name}
             </CardTitle>
-            <CardDescription className="text-sm">
+            <CardDescription className="text-sm text-muted-foreground">
               ID: {item.id}
             </CardDescription>
           </div>
@@ -60,7 +60,7 @@ export const ItemCard = ({ item, showPrice = false }: ItemCardProps) => {
               </HoverCardTrigger>
               <HoverCardContent className="w-80">
                 <div className="space-y-2">
-                  <h4 className="text-sm font-semibold">Detalhes de Preço</h4>
+                  <h4 className="text-sm font-semibold text-foreground">Detalhes de Preço</h4>
                   <p className="text-sm text-muted-foreground">
                     Preço base mensal. Valores podem variar conforme configuração e localização do data center.
                   </p>
@@ -83,13 +83,13 @@ export const ItemCard = ({ item, showPrice = false }: ItemCardProps) => {
 
         <div className="flex flex-wrap gap-1">
           {item.tags.slice(0, 3).map((tag, index) => (
-            <Badge key={index} variant="outline" className="text-xs hover:bg-primary/10 transition-colors">
-              <Tag className="h-2 w-2 mr-1" />
+            <Badge key={index} variant="outline" className="text-xs text-foreground hover:bg-muted hover:text-foreground transition-colors border border-muted">
+              <Tag className="h-2 w-2 mr-1 text-foreground" />
               {tag}
             </Badge>
           ))}
           {item.tags.length > 3 && (
-            <Badge variant="outline" className="text-xs">
+            <Badge variant="outline" className="text-xs text-foreground border border-muted">
               +{item.tags.length - 3}
             </Badge>
           )}
@@ -113,36 +113,36 @@ export const ItemCard = ({ item, showPrice = false }: ItemCardProps) => {
             <div className="grid grid-cols-1 gap-3">
               <HoverCard>
                 <HoverCardTrigger asChild>
-                  <div className="p-3 rounded-lg bg-accent/20 hover:bg-accent/30 transition-colors cursor-pointer">
-                    <h4 className="font-medium text-sm mb-1 flex items-center gap-2">
-                      <Info className="h-3 w-3 text-primary" />
+                  <div className="p-3 rounded-lg bg-secondary hover:bg-secondary/80 transition-colors cursor-pointer">
+                    <h4 className="font-medium text-sm mb-1 flex items-center gap-2 text-foreground">
+                      <Info className="h-3 w-3 text-foreground" />
                       Funcionamento
                     </h4>
-                    <p className="text-xs text-muted-foreground line-clamp-2">{item.functionality}</p>
+                    <p className="text-xs text-foreground line-clamp-2">{item.functionality}</p>
                   </div>
                 </HoverCardTrigger>
                 <HoverCardContent className="w-80">
                   <div className="space-y-2">
-                    <h4 className="text-sm font-semibold">Como Funciona</h4>
-                    <p className="text-sm text-muted-foreground">{item.functionality}</p>
+                    <h4 className="text-sm font-semibold text-foreground">Como Funciona</h4>
+                    <p className="text-sm text-foreground">{item.functionality}</p>
                   </div>
                 </HoverCardContent>
               </HoverCard>
 
               <HoverCard>
                 <HoverCardTrigger asChild>
-                  <div className="p-3 rounded-lg bg-secondary/20 hover:bg-secondary/30 transition-colors cursor-pointer">
-                    <h4 className="font-medium text-sm mb-1">Aplicabilidade</h4>
-                    <p className="text-xs text-muted-foreground line-clamp-2">{item.applicability}</p>
+                  <div className="p-3 rounded-lg bg-secondary hover:bg-secondary/80 transition-colors cursor-pointer">
+                    <h4 className="font-medium text-sm mb-1 text-foreground">Aplicabilidade</h4>
+                    <p className="text-xs text-foreground line-clamp-2">{item.applicability}</p>
                   </div>
                 </HoverCardTrigger>
                 <HoverCardContent className="w-80">
                   <div className="space-y-2">
-                    <h4 className="text-sm font-semibold">Casos de Uso</h4>
-                    <p className="text-sm text-muted-foreground">{item.applicability}</p>
-                    <div className="mt-2 p-2 bg-primary/10 rounded">
-                      <p className="text-xs text-primary font-medium">Exemplo Prático:</p>
-                      <p className="text-xs text-muted-foreground italic">{item.example}</p>
+                    <h4 className="text-sm font-semibold text-foreground">Casos de Uso</h4>
+                    <p className="text-sm text-foreground">{item.applicability}</p>
+                    <div className="mt-2 p-2 bg-secondary rounded">
+                      <p className="text-xs text-foreground font-bold">Exemplo Prático:</p>
+                      <p className="text-xs text-foreground italic">{item.example}</p>
                     </div>
                   </div>
                 </HoverCardContent>
@@ -150,11 +150,11 @@ export const ItemCard = ({ item, showPrice = false }: ItemCardProps) => {
             </div>
             
             <div className="space-y-2">
-              <h4 className="font-medium text-sm">Características Principais</h4>
+              <h4 className="font-medium text-sm text-foreground">Características Principais</h4>
               <div className="grid grid-cols-1 gap-1">
                 {item.characteristics.map((char, index) => (
-                  <div key={index} className="text-xs text-muted-foreground flex items-start gap-2 p-2 rounded hover:bg-muted/50 transition-colors">
-                    <span className="w-2 h-2 bg-gradient-primary rounded-full mt-1 flex-shrink-0"></span>
+                  <div key={index} className="text-xs text-foreground flex items-start gap-2 p-2 rounded hover:bg-muted/50 transition-colors">
+                    <span className="w-2 h-2 bg-foreground rounded-full mt-1 flex-shrink-0"></span>
                     <span>{char}</span>
                   </div>
                 ))}
@@ -162,10 +162,10 @@ export const ItemCard = ({ item, showPrice = false }: ItemCardProps) => {
             </div>
 
             {item.observations && (
-              <div className="p-3 bg-gradient-subtle rounded-lg border border-primary/20">
+              <div className="p-3 bg-secondary rounded-lg border border-foreground/20">
                 <p className="text-xs">
-                  <strong className="text-primary">Observações Importantes:</strong> 
-                  <span className="text-muted-foreground ml-1">{item.observations}</span>
+                  <strong className="text-foreground font-bold">Observações Importantes:</strong> 
+                  <span className="text-foreground ml-1">{item.observations}</span>
                 </p>
               </div>
             )}
@@ -176,7 +176,7 @@ export const ItemCard = ({ item, showPrice = false }: ItemCardProps) => {
           {item.externalLink && (
             <Tooltip>
               <TooltipTrigger asChild>
-                <Button variant="outline" size="sm" className="flex-1 hover:bg-primary hover:text-foreground transition-colors" asChild>
+                <Button variant="outline" size="sm" className="flex-1 hover:bg-primary hover:text-primary-foreground transition-colors text-foreground" asChild>
                   <a href={item.externalLink} target="_blank" rel="noopener noreferrer">
                     <ExternalLink className="h-3 w-3 mr-2" />
                     Mais Info

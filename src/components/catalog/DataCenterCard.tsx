@@ -42,12 +42,12 @@ export const DataCenterCard = ({ dataCenter }: DataCenterCardProps) => {
         </div>
         
         <div>
-          <h4 className="font-medium text-sm mb-2">Custo-Benefício</h4>
+          <h4 className="font-medium text-sm mb-2 text-foreground">Custo-Benefício</h4>
           <p className="text-sm text-muted-foreground">{dataCenter.costBenefit}</p>
         </div>
         
         <div>
-          <h4 className="font-medium text-sm mb-2">Por que escolher?</h4>
+          <h4 className="font-medium text-sm mb-2 text-foreground">Por que escolher?</h4>
           <p className="text-sm text-muted-foreground">{dataCenter.reasons[0]}</p>
         </div>
         
