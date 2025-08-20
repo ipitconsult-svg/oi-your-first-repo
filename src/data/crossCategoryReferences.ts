@@ -31,7 +31,7 @@ export const crossCategoryReferences: CategoryReference[] = [
     targetSubcategoryName: "Conectividade",
     sourceCategory: "NETWORKING",
     displayName: "Conectividade",
-    description: "Soluções de rede e conectividade para infraestrutura dedicada"
+    description: "Soluções de conectividade e networking para servidores dedicados"
   },
   
   // 3. Licenças e Softwares -> itens da categoria LICENÇAS DE SOFTWARE
@@ -40,7 +40,7 @@ export const crossCategoryReferences: CategoryReference[] = [
     targetSubcategoryName: "Licenças e Softwares",
     sourceCategory: "LICENÇAS DE SOFTWARE",
     displayName: "Licenças e Softwares",
-    description: "Licenças de software e soluções para servidores dedicados"
+    description: "Licenças de software e aplicações para servidores dedicados"
   },
   
   // 4. Segurança -> itens da categoria SECURITY
@@ -58,16 +58,16 @@ export const crossCategoryReferences: CategoryReference[] = [
     targetSubcategoryName: "Gerenciamento",
     sourceCategory: "MANAGED SERVICES",
     displayName: "Gerenciamento",
-    description: "Serviços gerenciados para otimização de infraestrutura dedicada"
+    description: "Serviços gerenciados para infraestrutura dedicada"
   },
   
-  // 6. Data Protection -> itens da categoria Data Protection
+  // 6. Data Protection -> itens da categoria DATA PROTECTION
   {
     targetSubcategoryId: "data-protection",
     targetSubcategoryName: "Data Protection",
     sourceCategory: "DATA PROTECTION",
     displayName: "Data Protection",
-    description: "Soluções de backup e proteção de dados para servidores dedicados"
+    description: "Soluções de proteção e backup de dados para infraestrutura dedicada"
   }
 ];
 
