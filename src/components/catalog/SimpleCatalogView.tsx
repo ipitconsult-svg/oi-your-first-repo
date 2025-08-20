@@ -36,27 +36,42 @@ const SimpleCatalogView: React.FC<SimpleCatalogViewProps> = ({ searchValue }) =>
     const hasItems = subcat.items && subcat.items.length > 0;
     const hasSubcategories = subcat.subcategories && subcat.subcategories.length > 0;
     const totalItems = hasItems ? subcat.items.length : (hasSubcategories ? countAllItems(subcat.subcategories) : 0);
+    const isReference = subcat._isReference; // flag para identificar referências cruzadas
     
-    const bgColor = level === 0 ? 'bg-gray-50' : level === 1 ? 'bg-blue-50' : 'bg-green-50';
-    const borderColor = level === 0 ? 'border-gray-200' : level === 1 ? 'border-blue-200' : 'border-green-200';
+    const bgColor = isReference 
+      ? 'bg-purple-50' 
+      : level === 0 ? 'bg-gray-50' : level === 1 ? 'bg-blue-50' : 'bg-green-50';
+    const borderColor = isReference 
+      ? 'border-purple-200' 
+      : level === 0 ? 'border-gray-200' : level === 1 ? 'border-blue-200' : 'border-green-200';
     
     return (
       <div key={subcat.id} className={`${bgColor} border ${borderColor} rounded-lg`}>
         <div 
-          className={`p-4 cursor-pointer hover:${level === 0 ? 'bg-gray-100' : level === 1 ? 'bg-blue-100' : 'bg-green-100'}`}
+          className={`p-4 cursor-pointer hover:${isReference ? 'bg-purple-100' : level === 0 ? 'bg-gray-100' : level === 1 ? 'bg-blue-100' : 'bg-green-100'}`}
           onClick={() => toggleSubcategory(subcat.id)}
         >
           <div className="flex justify-between items-center">
             <div>
-              <h3 className={`font-semibold text-gray-900 ${level === 0 ? 'text-base' : 'text-sm'}`}>
+              <h3 className={`font-semibold text-gray-900 ${level === 0 ? 'text-base' : 'text-sm'} ${isReference ? 'flex items-center gap-2' : ''}`}>
                 {'  '.repeat(level)}
                 {subcat.name}
+                {isReference && (
+                  <span className="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded-full border border-purple-300">
+                    🔗 Ref: {subcat._sourceCategory}
+                  </span>
+                )}
               </h3>
               <p className={`text-gray-600 ${level === 0 ? 'text-sm' : 'text-xs'}`}>
                 {subcat.description}
               </p>
               <div className="text-xs text-gray-500 mt-2">
                 {totalItems} itens totais | Clique para expandir
+                {isReference && (
+                  <span className="ml-2 text-purple-600 font-medium">
+                    (Itens referenciados da categoria {subcat._sourceCategory})
+                  </span>
+                )}
               </div>
             </div>
             <span className="text-gray-400">
@@ -71,8 +86,15 @@ const SimpleCatalogView: React.FC<SimpleCatalogViewProps> = ({ searchValue }) =>
             {hasItems && (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 {subcat.items.map((item: any) => (
-                  <div key={item.id} className="border rounded-lg p-4 bg-gray-50">
-                    <h4 className="font-medium text-gray-900 mb-2">{item.name}</h4>
+                  <div key={item.id} className={`border rounded-lg p-4 ${isReference ? 'bg-purple-50 border-purple-200' : 'bg-gray-50'}`}>
+                    <h4 className="font-medium text-gray-900 mb-2 flex items-center gap-2">
+                      {item.name}
+                      {isReference && (
+                        <span className="text-xs bg-purple-100 text-purple-700 px-1.5 py-0.5 rounded">
+                          REF
+                        </span>
+                      )}
+                    </h4>
                     <p className="text-sm text-gray-600 mb-3">{item.description}</p>
                     
                     {item.price && (
@@ -95,10 +117,16 @@ const SimpleCatalogView: React.FC<SimpleCatalogViewProps> = ({ searchValue }) =>
                     {item.tags && (
                       <div className="mt-2 flex flex-wrap gap-1">
                         {item.tags.slice(0, 4).map((tag: string, idx: number) => (
-                          <span key={idx} className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">
+                          <span key={idx} className={`text-xs px-2 py-1 rounded ${isReference ? 'bg-purple-100 text-purple-800' : 'bg-blue-100 text-blue-800'}`}>
                             {tag}
                           </span>
                         ))}
+                      </div>
+                    )}
+                    
+                    {isReference && (
+                      <div className="mt-2 text-xs text-purple-600 font-medium">
+                        📂 Categoria original: {subcat._sourceCategory}
                       </div>
                     )}
                   </div>

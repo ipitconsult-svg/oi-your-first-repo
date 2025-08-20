@@ -12,12 +12,13 @@ import { professionalServicesCategory } from "./categories/professional-services
 import { itTransformationServicesCategory } from "./categories/it-transformation-services";
 import { monitoringCategory } from "./categories/monitoring";
 import { artificialIntelligenceCategory } from "./categories/artificial-intelligence";
+import { applyCrossCategoryReferences } from "./crossCategoryReferences";
 
 // Exportar os datacenters
 export const dataCenters: DataCenter[] = datacentersData;
 
-// Exportar as categorias como um array
-export const categories: Category[] = [
+// Array base das categorias
+const baseCategories: Category[] = [
   computeCategory,
   storageCategory,
   dataProtectionCategory,
@@ -32,4 +33,7 @@ export const categories: Category[] = [
   artificialIntelligenceCategory
 ];
 
-console.log('Categorias carregadas:', categories.length);
+// Aplicar referências cruzadas e exportar as categorias processadas
+export const categories: Category[] = applyCrossCategoryReferences(baseCategories);
+
+console.log('Categorias carregadas com referências cruzadas:', categories.length);
