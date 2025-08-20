@@ -192,3 +192,12 @@ All colors MUST be HSL.
 .animate-spin-slow {
   animation: spin-slow 8s linear infinite;
 }
+
+/* Line Clamp utilities */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
