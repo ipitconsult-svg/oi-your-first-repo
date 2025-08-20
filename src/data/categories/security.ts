@@ -494,7 +494,7 @@ export const securityCategory: Category = {
           observations: "Valor/Mês: R$4.900,00. Com UTP: R$7.473,94"
         },
         {
-          id: "4.2.2",
+          id: "4.2.2.1",
           name: "Next-Gen Firewall - Business",
           description: "Firewall de próxima geração para empresas de médio porte",
           price: 700.00,
@@ -512,7 +512,7 @@ export const securityCategory: Category = {
           observations: "Equilíbrio entre performance, recursos e custo para empresas em crescimento"
         },
         {
-          id: "4.2.3",
+          id: "4.2.3.1",
           name: "Next-Gen Firewall - Enterprise",
           description: "Firewall de próxima geração para grandes corporações",
           price: 1500.00,
@@ -569,12 +569,12 @@ export const securityCategory: Category = {
       ]
     },
     {
-      id: "4.3",
+      id: "4.3.1",
       name: "Segurança de Endpoints",
       description: "Proteção avançada para dispositivos finais corporativos",
       items: [
         {
-          id: "4.3.1",
+          id: "4.3.1.1",
           name: "EDR (Endpoint Detection & Response)",
           description: "Detecção e resposta avançada para endpoints",
           price: 25.00,

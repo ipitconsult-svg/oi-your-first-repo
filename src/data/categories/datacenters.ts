@@ -2,7 +2,7 @@ import { DataCenter } from "@/types/catalog";
 
 export const dataCenters: DataCenter[] = [
   {
-    id: "1.1.0.1",
+    id: "DC.1",
     name: "JPA",
     location: "João Pessoa, Paraíba, Brasil",
     tier: "Tier III Design Certified",
@@ -27,7 +27,7 @@ export const dataCenters: DataCenter[] = [
     certifications: ["Tier III Design Certified", "ISO 27001", "SOC 2"]
   },
   {
-    id: "1.1.0.2",
+    id: "DC.2",
     name: "SPO",
     location: "São Paulo, SP, Brasil",
     tier: "Tier III Design Certified",
@@ -51,7 +51,7 @@ export const dataCenters: DataCenter[] = [
     certifications: ["Tier III Design Certified", "ISO 27001"]
   },
   {
-    id: "1.1.0.3",
+    id: "DC.3",
     name: "Orlando",
     location: "Orlando, Flórida, EUA",
     tier: "Tier IV (novo complexo Q3 2025)",
@@ -75,7 +75,7 @@ export const dataCenters: DataCenter[] = [
     certifications: ["Tier IV Design (novo DC)", "SOC 2", "SSAE 18"]
   },
   {
-    id: "1.1.0.4",
+    id: "DC.4",
     name: "México",
     location: "Cidade do México, México",
     tier: "Tier III",
@@ -99,7 +99,7 @@ export const dataCenters: DataCenter[] = [
     certifications: ["Certificações locais de segurança", "Compliance NAFTA"]
   },
   {
-    id: "1.1.0.5",
+    id: "DC.5",
     name: "Colômbia",
     location: "Bogotá, Colômbia",
     tier: "Tier III",
