@@ -72,10 +72,49 @@ export const CatalogView = ({
         }
         
         // Buscar nas subcategorias
-        if (category.subcategories?.some((subcat: any) => 
-          subcat.name.toLowerCase().includes(searchLower) ||
-          subcat.description?.toLowerCase().includes(searchLower)
-        )) {
+        if (category.subcategories?.some((subcat: any) => {
+          // Buscar no nome e descrição da subcategoria
+          if (subcat.name.toLowerCase().includes(searchLower) ||
+              subcat.description?.toLowerCase().includes(searchLower)) {
+            return true;
+          }
+          
+          // Buscar nos itens da subcategoria
+          if (subcat.items?.some((item: any) => 
+            item.name?.toLowerCase().includes(searchLower) ||
+            item.description?.toLowerCase().includes(searchLower) ||
+            item.functionality?.toLowerCase().includes(searchLower) ||
+            item.applicability?.toLowerCase().includes(searchLower) ||
+            item.example?.toLowerCase().includes(searchLower) ||
+            item.tags?.some((tag: string) => tag.toLowerCase().includes(searchLower)) ||
+            item.characteristics?.some((char: string) => char.toLowerCase().includes(searchLower))
+          )) {
+            return true;
+          }
+          
+          // Buscar em subcategorias aninhadas
+          if (subcat.subcategories?.some((nestedSubcat: any) => {
+            if (nestedSubcat.name.toLowerCase().includes(searchLower) ||
+                nestedSubcat.description?.toLowerCase().includes(searchLower)) {
+              return true;
+            }
+            
+            // Buscar nos itens das subcategorias aninhadas
+            return nestedSubcat.items?.some((item: any) => 
+              item.name?.toLowerCase().includes(searchLower) ||
+              item.description?.toLowerCase().includes(searchLower) ||
+              item.functionality?.toLowerCase().includes(searchLower) ||
+              item.applicability?.toLowerCase().includes(searchLower) ||
+              item.example?.toLowerCase().includes(searchLower) ||
+              item.tags?.some((tag: string) => tag.toLowerCase().includes(searchLower)) ||
+              item.characteristics?.some((char: string) => char.toLowerCase().includes(searchLower))
+            );
+          })) {
+            return true;
+          }
+          
+          return false;
+        })) {
           return true;
         }
         
@@ -98,12 +137,16 @@ export const CatalogView = ({
     let filteredItems = datacenters;
 
     // Filtro por busca textual
-    if (searchValue) {
+    if (searchValue && searchValue.trim()) {
+      const searchLower = searchValue.toLowerCase().trim();
       filteredItems = filteredItems.filter(dc => 
-        dc.name.toLowerCase().includes(searchValue.toLowerCase()) ||
-        dc.city.toLowerCase().includes(searchValue.toLowerCase()) ||
-        dc.country.toLowerCase().includes(searchValue.toLowerCase()) ||
-        dc.region?.toLowerCase().includes(searchValue.toLowerCase())
+        dc.name?.toLowerCase().includes(searchLower) ||
+        dc.location?.toLowerCase().includes(searchLower) ||
+        dc.tier?.toLowerCase().includes(searchLower) ||
+        dc.costBenefit?.toLowerCase().includes(searchLower) ||
+        dc.characteristics?.some((char: string) => char.toLowerCase().includes(searchLower)) ||
+        dc.reasons?.some((reason: string) => reason.toLowerCase().includes(searchLower)) ||
+        dc.certifications?.some((cert: string) => cert.toLowerCase().includes(searchLower))
       );
     }
 
@@ -111,8 +154,8 @@ export const CatalogView = ({
     if (filters.dataCenters.length > 0) {
       filteredItems = filteredItems.filter(dc => 
         filters.dataCenters.some(filterDc => 
-          dc.name.toLowerCase().includes(filterDc.toLowerCase()) ||
-          dc.city.toLowerCase().includes(filterDc.toLowerCase())
+          dc.name?.toLowerCase().includes(filterDc.toLowerCase()) ||
+          dc.location?.toLowerCase().includes(filterDc.toLowerCase())
         )
       );
     }
@@ -170,8 +213,8 @@ export const CatalogView = ({
 
   return (
     <div className="space-y-16 min-h-screen bg-white">
-      {/* Hero Section - mostra quando não há busca ou quando não há resultados */}
-      {(!hasActiveSearch || !hasResults) && showHome && (
+      {/* Hero Section - mostra apenas quando não há busca ativa e está na home */}
+      {!hasActiveSearch && showHome && (
         <ModernHero 
           onExploreClick={() => {
             const categoriesSection = document.getElementById('categories-section');
