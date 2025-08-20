@@ -1,0 +1,17 @@
+/* Definições de gradientes personalizados como classes CSS */
+
+.bg-gradient-hero {
+  background: var(--gradient-hero);
+}
+
+.bg-gradient-primary {
+  background: var(--gradient-primary);
+}
+
+.bg-gradient-tech {
+  background: var(--gradient-tech);
+}
+
+.bg-gradient-glow {
+  background: radial-gradient(circle, hsla(25, 95%, 55%, 0.8) 0%, hsla(25, 95%, 55%, 0) 70%);
+}

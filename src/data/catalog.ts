@@ -31,3 +31,5 @@ export const categories: Category[] = [
   monitoringCategory,
   artificialIntelligenceCategory
 ];
+
+console.log('Categorias carregadas:', categories.length);

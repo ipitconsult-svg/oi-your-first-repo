@@ -2,8 +2,8 @@ import { Category } from "@/types/catalog";
 
 export const storageCategory: Category = {
   id: "2",
-  name: "STaaS (Storage as a Service)",
-  description: "Soluções completas de armazenamento escalável e de alta performance",
+  name: "STORAGE",
+  description: "Soluções completas de storage para diferentes necessidades de performance",
   subcategories: [
     {
       id: "2.1",

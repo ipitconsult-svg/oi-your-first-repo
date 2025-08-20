@@ -31,12 +31,12 @@ export const ModernHero = ({
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background with tech pattern */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-hero"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-50/60 to-blue-50/40"></div>
         
         {/* Animated tech elements */}
-        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/8 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-glow opacity-50 rounded-full blur-2xl animate-pulse"></div>
+        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-orange-200/30 opacity-50 rounded-full blur-2xl animate-pulse"></div>
       </div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 text-center">

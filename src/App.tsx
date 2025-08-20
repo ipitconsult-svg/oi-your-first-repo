@@ -24,4 +24,6 @@ const App = () => (
   </QueryClientProvider>
 );
 
+// Adicionar logging para depuração
+console.log('Renderizando App');
 export default App;

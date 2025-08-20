@@ -4,7 +4,7 @@ import { categories, dataCenters } from "@/data/catalog";
 import { CompactDataCenterCard } from "./CompactDataCenterCard";
 import { DataCenterNetwork } from "./DataCenterNetwork";
 import { ModernCategoryPage } from "./ModernCategoryPage";
-import { ModernCategoryDetail } from "./ModernCategoryDetail";
+import ModernCategoryDetail from "./ModernCategoryDetail";
 import { ModernHero } from "../layout/ModernHero";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Building2, MapPin, Package, Sparkles, TrendingUp, Search } from "lucide-react";
@@ -31,6 +31,8 @@ export const CatalogView = ({
   onSearchChange,
   onFiltersChange
 }: CatalogViewProps) => {
+  console.log('CatalogView renderizando com:', { searchValue, showHome, categoriesCount: categories.length });
+  
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [breadcrumb, setBreadcrumb] = useState<{
     id: string;
@@ -56,6 +58,37 @@ export const CatalogView = ({
     onBackToHome?.();
   };
 
+  // Função para buscar recursivamente em subcategorias aninhadas
+  const searchInSubcategories = (subcategories: any[], searchLower: string): boolean => {
+    return subcategories.some((subcat: any) => {
+      // Buscar no nome e descrição da subcategoria
+      if (subcat.name.toLowerCase().includes(searchLower) ||
+          subcat.description?.toLowerCase().includes(searchLower)) {
+        return true;
+      }
+      
+      // Buscar nos itens da subcategoria
+      if (subcat.items?.some((item: any) => 
+        item.name?.toLowerCase().includes(searchLower) ||
+        item.description?.toLowerCase().includes(searchLower) ||
+        item.functionality?.toLowerCase().includes(searchLower) ||
+        item.applicability?.toLowerCase().includes(searchLower) ||
+        item.example?.toLowerCase().includes(searchLower) ||
+        item.tags?.some((tag: string) => tag.toLowerCase().includes(searchLower)) ||
+        item.characteristics?.some((char: string) => char.toLowerCase().includes(searchLower))
+      )) {
+        return true;
+      }
+      
+      // Buscar recursivamente em subcategorias aninhadas
+      if (subcat.subcategories && subcat.subcategories.length > 0) {
+        return searchInSubcategories(subcat.subcategories, searchLower);
+      }
+      
+      return false;
+    });
+  };
+
   // Função para filtrar categorias
   const filterCategories = (categoriesList: any[]) => {
     let filteredItems = categoriesList;
@@ -71,51 +104,9 @@ export const CatalogView = ({
           return true;
         }
         
-        // Buscar nas subcategorias
-        if (category.subcategories?.some((subcat: any) => {
-          // Buscar no nome e descrição da subcategoria
-          if (subcat.name.toLowerCase().includes(searchLower) ||
-              subcat.description?.toLowerCase().includes(searchLower)) {
-            return true;
-          }
-          
-          // Buscar nos itens da subcategoria
-          if (subcat.items?.some((item: any) => 
-            item.name?.toLowerCase().includes(searchLower) ||
-            item.description?.toLowerCase().includes(searchLower) ||
-            item.functionality?.toLowerCase().includes(searchLower) ||
-            item.applicability?.toLowerCase().includes(searchLower) ||
-            item.example?.toLowerCase().includes(searchLower) ||
-            item.tags?.some((tag: string) => tag.toLowerCase().includes(searchLower)) ||
-            item.characteristics?.some((char: string) => char.toLowerCase().includes(searchLower))
-          )) {
-            return true;
-          }
-          
-          // Buscar em subcategorias aninhadas
-          if (subcat.subcategories?.some((nestedSubcat: any) => {
-            if (nestedSubcat.name.toLowerCase().includes(searchLower) ||
-                nestedSubcat.description?.toLowerCase().includes(searchLower)) {
-              return true;
-            }
-            
-            // Buscar nos itens das subcategorias aninhadas
-            return nestedSubcat.items?.some((item: any) => 
-              item.name?.toLowerCase().includes(searchLower) ||
-              item.description?.toLowerCase().includes(searchLower) ||
-              item.functionality?.toLowerCase().includes(searchLower) ||
-              item.applicability?.toLowerCase().includes(searchLower) ||
-              item.example?.toLowerCase().includes(searchLower) ||
-              item.tags?.some((tag: string) => tag.toLowerCase().includes(searchLower)) ||
-              item.characteristics?.some((char: string) => char.toLowerCase().includes(searchLower))
-            );
-          })) {
-            return true;
-          }
-          
-          return false;
-        })) {
-          return true;
+        // Buscar recursivamente nas subcategorias
+        if (category.subcategories && category.subcategories.length > 0) {
+          return searchInSubcategories(category.subcategories, searchLower);
         }
         
         return false;
@@ -170,17 +161,23 @@ export const CatalogView = ({
   // Determinar o que mostrar - se há busca/filtros, mostrar apenas resultados filtrados
   const categoriesToShow = searchValue || filters.categories.length > 0 || filters.types.length > 0 ? filteredCategories : categories;
 
+  // Função recursiva para contar todos os itens (incluindo subcategorias profundamente aninhadas)
+  const countAllItems = (subcategories: any[]): number => {
+    return subcategories.reduce((total, subcat) => {
+      let itemCount = subcat.items ? subcat.items.length : 0;
+      if (subcat.subcategories && subcat.subcategories.length > 0) {
+        itemCount += countAllItems(subcat.subcategories);
+      }
+      return total + itemCount;
+    }, 0);
+  };
+
   // Calcular total de resultados
   useEffect(() => {
     if (searchValue || filters.categories.length > 0 || filters.types.length > 0 || filters.dataCenters.length > 0) {
       // Contar itens dentro das categorias filtradas
       const totalItems = categoriesToShow.reduce((total, cat) => {
-        const categoryItemCount = cat.subcategories?.reduce((subTotal: number, subcat: any) => {
-          const itemCount = subcat.items?.length || 0;
-          const nestedItemCount = subcat.subcategories?.reduce((nestedTotal: number, nestedSubcat: any) => 
-            nestedTotal + (nestedSubcat.items?.length || 0), 0) || 0;
-          return subTotal + itemCount + nestedItemCount;
-        }, 0) || 0;
+        const categoryItemCount = cat.subcategories ? countAllItems(cat.subcategories) : 0;
         return total + categoryItemCount;
       }, 0);
       
@@ -203,6 +200,7 @@ export const CatalogView = ({
         showPrices={showPrices}
         onBackClick={handleBackClick}
         onTogglePrices={() => setShowPrices(!showPrices)}
+        onSearchChange={onSearchChange}
       />
     );
   }

@@ -55,22 +55,22 @@ export const ItemCard = ({ item, showPrice = false }: ItemCardProps) => {
 
       {/* Conteúdo principal */}
       <div className="px-4 pb-3">
-        {/* Descrição compacta */}
-        <p className="text-xs text-gray-600 line-clamp-2 leading-relaxed mb-3">
+        {/* Descrição expandida para melhor legibilidade */}
+        <p className="text-xs text-gray-600 line-clamp-3 leading-relaxed mb-3" title={item.description}>
           {item.description}
         </p>
 
-        {/* Tags como pills compactas */}
+        {/* Tags como pills compactas - mostrando mais para itens de hardware */}
         <div className="flex flex-wrap gap-1 mb-3">
-          {item.tags.slice(0, 3).map((tag, index) => (
-            <span key={index} className="inline-flex items-center gap-1 bg-gray-100 hover:bg-gray-200 px-2 py-0.5 rounded-full text-xs font-medium text-gray-700 transition-colors">
+          {item.tags.slice(0, 5).map((tag, index) => (
+            <span key={index} className="inline-flex items-center gap-1 bg-gray-100 hover:bg-gray-200 px-2 py-0.5 rounded-full text-xs font-medium text-gray-700 transition-colors" title={tag}>
               <Tag className="h-2 w-2" />
               {tag}
             </span>
           ))}
-          {item.tags.length > 3 && (
-            <span className="inline-flex items-center bg-primary/10 text-primary px-2 py-0.5 rounded-full text-xs font-medium">
-              +{item.tags.length - 3}
+          {item.tags.length > 5 && (
+            <span className="inline-flex items-center bg-primary/10 text-primary px-2 py-0.5 rounded-full text-xs font-medium" title={`${item.tags.length - 5} tags adicionais: ${item.tags.slice(5).join(', ')}`}>
+              +{item.tags.length - 5}
             </span>
           )}
         </div>
@@ -102,20 +102,30 @@ export const ItemCard = ({ item, showPrice = false }: ItemCardProps) => {
               </div>
             </div>
             
-            {/* Características em lista compacta */}
+            {/* Características em lista compacta - mostrando mais para hardware */}
             <div className="bg-gray-50 rounded-xl p-3">
               <h4 className="font-medium text-xs text-gray-900 mb-2">Características</h4>
               <div className="space-y-1">
-                {item.characteristics.slice(0, 3).map((char, index) => (
+                {item.characteristics.slice(0, 5).map((char, index) => (
                   <div key={index} className="text-xs text-gray-700 flex items-start gap-2">
                     <span className="w-1 h-1 bg-primary rounded-full mt-1.5 flex-shrink-0"></span>
-                    <span className="line-clamp-1">{char}</span>
+                    <span className="line-clamp-2" title={char}>{char}</span>
                   </div>
                 ))}
-                {item.characteristics.length > 3 && (
-                  <div className="text-xs text-primary font-medium">
-                    +{item.characteristics.length - 3} mais características
-                  </div>
+                {item.characteristics.length > 5 && (
+                  <details className="cursor-pointer">
+                    <summary className="text-xs text-primary font-medium hover:text-primary/80 transition-colors">
+                      +{item.characteristics.length - 5} mais características
+                    </summary>
+                    <div className="mt-2 space-y-1">
+                      {item.characteristics.slice(5).map((char, index) => (
+                        <div key={index + 5} className="text-xs text-gray-700 flex items-start gap-2">
+                          <span className="w-1 h-1 bg-primary rounded-full mt-1.5 flex-shrink-0"></span>
+                          <span className="line-clamp-2" title={char}>{char}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </details>
                 )}
               </div>
             </div>

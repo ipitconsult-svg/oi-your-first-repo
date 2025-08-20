@@ -15,10 +15,18 @@ const categoryIcons = {
 export const ModernCategoryPage = ({ category, onCategoryClick }: ModernCategoryPageProps) => {
   const IconComponent = categoryIcons[category.id as keyof typeof categoryIcons] || categoryIcons.default;
   
-  const totalItems = category.subcategories.reduce((total, subcat) => {
-    return total + subcat.items.length + (subcat.subcategories?.reduce((subTotal, nestedSubcat) => 
-      subTotal + nestedSubcat.items.length, 0) || 0);
-  }, 0);
+  // Função recursiva para contar todos os itens (incluindo subcategorias profundamente aninhadas)
+  const countAllItems = (subcategories: any[]): number => {
+    return subcategories.reduce((total, subcat) => {
+      let itemCount = subcat.items ? subcat.items.length : 0;
+      if (subcat.subcategories && subcat.subcategories.length > 0) {
+        itemCount += countAllItems(subcat.subcategories);
+      }
+      return total + itemCount;
+    }, 0);
+  };
+
+  const totalItems = countAllItems(category.subcategories);
 
   return (
     <div 
@@ -48,25 +56,25 @@ export const ModernCategoryPage = ({ category, onCategoryClick }: ModernCategory
           </div>
         </div>
 
-        {/* Descrição */}
+        {/* Descrição expandida para hardware */}
         <div className="relative z-10 mb-3">
-          <p className="text-sm text-gray-600 line-clamp-2 leading-relaxed">
+          <p className="text-sm text-gray-600 line-clamp-3 leading-relaxed" title={category.description}>
             {category.description}
           </p>
         </div>
 
-        {/* Subcategorias como pills */}
+        {/* Subcategorias como pills - mostrando até 6 para melhor visualização */}
         <div className="relative z-10 mb-3">
           <div className="flex flex-wrap gap-1.5">
-            {category.subcategories.slice(0, 4).map((subcat, index) => (
+            {category.subcategories.slice(0, 6).map((subcat, index) => (
               <div key={subcat.id} className="inline-flex items-center gap-1.5 bg-gray-100/80 hover:bg-gray-200/80 px-2.5 py-1 rounded-full transition-colors">
                 <div className="w-1 h-1 bg-primary rounded-full"></div>
-                <span className="text-xs font-medium text-gray-700 truncate max-w-[120px]">{subcat.name}</span>
+                <span className="text-xs font-medium text-gray-700 truncate max-w-[120px]" title={subcat.name}>{subcat.name}</span>
               </div>
             ))}
-            {category.subcategories.length > 4 && (
-              <div className="inline-flex items-center gap-1.5 bg-primary/10 px-2.5 py-1 rounded-full">
-                <span className="text-xs font-medium text-primary">+{category.subcategories.length - 4}</span>
+            {category.subcategories.length > 6 && (
+              <div className="inline-flex items-center gap-1.5 bg-primary/10 px-2.5 py-1 rounded-full" title={`${category.subcategories.length - 6} subcategorias adicionais`}>
+                <span className="text-xs font-medium text-primary">+{category.subcategories.length - 6}</span>
               </div>
             )}
           </div>

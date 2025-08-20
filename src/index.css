@@ -1,3 +1,7 @@
+/* Importar animações e estilos personalizados */
+@import './components/catalog/catalog-animations.css';
+@import './components/layout/gradients.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
