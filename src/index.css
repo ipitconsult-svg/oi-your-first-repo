@@ -8,52 +8,59 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Modern Design System - Enhanced Contrast */
-    --background: 226 232 240;
-    --foreground: 30 41 59;
+    /* HostDime Brasil Modern Design System */
+    --background: 248 250 252;
+    --foreground: 15 23 42;
 
     --card: 255 255 255;
-    --card-foreground: 30 41 59;
+    --card-foreground: 15 23 42;
 
     --popover: 255 255 255;
-    --popover-foreground: 30 41 59;
+    --popover-foreground: 15 23 42;
 
-    /* Orange as primary (HostDime brand) */
-    --primary: 22 100% 55%;
-    --primary-foreground: 15 23 42; /* Azul escuro para melhor contraste em fundos claros */
-    --primary-subtle: 22 100% 95%;
+    /* HostDime Brand Colors - Orange Primary with Tech Blue Accent */
+    --primary: 25 95% 55%;
+    --primary-foreground: 255 255 255;
+    --primary-subtle: 25 95% 97%;
+    --primary-glow: 25 95% 65%;
 
-    /* Enhanced grays for better contrast */
-    --secondary: 241 245 249;
-    --secondary-foreground: 30 41 59;
+    /* Tech Blue Secondary */
+    --secondary: 217 91% 60%;
+    --secondary-foreground: 255 255 255;
 
-    --muted: 226 232 240;
-    --muted-foreground: 30 41 59;
+    --muted: 241 245 249;
+    --muted-foreground: 100 116 139;
 
-    --accent: 241 245 249;
-    --accent-foreground: 30 41 59;
+    --accent: 217 91% 60%;
+    --accent-foreground: 255 255 255;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 255 255 255;
 
-    --border: 203 213 225;
-    --input: 241 245 249;
-    --ring: 22 100% 55%;
+    --border: 226 232 240;
+    --input: 255 255 255;
+    --ring: 25 95% 55%;
 
-    /* Enhanced design tokens for better contrast */
-    --gradient-primary: linear-gradient(135deg, hsl(22 100% 55%) 0%, hsl(22 90% 45%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(203 213 225) 0%, hsl(226 232 240) 50%, hsl(241 245 249) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(255 255 255) 0%, hsl(248 250 252) 100%);
+    /* Enhanced Modern Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(25 95% 55%) 0%, hsl(25 85% 50%) 50%, hsl(217 91% 60%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(248 250 252) 0%, hsl(241 245 249) 30%, hsl(226 232 240) 70%, hsl(203 213 225) 100%);
+    --gradient-tech: linear-gradient(135deg, hsl(217 91% 60% / 0.1) 0%, hsl(25 95% 55% / 0.1) 100%);
     --gradient-card: linear-gradient(145deg, hsl(255 255 255) 0%, hsl(248 250 252) 100%);
-    --gradient-datacenter: linear-gradient(135deg, hsl(22 100% 55% / 0.08) 0%, hsl(255 255 255) 100%);
-    --gradient-background: linear-gradient(135deg, hsl(203 213 225) 0%, hsl(226 232 240) 40%, hsl(241 245 249) 100%);
+    --gradient-datacenter: linear-gradient(135deg, hsl(25 95% 55% / 0.05) 0%, hsl(217 91% 60% / 0.05) 50%, hsl(255 255 255) 100%);
+    --gradient-background: linear-gradient(135deg, hsl(248 250 252) 0%, hsl(241 245 249) 40%, hsl(226 232 240) 80%, hsl(203 213 225) 100%);
+    --gradient-glow: radial-gradient(ellipse at center, hsl(25 95% 55% / 0.3) 0%, transparent 70%);
     
-    --shadow-elegant: 0 12px 40px -8px hsl(15 23 42 / 0.15);
-    --shadow-card: 0 6px 25px -6px hsl(15 23 42 / 0.12);
-    --shadow-glow: 0 0 40px hsl(22 100% 55% / 0.3);
-    --shadow-float: 0 25px 50px -12px hsl(15 23 42 / 0.25);
+    /* Modern Shadows with Orange Glow */
+    --shadow-elegant: 0 20px 60px -12px hsl(15 23 42 / 0.15), 0 0 0 1px hsl(226 232 240);
+    --shadow-card: 0 10px 30px -6px hsl(15 23 42 / 0.1), 0 0 0 1px hsl(226 232 240);
+    --shadow-glow: 0 0 50px hsl(25 95% 55% / 0.4);
+    --shadow-float: 0 30px 60px -12px hsl(15 23 42 / 0.25), 0 0 0 1px hsl(226 232 240);
+    --shadow-tech: 0 0 40px hsl(217 91% 60% / 0.3);
+    
+    /* Smooth Transitions */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-elastic: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
     --radius: 1rem;
 
@@ -135,4 +142,53 @@ All colors MUST be HSL.
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
+}
+
+/* Enhanced animations for data centers */
+@keyframes glow-pulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+.glow-pulse {
+  animation: glow-pulse 3s ease-in-out infinite;
+}
+
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  background-size: 200px 100%;
+  animation: shimmer 2s infinite;
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
 }

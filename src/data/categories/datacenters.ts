@@ -3,7 +3,7 @@ import { DataCenter } from "@/types/catalog";
 export const dataCenters: DataCenter[] = [
   {
     id: "1.1.0.1",
-    name: "JPA - João Pessoa",
+    name: "JPA",
     location: "João Pessoa, Paraíba, Brasil",
     tier: "Tier III Design Certified",
     characteristics: [
@@ -15,7 +15,7 @@ export const dataCenters: DataCenter[] = [
       "98Gbps de banda total disponível",
       "Conectividade com Mob Telecom, 1Telecom, Tely, Cabo Telecom"
     ],
-    costBenefit: "Máxima certificação com custo competitivo",
+    costBenefit: "Máxima certificação e Localização Estratégica",
     reasons: [
       "Data center mais certificado da América Latina",
       "Posicionamento geográfico estratégico para LATAM",
@@ -28,7 +28,7 @@ export const dataCenters: DataCenter[] = [
   },
   {
     id: "1.1.0.2",
-    name: "SPO - São Paulo",
+    name: "SPO",
     location: "São Paulo, SP, Brasil",
     tier: "Tier III Design Certified",
     characteristics: [

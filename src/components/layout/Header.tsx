@@ -1,6 +1,7 @@
 import { Search, Menu, Filter, Home } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import hostdimeLogo from "@/assets/hostdime-logo.png";
 
 interface HeaderProps {
   onSearchChange: (search: string) => void;
@@ -23,13 +24,28 @@ export const Header = ({ onSearchChange, searchValue, onMenuToggle, onHomeClick 
         </Button>
         
         <div className="flex items-center space-x-4">
-          <div className="flex items-center space-x-2 cursor-pointer" onClick={onHomeClick}>
-            <div className="h-8 w-8 rounded-lg bg-gradient-primary flex items-center justify-center">
-              <span className="text-foreground font-bold text-sm">HD</span>
+          <div className="flex items-center space-x-3 cursor-pointer group" onClick={onHomeClick}>
+            <div className="relative">
+              <div className="h-10 w-10 rounded-xl bg-white flex items-center justify-center shadow-elegant group-hover:scale-110 transition-transform duration-300 p-1">
+                <img 
+                  src={hostdimeLogo} 
+                  alt="HostDime Brasil" 
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <div className="absolute -top-1 -right-1 w-3 h-3 bg-secondary rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="w-full h-full bg-white rounded-full animate-pulse"></div>
+              </div>
             </div>
-            <h1 className="text-lg font-semibold text-foreground hidden sm:block">
-              Catálogo de Infraestrutura
-            </h1>
+            
+            <div className="hidden sm:block">
+              <h1 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors duration-300">
+          
+              </h1>
+              <p className="text-xs text-muted-foreground">
+                Catálogo de Infraestrutura
+              </p>
+            </div>
           </div>
         </div>
         
