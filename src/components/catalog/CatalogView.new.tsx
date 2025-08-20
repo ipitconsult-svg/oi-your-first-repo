@@ -61,26 +61,18 @@ export const CatalogView = ({
     let filteredItems = categoriesList;
 
     // Filtro por busca textual
-    if (searchValue && searchValue.trim()) {
-      const searchLower = searchValue.toLowerCase().trim();
-      
-      filteredItems = filteredItems.filter(category => {
-        // Buscar no nome e descrição da categoria
-        if (category.name.toLowerCase().includes(searchLower) ||
-            category.description?.toLowerCase().includes(searchLower)) {
-          return true;
-        }
-        
-        // Buscar nas subcategorias
-        if (category.subcategories?.some((subcat: any) => 
-          subcat.name.toLowerCase().includes(searchLower) ||
-          subcat.description?.toLowerCase().includes(searchLower)
-        )) {
-          return true;
-        }
-        
-        return false;
-      });
+    if (searchValue) {
+      filteredItems = filteredItems.filter(category => 
+        category.name.toLowerCase().includes(searchValue.toLowerCase()) ||
+        category.description?.toLowerCase().includes(searchValue.toLowerCase()) ||
+        category.subcategories?.some((subcat: any) => 
+          subcat.name.toLowerCase().includes(searchValue.toLowerCase()) ||
+          subcat.items?.some((item: any) => 
+            item.name.toLowerCase().includes(searchValue.toLowerCase()) ||
+            item.description?.toLowerCase().includes(searchValue.toLowerCase())
+          )
+        )
+      );
     }
 
     // Filtros por categoria (nome exato)
@@ -123,15 +115,12 @@ export const CatalogView = ({
   // Aplicar filtros
   const filteredCategories = filterCategories(categories);
   const filteredDataCenters = filterDataCenters(dataCenters);
-  
-  // Determinar o que mostrar - se há busca/filtros, mostrar apenas resultados filtrados
-  const categoriesToShow = searchValue || filters.categories.length > 0 || filters.types.length > 0 ? filteredCategories : categories;
 
   // Calcular total de resultados
   useEffect(() => {
     if (searchValue || filters.categories.length > 0 || filters.types.length > 0 || filters.dataCenters.length > 0) {
       // Contar itens dentro das categorias filtradas
-      const totalItems = categoriesToShow.reduce((total, cat) => {
+      const totalItems = filteredCategories.reduce((total, cat) => {
         const categoryItemCount = cat.subcategories?.reduce((subTotal: number, subcat: any) => {
           const itemCount = subcat.items?.length || 0;
           const nestedItemCount = subcat.subcategories?.reduce((nestedTotal: number, nestedSubcat: any) => 
@@ -141,12 +130,12 @@ export const CatalogView = ({
         return total + categoryItemCount;
       }, 0);
       
-      const totalResults = totalItems + filteredDataCenters.length + categoriesToShow.length;
+      const totalResults = totalItems + filteredDataCenters.length + filteredCategories.length;
       onResultsChange?.(totalResults);
     } else {
       onResultsChange?.(undefined);
     }
-  }, [searchValue, filters, categoriesToShow, filteredDataCenters, onResultsChange]);
+  }, [searchValue, filters, filteredCategories, filteredDataCenters, onResultsChange]);
 
   // Se uma categoria específica está selecionada, mostrar detalhes
   if (selectedCategory) {
@@ -166,12 +155,12 @@ export const CatalogView = ({
 
   // Verificar se há busca ativa ou filtros ativos
   const hasActiveSearch = searchValue || filters.categories.length > 0 || filters.types.length > 0 || filters.dataCenters.length > 0;
-  const hasResults = categoriesToShow.length > 0 || filteredDataCenters.length > 0;
+  const hasResults = filteredCategories.length > 0 || filteredDataCenters.length > 0;
 
   return (
     <div className="space-y-16 min-h-screen bg-white">
-      {/* Hero Section - mostra quando não há busca ou quando não há resultados */}
-      {(!hasActiveSearch || !hasResults) && showHome && (
+      {/* Hero Section - só mostra se não há busca ativa */}
+      {!hasActiveSearch && showHome && (
         <ModernHero 
           onExploreClick={() => {
             const categoriesSection = document.getElementById('categories-section');
@@ -182,7 +171,7 @@ export const CatalogView = ({
         />
       )}
 
-      {/* Data Centers Section - mostra apenas na home sem busca */}
+      {/* Data Centers Section - só mostra se não há busca ativa */}
       {!hasActiveSearch && showHome && (
         <section className="py-12 px-4 relative" id="datacenters-section">
           <div className="absolute inset-0 bg-gradient-to-r from-slate-50/60 to-blue-50/40"></div>
@@ -239,16 +228,16 @@ export const CatalogView = ({
             </h2>
             <p className="text-slate-600 text-lg max-w-3xl mx-auto">
               {hasActiveSearch 
-                ? `Encontramos ${categoriesToShow.length + filteredDataCenters.length} resultado(s) para sua pesquisa`
+                ? `Encontramos ${filteredCategories.length + filteredDataCenters.length} resultado(s) para sua pesquisa`
                 : 'Descubra a solução perfeita para suas necessidades de infraestrutura digital'
               }
             </p>
           </div>
 
-          {/* Categories Grid - sempre mostra categorias disponíveis */}
-          {categoriesToShow.length > 0 && (
+          {/* Categories Grid */}
+          {filteredCategories.length > 0 && (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-              {categoriesToShow.map(category => (
+              {filteredCategories.map(category => (
                 <ModernCategoryPage 
                   key={category.id} 
                   category={category} 
@@ -293,30 +282,7 @@ export const CatalogView = ({
                 >
                   Limpar filtros
                 </Button>
-                <Button 
-                  onClick={() => {
-                    onSearchChange?.("");
-                    onFiltersChange?.({ categories: [], types: [], dataCenters: [] });
-                    onBackToHome?.();
-                  }}
-                  className="bg-orange-500 hover:bg-orange-600 text-white"
-                >
-                  Voltar ao Catálogo
-                </Button>
               </div>
-            </div>
-          )}
-          
-          {/* Fallback - se não há busca ativa mas também não há resultados (erro), mostra todas as categorias */}
-          {!hasActiveSearch && categoriesToShow.length === 0 && (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-              {categories.map(category => (
-                <ModernCategoryPage 
-                  key={category.id} 
-                  category={category} 
-                  onCategoryClick={() => handleCategoryClick(category.id)}
-                />
-              ))}
             </div>
           )}
         </div>
