@@ -13,11 +13,11 @@ export const managedServicesCategory: Category = {
         {
           id: "6.1.1",
           name: "Gerenciamento Padrão 8x5",
-          description: "Gerenciamento básico com 5 horas mensais e suporte das 9h às 18h",
+          description: "Departamento de TI terceirizado para horário comercial - como ter um técnico dedicado, mas que trabalha das 9h às 18h",
           price: 199.00,
-          functionality: "Bundle de 5 horas mensais para atividades básicas de gerenciamento com suporte comercial",
-          applicability: "Pequenas empresas, ambientes não críticos, infraestruturas simples que não requerem suporte 24x7",
-          example: "Servidor web corporativo, pequeno e-commerce, aplicação interna de departamento",
+          functionality: "Você tem 5 horas mensais de trabalho técnico especializado mais suporte durante o expediente - é como ter um 'plano de saúde' para sua infraestrutura",
+          applicability: "Escritórios que fecham à noite, empresas onde uma parada noturna pode esperar até o dia seguinte, operações das 9h às 18h",
+          example: "Consultório médico, escritório de contabilidade ou pequeno comércio que só funciona durante o dia",
           characteristics: [
             "5 horas mensais de gerenciamento",
             "Suporte 8x5 (das 9h às 18h)",
@@ -33,11 +33,11 @@ export const managedServicesCategory: Category = {
         {
           id: "6.1.2", 
           name: "Gerenciamento Padrão 24x7",
-          description: "Gerenciamento básico com 5 horas mensais e suporte 24 horas por dia",
+          description: "Suporte técnico que nunca dorme - como ter um plantonista cuidando da sua infraestrutura madrugada adentro",
           price: 299.00,
-          functionality: "Bundle de 5 horas mensais para atividades básicas de gerenciamento com suporte contínuo",
-          applicability: "Empresas com operação contínua, e-commerce, aplicações que não podem parar durante a noite",
-          example: "Loja virtual, sistema de vendas online, aplicação móvel com usuários 24x7",
+          functionality: "Mesmas 5 horas mensais de trabalho técnico, mas com alguém sempre disponível para emergências - sua tranquilidade 24 horas por dia",
+          applicability: "Lojas virtuais, sistemas que vendem online, aplicativos móveis, ou qualquer negócio que não pode parar de noite ou fim de semana",
+          example: "E-commerce que vende de madrugada, aplicativo de delivery, ou sistema de reservas que funciona 24h",
           characteristics: [
             "5 horas mensais de gerenciamento",
             "Suporte 24x7 (24 horas, 7 dias)",
@@ -60,11 +60,11 @@ export const managedServicesCategory: Category = {
         {
           id: "6.2.1",
           name: "Gerenciamento Avançado 8x5",
-          description: "Gerenciamento intermediário com 7 horas mensais e suporte das 9h às 18h",
+          description: "Equipe de TI sênior dedicada no horário comercial - como ter especialistas otimizando sua infraestrutura constantemente",
           price: 399.00,
-          functionality: "Bundle de 7 horas mensais para atividades avançadas de gerenciamento com suporte comercial",
-          applicability: "Empresas médias, infraestruturas mais complexas, múltiplos serviços que requerem configurações avançadas",
-          example: "Ambiente com múltiplos servidores, cluster de aplicação, infraestrutura corporativa média",
+          functionality: "7 horas mensais com técnicos mais experientes que não só resolvem problemas, mas otimizam e melhoram sua infraestrutura proativamente",
+          applicability: "Empresas com vários servidores, sistemas mais complexos, ou que querem performance máxima durante o expediente",
+          example: "Empresa com ERP, CRM, sistemas integrados que precisam funcionar sempre bem durante o horário de trabalho",
           characteristics: [
             "7 horas mensais de gerenciamento",
             "Suporte 8x5 (das 9h às 18h)",
@@ -81,11 +81,11 @@ export const managedServicesCategory: Category = {
         {
           id: "6.2.2",
           name: "Gerenciamento Avançado 24x7",
-          description: "Gerenciamento intermediário com 7 horas mensais e suporte contínuo",
+          description: "Departamento de TI completo trabalhando para você 24 horas - como ter uma equipe interna, mas sem os custos fixos",
           price: 499.00,
-          functionality: "Bundle de 7 horas mensais para atividades avançadas de gerenciamento com suporte contínuo",
-          applicability: "Empresas médias com operação contínua, aplicações críticas, ambientes que exigem disponibilidade alta",
-          example: "Sistema ERP corporativo, plataforma SaaS, aplicação financeira, serviços críticos 24x7",
+          functionality: "Técnicos sêniores sempre disponíveis que não só apagam incêndios, mas previnem problemas e otimizam sua infraestrutura continuamente",
+          applicability: "Empresas onde TI é crítico para o negócio, sistemas que sustentam operações importantes, ou infraestrutura complexa que exige atenção constante",
+          example: "SaaS empresarial, plataforma financeira, sistema ERP de multinacional, ou qualquer aplicação onde parada = prejuízo imediato",
           characteristics: [
             "7 horas mensais de gerenciamento",
             "Suporte 24x7 (24 horas, 7 dias)",

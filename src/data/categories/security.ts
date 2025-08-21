@@ -14,11 +14,11 @@ export const securityCategory: Category = {
         {
           id: "4.1.1.1",
           name: "SOC Endpoint Monitoring",
-          description: "Monitoramento de endpoints - principal ponto de entrada para ameaças",
+          description: "Vigilância digital 24/7 para computadores e dispositivos - como ter um guarda de segurança observando cada laptop da empresa",
           price: 15.00,
-          functionality: "Monitoramento contínuo de atividades suspeitas em endpoints com detecção comportamental e response automatizado",
-          applicability: "Workstations, laptops corporativos, dispositivos móveis, pontos de acesso remoto",
-          example: "Monitoramento de laptops corporativos ou workstations de usuários finais",
+          functionality: "Monitoramento contínuo que observa padrões de comportamento e detecta atividades suspeitas antes que se tornem problemas sérios",
+          applicability: "Empresas com funcionários em home office, política BYOD (traga seu próprio dispositivo), equipes híbridas ou qualquer ambiente com laptops corporativos",
+          example: "Detecta automaticamente se um funcionário que normalmente acessa apenas arquivos de vendas tenta acessar dados financeiros às 3h da manhã",
           characteristics: [
             "Detecção de ameaças em tempo real",
             "Análise comportamental de usuários",
@@ -32,11 +32,11 @@ export const securityCategory: Category = {
         {
           id: "4.1.1.2",
           name: "SOC Server Monitoring",
-          description: "Monitoramento de servidores críticos",
+          description: "Sala de controle digital para seus servidores mais importantes - como ter uma equipe médica monitorando sinais vitais 24/7",
           price: 25.00,
-          functionality: "Monitoramento avançado de servidores com detecção de anomalias, análise de logs e alertas em tempo real",
-          applicability: "Servidores críticos, aplicações sensíveis, bancos de dados, sistemas core",
-          example: "Monitoramento de servidor de banco de dados ou servidor de aplicação crítica",
+          functionality: "Monitoramento avançado que analisa logs em tempo real, detecta anomalias e correlaciona eventos para identificar ameaças antes do impacto",
+          applicability: "Servidores críticos como ERP, banco de dados principal, e-commerce, sistemas de pagamento ou qualquer aplicação que não pode sair do ar",
+          example: "Detecta se o servidor do seu ERP começa a receber conexões suspeitas de outros países ou apresenta picos de processamento inexplicáveis",
           characteristics: [
             "Log analysis avançada",
             "Detecção de anomalias",

@@ -19,11 +19,11 @@ export const networkingCategory: Category = {
             {
               id: "5.1.1.1",
               name: "Cross Connect LAN to LAN - JPA",
-              description: "Interconexão LAN to LAN através de link dedicado em João Pessoa",
+              description: "Ponte digital privada entre seu escritório e o datacenter - como ter um túnel secreto só seu",
               price: 1200.00,
-              functionality: "Link dedicado ponto-a-ponto fornecido por operadora de telecom escolhida pelo cliente",
-              applicability: "Empresas que necessitam conectar sua infraestrutura local com o datacenter JPA",
-              example: "Conexão dedicada entre escritório corporativo em Recife e datacenter JPA",
+              functionality: "Link dedicado exclusivo que conecta diretamente seu escritório ao datacenter, sem passar pela internet pública - é como ter uma 'estrada privada'",
+              applicability: "Empresas que precisam de conexão super segura e rápida entre escritório e datacenter, especialmente dados sensíveis ou backup em tempo real",
+              example: "Escritório em Recife conectado diretamente ao datacenter JPA para acessar sistemas como se estivessem na sala ao lado",
               characteristics: [
                 "Link dedicado ponto-a-ponto",
                 "Operadora de escolha do cliente",
@@ -37,11 +37,11 @@ export const networkingCategory: Category = {
             {
               id: "5.1.1.2",
               name: "Cross Connect LAN to LAN - SPO",
-              description: "Interconexão LAN to LAN através de link dedicado em São Paulo",
+              description: "Conexão expressa privada para o coração financeiro do Brasil - seu escritório conectado ao principal hub tecnológico",
               price: 1350.00,
-              functionality: "Link dedicado ponto-a-ponto fornecido por operadora de telecom escolhida pelo cliente",
-              applicability: "Empresas que necessitam conectar sua infraestrutura local com o datacenter SPO",
-              example: "Conexão dedicada entre matriz corporativa e datacenter SPO",
+              functionality: "Link dedicado que transforma seus servidores em São Paulo numa extensão da sua rede local - velocidade garantida e segurança máxima",
+              applicability: "Empresas nacionais ou multinacionais que precisam de conectividade premium com o principal datacenter financeiro/tecnológico do país",
+              example: "Matriz em São Paulo ou filial conectada diretamente ao datacenter SPO, eliminando dependência da internet comum",
               characteristics: [
                 "Link dedicado ponto-a-ponto",
                 "Operadora de escolha do cliente",
@@ -68,11 +68,11 @@ export const networkingCategory: Category = {
                 {
                   id: "5.1.2.1.1",
                   name: "Cross Connect Server to Server JPA - Fibra",
-                  description: "Interconexão via fibra ótica entre servidores no DC JPA",
+                  description: "Cabo de fibra ótica dedicado entre seus servidores - velocidade da luz para comunicação entre máquinas",
                   price: 600.00,
-                  functionality: "Conexão direta via fibra ótica entre equipamentos do cliente no datacenter",
-                  applicability: "Interconexão de alta performance entre servidores no mesmo datacenter",
-                  example: "Conexão entre servidor de aplicação e servidor de banco de dados",
+                  functionality: "Conexão direta por fibra ótica entre seus servidores no datacenter - como ter uma 'autoestrada de dados' particular",
+                  applicability: "Aplicações que precisam trocar muitos dados entre servidores rapidamente - databases, clusters, replicação",
+                  example: "Servidor web conectado ao servidor de banco de dados com latência mínima para aplicações ultra-rápidas",
                   characteristics: [
                     "Conexão via fibra ótica",
                     "Alta performance e baixa latência",
@@ -85,11 +85,11 @@ export const networkingCategory: Category = {
                 {
                   id: "5.1.2.1.2",
                   name: "Cross Connect Server to Server JPA - UTP",
-                  description: "Interconexão via cabo UTP entre servidores no DC JPA",
+                  description: "Cabo de rede dedicado entre servidores - conexão econômica e confiável para necessidades básicas",
                   price: 200.00,
-                  functionality: "Conexão direta via cabo UTP entre equipamentos do cliente no datacenter",
-                  applicability: "Interconexão econômica entre servidores no mesmo datacenter",
-                  example: "Conexão de gerenciamento ou baixa demanda entre equipamentos",
+                  functionality: "Conexão direta via cabo de rede comum entre servidores - simples, barato e eficaz para comunicação básica",
+                  applicability: "Comunicação entre servidores que não exige alta velocidade - gerenciamento, monitoramento, backups básicos",
+                  example: "Conexão de gerenciamento entre servidores ou link de backup para redundância simples",
                   characteristics: [
                     "Conexão via cabo UTP",
                     "Solução econômica",
