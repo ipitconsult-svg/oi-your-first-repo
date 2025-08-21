@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { Settings, Eye, EyeOff } from "lucide-react";
 import { Header } from "@/components/layout/Header";
-import SimpleCatalogView from "@/components/catalog/SimpleCatalogView";
-import EnhancedCatalogView from "@/components/catalog/EnhancedCatalogView";
+import SimpleCatalogView from "@/components/catalog/SimpleCatalogView-clean";
 import { type FilterOptions } from "@/components/layout/FilterPanel";
 
 const Index = () => {
@@ -75,11 +74,7 @@ const Index = () => {
       </div>
       
       <main className="container mx-auto px-4 py-8">
-        {useEnhancedView ? (
-          <EnhancedCatalogView searchValue={searchValue} />
-        ) : (
-          <SimpleCatalogView searchValue={searchValue} />
-        )}
+        <SimpleCatalogView searchValue={searchValue} />
       </main>
     </div>
   );

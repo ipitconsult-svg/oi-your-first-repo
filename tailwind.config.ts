@@ -42,6 +42,10 @@ export default {
 					DEFAULT: 'hsl(var(--destructive))',
 					foreground: 'hsl(var(--destructive-foreground))'
 				},
+				success: {
+					DEFAULT: 'hsl(var(--success))',
+					foreground: 'hsl(var(--success-foreground))'
+				},
 				muted: {
 					DEFAULT: 'hsl(var(--muted))',
 					foreground: 'hsl(var(--muted-foreground))'
@@ -67,12 +71,20 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Cores específicas HostDime Brasil
+				'hostdime-blue': '#2F80ED',
+				'hostdime-dark': '#0A2540',
+				'hostdime-gray': '#B0B7C3',
+				'hostdime-light': '#F6F7FB',
+				'hostdime-success': '#27AE60',
+				'hostdime-error': '#EB5757'
 			},
 			borderRadius: {
-				lg: 'var(--radius)',
-				md: 'calc(var(--radius) - 2px)',
-				sm: 'calc(var(--radius) - 4px)'
+				'lg': '6px', /* Conforme especificação */
+				'md': '4px',
+				'sm': '2px',
+				'hostdime': '6px' /* Padrão HostDime */
 			},
 			backgroundImage: {
 				'gradient-primary': 'var(--gradient-primary)',
@@ -84,9 +96,13 @@ export default {
 			},
 			boxShadow: {
 				'elegant': 'var(--shadow-elegant)',
-				'card': 'var(--shadow-card)',
+				'card': '0 4px 16px rgba(10,37,64,0.08)', /* Conforme especificação */
 				'glow': 'var(--shadow-glow)',
-				'float': 'var(--shadow-float)'
+				'float': 'var(--shadow-float)',
+				'tech': 'var(--shadow-tech)',
+				'button': '0 2px 8px rgba(10,37,64,0.12)', /* Para botões */
+				'hover': '0 8px 24px rgba(10,37,64,0.15)', /* Hover effect */
+				'subtle': '0 1px 3px rgba(10,37,64,0.1)'
 			},
 			transitionTimingFunction: {
 				'smooth': 'var(--transition-smooth)',

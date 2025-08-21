@@ -12,112 +12,121 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* HostDime Brasil Modern Design System */
-    --background: 248 250 252;
-    --foreground: 15 23 42;
+    /* HostDime Brasil Design System 2025 - Baseado no site oficial */
+    --background: 246 247 251; /* #F6F7FB - Cinza claro para fundos */
+    --foreground: 10 37 64; /* #0A2540 - Azul profundo para textos principais */
 
-    --card: 255 255 255;
-    --card-foreground: 15 23 42;
+    --card: 255 255 255; /* #FFFFFF - Branco para cards */
+    --card-foreground: 10 37 64; /* #0A2540 - Texto em cards */
 
     --popover: 255 255 255;
-    --popover-foreground: 15 23 42;
+    --popover-foreground: 10 37 64;
 
-    /* HostDime Brand Colors - Orange Primary with Tech Blue Accent */
-    --primary: 25 95% 55%;
-    --primary-foreground: 255 255 255;
-    --primary-subtle: 25 95% 97%;
-    --primary-glow: 25 95% 65%;
+    /* Cores Principais HostDime Brasil */
+    --primary: 213 81% 58%; /* #2F80ED - Azul elétrico para botões principais */
+    --primary-foreground: 255 255 255; /* Branco para texto em botões */
+    --primary-subtle: 213 81% 96%; /* Versão suave do azul */
+    --primary-glow: 213 81% 68%; /* Glow effect */
 
-    /* Tech Blue Secondary */
-    --secondary: 217 91% 60%;
+    /* Azul Profundo para elementos de confiança */
+    --secondary: 210 84% 20%; /* #0A2540 - Azul profundo HostDime */
     --secondary-foreground: 255 255 255;
 
-    --muted: 241 245 249;
-    --muted-foreground: 100 116 139;
+    /* Cinzas do sistema */
+    --muted: 246 247 251; /* #F6F7FB - Fundos de separação */
+    --muted-foreground: 211 20% 68%; /* #B0B7C3 - Textos secundários */
 
-    --accent: 217 91% 60%;
+    --accent: 213 81% 58%; /* Mesmo azul elétrico */
     --accent-foreground: 255 255 255;
 
-    --destructive: 0 84% 60%;
+    /* Estados de sucesso e erro */
+    --success: 145 63% 42%; /* #27AE60 - Verde limpo */
+    --success-foreground: 255 255 255;
+    
+    --destructive: 0 67% 63%; /* #EB5757 - Vermelho suave */
     --destructive-foreground: 255 255 255;
 
-    --border: 226 232 240;
+    --border: 220 14% 91%; /* Bordas sutis */
     --input: 255 255 255;
-    --ring: 25 95% 55%;
+    --ring: 213 81% 58%; /* Foco com azul elétrico */
 
-    /* Enhanced Modern Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(25 95% 55%) 0%, hsl(25 85% 50%) 50%, hsl(217 91% 60%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(248 250 252) 0%, hsl(241 245 249) 30%, hsl(226 232 240) 70%, hsl(203 213 225) 100%);
-    --gradient-tech: linear-gradient(135deg, hsl(217 91% 60% / 0.1) 0%, hsl(25 95% 55% / 0.1) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(255 255 255) 0%, hsl(248 250 252) 100%);
-    --gradient-datacenter: linear-gradient(135deg, hsl(25 95% 55% / 0.05) 0%, hsl(217 91% 60% / 0.05) 50%, hsl(255 255 255) 100%);
-    --gradient-background: linear-gradient(135deg, hsl(248 250 252) 0%, hsl(241 245 249) 40%, hsl(226 232 240) 80%, hsl(203 213 225) 100%);
-    --gradient-glow: radial-gradient(ellipse at center, hsl(25 95% 55% / 0.3) 0%, transparent 70%);
+    /* Gradientes Modernos HostDime */
+    --gradient-primary: linear-gradient(135deg, hsl(213 81% 58%) 0%, hsl(210 84% 20%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(246 247 251) 0%, hsl(220 14% 96%) 50%, hsl(213 81% 96%) 100%);
+    --gradient-tech: linear-gradient(135deg, hsl(213 81% 58% / 0.1) 0%, hsl(210 84% 20% / 0.1) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(255 255 255) 0%, hsl(246 247 251) 100%);
+    --gradient-datacenter: linear-gradient(135deg, hsl(213 81% 58% / 0.05) 0%, hsl(210 84% 20% / 0.05) 50%, hsl(255 255 255) 100%);
+    --gradient-background: linear-gradient(135deg, hsl(246 247 251) 0%, hsl(220 14% 96%) 40%, hsl(213 81% 96%) 80%, hsl(210 84% 96%) 100%);
+    --gradient-glow: radial-gradient(ellipse at center, hsl(213 81% 58% / 0.3) 0%, transparent 70%);
     
-    /* Modern Shadows with Orange Glow */
-    --shadow-elegant: 0 20px 60px -12px hsl(15 23 42 / 0.15), 0 0 0 1px hsl(226 232 240);
-    --shadow-card: 0 10px 30px -6px hsl(15 23 42 / 0.1), 0 0 0 1px hsl(226 232 240);
-    --shadow-glow: 0 0 50px hsl(25 95% 55% / 0.4);
-    --shadow-float: 0 30px 60px -12px hsl(15 23 42 / 0.25), 0 0 0 1px hsl(226 232 240);
-    --shadow-tech: 0 0 40px hsl(217 91% 60% / 0.3);
+    /* Sombras Modernas com Identidade HostDime */
+    --shadow-elegant: 0 20px 60px -12px hsl(10 37 64 / 0.15), 0 0 0 1px hsl(220 14% 91%);
+    --shadow-card: 0 4px 16px hsl(10 37 64 / 0.08); /* Conforme especificação */
+    --shadow-glow: 0 0 50px hsl(213 81% 58% / 0.4);
+    --shadow-float: 0 30px 60px -12px hsl(10 37 64 / 0.25), 0 0 0 1px hsl(220 14% 91%);
+    --shadow-tech: 0 0 40px hsl(213 81% 58% / 0.3);
+    --shadow-button: 0 2px 8px hsl(10 37 64 / 0.12); /* Para botões */
     
-    /* Smooth Transitions */
-    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    --transition-elastic: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* Transições Suaves (0.2s conforme especificação) */
+    --transition-smooth: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-elastic: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
-    --radius: 1rem;
+    --radius: 0.375rem; /* 6px conforme especificação */
 
-    --sidebar-background: 226 232 240;
-    --sidebar-foreground: 30 41 59;
-    --sidebar-primary: 22 100% 55%;
-    --sidebar-primary-foreground: 15 23 42; /* Mudando para consistência */
-    --sidebar-accent: 241 245 249;
-    --sidebar-accent-foreground: 30 41 59;
-    --sidebar-border: 203 213 225;
-    --sidebar-ring: 22 100% 55%;
+    /* Sidebar com cores HostDime */
+    --sidebar-background: 246 247 251;
+    --sidebar-foreground: 10 37 64;
+    --sidebar-primary: 213 81% 58%;
+    --sidebar-primary-foreground: 255 255 255;
+    --sidebar-accent: 220 14% 96%;
+    --sidebar-accent-foreground: 10 37 64;
+    --sidebar-border: 220 14% 91%;
+    --sidebar-ring: 213 81% 58%;
   }
 
   .dark {
-    --background: 15 23 42;
-    --foreground: 248 250 252;
+    /* Tema Escuro HostDime Brasil */
+    --background: 10 37 64; /* Azul profundo como fundo */
+    --foreground: 246 247 251; /* Cinza claro para texto */
 
-    --card: 30 41 59;
-    --card-foreground: 248 250 252;
+    --card: 15 23 42; /* Card escuro */
+    --card-foreground: 246 247 251;
 
-    --popover: 30 41 59;
-    --popover-foreground: 248 250 252;
+    --popover: 15 23 42;
+    --popover-foreground: 246 247 251;
 
-    --primary: 22 100% 55%;
-    --primary-foreground: 248 250 252; /* Mantém cor clara no tema escuro */
+    --primary: 213 81% 58%; /* Mantém azul elétrico */
+    --primary-foreground: 255 255 255;
 
-    --secondary: 30 41 59;
-    --secondary-foreground: 248 250 252;
+    --secondary: 15 23 42;
+    --secondary-foreground: 246 247 251;
 
-    --muted: 30 41 59;
-    --muted-foreground: 148 163 184;
+    --muted: 15 23 42;
+    --muted-foreground: 176 183 195; /* Cinza médio claro */
 
-    --accent: 30 41 59;
-    --accent-foreground: 248 250 252;
+    --accent: 15 23 42;
+    --accent-foreground: 246 247 251;
 
-    --destructive: 0 63% 31%;
-    --destructive-foreground: 248 250 252;
+    --destructive: 0 67% 63%; /* Mantém vermelho suave */
+    --destructive-foreground: 255 255 255;
+
+    --success: 145 63% 42%; /* Mantém verde limpo */
+    --success-foreground: 255 255 255;
 
     --border: 30 41 59;
-    --input: 30 41 59;
-    --ring: 22 100% 55%;
-    
-    --gradient-background: linear-gradient(135deg, hsl(15 23 42) 0%, hsl(30 41 59) 50%, hsl(51 65 85) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(15 23 42) 0%, hsl(30 41 59) 50%, hsl(51 65 85) 100%);
-    
-    --sidebar-background: 15 23 42;
-    --sidebar-foreground: 248 250 252;
-    --sidebar-primary: 22 100% 55%;
-    --sidebar-primary-foreground: 15 23 42;
-    --sidebar-accent: 30 41 59;
-    --sidebar-accent-foreground: 248 250 252;
+    --input: 15 23 42;
+    --ring: 213 81% 58%;
+
+    /* Sidebar tema escuro */
+    --sidebar-background: 10 37 64;
+    --sidebar-foreground: 246 247 251;
+    --sidebar-primary: 213 81% 58%;
+    --sidebar-primary-foreground: 255 255 255;
+    --sidebar-accent: 15 23 42;
+    --sidebar-accent-foreground: 246 247 251;
     --sidebar-border: 30 41 59;
-    --sidebar-ring: 22 100% 55%;
+    --sidebar-ring: 213 81% 58%;
   }
 }
 
@@ -127,27 +136,33 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    border: 1px solid hsl(var(--border));
+  }
+
+  body {
+    background: hsl(var(--background)); 
+    color: hsl(var(--foreground));
   }
 }
 
 @layer utilities {
   /* Line clamp utilities */
-  .line-clamp-2 {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-  
-  .line-clamp-3 {
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
+/* Propriedades úteis para line clamping */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+}
 
-  /* Enhanced search field styles */
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+}  /* Enhanced search field styles */
   .search-field-focus {
     outline: 2px solid hsl(var(--primary) / 0.2);
     outline-offset: 2px;
